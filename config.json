@@ -1,0 +1,11 @@
+{
+  "wait_boot": 5,
+  "debug": false,
+  "timezone": "America/New_York",
+  "addons_custom_list": [
+    "https://github.com/hassio-addons/repository"
+  ],
+  "debug_block": false,
+  "logging": "info",
+  "last_boot": "2020-03-03T16:00:57"
+}

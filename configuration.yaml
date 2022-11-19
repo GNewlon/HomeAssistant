@@ -1,0 +1,167 @@
+#################################################################
+#                                                               #
+#           Home Assistant Main Configuration File              #
+#                                                               #
+#################################################################
+homeassistant:
+# name: !secret name
+# temperature_unit: F
+# time_zone: !secret timezone
+# latitude: !secret latitude
+# longitude: !secret longitude
+# unit_system: Imperial
+# elevation: 0
+# customize: !include includes/customize.yaml
+#  whitelist_external_dirs:
+#    - /config
+#  packages: !include_dir_named packages
+default_config:
+#################################################################
+#                                                               #
+#                        Customizations                         #
+#                                                               #
+#################################################################
+frontend:
+  themes: !include includes/theme-oled.yaml
+#  themes: !include_dir_merge_named includes/themes
+  extra_module_url:
+    - /hacsfiles/custom-sidebar/custom-sidebar.js
+    - /hacsfiles/lovelace-card-mod/card-mod.js
+#input_text:
+#  default_theme:
+#    name: amoled
+lovelace:
+  mode: yaml
+  resources: !include /config/resources.yaml
+####################################################
+#                                                  #
+#                    Includes                      #
+#                                                  #
+####################################################
+automation: !include includes/automations.yaml
+group: !include includes/groups.yaml
+input_boolean: !include includes/input_boolean.yaml
+input_number: !include includes/input_number.yaml
+input_select: !include includes/input_select.yaml
+#light: !include includes/lights.yaml
+#switch: !include includes/switches.yaml
+scene: !include includes/scenes.yaml
+script: !include includes/scripts.yaml
+binary_sensor: !include includes/binary_sensors.yaml
+sensor: !include includes/sensors.yaml
+# Define input_select
+#################################################################
+#                                                               #
+#                  Custom Components                            #
+#                                                               #
+#################################################################
+#ecobee:
+#  api_key: !secret ecobee_api_key
+tts:
+  - platform: google_translate
+#lutron_caseta_pro:
+#  bridges:
+#    - host: 10.1.1.59
+#      mac: 10:08:2c:9c:50:df
+####################################################
+#                                                  #
+#                      Logger                      #
+#                                                  #
+####################################################
+#logger:
+#  default: info
+#  logs:
+#    custom_components: debug
+####################################################
+#                                                  #
+#                      MQTT                        #
+#                                                  #
+####################################################
+#  mqtt:
+#    broker: 10.1.1.202
+#    username: !secret mqtt_username
+#    password: !secret mqtt_password
+# Example configuration.yaml entry with device types
+####################################################
+#                                                  #
+#                   node-red                       #
+#                                                  #
+####################################################
+#################################################################
+#                                                               #
+#                            Panel                              #
+#                                                               #
+#################################################################
+panel_iframe: 
+#  vscode:
+#     title: 'VisualCode'
+#     url: 'http://10.1.1.10:8443'
+#     icon: mdi:visual-studio-code
+#  nodered:
+#     title: 'Node-RED'
+#     url: 'http://10.1.1.203:1880'
+#     icon: mdi:sitemap
+####################################################
+#                                                  #
+#                     Recorder                     #
+#                                                  #
+####################################################
+recorder:
+  purge_keep_days: 180
+  db_url: !secret maria_db_info
+####################################################
+#                                                  #
+#               Xiaomi Miot                        #
+#                                                  #
+####################################################
+#vacuum:
+#  - platform: xiaomi_miio
+#    host: 192.168.2.28#    token: 5056765154776c433269337857747941
+#xiaomi_miot:
+#  username: newlon@outlook.com
+#  password: Gibj.Q#x9ZYs9m8+
+#  server_country: us
+####################################################
+#                                                  #
+#                  Zwave + Zigbee                  #
+#                                                  #
+####################################################
+#zha:
+#  database_path: /config/includes/zigbee.db
+####################################################
+#                                                  #
+#                  Templates                       #
+#                                                  #
+####################################################
+#templates: !include includes/templates.yaml
+
+####################################################
+#                                                  #
+#                  http                            #
+#                                                  #
+####################################################
+http:
+  server_host: 0.0.0.0
+  use_x_forwarded_for: true
+  trusted_proxies:
+    - 10.1.1.0/24      # Add the IP address of the proxy server
+    - 172.19.0.0/16    # You may also provide the subnet mask
+#  server_port: 8123
+#  ssl_certificate: /etc/letsencrypt/live/hass.example.com/fullchain.pem
+#  ssl_key: /etc/letsencrypt/live/hass.example.com/privkey.pem
+#  cors_allowed_origins:
+#    - https://google.com
+#    - https://www.home-assistant.io
+#  use_x_forwarded_for: true
+#  ip_ban_enabled: true
+#  login_attempts_threshold: 500
+    
+# http:
+#   use_x_forwarded_for: true
+#   trusted_proxies:
+#     - 172.16.0.0/12
+#-------------------
+#  ssl_certificate: /ssl/fullchain.pem
+#  ssl_key: /ssl/privkey.pem
+#  ip_ban_enabled: true
+#  login_attempts_threshold: 5

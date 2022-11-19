@@ -1,0 +1,12 @@
+#################################################################
+## Input_number
+#################################################################
+
+#Node-Red Input Numbers
+hvac_runtime:
+  name: HVAC Runtime
+  icon: mdi:timer
+  min: 0
+  max: 86400
+  step: 1
+  mode: box

@@ -1,0 +1,2409 @@
+#################################################################
+#                                                               #
+#               button-card-headers-2                           #
+#                                                               #
+#################################################################
+button-card-headers-2:
+  styles:
+    card:
+      - text-transform: uppercase
+      - font-size: 110%
+      - font-weight: 100
+      - text-shadow: 0px 0px 5px black
+      - letter-spacing: 7px
+      - padding-top: 1px
+      - padding-bottom: 1px
+    template: header
+#################################################################
+#                                                               #
+#                 button_card_templates                         #
+#                                                               #
+#################################################################
+button-card-headers:
+  styles:
+    card:
+      - text-transform: uppercase
+      - font-size: 150%
+      - font-weight: 100
+      - text-shadow: 0px 0px 5px black
+      - letter-spacing: 10px
+    template: header
+header:
+  styles:
+    card:
+      - padding: 5px 15px
+      - '--paper-card-background-color': 'rgba(40, 40, 40)'
+      - box-shadow: '0px 0px 10px 5px #0593ff'
+    label:
+      - text-transform: uppercase
+      - color: var(--primary-background-color)
+      - justify-self: start
+      - font-weight: bold
+    name:
+      - text-transform: uppercase
+      - color: var(--primary-background-color)
+      - justify-self: start
+      - font-weight: bold
+#################################################################
+#                                                               #
+#                     dimmer_button                             #
+#                                                               #
+#################################################################
+dimmer_button:
+  aspect_ratio: 1/1
+  color: 'rgb(5, 147, 255)'
+  hold_action:
+    action: more-info
+  label: >
+    [[[ var bri = Math.round(entity.attributes.brightness / 2.55);  if
+    (entity.state === 'on') return (bri ? (bri+"%") : '') ]]]
+  layout: vertical
+  show_label: true
+  show_name: true
+  show_state: false
+  size: 47%
+  state:
+    - icon: 'mdi:lightbulb'
+      styles:
+        card:
+          - '--paper-card-background-color': 'var(--accent-color)'
+          - box-shadow: '0px 0px 13px 3px var(--box-shadow)'
+          - border-radius: 10px
+          - text-shadow: 0px 0px 5px black
+        label:
+          - color: 'var(--accent-color)'
+        icon:
+          - color: 'var(--accent-color)'
+        name:
+          - color: 'var(--accent-color)'
+      value: 'on'
+    - icon: 'mdi:lightbulb-outline'
+      styles:
+        card:
+          - '--paper-card-background-color': 'var(--secondary-background-color)'
+          - box-shadow: '0px 0px 1px 1px var(--secondary-background-color)'
+          - border-radius: 10px
+        label:
+          - color: var(--secondary-text-color)
+        icon:
+          - color: var(--secondary-text-color)
+        name:
+          - color: var(--secondary-text-color)
+          - font-size: 15px
+          - padding-bottom: 6%
+      value: 'off'
+  tap_action:
+    action: toggle
+    haptic: heavy
+#################################################################
+#                                                               #
+#                        lock_button                            #
+#                                                               #
+#################################################################
+lock_button:
+  aspect_ratio: 1/1
+  color: 'rgb(5, 147, 255)'
+  hold_action:
+    action: more-info
+  layout: vertical
+  show_label: true
+  show_name: true
+  show_state: false
+  size: 35%
+  state:
+    - icon: 'mdi:lock-open-variant'
+      styles:
+        card:
+          - aspect_ratio: 1/1
+          - '--paper-card-background-color': 'var(--accent-color)'
+          - box-shadow: '0px 0px 13px 3px var(--box-shadow)'
+          - border-radius: 10px
+          - text-shadow: 0px 0px 5px black
+        label:
+          - color: 'var(--accent-color)'
+        icon:
+          - color: 'var(--accent-color)'
+        name:
+          - color: 'var(--accent-color)'
+          - font-size: 14px
+          - padding-bottom: 10px
+          - text-shadow: 0px 0px 5px black
+        state:
+          - color: var(--accent-color)
+      value: unlocked
+    - color: var(--accent-color)
+      icon: 'mdi:lock'
+      styles:
+        card:
+          - '--paper-card-background-color': 'var(--secondary-background-color)'
+          - box-shadow: '0px 0px 1px 1px var(--secondary-background-color)'
+          - border-radius: 10px
+        label:
+          - color: var(--secondary-text-color)
+        icon:
+          - color: var(--secondary-text-color)
+        name:
+          - color: var(--secondary-text-color)
+          - font-size: 14px
+          - padding-bottom: 10px
+      value: locked
+  tap_action:
+    action: call-service
+    haptic: heavy
+    service: '[[[ return entity.state === "locked" ? "lock.unlock" : "lock.lock" ]]]'
+    service_data:
+      entity_id: entity
+#################################################################
+#                                                               #
+#                       slide.dim_button                        #
+#                                                               #
+#################################################################
+slide.dim_button:
+  aspect_ratio: 1/1
+  color: 'rgb(5, 147, 255)'
+  custom_fields:
+#    label: >
+#      [[[ var bri = Math.round(entity.attributes.brightness / 2.55);  if
+#      (entity.state === 'on') return (bri ? (bri+"%") : '') ]]]
+    slider:
+      card:
+        entity: '[[[ return entity.entity_id ]]]'
+        full_row: true
+        hide_state: true
+        hide_when_off: true
+        min: 30
+        width: 20%
+        type: 'custom:slider-entity-row'
+      overflow: unset
+  hold_action:
+    action: more-info
+  show_label: true
+  show_name: true
+  show_state: false
+  size: 50%
+  state:
+    - icon: 'mdi:lightbulb'
+      styles:
+        card:
+          - '--paper-card-background-color': 'var(--accent-color)'
+          - box-shadow: '0px 0px 13px 3px var(--box-shadow)'
+          - border-radius: 10px
+          - text-shadow: 0px 0px 5px black
+        label:
+          - color: 'var(--accent-color)'
+        icon:
+          - color: 'var(--accent-color)'
+        name:
+          - color: 'var(--accent-color)'
+          - padding-top: 18%
+          - font-size: 14px
+      value: 'on'
+    - icon: 'mdi:lightbulb-outline'
+      styles:
+        icon:
+          - color: var(--secondary-text-color)
+        card:
+          - '--paper-card-background-color': 'var(--secondary-background-color)'
+          - box-shadow: '0px 0px 1px 1px var(--secondary-background-color)'
+          - border-radius: 10px
+        label:
+          - color: var(--secondary-text-color)
+        name:
+          - color: var(--secondary-text-color)
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'off'
+  styles:
+    card:
+      - padding: 5%
+      - text-transform: capitalize
+      - '--mdc-ripple-press-opacity': 0.5
+      - '--mdc-ripple-color': black
+    grid:
+      - grid-template-areas: '"i" "n" "slider"'
+      - grid-template-columns: 100%
+      - grid-template-rows: 50% auto
+    img_cell:
+      - justify-content: center
+      - align-items: center
+      - padding-top: 13%
+  tap_action:
+    action: toggle
+    haptic: heavy
+  double_tap_action:
+    action: more-info
+    haptic: heavy
+#################################################################
+#                                                               #
+#                   light_button                                #
+#             (derived from slide.dim_button)                   #
+#                USED ONLY FOR SMALL BUTTONS                    #
+#################################################################
+light_button:
+  aspect_ratio: 1/1
+  color: 'rgb(5, 147, 255)'
+  hold_action:
+    action: more-info
+  show_label: true
+  show_name: true
+  show_state: false
+  size: 50%
+  state:
+    - styles:
+        card:
+          - '--paper-card-background-color': 'var(--accent-color)'
+          - box-shadow: '0px 0px 13px 3px var(--box-shadow)'
+          - border-radius: 10px
+          - text-shadow: 0px 0px 5px black
+        label:
+          - color: 'var(--accent-color)'
+        icon:
+          - color: 'var(--accent-color)'
+        name:
+          - color: 'var(--accent-color)'
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'on'
+    - styles:
+        card:
+          - '--paper-card-background-color': 'var(--secondary-background-color)'
+          - box-shadow: '0px 0px 1px 1px var(--secondary-background-color)'
+          - border-radius: 10px
+        label:
+          - color: var(--secondary-text-color)
+        icon:
+          - color: var(--secondary-text-color)
+        name:
+          - color: var(--secondary-text-color)
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'off'
+  styles:
+    card:
+      - color: 'rgb(5, 147, 255)'
+      - padding: 5%
+      - text-transform: capitalize
+      - '--mdc-ripple-press-opacity': 0.5
+      - '--mdc-ripple-color': black
+    grid:
+      - grid-template-areas: '"i" "n" "slider"'
+      - grid-template-columns: 100%
+      - grid-template-rows: 50% auto
+    img_cell:
+      - justify-content: center
+      - align-items: center
+      - padding-top: 13%
+  tap_action:
+    action: toggle
+    haptic: heavy
+  double_tap_action:
+    action: more-info
+    haptic: heavy
+#################################################################
+#                                                               #
+#                     vacuum_button                             #
+#               # States: Idle, Cleaning, Docked                #
+#################################################################
+vacuum_button:
+  aspect_ratio: auto
+  show_icon: false
+  custom_fields:
+    vacuum:
+      card:
+        entity: vacuum.roborock
+        name: false
+        type: 'custom:xiaomi-vacuum-card'
+  styles:
+    custom_fields:
+      vacuum:
+        - position: absolute
+        - height: 100%
+        - width: 100%
+        - bottom: .25%
+        - z-index: 0
+    card:
+      - border-radius: 10px
+      - '--paper-card-background-color': 'var(--secondary-background-color)'
+      - box-shadow: '0px 0px 2px 2px var(--secondary-background-color)'
+  color_type: card
+  hold_action:
+    action: more-info
+#################################################################
+#                                                               #
+#                 unifi.protect_button                          #
+#                                                               #
+#################################################################
+unifi.protect_button:
+  aspect_ratio: 1/1
+  show_icon: false
+  custom_fields:
+    camera_image: |
+      [[[
+        return html`
+          <hui-image
+            .hass=${hass}
+            .cameraImage=${entity.entity_id}
+            .entity=${entity.entity_id}
+            .cameraView="auto"
+            aspectRatio="1"
+          ></hui-image>
+        `;
+      ]]]
+  styles:
+    custom_fields:
+      camera_image:
+        - position: absolute
+        - height: 100%
+        - width: 100%
+        - bottom: .25%
+        - z-index: 0
+    card:
+      - border-radius: 10px
+  color_type: card
+  hold_action:
+    action: more-info
+#################################################################
+#                                                               #
+#          unifi.protect.thumbnail_button                       #
+#                                                               #
+#################################################################
+unifi.protect.thumbnail_button:
+  aspect_ratio: 1/1
+  show_icon: false
+  custom_fields:
+    camera_image: |
+      [[[
+        return html`
+          <hui-image
+            .hass=${hass}
+            .cameraImage=${entity.entity_id}
+            .entity=${entity.entity_id}
+            .cameraView="auto"
+            aspectRatio="1"
+          ></hui-image>
+        `;
+      ]]]
+  styles:
+    custom_fields:
+      camera_image:
+        - position: absolute
+        - height: 100%
+        - width: 100%
+        - bottom: .25%
+        - z-index: 0
+    card:
+      - border-radius: 10px
+  color_type: card
+  hold_action:
+    action: more-info
+#################################################################
+#                                                               #
+#                         fan_button                            #
+#                                                               #
+#################################################################
+fan_button:
+  aspect_ratio: 1/1
+  color: 'rgb(5, 147, 255)'
+  custom_fields:
+#    label: >
+#      [[[ var bri = Math.round(entity.attributes.brightness / 2.55);  if
+#      (entity.state === 'on') return (bri ? (bri+"%") : '') ]]]
+  hold_action:
+    action: more-info
+  show_label: true
+  show_name: true
+  show_state: false
+  size: 50%
+  state:
+    - icon: 'mdi:fan'
+      styles:
+        card:
+          - '--paper-card-background-color': 'var(--accent-color)'
+          - box-shadow: '0px 0px 13px 3px var(--box-shadow)'
+          - border-radius: 10px
+          - text-shadow: 0px 0px 5px black
+        label:
+          - color: 'var(--accent-color)'
+        icon:
+          - color: 'var(--accent-color)'
+        name:
+          - color: 'var(--accent-color)'
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'on'
+    - icon: 'mdi:fan'
+      styles:
+        card:
+          - '--paper-card-background-color': 'var(--secondary-background-color)'
+          - box-shadow: '0px 0px 1px 1px var(--secondary-background-color)'
+          - border-radius: 10px
+        label:
+          - color: var(--secondary-text-color)
+        icon:
+          - color: var(--secondary-text-color)
+        name:
+          - color: var(--secondary-text-color)
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'off'
+  styles:
+    card:
+      - color: 'rgb(5, 147, 255)'
+      - padding: 5%
+      - text-transform: capitalize
+      - '--mdc-ripple-press-opacity': 0.5
+      - '--mdc-ripple-color': black
+    grid:
+      - grid-template-areas: '"i" "n" "slider"'
+      - grid-template-columns: 100%
+      - grid-template-rows:  50% auto auto auto
+    img_cell:
+      - justify-content: center
+      - align-items: center
+      - padding-top: 13%
+  tap_action:
+    action: toggle
+    haptic: heavy
+#################################################################
+#                                                               #
+#                    goodnite_button                            #
+#                                                               #
+#################################################################
+goodnite_button:
+  aspect_ratio: 1/1
+  color: 'rgb(5, 147, 255)'
+  tap_action:
+    action: none 
+  double_tap_action:
+    haptic: heavy
+    action: call-service
+    service: input_boolean.turn_on
+    service_data:
+      entity_id: entity
+  hold_action:
+    action: more-info
+  show_name: true
+  size: 40%
+  state:
+    - icon: 'mdi:weather-night'
+      styles:
+        card:
+          - '--paper-card-background-color': 'var(--accent-color)'
+          - box-shadow: '0px 0px 13px 3px var(--box-shadow)'
+          - border-radius: 10px
+          - text-shadow: 0px 0px 5px black
+        label:
+          - color: 'var(--accent-color)'
+        icon:
+          - color: 'var(--accent-color)'
+        name:
+          - color: 'var(--accent-color)'
+          - padding-top: 9%
+          - font-size: 14px
+      value: 'on'
+    - icon: 'mdi:weather-night'
+      styles:
+        card:
+          - '--paper-card-background-color': 'var(--secondary-background-color)'
+          - box-shadow: '0px 0px 1px 1px var(--secondary-background-color)'
+          - border-radius: 10px
+        label:
+          - color: var(--secondary-text-color)
+        icon:
+          - color: var(--secondary-text-color)
+        name:
+          - color: var(--secondary-text-color)
+          - padding-top: 17%
+          - font-size: 14px
+      value: 'off'
+  styles:
+    card:
+      - color: 'rgb(5, 147, 255)'
+      - padding: 5%
+      - font-size: 12px
+      - text-transform: capitalize
+      - '--mdc-ripple-press-opacity': 0.5
+      - '--mdc-ripple-color': black
+    grid:
+      - grid-template-areas: '"i" "n" "slider"'
+      - grid-template-columns: 100%
+      - grid-template-rows: 50% auto
+    img_cell:
+      - justify-content: center
+      - align-items: center
+      - padding-top: 15%
+#################################################################
+#                                                               #
+#                    spa_mode_button                            #
+#                                                               #
+#################################################################
+spa_mode_button:
+  aspect_ratio: 1/1
+  color: 'rgb(5, 147, 255)'
+  hold_action:
+    haptic: heavy
+    action: call-service
+    service: switch.turn_on
+    service_data:
+      entity_id: entity
+  show_name: true
+  size: 45%
+  state:
+    - icon: 'mdi:coolant-temperature'
+      styles:
+        card:
+          - '--paper-card-background-color': 'var(--accent-color)'
+          - box-shadow: '0px 0px 13px 3px var(--box-shadow)'
+          - border-radius: 10px
+          - text-shadow: 0px 0px 5px black
+        label:
+          - color: 'var(--accent-color)'
+        icon:
+          - color: 'var(--accent-color)'
+        name:
+          - color: 'var(--accent-color)'
+          - padding-bottom: 2px
+          - font-size: 14px
+      value: 'on'
+    - icon: 'mdi:waves'
+      styles:
+        card:
+          - '--paper-card-background-color': 'var(--secondary-background-color)'
+          - box-shadow: '0px 0px 1px 1px var(--secondary-background-color)'
+          - border-radius: 10px
+        label:
+          - color: var(--secondary-text-color)
+        icon:
+          - color: var(--secondary-text-color)
+        name:
+          - color: var(--secondary-text-color)
+          - padding-bottom: 2px
+          - font-size: 14px
+      value: 'off'
+  styles:
+    card:
+      - color: 'rgb(5, 147, 255)'
+      - padding: 5%
+      - font-size: 12px
+      - text-transform: capitalize
+      - '--mdc-ripple-press-opacity': 0.5
+      - '--mdc-ripple-color': black
+    custom_fields:
+      power:
+        - align-self: start
+        - justify-self: end
+        - font-size: 9px
+        - padding-top: 5px
+        - padding-right: 3px
+    grid:
+      - grid-template-areas: '"i power" "i power" "n n"'
+      - grid-template-columns: 1fr 1fr
+      - grid-template-rows: 50% auto auto
+    img_cell:
+      - margin: none
+      - padding-top: 15px
+      - padding-left: 29px
+  tap_action:
+    action: more-info
+    haptic: heavy
+  double_tap_action:
+    tap_action:
+    haptic: heavy
+    action: call-service
+    service: input_boolean.turn_on
+    service_data:
+      entity_id: entity
+#################################################################
+#                                                               #
+#                      HA_Reset_button                          #
+#                                                               #
+#################################################################
+HA_Reset_button:
+  aspect_ratio: 1/1
+  color: 'rgb(5, 147, 255)'
+  hold_action:
+    haptic: heavy
+    action: call-service
+    service: switch.turn_on
+    service_data:
+      entity_id: entity
+  show_name: true
+  size: 39%
+  state:
+    - icon: 'mdi:shield-home'
+      styles:
+        card:
+          - '--paper-card-background-color': 'var(--accent-color)'
+          - box-shadow: '0px 0px 13px 3px var(--box-shadow)'
+          - border-radius: 10px
+          - text-shadow: 0px 0px 5px black
+        label:
+          - color: 'var(--accent-color)'
+        icon:
+          - color: 'var(--accent-color)'
+        name:
+          - color: 'var(--accent-color)'
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'on'
+    - icon: 'mdi:shield-home'
+      styles:
+        card:
+          - '--paper-card-background-color': 'var(--secondary-background-color)'
+          - box-shadow: '0px 0px 1px 1px var(--secondary-background-color)'
+          - border-radius: 10px
+        label:
+          - color: var(--secondary-text-color)
+        icon:
+          - color: var(--secondary-text-color)
+        name:
+          - color: var(--secondary-text-color)
+          - padding-top: 9%
+          - font-size: 14px
+      value: 'off'
+  styles:
+    card:
+      - color: 'rgb(5, 147, 255)'
+      - padding: 5%
+      - font-size: 12px
+      - text-transform: capitalize
+      - '--mdc-ripple-press-opacity': 0.5
+      - '--mdc-ripple-color': black
+    grid:
+      - grid-template-areas: '"i" "n" "slider"'
+      - grid-template-columns: 100%
+      - grid-template-rows: 50% auto
+    img_cell:
+      - justify-content: center
+      - align-items: center
+      - padding-top: 13%
+  tap_action:
+    haptic: heavy
+    action: call-service
+    service: input_boolean.toggle
+    service_data:
+      entity_id: entity
+  double_tap_action:
+    action: none
+#################################################################
+#                                                               #
+#                       switch_slider                           #
+#                                                               #
+#################################################################
+switch_slider:
+  show_label: false
+  show_name: false
+  show_state: false
+  state:
+    - styles:
+        icon:
+          - color: var(--accent-color)
+      value: 'off'
+    - styles:
+        icon:
+          - color: 'rgb(5, 147, 255)'
+      value: 'on'
+    - styles:
+        icon:
+          - color: red
+      value: unavailable
+  styles:
+    card:
+      - background-color: 'rgb(44, 109, 214)'
+      - box-shadow: none;
+      - overflow: unset
+    custom_fields:
+      slider:
+        - filter: opacity(80%)
+        - overflow: unset
+        - color: 'rgb(3, 169, 244)'
+    grid:
+      - grid-template-areas: '"n" "i" "l" "slider"'
+      - grid-template-columns: 1fr
+      - grid-template-rows: 'min-content fr min-conten>    size: 10%'
+    label:
+      - color: yellow
+    name:
+      - color: orange
+  value: 'off'
+#################################################################
+#                                                               #
+#                         button                                #
+#           ORIGINAL BUTTON CARD EXAMPLE FROM GIT               #
+#################################################################
+button:
+  aspect_ratio: 1/1
+  styles:
+    card:
+      - border-radius: 10%
+      - padding: 5%
+      - color: ivory
+      - font-size: 11px
+      - text-shadow: 0px 0px 5px black
+      - text-transform: capitalize
+    grid:
+      - grid-template-areas: '"i temp" "n n" "cpu cpu" "ram ram" "sd sd" "l l"'
+      - grid-template-columns: 1fr 1fr
+      - grid-template-rows: 3fr 3fr 2fr 2fr 2fr
+    name:
+      - font-weight: bold
+      - font-size: 15px
+      - color: white
+      - align-self: middle
+      - justify-self: start
+      - padding-bottom: 4px
+    img_cell:
+      - justify-content: start
+      - align-items: start
+      - margin: none
+    icon:
+      - width: 70%
+    label:
+      - align-self: middle
+    custom_fields:
+      temp:
+        - align-self: start
+        - justify-self: end
+        - text-align: left
+      cpu:
+        - padding-bottom: 2px
+        - align-self: middle
+        - justify-self: start
+      ram:
+        - padding-bottom: 2px
+        - align-self: middle
+        - justify-self: start
+      sd:
+        - align-self: middle
+        - justify-self: start
+  tap_action:
+    action: more-info
+#################################################################
+#                                                               #
+#               slide.dim.watt_button                           #
+#                                                               #
+#################################################################
+slide.dim.watt_button:
+  aspect_ratio: 1/1
+  color: 'rgb(5, 147, 255)'
+  custom_fields:
+    label: >
+      [[[ var bri = Math.round(entity.attributes.brightness / 2.55);  if
+      (entity.state === 'on') return (bri ? (bri+"%") : '') ]]]
+    power: |
+      [[[ return entity.attributes.power_consumption + 'W' ]]]
+    slider:
+      card:
+        entity: '[[[ return entity.entity_id ]]]'
+        full_row: true
+        hide_state: true
+        hide_when_off: true
+        type: 'custom:slider-entity-row'
+      overflow: unset
+  hold_action:
+    action: more-info
+  show_label: true
+  show_name: true
+  show_state: false
+  size: 66%
+  state:
+    - icon: 'mdi:hanger'
+      styles:
+        card:
+          - '--paper-card-background-color': 'rgba(40, 40, 40)'
+          - box-shadow: '0px 0px 12px 3px #0593ff'
+          - border-radius: 10px
+          - text-shadow: 0px 0px 5px black
+        custom_fields:
+        label:
+          - color: 'rgb(5, 147, 255)'
+        name:
+          - color: 'rgb(5, 147, 255)'
+      value: 'on'
+    - icon: 'mdi:lightbulb-outline'
+      styles:
+        card:
+          - '--paper-card-background-color': 'var(--secondary-background-color)'
+          - box-shadow: '0px 0px 1px 1px var(--secondary-background-color)'
+          - border-radius: 10px
+        custom_fields:
+        label:
+          - color: var(--secondary-text-color)
+        icon:
+          - color: var(--secondary-text-color)
+        name:
+          - color: var(--secondary-text-color)
+          - font-size: 15px
+          - padding-bottom: 15%
+      value: 'off'
+  styles:
+    card:
+      - color: 'rgb(5, 147, 255)'
+      - text-transform: capitalize
+      - '--mdc-ripple-press-opacity': 0.75
+      - '--mdc-ripple-color': black
+    custom_fields:
+      label:
+#        - font-size: 7px
+#      power:
+#        - align-self: start
+#        - justify-self: end
+#        - font-size: 9px
+#        - padding-top: 5px
+#        - padding-right: 1px
+    grid:
+      - grid-template-areas: '"n" "i" "l" "slider"'
+      - grid-template-columns: 1fr
+      - grid-template-rows: min-content fr min-content min-content    
+#      - grid-template-areas: '"i power" "i power" "n n" "label label" "slider slider"'
+#      - grid-template-columns: 1fr 1fr
+#      - grid-template-rows: 50% auto auto auto
+#########
+#      - grid-template-areas: '"i" "n" "slider"'
+#      - grid-template-columns: 100%
+#      - grid-template-rows: min-content min-content 1fr
+#    img_cell:
+#      - justify-content: end
+#      - align-items: end
+#      - margin: none
+#      - padding-top: 0%
+#      - padding-left: 0%
+  tap_action:
+    action: toggle
+    haptic: heavy
+#################################################################
+#                                                               #
+#                      input_select_button                      #
+#################################################################
+input_select_button:
+  aspect_ratio: 1/1
+  color: 'rgba(148, 148, 148)'
+  tap_action:
+    action: none
+  double_tap_action:
+    action: more-info
+    haptic: heavy 
+  hold_action:
+    action: more-info
+  show_label: false
+  show_name: true
+  show_state: true
+  size: 55%
+  styles:
+    card:
+      - '--paper-card-background-color': 'var(--secondary-background-color)'
+      - box-shadow: '0px 0px 13px 3px  #949494'
+      - border-radius: 10px
+      - text-shadow: 0px 0px 5px black
+      - color: 'rgba(148, 148, 148)'
+      - padding: 5%
+      - text-transform: capitalize
+      - '--mdc-ripple-press-opacity': 0.5
+      - '--mdc-ripple-color': black
+    label:
+      - color: 'rgba(148, 148, 148)'
+    icon:
+      - color: 'rgba(148, 148, 148)'
+    name:
+      - color: 'rgba(148, 148, 148)'
+      - padding-top: 25%
+      - font-size: 14px        
+    grid:
+      - grid-template-areas: '"i" "n" "slider"'
+      - grid-template-columns: 100%
+      - grid-template-rows: 50% auto
+    img_cell:
+      - justify-content: center
+      - align-items: center
+      - padding-top: 30%   
+#################################################################
+#                                                               #
+#              input_select.alarm_mode                          #
+#################################################################
+input_select.alarm_mode:
+  aspect_ratio: 1/1
+  color: 'rgb(5, 147, 255)'
+  tap_action:
+    action: none
+  double_tap_action:
+    action: more-info
+    haptic: heavy
+  hold_action:
+    action: more-info
+  show_label: false
+  show_name: true
+  show_state: false
+  size: 50%
+  state:
+    - icon: 'mdi:fire'
+      name: Fire  
+      styles:
+        card:
+          - '--paper-card-background-color': 'rgba(--accent-color)'
+          - box-shadow: '0px 0px 16px 4px  #faafaf'
+          - border-radius: 10px
+          - text-shadow: 0px 0px 5px black
+        label:
+          - color: 'var(--accent-color)'
+        icon:
+          - color: 'rgba(255, 76, 48)'
+        name:
+          - color: 'var(--accent-color)'
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'Fire'
+    - icon: 'mdi:skull-crossbones'
+      name: CO2  
+      styles:
+        card:
+          - '--paper-card-background-color': 'rgba(--accent-color)'
+          - box-shadow: '0px 0px 16px 4px  #faafaf'
+          - border-radius: 10px
+          - text-shadow: 0px 0px 5px black
+        label:
+          - color: 'var(--accent-color)'
+        icon:
+          - color: 'rgba(255, 76, 48)'
+        name:
+          - color: 'var(--accent-color)'
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'CO2'
+    - icon: 'mdi:battery-low'
+      name: Master.Smk  
+      styles:
+        card:
+          - '--paper-card-background-color': 'rgba(--accent-color)'
+          - box-shadow: '0px 0px 16px 4px  #faafaf'
+          - border-radius: 10px
+          - text-shadow: 0px 0px 5px black
+        label:
+          - color: 'var(--accent-color)'
+        icon:
+          - color: 'rgba(255, 76, 48)'
+        name:
+          - color: 'var(--accent-color)'
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'master.fireco.alarm.battery.not.ok'
+    - icon: 'mdi:battery-low'
+      name: Office.Smk  
+      styles:
+        card:
+          - '--paper-card-background-color': 'rgba(--accent-color)'
+          - box-shadow: '0px 0px 16px 4px  #faafaf'
+          - border-radius: 10px
+          - text-shadow: 0px 0px 5px black
+        label:
+          - color: 'var(--accent-color)'
+        icon:
+          - color: 'rgba(255, 76, 48)'
+        name:
+          - color: 'var(--accent-color)'
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'office.fireco.alarm.battery.not.ok'
+    - icon: 'mdi:home-assistant'
+      name: Clear  
+      styles:
+        card:
+          - '--paper-card-background-color': 'var(--secondary-background-color)'
+          - box-shadow: '0px 0px 1px 1px var(--secondary-background-color)'
+          - border-radius: 10px
+        label:
+          - color: var(--secondary-text-color)
+        icon:
+          - color: var(--secondary-text-color)
+        name:
+          - color: var(--secondary-text-color)
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'Clear'
+  styles:
+    card:
+      - color: 'rgb(5, 147, 255)'
+      - padding: 5%
+      - text-transform: capitalize
+      - '--mdc-ripple-press-opacity': 0.5
+      - '--mdc-ripple-color': black
+    grid:
+      - grid-template-areas: '"i" "n" "slider"'
+      - grid-template-columns: 100%
+      - grid-template-rows: 50% auto
+    img_cell:
+      - justify-content: center
+      - align-items: center
+      - padding-top: 13%
+#################################################################
+#                                                               #
+#                 input_select.guest_mode                       #
+#################################################################
+input_select.guest_mode:
+  aspect_ratio: 1/1
+  color: 'rgb(5, 147, 255)'
+  tap_action:
+    action: none
+  double_tap_action:
+    action: more-info
+    haptic: heavy
+  hold_action:
+    action: more-info
+  show_label: false
+  show_name: true
+  show_state: false
+  size: 50%
+  state:
+    - icon: 'mdi:briefcase-plus'
+      name: Guest  
+      styles:
+        card:
+          - '--paper-card-background-color': 'var(--accent-color)'
+          - box-shadow: '0px 0px 13px 3px var(--box-shadow)'
+          - border-radius: 10px
+          - text-shadow: 0px 0px 5px black
+        label:
+          - color: 'var(--accent-color)'
+        icon:
+          - color: 'var(--accent-color)'
+        name:
+          - color: 'var(--accent-color)'
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'Guest.Home'
+    - icon: 'mdi:briefcase-minus'
+      name: Guest  
+      styles:
+        card:
+          - '--paper-card-background-color': 'var(--accent-color)'
+          - box-shadow: '0px 0px 13px 3px var(--box-shadow)'
+          - border-radius: 10px
+          - text-shadow: 0px 0px 5px black
+        label:
+          - color: 'var(--accent-color)'
+        icon:
+          - color: 'var(--accent-color)'
+        name:
+          - color: 'var(--accent-color)'
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'Guest.Away'
+    - icon: 'mdi:briefcase-remove'
+      name: Guest  
+      styles:
+        card:
+          - '--paper-card-background-color': 'var(--secondary-background-color)'
+          - box-shadow: '0px 0px 1px 1px var(--secondary-background-color)'
+          - border-radius: 10px
+        label:
+          - color: var(--secondary-text-color)
+        icon:
+          - color: var(--secondary-text-color)
+        name:
+          - color: var(--secondary-text-color)
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'No.Guest'
+  styles:
+    card:
+      - color: 'rgb(5, 147, 255)'
+      - padding: 5%
+      - text-transform: capitalize
+      - '--mdc-ripple-press-opacity': 0.5
+      - '--mdc-ripple-color': black
+    grid:
+      - grid-template-areas: '"i" "n" "slider"'
+      - grid-template-columns: 100%
+      - grid-template-rows: 50% auto
+    img_cell:
+      - justify-content: center
+      - align-items: center
+      - padding-top: 13%
+#################################################################
+#                                                               #
+#                 input_select.pool_state                        #
+#################################################################
+input_select.pool_state:
+  aspect_ratio: 1/1
+  color: 'rgb(5, 147, 255)'
+  tap_action:
+    action: more-info
+  double_tap_action:
+    action: more-info
+    haptic: heavy
+  hold_action:
+    action: more-info
+  show_label: true
+  show_name: true
+  show_state: false
+  size: 50%
+  state:
+    - icon: 'mdi:swim'
+      name: Swim  
+      styles:
+        card:
+          - '--paper-card-background-color': 'var(--secondary-background-color)'
+          - box-shadow: '0px 0px 1px 1px var(--secondary-background-color)'
+          - border-radius: 10px
+        label:
+          - color: var(--secondary-text-color)
+        icon:
+          - color: var(--secondary-text-color)
+        name:
+          - color: var(--secondary-text-color)
+          - padding-top: 8%
+          - font-size: 14px
+      value: 'Swim'
+    - icon: 'mdi:waterfall'
+      name: Waterfall 
+      styles:
+        card:
+          - '--paper-card-background-color': 'var(--secondary-background-color)'
+          - box-shadow: '0px 0px 1px 1px var(--secondary-background-color)'
+          - border-radius: 10px
+        label:
+          - color: var(--secondary-text-color)
+        icon:
+          - color: var(--secondary-text-color)
+        name:
+          - color: var(--secondary-text-color)
+          - padding-top: 8%
+          - font-size: 14px
+      value: 'Waterfall'
+    - icon: 'mdi:waves'
+      name: Skimmer  
+      styles:
+        card:
+          - '--paper-card-background-color': 'var(--secondary-background-color)'
+          - box-shadow: '0px 0px 1px 1px var(--secondary-background-color)'
+          - border-radius: 10px
+        label:
+          - color: var(--secondary-text-color)
+        icon:
+          - color: var(--secondary-text-color)
+        name:
+          - color: var(--secondary-text-color)
+          - padding-top: 8%
+          - font-size: 14px
+      value: 'Skimmer'
+    - icon: 'mdi:coolant-temperature'
+      name: Pool Heater
+      styles:
+        card:
+          - '--paper-card-background-color': 'var(--secondary-background-color)'
+          - box-shadow: '0px 0px 1px 1px var(--secondary-background-color)'
+          - border-radius: 10px
+        label:
+          - color: var(--secondary-text-color)
+        icon:
+          - color: var(--secondary-text-color)
+        name:
+          - color: var(--secondary-text-color)
+          - padding-top: 8%
+          - font-size: 14px
+      value: 'PoolHeater'
+    - icon: 'mdi:coolant-temperature'
+      name: Spa
+      styles:
+        card:
+          - '--paper-card-background-color': 'var(--secondary-background-color)'
+          - box-shadow: '0px 0px 1px 1px var(--secondary-background-color)'
+          - border-radius: 10px
+        label:
+          - color: var(--secondary-text-color)
+        icon:
+          - color: var(--secondary-text-color)
+        name:
+          - color: var(--secondary-text-color)
+          - padding-top: 8%
+          - font-size: 14px
+      value: 'Spa'
+    - icon: 'mdi:water-pump-off'
+      name: OFF 
+      styles:
+        card:
+          - '--paper-card-background-color': 'var(--secondary-background-color)'
+          - box-shadow: '0px 0px 1px 1px var(--secondary-background-color)'
+          - border-radius: 10px
+        label:
+          - color: var(--secondary-text-color)
+        icon:
+          - color: var(--secondary-text-color)
+        name:
+          - color: var(--secondary-text-color)
+          - padding-top: 8%
+          - font-size: 14px
+      value: 'OFF'
+    - icon: 'mdi:sleep'
+      name: Sleep 
+      styles:
+        card:
+          - '--paper-card-background-color': 'var(--secondary-background-color)'
+          - box-shadow: '0px 0px 1px 1px var(--secondary-background-color)'
+          - border-radius: 10px
+        label:
+          - color: var(--secondary-text-color)
+        icon:
+          - color: var(--secondary-text-color)
+        name:
+          - color: var(--secondary-text-color)
+          - padding-top: 8%
+          - font-size: 14px
+      value: 'Sleep'
+    - icon: 'mdi:pool-thermometer'
+      name: WaterLevel 
+      styles:
+        card:
+          - '--paper-card-background-color': 'var(--secondary-background-color)'
+          - box-shadow: '0px 0px 1px 1px var(--secondary-background-color)'
+          - border-radius: 10px
+        label:
+          - color: var(--secondary-text-color)
+        icon:
+          - color: var(--secondary-text-color)
+        name:
+          - color: var(--secondary-text-color)
+          - padding-top: 8%
+          - font-size: 14px
+      value: 'WaterLevel'
+  styles:
+    card:
+      - color: 'rgb(5, 147, 255)'
+      - padding: 5%
+      - text-transform: capitalize
+      - '--mdc-ripple-press-opacity': 0.5
+      - '--mdc-ripple-color': black
+    grid:
+      - grid-template-areas: '"i" "n" "slider"'
+      - grid-template-columns: 100%
+      - grid-template-rows: 50% auto
+    img_cell:
+      - justify-content: center
+      - align-items: center
+      - padding-top: 13%
+#################################################################
+#                                                               #
+#                 input_select.fph                              #
+#################################################################
+input_select.fph:
+  aspect_ratio: 1/1
+  color: 'rgb(5, 147, 255)'
+  tap_action:
+    action: more-info
+  double_tap_action:
+    action: more-info
+    haptic: heavy
+  hold_action:
+    action: more-info
+  show_label: true
+  show_name: true
+  show_state: false
+  size: 50%
+  state:
+    - icon: 'mdi:recycle'
+      name: FPH  
+      styles:
+        card:
+          - '--paper-card-background-color': 'rgba(--accent-color)'
+          - box-shadow: '0px 0px 16px 4px  #6fa8dc' # LIGHT BLUE
+          - border-radius: 10px
+          - text-shadow: 0px 0px 5px black
+        label:
+          - color: 'var(--accent-color)'
+        icon:
+          - color: 'var(--accent-color)'
+        name:
+          - color: 'var(--accent-color)'
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'FPH'
+    - icon: 'mdi:currency-usd'
+      name: $PH 
+      styles:
+        card:
+          - '--paper-card-background-color': 'rgba(--accent-color)'
+          - box-shadow: '0px 0px 16px 4px  #93c47d'  # LIGHT GREEN
+          - border-radius: 10px
+          - text-shadow: 0px 0px 5px black
+        label:
+          - color: 'var(--accent-color)'
+        icon:
+          - color: 'var(--accent-color)'
+        name:
+          - color: 'var(--accent-color)'
+          - padding-top: 7%
+          - font-size: 14px
+      value: '$PH'
+    - icon: 'mdi:pause'
+      name: Idle  
+      styles:
+        card:
+          - '--paper-card-background-color': 'var(--secondary-background-color)' #set no "ON" indication
+          - box-shadow: '0px 0px 1px 1px var(--secondary-background-color)'
+          - border-radius: 10px
+        label:
+          - color: var(--secondary-text-color)
+        icon:
+          - color: var(--secondary-text-color)
+        name:
+          - color: var(--secondary-text-color)
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'IDLE'
+    - icon: 'mdi:approximately-equal'
+      name: NPH
+      styles:
+        card:
+          - '--paper-card-background-color': 'var(--secondary-background-color)' #set no "ON" indication
+          - box-shadow: '0px 0px 1px 1px var(--secondary-background-color)'
+          - border-radius: 10px
+        label:
+          - color: var(--secondary-text-color)
+        icon:
+          - color: var(--secondary-text-color)
+        name:
+          - color: var(--secondary-text-color)
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'NPH'
+    - icon: 'mdi:thermometer-alert'
+      name: HOT  
+      styles:
+        card:
+          - '--paper-card-background-color': 'rgba(--accent-color)'
+          - box-shadow: '0px 0px 16px 4px  #e06666'
+          - border-radius: 10px
+          - text-shadow: 0px 0px 5px black
+        label:
+          - color: 'var(--accent-color)'
+        icon:
+          - color: 'rgba(255, 76, 48)'
+        name:
+          - color: 'var(--accent-color)'
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'HOT'
+  styles:
+    card:
+      - color: 'rgb(5, 147, 255)'
+      - padding: 5%
+      - text-transform: capitalize
+      - '--mdc-ripple-press-opacity': 0.5
+      - '--mdc-ripple-color': black
+    grid:
+      - grid-template-areas: '"i" "n" "slider"'
+      - grid-template-columns: 100%
+      - grid-template-rows: 50% auto
+    img_cell:
+      - justify-content: center
+      - align-items: center
+      - padding-top: 13%
+#################################################################
+#                                                               #
+#             input_select_security_mode                        #
+#################################################################
+input_select_security_mode:
+  aspect_ratio: 1/1
+  color: 'rgb(5, 147, 255)'
+  tap_action:
+    action: none
+  double_tap_action:
+    action: more-info
+    haptic: heavy
+  hold_action:
+    action: more-info
+  show_label: true
+  show_name: true
+  show_state: false
+  size: 50%
+  state:
+    - icon: 'mdi:shield-lock'
+      name: Away  
+      styles:
+        card:
+          - '--paper-card-background-color': 'var(--accent-color)'
+          - box-shadow: '0px 0px 13px 3px var(--box-shadow)'
+          - border-radius: 10px
+          - text-shadow: 0px 0px 5px black
+        label:
+          - color: 'var(--accent-color)'
+        icon:
+          - color: 'var(--accent-color)'
+        name:
+          - color: 'var(--accent-color)'
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'Away'
+    - icon: 'mdi:shield-account'
+      name: Graham
+      styles:
+        card:
+          - '--paper-card-background-color': 'var(--accent-color)'
+          - box-shadow: '0px 0px 13px 3px var(--box-shadow)'
+          - border-radius: 10px
+          - text-shadow: 0px 0px 5px black
+        label:
+          - color: 'var(--accent-color)'
+        icon:
+          - color: 'var(--accent-color)'
+        name:
+          - color: 'var(--accent-color)'
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'G.Home'
+    - icon: 'mdi:account-arrow-right'
+      name: Graham  
+      styles:
+        card:
+          - '--paper-card-background-color': 'var(--accent-color)'
+          - box-shadow: '0px 0px 13px 3px var(--box-shadow)'
+          - border-radius: 10px
+          - text-shadow: 0px 0px 5px black
+        label:
+          - color: 'var(--accent-color)'
+        icon:
+          - color: 'var(--accent-color)'
+        name:
+          - color: 'var(--accent-color)'
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'G.Away'
+    - icon: 'mdi:shield-account'
+      name: Christina
+      styles:
+        card:
+          - '--paper-card-background-color': 'var(--accent-color)'
+          - box-shadow: '0px 0px 13px 3px var(--box-shadow)'
+          - border-radius: 10px
+          - text-shadow: 0px 0px 5px black
+        label:
+          - color: 'var(--accent-color)'
+        icon:
+          - color: 'var(--accent-color)'
+        name:
+          - color: 'var(--accent-color)'
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'C.Home'
+    - icon: 'mdi:account-arrow-right'
+      name: Christina
+      styles:
+        card:
+          - '--paper-card-background-color': 'var(--accent-color)'
+          - box-shadow: '0px 0px 13px 3px var(--box-shadow)'
+          - border-radius: 10px
+          - text-shadow: 0px 0px 5px black
+        label:
+          - color: 'var(--accent-color)'
+        icon:
+          - color: 'var(--accent-color)'
+        name:
+          - color: 'var(--accent-color)'
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'C.Away'
+    - icon: 'mdi:shield-home'
+      name: Home 
+      styles:
+        card:
+          - '--paper-card-background-color': 'var(--secondary-background-color)'
+          - box-shadow: '0px 0px 1px 1px var(--secondary-background-color)'
+          - border-radius: 10px
+        label:
+          - color: var(--secondary-text-color)
+        icon:
+          - color: var(--secondary-text-color)
+        name:
+          - color: var(--secondary-text-color)
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'Home'
+  styles:
+    card:
+      - color: 'rgb(5, 147, 255)'
+      - padding: 5%
+      - text-transform: capitalize
+      - '--mdc-ripple-press-opacity': 0.5
+      - '--mdc-ripple-color': black
+    grid:
+      - grid-template-areas: '"i" "n" "slider"'
+      - grid-template-columns: 100%
+      - grid-template-rows: 50% auto
+    img_cell:
+      - justify-content: center
+      - align-items: center
+      - padding-top: 13%
+#################################################################
+#                                                               #
+#             input_select.time_triggers                        #
+#################################################################
+input_select.time_triggers:
+  aspect_ratio: 1/1
+  color: 'rgb(5, 147, 255)'
+  tap_action:
+    action: none
+  double_tap_action:
+    action: more-info
+    haptic: heavy
+  hold_action:
+    action: more-info
+  show_label: true
+  show_name: true
+  show_state: false
+  size: 50%
+  state:
+    - icon: 'mdi:theme-light-dark'
+      name: Rise  
+      styles:
+        card:
+          - '--paper-card-background-color': 'var(--accent-color)'
+          - box-shadow: '0px 0px 13px 3px var(--box-shadow)'
+          - border-radius: 10px
+          - text-shadow: 0px 0px 5px black
+        label:
+          - color: 'var(--accent-color)'
+        icon:
+          - color: 'var(--accent-color)'
+        name:
+          - color: 'var(--accent-color)'
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'sunrise'
+    - icon: 'mdi:weather-sunset-up'
+      name: Up  
+      styles:
+        card:
+          - '--paper-card-background-color': 'var(--accent-color)'
+          - box-shadow: '0px 0px 13px 3px var(--box-shadow)'
+          - border-radius: 10px
+          - text-shadow: 0px 0px 5px black
+        label:
+          - color: 'var(--accent-color)'
+        icon:
+          - color: 'var(--accent-color)'
+        name:
+          - color: 'var(--accent-color)'
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'sunrise.end'
+    - icon: 'mdi:white-balance-sunny'
+      name: Day
+      styles:
+        card:
+          - '--paper-card-background-color': 'var(--accent-color)'
+          - box-shadow: '0px 0px 13px 3px var(--box-shadow)'
+          - border-radius: 10px
+          - text-shadow: 0px 0px 5px black
+        label:
+          - color: 'var(--accent-color)'
+        icon:
+          - color: 'var(--accent-color)'
+        name:
+          - color: 'var(--accent-color)'
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'day.0800'
+    - icon: 'mdi:white-balance-sunny'
+      name: Day
+      styles:
+        card:
+          - '--paper-card-background-color': 'var(--accent-color)'
+          - box-shadow: '0px 0px 13px 3px var(--box-shadow)'
+          - border-radius: 10px
+          - text-shadow: 0px 0px 5px black
+        label:
+          - color: 'var(--accent-color)'
+        icon:
+          - color: 'var(--accent-color)'
+        name:
+          - color: 'var(--accent-color)'
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'day.0900'
+    - icon: 'mdi:white-balance-sunny'
+      name: Solar
+      styles:
+        card:
+          - '--paper-card-background-color': 'var(--accent-color)'
+          - box-shadow: '0px 0px 13px 3px var(--box-shadow)'
+          - border-radius: 10px
+          - text-shadow: 0px 0px 5px black
+        label:
+          - color: 'var(--accent-color)'
+        icon:
+          - color: 'var(--accent-color)'
+        name:
+          - color: 'var(--accent-color)'
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'solar.noon'
+    - icon: 'mdi:white-balance-sunny'
+      name: Afternoon
+      styles:
+        card:
+          - '--paper-card-background-color': 'var(--accent-color)'
+          - box-shadow: '0px 0px 13px 3px var(--box-shadow)'
+          - border-radius: 10px
+          - text-shadow: 0px 0px 5px black
+        label:
+          - color: 'var(--accent-color)'
+        icon:
+          - color: 'var(--accent-color)'
+        name:
+          - color: 'var(--accent-color)'
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'afternoon'
+    - icon: 'mdi:weather-sunset-down'
+      name: Start
+      styles:
+        card:
+          - '--paper-card-background-color': 'var(--accent-color)'
+          - box-shadow: '0px 0px 13px 3px var(--box-shadow)'
+          - border-radius: 10px
+          - text-shadow: 0px 0px 5px black
+        label:
+          - color: 'var(--accent-color)'
+        icon:
+          - color: 'var(--accent-color)'
+        name:
+          - color: 'var(--accent-color)'
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'sunset.start'
+    - icon: 'mdi:weather-sunset'
+      name: Sunset  
+      styles:
+        card:
+          - '--paper-card-background-color': 'var(--accent-color)'
+          - box-shadow: '0px 0px 13px 3px var(--box-shadow)'
+          - border-radius: 10px
+          - text-shadow: 0px 0px 5px black
+        label:
+          - color: 'var(--accent-color)'
+        icon:
+          - color: 'var(--accent-color)'
+        name:
+          - color: 'var(--accent-color)'
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'sunset'
+    - icon: 'mdi:weather-night-partly-cloudy'
+      name: Dusk
+      styles:
+        card:
+          - '--paper-card-background-color': 'var(--accent-color)'
+          - box-shadow: '0px 0px 13px 3px var(--box-shadow)'
+          - border-radius: 10px
+          - text-shadow: 0px 0px 5px black
+        label:
+          - color: 'var(--accent-color)'
+        icon:
+          - color: 'var(--accent-color)'
+        name:
+          - color: 'var(--accent-color)'
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'dusk'
+    - icon: 'mdi:weather-night-partly-cloudy'
+      name: Nautical
+      styles:
+        card:
+          - '--paper-card-background-color': 'var(--accent-color)'
+          - box-shadow: '0px 0px 13px 3px var(--box-shadow)'
+          - border-radius: 10px
+          - text-shadow: 0px 0px 5px black
+        label:
+          - color: 'var(--accent-color)'
+        icon:
+          - color: 'var(--accent-color)'
+        name:
+          - color: 'var(--accent-color)'
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'nautical.dusk'
+    - icon: 'mdi:weather-night'
+      name: Night 
+      styles:
+        card:
+          - '--paper-card-background-color': 'var(--secondary-background-color)'
+          - box-shadow: '0px 0px 1px 1px var(--secondary-background-color)'
+          - border-radius: 10px
+        label:
+          - color: var(--secondary-text-color)
+        icon:
+          - color: var(--secondary-text-color)
+        name:
+          - color: var(--secondary-text-color)
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'night'
+    - icon: 'mdi:weather-night-partly-cloudy'
+      name: Wnd Dn 
+      styles:
+        card:
+          - '--paper-card-background-color': 'var(--secondary-background-color)'
+          - box-shadow: '0px 0px 1px 1px var(--secondary-background-color)'
+          - border-radius: 10px
+        label:
+          - color: var(--secondary-text-color)
+        icon:
+          - color: var(--secondary-text-color)
+        name:
+          - color: var(--secondary-text-color)
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'wind.down.2200'
+    - icon: 'mdi:star-shooting-outline'
+      name: Late 
+      styles:
+        card:
+          - '--paper-card-background-color': 'var(--secondary-background-color)'
+          - box-shadow: '0px 0px 1px 1px var(--secondary-background-color)'
+          - border-radius: 10px
+        label:
+          - color: var(--secondary-text-color)
+        icon:
+          - color: var(--secondary-text-color)
+        name:
+          - color: var(--secondary-text-color)
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'night.2300'
+  styles:
+    card:
+      - color: 'rgb(5, 147, 255)'
+      - padding: 5%
+      - text-transform: capitalize
+      - '--mdc-ripple-press-opacity': 0.5
+      - '--mdc-ripple-color': black
+    grid:
+      - grid-template-areas: '"i" "n" "slider"'
+      - grid-template-columns: 100%
+      - grid-template-rows: 50% auto
+    img_cell:
+      - justify-content: center
+      - align-items: center
+      - padding-top: 13%
+#################################################################
+#                                                               #
+#              input_select.battery_levels                      #
+#################################################################
+input_select.battery_levels:
+  aspect_ratio: 1/1
+  color: 'rgb(5, 147, 255)'
+  tap_action:
+    action: none
+  double_tap_action:
+    action: more-info
+    haptic: heavy
+  hold_action:
+    action: more-info
+  show_label: false
+  show_name: true
+  show_state: false
+  size: 50%
+  state:
+    - icon: 'mdi:battery-low'
+      name: Garage1  
+      styles:
+        card:
+          - '--paper-card-background-color': 'rgba(--accent-color)'
+          - box-shadow: '0px 0px 16px 4px  #faafaf'
+          - border-radius: 10px
+          - text-shadow: 0px 0px 5px black
+        label:
+          - color: 'var(--accent-color)'
+        icon:
+          - color: 'rgba(255, 76, 48)'
+        name:
+          - color: 'var(--accent-color)'
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'garage.motion.1.battery.not.ok'
+    - icon: 'mdi:battery-low'
+      name: Garage2
+      styles:
+        card:
+          - '--paper-card-background-color': 'rgba(--accent-color)'
+          - box-shadow: '0px 0px 16px 4px  #faafaf'
+          - border-radius: 10px
+          - text-shadow: 0px 0px 5px black
+        label:
+          - color: 'var(--accent-color)'
+        icon:
+          - color: 'rgba(255, 76, 48)'
+        name:
+          - color: 'var(--accent-color)'
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'garage.motion.2.battery.not.ok'
+    - icon: 'mdi:battery-low'
+      name: Lanai
+      styles:
+        card:
+          - '--paper-card-background-color': 'rgba(--accent-color)'
+          - box-shadow: '0px 0px 16px 4px  #faafaf'
+          - border-radius: 10px
+          - text-shadow: 0px 0px 5px black
+        label:
+          - color: 'var(--accent-color)'
+        icon:
+          - color: 'rgba(255, 76, 48)'
+        name:
+          - color: 'var(--accent-color)'
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'lanai.motion.battery.not.ok'
+    - icon: 'mdi:battery-low'
+      name: Laundry 
+      styles:
+        card:
+          - '--paper-card-background-color': 'rgba(--accent-color)'
+          - box-shadow: '0px 0px 16px 4px  #faafaf'
+          - border-radius: 10px
+          - text-shadow: 0px 0px 5px black
+        label:
+          - color: 'var(--accent-color)'
+        icon:
+          - color: 'rgba(255, 76, 48)'
+        name:
+          - color: 'var(--accent-color)'
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'laundry.motion.battery.not.ok'
+    - icon: 'mdi:battery-low'
+      name: Portico 
+      styles:
+        card:
+          - '--paper-card-background-color': 'rgba(--accent-color)'
+          - box-shadow: '0px 0px 16px 4px  #faafaf'
+          - border-radius: 10px
+          - text-shadow: 0px 0px 5px black
+        label:
+          - color: 'var(--accent-color)'
+        icon:
+          - color: 'rgba(255, 76, 48)'
+        name:
+          - color: 'var(--accent-color)'
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'portico.motion.battery.not.ok'
+    - icon: 'mdi:battery-low'
+      name: SD.Motion  
+      styles:
+        card:
+          - '--paper-card-background-color': 'rgba(--accent-color)'
+          - box-shadow: '0px 0px 16px 4px  #faafaf'
+          - border-radius: 10px
+          - text-shadow: 0px 0px 5px black
+        label:
+          - color: 'var(--accent-color)'
+        icon:
+          - color: 'rgba(255, 76, 48)'
+        name:
+          - color: 'var(--accent-color)'
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'side.door.motion.battery.not.ok'
+    - icon: 'mdi:battery-low'
+      name: ATTIC  
+      styles:
+        card:
+          - '--paper-card-background-color': 'rgba(--accent-color)'
+          - box-shadow: '0px 0px 16px 4px  #faafaf'
+          - border-radius: 10px
+          - text-shadow: 0px 0px 5px black
+        label:
+          - color: 'var(--accent-color)'
+        icon:
+          - color: 'rgba(255, 76, 48)'
+        name:
+          - color: 'var(--accent-color)'
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'attic.motion.battery.not.ok'
+    - icon: 'mdi:emoticon-dead'
+      name: MIA 
+      styles:
+        card:
+          - '--paper-card-background-color': 'rgba(--accent-color)'
+          - box-shadow: '0px 0px 16px 4px  #faafaf'
+          - border-radius: 10px
+          - text-shadow: 0px 0px 5px black
+        label:
+          - color: 'var(--accent-color)'
+        icon:
+          - color: 'rgba(255, 76, 48)'
+        name:
+          - color: 'var(--accent-color)'
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'MIA'
+    - icon: 'mdi:battery-high'
+      name: OK  
+      styles:
+        card:
+          - '--paper-card-background-color': 'var(--secondary-background-color)'
+          - box-shadow: '0px 0px 1px 1px var(--secondary-background-color)'
+          - border-radius: 10px
+        label:
+          - color: var(--secondary-text-color)
+        icon:
+          - color: var(--secondary-text-color)
+        name:
+          - color: var(--secondary-text-color)
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'ok'
+  styles:
+    card:
+      - color: 'rgb(5, 147, 255)'
+      - padding: 5%
+      - text-transform: capitalize
+      - '--mdc-ripple-press-opacity': 0.5
+      - '--mdc-ripple-color': black
+    grid:
+      - grid-template-areas: '"i" "n" "slider"'
+      - grid-template-columns: 100%
+      - grid-template-rows: 50% auto
+    img_cell:
+      - justify-content: center
+      - align-items: center
+      - padding-top: 13%
+###########
+#################################################################
+#                                                               #
+#                   $PH_button                                #
+#             (derived from slide.dim_button)                   #
+#                USED ONLY FOR SMALL BUTTONS                    #
+#################################################################
+$PH_button:
+  aspect_ratio: 1/1
+  color: 'rgb(5, 147, 255)'
+  hold_action:
+    action: more-info
+  show_label: true
+  show_name: true
+  show_state: false
+  size: 50%
+  state:
+    - styles:
+        card:
+          - '--paper-card-background-color': 'var(--accent-color)'
+          - box-shadow: '0px 0px 13px 3px var(--box-shadow)'
+          - border-radius: 10px
+          - text-shadow: 0px 0px 5px black
+        label:
+          - color: 'var(--accent-color)'
+        icon:
+          - color: 'var(--accent-color)'
+        name:
+          - color: 'var(--accent-color)'
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'on'
+    - styles:
+        card:
+          - '--paper-card-background-color': 'var(--secondary-background-color)'
+          - box-shadow: '0px 0px 1px 1px var(--secondary-background-color)'
+          - border-radius: 10px
+        label:
+          - color: var(--secondary-text-color)
+        icon:
+          - color: var(--secondary-text-color)
+        name:
+          - color: var(--secondary-text-color)
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'off'
+  styles:
+    card:
+      - color: 'rgb(5, 147, 255)'
+      - padding: 5%
+      - text-transform: capitalize
+      - '--mdc-ripple-press-opacity': 0.5
+      - '--mdc-ripple-color': black
+    grid:
+      - grid-template-areas: '"i" "n" "slider"'
+      - grid-template-columns: 100%
+      - grid-template-rows: 50% auto
+    img_cell:
+      - justify-content: center
+      - align-items: center
+      - padding-top: 13%
+  tap_action:
+    action: none 
+  double_tap_action:
+    action: toggle
+    haptic: heavy
+#################################################################
+#                                                               #
+#                        set_max_temp                           #
+#################################################################
+set_max_temp:
+  aspect_ratio: 1/1
+  color: 'rgba(148, 148, 148)'
+  tap_action:
+    action: none
+  double_tap_action:
+    action: more-info
+    haptic: heavy 
+  hold_action:
+    action: more-info
+  show_label: true
+  show_name: true
+  show_state: true
+  size: 50%
+  styles:
+    card:
+      - '--paper-card-background-color': 'var(--secondary-background-color)'
+      - box-shadow: '0px 0px 1px 1px var(--secondary-background-color)'
+      - border-radius: 10px
+      - text-shadow: 0px 0px 5px black
+      - color: 'rgba(148, 148, 148)'
+      - padding: 5%
+      - text-transform: capitalize
+      - '--mdc-ripple-press-opacity': 0.5
+      - '--mdc-ripple-color': black
+    label:
+      - color: var(--secondary-text-color)
+      - font-size: 10px  
+    icon:
+      - color: var(--secondary-text-color)
+      - padding-top: 15%
+    name:
+      - color: var(--secondary-text-color)
+      - padding-top: 1%
+      - font-size: 11px     
+    state:
+      - color: var(--secondary-text-color)
+      - font-size: 10px  
+#################################################################
+#                                                               #
+#                    pool_heat_select                           #
+#################################################################
+pool_heat_select:      
+  aspect_ratio: 1/1
+  color: 'rgba(148, 148, 148)'
+  tap_action:
+    action: none
+  double_tap_action:
+    action: more-info
+    haptic: heavy 
+  hold_action:
+    action: more-info
+  show_label: true
+  show_name: true
+  show_state: true
+  size: 40%
+  styles:
+    card:
+      - '--paper-card-background-color': 'var(--secondary-background-color)'
+      - box-shadow: '0px 0px 1px 1px var(--secondary-background-color)'
+      - border-radius: 10px
+      - text-shadow: 0px 0px 5px black
+      - color: 'rgba(148, 148, 148)'
+      - padding: 5%
+      - text-transform: capitalize
+      - '--mdc-ripple-press-opacity': 0.5
+      - '--mdc-ripple-color': black
+    label:
+      - color: var(--secondary-text-color)
+      - font-size: 10px  
+    icon:
+      - color: var(--secondary-text-color)
+      - padding-top: 15%
+    name:
+      - color: var(--secondary-text-color)
+      - padding-top: 1%
+      - font-size: 10px     
+    state:
+      - color: var(--secondary-text-color)
+      - font-size: 10px  
+#################################################################
+#                                                               #
+#                     curtain_button                            #
+#                                                               #
+#################################################################
+curtain_button:
+  aspect_ratio: 1/1
+  color: 'rgb(5, 147, 255)'
+  hold_action:
+    action: more-info
+  tap_action:
+    action: toggle
+    haptic: heavy
+  show_label: true
+  show_name: true
+  show_state: false
+  size: 50%
+  state:
+    - icon: 'mdi:curtains'
+      styles:    
+#        icon: 'mdi:curtains-closed'
+        card:
+          - '--paper-card-background-color': 'var(--accent-color)'
+          - box-shadow: '0px 0px 13px 3px var(--box-shadow)'
+          - border-radius: 10px
+          - text-shadow: 0px 0px 5px black
+        label:
+          - color: 'var(--accent-color)'
+        icon:
+          - color: 'var(--accent-color)'
+        name:
+          - color: 'var(--accent-color)'
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'closed'
+    - icon: 'mdi:curtains-closed'
+      styles:    
+#        icon: 'mdi:curtains'
+        card:
+          - '--paper-card-background-color': 'var(--secondary-background-color)'
+          - box-shadow: '0px 0px 1px 1px var(--secondary-background-color)'
+          - border-radius: 10px
+        label:
+          - color: var(--secondary-text-color)
+        icon:
+          - color: var(--secondary-text-color)
+        name:
+          - color: var(--secondary-text-color)
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'open'
+  styles:
+    card:
+      - color: 'rgb(5, 147, 255)'
+      - padding: 5%
+      - text-transform: capitalize
+      - '--mdc-ripple-press-opacity': 0.5
+      - '--mdc-ripple-color': black
+    grid:
+      - grid-template-areas: '"i" "n" "slider"'
+      - grid-template-columns: 100%
+      - grid-template-rows:  50% auto auto auto
+    img_cell:
+      - justify-content: center
+      - align-items: center
+      - padding-top: 13%
+#################################################################
+#                                                               #
+#               input_select.pool_heat_select--NOT USED         #
+#################################################################
+input_select.pool_heat_select:
+  aspect_ratio: 1/1
+  color: 'rgb(5, 147, 255)'
+  tap_action:
+    action: none
+  double_tap_action:
+    action: more-info
+    haptic: heavy
+  hold_action:
+    action: more-info
+  show_label: true
+  show_name: true
+  show_state: true
+  size: 50%
+  state:
+    - icon: 'mdi:recycle'
+      name: FPH  
+      styles:
+        card:
+          - '--paper-card-background-color': 'var(--secondary-background-color)' #set no "ON" indication
+          - box-shadow: '0px 0px 1px 1px var(--secondary-background-color)'
+          - border-radius: 10px
+        label:
+          - color: var(--secondary-text-color)
+          - font-size: 11px
+        icon:
+          - color: var(--secondary-text-color)
+          - padding-top: 15%
+        state:
+          - color: var(--secondary-text-color)
+          - font-size: 10px   
+        name:
+          - color: var(--secondary-text-color)
+#          - padding-top: 1%
+          - font-size: 12px
+      value: 'FPH'
+    - icon: 'mdi:currency-usd'
+      name: $PH 
+      styles:
+        card:
+          - '--paper-card-background-color': 'var(--secondary-background-color)' #set no "ON" indication
+          - box-shadow: '0px 0px 1px 1px var(--secondary-background-color)'
+          - border-radius: 10px
+        label:
+          - color: var(--secondary-text-color)
+        icon:
+          - color: var(--secondary-text-color)
+        name:
+          - color: var(--secondary-text-color)
+          - padding-top: 7%
+          - font-size: 14px
+      value: '$PH'
+    - icon: 'mdi:arrow-decision'
+      name: $+FPH
+      styles:
+        card:
+          - '--paper-card-background-color': 'var(--secondary-background-color)' #set no "ON" indication
+          - box-shadow: '0px 0px 1px 1px var(--secondary-background-color)'
+          - border-radius: 10px
+        label:
+          - color: var(--secondary-text-color)
+        icon:
+          - color: var(--secondary-text-color)
+        name:
+          - color: var(--secondary-text-color)
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'FPH+$PH'
+    - icon: 'mdi:set-none'
+      name: NONE
+      styles:
+        card:
+          - '--paper-card-background-color': 'var(--secondary-background-color)' #set no "ON" indication
+          - box-shadow: '0px 0px 1px 1px var(--secondary-background-color)'
+          - border-radius: 10px
+        label:
+          - color: var(--secondary-text-color)
+        icon:
+          - color: var(--secondary-text-color)
+        name:
+          - color: var(--secondary-text-color)
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'NONE'
+  styles:
+    card:
+      - color: 'rgb(5, 147, 255)'
+      - padding: 5%
+      - text-transform: capitalize
+      - '--mdc-ripple-press-opacity': 0.5
+      - '--mdc-ripple-color': black
+    grid:
+      - grid-template-areas: '"i" "n" "slider"'
+      - grid-template-columns: 100%
+      - grid-template-rows: 50% auto
+    img_cell:
+      - justify-content: center
+      - align-items: center
+      - padding-top: 13%
+#################################################################
+#                                                               #
+#                 input_select.fph_3                            #
+#################################################################
+input_select.fph_3:
+  aspect_ratio: 1/1
+  color: 'rgb(5, 147, 255)'
+  tap_action:
+    action: more-info
+  double_tap_action:
+    action: more-info
+    haptic: heavy
+  hold_action:
+    action: more-info
+  show_label: true
+  show_name: true
+  show_state: true
+  size: 40%
+  styles:
+    card:
+      - color: 'rgb(5, 147, 255)'
+      - padding: 5%
+      - text-transform: capitalize
+      - '--mdc-ripple-press-opacity': 0.5
+      - '--mdc-ripple-color': black
+    grid:
+      - grid-template-areas: '"i" "n" "slider"'
+      - grid-template-columns: 100%
+      - grid-template-rows: 50% auto
+    img_cell:
+      - justify-content: center
+      - align-items: center
+      - padding-top: 13%
+  state:
+    - icon: 'mdi:currency-usd'
+      name: $PH 
+      styles:
+        card:
+          - '--paper-card-background-color': 'rgba(--accent-color)'
+          - box-shadow: '0px 0px 16px 4px  #93c47d'  # LIGHT GREEN
+          - border-radius: 10px
+          - text-shadow: 0px 0px 5px black
+        label:
+          - color: 'var(--accent-color)'
+        icon:
+          - color: 'var(--accent-color)'
+        name:
+          - color: 'var(--accent-color)'
+          - padding-top: 7%
+          - font-size: 14px
+      value: '$PH'
+    - icon: 'mdi:pause'
+      name: Idle  
+      styles:
+        card:
+          - '--paper-card-background-color': 'var(--secondary-background-color)' #set no "ON" indication
+          - box-shadow: '0px 0px 1px 1px var(--secondary-background-color)'
+          - border-radius: 10px
+        label:
+          - color: var(--secondary-text-color)
+        icon:
+          - color: var(--secondary-text-color)
+        name:
+          - color: var(--secondary-text-color)
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'IDLE'
+    - icon: 'mdi:approximately-equal'
+      name: NPH
+      styles:
+        card:
+          - '--paper-card-background-color': 'var(--secondary-background-color)' #set no "ON" indication
+          - box-shadow: '0px 0px 1px 1px var(--secondary-background-color)'
+          - border-radius: 10px
+        label:
+          - color: var(--secondary-text-color)
+        icon:
+          - color: var(--secondary-text-color)
+        name:
+          - color: var(--secondary-text-color)
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'NPH'
+    - icon: 'mdi:thermometer-alert'
+      name: HOT  
+      styles:
+        card:
+          - '--paper-card-background-color': 'rgba(--accent-color)'
+          - box-shadow: '0px 0px 16px 4px  #e06666'
+          - border-radius: 10px
+          - text-shadow: 0px 0px 5px black
+        label:
+          - color: 'var(--accent-color)'
+        icon:
+          - color: 'rgba(255, 76, 48)'
+        name:
+          - color: 'var(--accent-color)'
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'HOT'
+    - icon: 'mdi:recycle'
+      name: FPH  
+      styles:
+        card:
+          - '--paper-card-background-color': 'rgba(--accent-color)'
+          - box-shadow: '0px 0px 16px 4px  #6fa8dc' # LIGHT BLUE
+          - border-radius: 10px
+          - text-shadow: 0px 0px 5px black
+        label:
+          - color: 'var(--accent-color)'
+        icon:
+          - color: 'var(--accent-color)'
+        name:
+          - color: 'var(--accent-color)'
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'FPH'
+input_select.fph_2: !include input_select.fph_2.yaml

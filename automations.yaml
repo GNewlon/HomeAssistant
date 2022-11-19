@@ -1,0 +1,84 @@
+- id: '1622760497607'
+  alias: GoodNite
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: group.goodnite
+    to: 'on'
+    from: 'off'
+    for: '1'
+  condition: []
+  action:
+  - service: lock.lock
+    target:
+      entity_id:
+      - lock.front_door_lock
+      - lock.side_door_lock
+  mode: single
+- id: '1622944493185'
+  alias: Inovelli Red Series LZW36 Fan Controller (ZWave-JS)
+  description: Guest Bedroom
+  use_blueprint:
+    path: cree8/zwave-js-inovelli-lzw36-fan-switch-dimmer.yaml
+    input:
+      inovelli_fan_switch: 5b49864863380cbc9957d45f4c9b1549
+      button_a:
+      - type: brightness_increase
+        device_id: 5b49864863380cbc9957d45f4c9b1549
+        entity_id: light.guest_room_fanlight_dimmer
+        domain: light
+      button_b:
+      - type: brightness_decrease
+        device_id: 5b49864863380cbc9957d45f4c9b1549
+        entity_id: light.guest_room_fanlight_dimmer
+        domain: light
+      button_a_held:
+      - type: brightness_increase
+        device_id: 5b49864863380cbc9957d45f4c9b1549
+        entity_id: light.guest_room_fanlight_dimmer
+        domain: light
+      button_b_held:
+      - device_id: 5f6262ec9631e199c0d64fd6918d3e7d
+        domain: fan
+        entity_id: fan.guest_fan
+        type: turn_off
+      button_d1:
+      - device_id: 5f6262ec9631e199c0d64fd6918d3e7d
+        domain: fan
+        entity_id: fan.guest_fan
+        type: turn_off
+      button_d2:
+      - type: turn_off
+        device_id: 5f6262ec9631e199c0d64fd6918d3e7d
+        entity_id: light.guest_fan
+        domain: light
+- id: '1622944772961'
+  alias: Inovelli Red Series LZW36 Fan Controller (ZWave-JS)
+  description: ''
+  use_blueprint:
+    path: cree8/zwave-js-inovelli-lzw36-fan-switch-dimmer.yaml
+    input:
+      inovelli_fan_switch: 5b49864863380cbc9957d45f4c9b1549
+      button_d1:
+      - device_id: 5f6262ec9631e199c0d64fd6918d3e7d
+        domain: fan
+        entity_id: fan.guest_fan
+        type: turn_on
+      button_d2:
+      - device_id: 5f6262ec9631e199c0d64fd6918d3e7d
+        domain: fan
+        entity_id: fan.guest_fan
+        type: turn_off
+      button_c2:
+      - device_id: ''
+        domain: ''
+        entity_id: ''
+      button_c1:
+      - type: toggle
+        device_id: 5f6262ec9631e199c0d64fd6918d3e7d
+        entity_id: light.guest_fan
+        domain: light
+      button_a:
+      - device_id: ''
+        domain: ''
+        entity_id: ''

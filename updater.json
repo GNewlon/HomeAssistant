@@ -1,0 +1,8 @@
+{
+  "channel": "stable",
+  "hassio": "209",
+  "homeassistant": "0.106.6",
+  "cli": "21",
+  "dns": "1",
+  "audio": "9"
+}

@@ -1,0 +1,44 @@
+#- alias: "sharkhouse MQTT State on HA Restart"
+#  trigger:
+#    platform: homeassistant
+#    event: start
+#  action:
+#   - service: mqtt.publish
+#     data:
+#        topic: cmnd/sharkhouse/backlog
+#        payload_template: power1 ;power2 ;power3 ;power4 ;power5; dimmer; state
+#- alias: "sharkhouse MQTT Powerretain: On/Off"
+#  trigger:
+#    platform: homeassistant
+#    event: start
+#  action:
+#    - service: mqtt.publish
+#      data:
+#        topic: cmnd/sharkhouse/backlog
+#        payload_template: SetOption19 1; Delay 100; State
+#- alias: "sharkhouse set timezone"
+#  trigger:
+#    platform: homeassistant
+#    event: start
+#  action:
+#    - service: mqtt.publish
+#      data:
+#        topic: cmnd/sharkhouse/backlog
+#        payload_template: Timezone -5; Delay 100
+- alias: "sharkhouse set Timeserver + Daylight Savings Time"
+# https://community.home-assistant.io/t/does-anyone-know-how-to-configure-tasmota-dst-st-settings/52861/13
+  trigger:
+    platform: homeassistant
+    event: start
+  action:
+    - service: mqtt.publish
+      data:
+        topic: cmnd/sharkhouse/backlog
+        payload_template: Backlog Time 0; Timezone 99; TimeDST 0,3,3,1,2,-240; TimeSTD 0,1,11,1,2,-300; NtpServer1 10.1.1.10; NtpServer2 10.1.1.10; NtpServer3 10.1.1.10
+        
+#        payload_template: ntpserver 10.1.1.10; time 0;timestd 0,1,11,1,2,-300; timedst 0,3,3,1,2,-240; Delay 100        
+
+#    - service: mqtt.publish
+#      data:
+#        topic: cmnd/sharkhouse/TimeZone
+#        payload_template: 99; Delay 100

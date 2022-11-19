@@ -1,0 +1,79 @@
+2022-11-19 11:47:16.690 WARNING (SyncWorker_0) [homeassistant.loader] We found a custom integration unifigateway which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2022-11-19 11:47:16.691 WARNING (SyncWorker_0) [homeassistant.loader] We found a custom integration xiaomi_cloud_map_extractor which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2022-11-19 11:47:16.691 WARNING (SyncWorker_0) [homeassistant.loader] We found a custom integration smartthinq_sensors which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2022-11-19 11:47:16.691 WARNING (SyncWorker_0) [homeassistant.loader] We found a custom integration nodered which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2022-11-19 11:47:16.692 WARNING (SyncWorker_0) [homeassistant.loader] We found a custom integration hacs which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2022-11-19 11:47:16.692 WARNING (SyncWorker_0) [homeassistant.loader] We found a custom integration xiaomi_miot which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2022-11-19 11:47:16.692 WARNING (SyncWorker_0) [homeassistant.loader] We found a custom integration tesla_custom which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2022-11-19 11:47:18.959 INFO (MainThread) [backoff] Backing off async_request(...) for 0.7s (tesla_wall_connector.exceptions.WallConnectorConnectionTimeoutError: Timeout while connecting to Wall Connector at 10.1.20.4)
+2022-11-19 11:47:19.183 WARNING (SyncWorker_10) [homeassistant.util.yaml.loader] YAML file /config/includes/main.yaml contains duplicate key "type". Check lines 786 and 787
+2022-11-19 11:47:20.502 ERROR (MainThread) [homeassistant.components.sensor] Error adding entities for domain sensor with platform github
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/helpers/entity_platform.py", line 428, in async_add_entities
+    await asyncio.gather(*tasks)
+  File "/usr/src/homeassistant/homeassistant/helpers/entity_platform.py", line 692, in _async_add_entity
+    await entity.add_to_platform_finish()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 789, in add_to_platform_finish
+    self.async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 545, in async_write_ha_state
+    self._async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 583, in _async_write_ha_state
+    state = self._stringify_state(available)
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 551, in _stringify_state
+    if (state := self.state) is None:
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 669, in state
+    value = self.native_value
+  File "/usr/src/homeassistant/homeassistant/components/github/sensor.py", line 214, in native_value
+    return self.entity_description.value_fn(self.coordinator.data)
+  File "/usr/src/homeassistant/homeassistant/components/github/sensor.py", line 101, in <lambda>
+    value_fn=lambda data: data["default_branch_ref"]["commit"]["message"][:255],
+TypeError: 'NoneType' object is not subscriptable
+2022-11-19 11:47:20.561 ERROR (MainThread) [homeassistant.components.sensor] Error while setting up github platform for sensor
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/helpers/entity_platform.py", line 289, in _async_setup_platform
+    await asyncio.gather(*pending)
+  File "/usr/src/homeassistant/homeassistant/helpers/entity_platform.py", line 428, in async_add_entities
+    await asyncio.gather(*tasks)
+  File "/usr/src/homeassistant/homeassistant/helpers/entity_platform.py", line 692, in _async_add_entity
+    await entity.add_to_platform_finish()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 789, in add_to_platform_finish
+    self.async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 545, in async_write_ha_state
+    self._async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 583, in _async_write_ha_state
+    state = self._stringify_state(available)
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 551, in _stringify_state
+    if (state := self.state) is None:
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 669, in state
+    value = self.native_value
+  File "/usr/src/homeassistant/homeassistant/components/github/sensor.py", line 214, in native_value
+    return self.entity_description.value_fn(self.coordinator.data)
+  File "/usr/src/homeassistant/homeassistant/components/github/sensor.py", line 101, in <lambda>
+    value_fn=lambda data: data["default_branch_ref"]["commit"]["message"][:255],
+TypeError: 'NoneType' object is not subscriptable
+2022-11-19 11:47:20.721 WARNING (MainThread) [homeassistant.components.unifiprotect.migrate] Failed to migate 1 reboot buttons
+2022-11-19 11:47:20.837 WARNING (MainThread) [homeassistant.components.unifiprotect.migrate] Failed to migrate 24 entities
+2022-11-19 11:47:21.711 ERROR (MainThread) [snitun.client.client_peer] Challenge/Response error with SniTun server (0 bytes read on a total of 32 expected bytes)
+2022-11-19 11:47:21.712 ERROR (MainThread) [hass_nabucasa.remote] Connection problem to snitun server
+2022-11-19 11:47:21.742 INFO (MainThread) [backoff] Backing off async_request(...) for 0.8s (tesla_wall_connector.exceptions.WallConnectorConnectionTimeoutError: Timeout while connecting to Wall Connector at 10.1.20.4)
+2022-11-19 11:47:22.996 WARNING (MainThread) [custom_components.xiaomi_miot] None device in xiaomi cloud: newlon@outlook.com
+2022-11-19 11:47:23.028 WARNING (MainThread) [homeassistant.config_entries] Config entry 'Roku-Office' for roku integration not ready yet: Invalid response from API: Error occurred while communicating with device; Retrying in background
+2022-11-19 11:47:23.544 INFO (MainThread) [backoff] Backing off async_request(...) for 0.3s (tesla_wall_connector.exceptions.WallConnectorConnectionTimeoutError: Timeout while connecting to Wall Connector at 10.1.20.4)
+2022-11-19 11:47:23.946 WARNING (MainThread) [aioesphomeapi.reconnect_logic] Can't connect to ESPHome API for powermeter-18c @ 10.1.30.71: Error connecting to ('10.1.30.71', 6053): [Errno 113] Connect call failed ('10.1.30.71', 6053)
+2022-11-19 11:47:24.857 ERROR (MainThread) [backoff] Giving up async_request(...) after 3 tries (tesla_wall_connector.exceptions.WallConnectorConnectionTimeoutError: Timeout while connecting to Wall Connector at 10.1.20.4)
+2022-11-19 11:47:24.859 WARNING (MainThread) [homeassistant.config_entries] Config entry 'Tesla Wall Connector' for tesla_wall_connector integration not ready yet: Could not fetch data from Tesla WallConnector at 10.1.20.4: Timeout; Retrying in background
+2022-11-19 11:47:29.433 WARNING (MainThread) [zigpy_znp.zigbee.application] Your network is using the insecure Zigbee2MQTT network key!
+2022-11-19 11:47:30.549 INFO (MainThread) [backoff] Backing off async_request(...) for 0.9s (tesla_wall_connector.exceptions.WallConnectorConnectionTimeoutError: Timeout while connecting to Wall Connector at 10.1.20.4)
+2022-11-19 11:47:30.613 WARNING (MainThread) [homeassistant.components.sonos.switch] Migration of Speech Enhancement switches on Living Room failed, manual cleanup required: ['switch.sonos_living_room_speech_enhancement', 'switch.sonos_living_room_speech_enhancement_2']
+2022-11-19 11:47:32.475 INFO (MainThread) [backoff] Backing off async_request(...) for 1.4s (tesla_wall_connector.exceptions.WallConnectorConnectionTimeoutError: Timeout while connecting to Wall Connector at 10.1.20.4)
+2022-11-19 11:47:34.921 ERROR (MainThread) [backoff] Giving up async_request(...) after 3 tries (tesla_wall_connector.exceptions.WallConnectorConnectionTimeoutError: Timeout while connecting to Wall Connector at 10.1.20.4)
+2022-11-19 11:47:46.113 INFO (MainThread) [backoff] Backing off async_request(...) for 0.5s (tesla_wall_connector.exceptions.WallConnectorConnectionTimeoutError: Timeout while connecting to Wall Connector at 10.1.20.4)
+2022-11-19 11:47:47.568 INFO (MainThread) [backoff] Backing off async_request(...) for 1.5s (tesla_wall_connector.exceptions.WallConnectorConnectionTimeoutError: Timeout while connecting to Wall Connector at 10.1.20.4)
+2022-11-19 11:47:50.056 ERROR (MainThread) [backoff] Giving up async_request(...) after 3 tries (tesla_wall_connector.exceptions.WallConnectorConnectionTimeoutError: Timeout while connecting to Wall Connector at 10.1.20.4)
+2022-11-19 11:48:11.059 INFO (MainThread) [backoff] Backing off async_request(...) for 0.9s (tesla_wall_connector.exceptions.WallConnectorConnectionTimeoutError: Timeout while connecting to Wall Connector at 10.1.20.4)
+2022-11-19 11:48:13.004 INFO (MainThread) [backoff] Backing off async_request(...) for 0.8s (tesla_wall_connector.exceptions.WallConnectorConnectionTimeoutError: Timeout while connecting to Wall Connector at 10.1.20.4)
+2022-11-19 11:48:14.835 ERROR (MainThread) [backoff] Giving up async_request(...) after 3 tries (tesla_wall_connector.exceptions.WallConnectorConnectionTimeoutError: Timeout while connecting to Wall Connector at 10.1.20.4)
+2022-11-19 11:48:55.838 INFO (MainThread) [backoff] Backing off async_request(...) for 0.6s (tesla_wall_connector.exceptions.WallConnectorConnectionTimeoutError: Timeout while connecting to Wall Connector at 10.1.20.4)
+2022-11-19 11:48:57.596 INFO (MainThread) [backoff] Backing off async_request(...) for 0.3s (tesla_wall_connector.exceptions.WallConnectorConnectionTimeoutError: Timeout while connecting to Wall Connector at 10.1.20.4)
+2022-11-19 11:48:58.944 INFO (MainThread) [backoff] Backing off async_request(...) for 0.6s (tesla_wall_connector.exceptions.WallConnectorConnectionTimeoutError: Timeout while connecting to Wall Connector at 10.1.20.4)
+2022-11-19 11:49:00.501 ERROR (MainThread) [backoff] Giving up async_request(...) after 3 tries (tesla_wall_connector.exceptions.WallConnectorConnectionTimeoutError: Timeout while connecting to Wall Connector at 10.1.20.4)
