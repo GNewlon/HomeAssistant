@@ -1,6 +1,6 @@
 #############################################
 #                                           #
-#               TAB: HOME                   #
+#         TAB: HOME  ASSISTANT              #
 #                                           #
 #############################################
 - badges: []
@@ -468,7 +468,7 @@
           type: horizontal-stack  
         - color: 'rgb(44, 109, 214)'
           color_type: icon
-          name: POOL SPEED
+          name: POOL SPEEDS
           template: button-card-headers-2
           type: custom:button-card
         - cards:
