@@ -785,7 +785,6 @@
               type: 'custom:mini-graph-card'
           type: horizontal-stack
       type: vertical-stack          
-      type: vertical-stack
   icon: mdi:weather-lightning  
   title: Weather
 #############################################
