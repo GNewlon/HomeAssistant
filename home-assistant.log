@@ -24,3 +24,4 @@
 2022-11-20 18:54:23.555 INFO (MainThread) [backoff] Backing off async_request(...) for 0.4s (tesla_wall_connector.exceptions.WallConnectorConnectionTimeoutError: Timeout while connecting to Wall Connector at 10.1.20.4)
 2022-11-20 18:54:24.963 ERROR (MainThread) [backoff] Giving up async_request(...) after 3 tries (tesla_wall_connector.exceptions.WallConnectorConnectionTimeoutError: Timeout while connecting to Wall Connector at 10.1.20.4)
 2022-11-20 18:54:24.965 ERROR (MainThread) [homeassistant.components.tesla_wall_connector] Error fetching tesla-wallconnector data: Could not fetch data from Tesla WallConnector at 10.1.20.4: Timeout
+2022-11-20 18:55:25.001 INFO (MainThread) [backoff] Backing off async_request(...) for 0.1s (tesla_wall_connector.exceptions.WallConnectorConnectionTimeoutError: Timeout while connecting to Wall Connector at 10.1.20.4)
