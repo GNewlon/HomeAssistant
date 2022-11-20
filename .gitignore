@@ -5,7 +5,8 @@
 !*.js*
 
 !node-red/
-
+*.log
+*.log
 secrets.yaml
 .ssh
 .storage
@@ -26,6 +27,7 @@ home-assistant_v2.db-DELETE
 dns.json
 OZW_Log.txt
 zigbee.db
-zigbee.db-shm
-zigbee.db-wal
-
+core_async.py
+settings.json
+media_player.py
+flows_cred.json

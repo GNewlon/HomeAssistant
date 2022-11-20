@@ -123,7 +123,6 @@ shell_command:
 ####################################################
 #vacuum:
 #  - platform: xiaomi_miio
-#    host: 192.168.2.28#    token: 5056765154776c433269337857747941
 #xiaomi_miot:
 #  username: newlon@outlook.com
 #  password: Gibj.Q#x9ZYs9m8+
