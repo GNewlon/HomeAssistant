@@ -30,6 +30,8 @@ zigbee.db
 core_async.py
 settings.json
 media_player.py
+custom_components/xiaomi_miot/media_player.py
+custom_components/smartthinq_sensors/wideq/core_async.py
 flows_cred.json
 home-assistant_v2.db
 secrets.yaml
