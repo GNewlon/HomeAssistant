@@ -44,6 +44,7 @@
 #        payload_template: 99; Delay 100
 - alias: "shell_command.pushupdates_to_github"
 # https://www.youtube.com/watch?v=hhv-WqGUy_o
+# https://www.home-assistant.io/integrations/shell_command
   trigger:
     platform: homeassistant
     event: start
