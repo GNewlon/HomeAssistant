@@ -1,185 +1,73 @@
-2022-11-20 10:03:40.971 WARNING (SyncWorker_0) [homeassistant.loader] We found a custom integration unifigateway which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
-2022-11-20 10:03:40.972 WARNING (SyncWorker_0) [homeassistant.loader] We found a custom integration xiaomi_cloud_map_extractor which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
-2022-11-20 10:03:40.972 WARNING (SyncWorker_0) [homeassistant.loader] We found a custom integration smartthinq_sensors which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
-2022-11-20 10:03:40.972 WARNING (SyncWorker_0) [homeassistant.loader] We found a custom integration nodered which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
-2022-11-20 10:03:40.973 WARNING (SyncWorker_0) [homeassistant.loader] We found a custom integration hacs which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
-2022-11-20 10:03:40.973 WARNING (SyncWorker_0) [homeassistant.loader] We found a custom integration xiaomi_miot which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
-2022-11-20 10:03:40.973 WARNING (SyncWorker_0) [homeassistant.loader] We found a custom integration tesla_custom which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
-2022-11-20 10:03:43.693 WARNING (SyncWorker_0) [homeassistant.util.yaml.loader] YAML file /config/includes/main.yaml contains duplicate key "type". Check lines 786 and 787
-2022-11-20 10:03:45.476 WARNING (MainThread) [homeassistant.components.unifiprotect.migrate] Failed to migate 1 reboot buttons
-2022-11-20 10:03:45.479 ERROR (MainThread) [snitun.client.client_peer] Challenge/Response error with SniTun server (0 bytes read on a total of 32 expected bytes)
-2022-11-20 10:03:45.480 ERROR (MainThread) [hass_nabucasa.remote] Connection problem to snitun server
-2022-11-20 10:03:45.488 INFO (MainThread) [backoff] Backing off async_request(...) for 0.8s (tesla_wall_connector.exceptions.WallConnectorConnectionTimeoutError: Timeout while connecting to Wall Connector at 10.1.20.4)
-2022-11-20 10:03:45.624 WARNING (MainThread) [homeassistant.components.unifiprotect.migrate] Failed to migrate 24 entities
-2022-11-20 10:03:46.062 WARNING (MainThread) [custom_components.xiaomi_miot] None device in xiaomi cloud: newlon@outlook.com
-2022-11-20 10:03:47.162 WARNING (MainThread) [homeassistant.config_entries] Config entry 'Roku-Office' for roku integration not ready yet: Invalid response from API: Error occurred while communicating with device; Retrying in background
-2022-11-20 10:03:48.010 WARNING (MainThread) [aioesphomeapi.reconnect_logic] Can't connect to ESPHome API for powermeter-18c @ 10.1.30.71: Error connecting to ('10.1.30.71', 6053): [Errno 113] Connect call failed ('10.1.30.71', 6053)
-2022-11-20 10:03:54.622 WARNING (MainThread) [zigpy_znp.zigbee.application] Your network is using the insecure Zigbee2MQTT network key!
-2022-11-20 10:03:55.885 WARNING (MainThread) [homeassistant.components.sonos.switch] Migration of Speech Enhancement switches on Living Room failed, manual cleanup required: ['switch.sonos_living_room_speech_enhancement', 'switch.sonos_living_room_speech_enhancement_2']
-2022-11-20 10:05:17.001 INFO (MainThread) [backoff] Backing off async_request(...) for 0.5s (tesla_wall_connector.exceptions.WallConnectorConnectionTimeoutError: Timeout while connecting to Wall Connector at 10.1.20.4)
-2022-11-20 10:05:48.079 INFO (MainThread) [backoff] Backing off async_request(...) for 0.6s (tesla_wall_connector.exceptions.WallConnectorConnectionTimeoutError: Timeout while connecting to Wall Connector at 10.1.20.4)
-2022-11-20 10:08:19.003 INFO (MainThread) [backoff] Backing off async_request(...) for 0.6s (tesla_wall_connector.exceptions.WallConnectorConnectionTimeoutError: Timeout while connecting to Wall Connector at 10.1.20.4)
-2022-11-20 10:08:50.003 INFO (MainThread) [backoff] Backing off async_request(...) for 0.0s (tesla_wall_connector.exceptions.WallConnectorConnectionTimeoutError: Timeout while connecting to Wall Connector at 10.1.20.4)
-2022-11-20 10:08:51.021 INFO (MainThread) [backoff] Backing off async_request(...) for 1.0s (tesla_wall_connector.exceptions.WallConnectorConnectionTimeoutError: Timeout while connecting to Wall Connector at 10.1.20.4)
-2022-11-20 10:12:23.002 INFO (MainThread) [backoff] Backing off async_request(...) for 0.6s (tesla_wall_connector.exceptions.WallConnectorConnectionTimeoutError: Timeout while connecting to Wall Connector at 10.1.20.4)
-2022-11-20 10:12:24.576 INFO (MainThread) [backoff] Backing off async_request(...) for 0.6s (tesla_wall_connector.exceptions.WallConnectorConnectionTimeoutError: Timeout while connecting to Wall Connector at 10.1.20.4)
-2022-11-20 10:12:26.152 ERROR (MainThread) [backoff] Giving up async_request(...) after 3 tries (tesla_wall_connector.exceptions.WallConnectorConnectionTimeoutError: Timeout while connecting to Wall Connector at 10.1.20.4)
-2022-11-20 10:12:26.153 ERROR (MainThread) [homeassistant.components.tesla_wall_connector] Error fetching tesla-wallconnector data: Could not fetch data from Tesla WallConnector at 10.1.20.4: Timeout
-2022-11-20 10:13:27.001 INFO (MainThread) [backoff] Backing off async_request(...) for 0.9s (tesla_wall_connector.exceptions.WallConnectorConnectionTimeoutError: Timeout while connecting to Wall Connector at 10.1.20.4)
-2022-11-20 10:14:29.002 INFO (MainThread) [backoff] Backing off async_request(...) for 0.8s (tesla_wall_connector.exceptions.WallConnectorConnectionTimeoutError: Timeout while connecting to Wall Connector at 10.1.20.4)
-2022-11-20 10:14:30.778 INFO (MainThread) [backoff] Backing off async_request(...) for 0.1s (tesla_wall_connector.exceptions.WallConnectorConnectionTimeoutError: Timeout while connecting to Wall Connector at 10.1.20.4)
-2022-11-20 10:16:01.027 INFO (MainThread) [backoff] Backing off async_request(...) for 0.5s (tesla_wall_connector.exceptions.WallConnectorConnectionTimeoutError: Timeout while connecting to Wall Connector at 10.1.20.4)
-2022-11-20 10:20:02.001 INFO (MainThread) [backoff] Backing off async_request(...) for 0.9s (tesla_wall_connector.exceptions.WallConnectorConnectionTimeoutError: Timeout while connecting to Wall Connector at 10.1.20.4)
-2022-11-20 10:21:03.001 INFO (MainThread) [backoff] Backing off async_request(...) for 0.1s (tesla_wall_connector.exceptions.WallConnectorConnectionTimeoutError: Timeout while connecting to Wall Connector at 10.1.20.4)
-2022-11-20 10:24:04.059 INFO (MainThread) [backoff] Backing off async_request(...) for 0.0s (tesla_wall_connector.exceptions.WallConnectorConnectionTimeoutError: Timeout while connecting to Wall Connector at 10.1.20.4)
-2022-11-20 10:26:35.002 INFO (MainThread) [backoff] Backing off async_request(...) for 0.1s (tesla_wall_connector.exceptions.WallConnectorConnectionTimeoutError: Timeout while connecting to Wall Connector at 10.1.20.4)
-2022-11-20 10:28:36.168 ERROR (Recorder) [homeassistant.components.recorder.core] Database connection invalidated: Error executing query: (MySQLdb.OperationalError) (1927, 'Connection was killed')
-[SQL: INSERT INTO events (event_type, event_data, origin, origin_idx, time_fired, context_id, context_user_id, context_parent_id, data_id) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)]
-[parameters: ('call_service', None, None, 0, datetime.datetime(2022, 11, 20, 15, 28, 35, 259815, tzinfo=datetime.timezone.utc), '01GJATFNDVW0R3CTNMNPN49EHP', '1b419c7cc23f4af58869e44b978c6d3f', None, 383)]
-(Background on this error at: https://sqlalche.me/e/14/e3q8). (retrying in 3 seconds)
-2022-11-20 10:28:39.115 WARNING (Thread-3 (_thread_main)) [homeassistant.components.mqtt.client] Disconnected from MQTT server 10.1.30.4:1883 (7)
-2022-11-20 10:28:39.144 ERROR (MainThread) [homeassistant.util.logging] Exception in availability_message_received when handling msg on 'tele/hvacrelays_1/LWT': 'Offline'
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.10/site-packages/hatasmota/entity.py", line 113, in availability_message_received
-    await self._on_availability_callback(False)
-  File "/usr/src/homeassistant/homeassistant/components/tasmota/mixins.py", line 130, in availability_updated
-    await self._tasmota_entity.poll_status()
-  File "/usr/local/lib/python3.10/site-packages/hatasmota/status_sensor.py", line 205, in poll_status
-    await self._poll_status()
-  File "/usr/local/lib/python3.10/site-packages/hatasmota/status_sensor.py", line 198, in _poll_status
-    await self.subscribe_topics()
-  File "/usr/local/lib/python3.10/site-packages/hatasmota/status_sensor.py", line 251, in subscribe_topics
-    self._sub_state = await self._mqtt_client.subscribe(
-  File "/usr/local/lib/python3.10/site-packages/hatasmota/mqtt.py", line 106, in subscribe
-    return await self._subscribe(sub_state, topics)
-  File "/usr/src/homeassistant/homeassistant/components/tasmota/__init__.py", line 61, in _subscribe_topics
-    await async_subscribe_topics(hass, sub_state)
-  File "/usr/src/homeassistant/homeassistant/components/mqtt/subscription.py", line 129, in async_subscribe_topics
-    await sub.subscribe()
-  File "/usr/src/homeassistant/homeassistant/components/mqtt/subscription.py", line 60, in subscribe
-    self.unsubscribe_callback = await self.subscribe_task
-  File "/usr/src/homeassistant/homeassistant/components/mqtt/client.py", line 220, in async_subscribe
-    async_remove = await mqtt_data.client.async_subscribe(
-  File "/usr/src/homeassistant/homeassistant/components/mqtt/client.py", line 485, in async_subscribe
-    await self._async_perform_subscriptions(((topic, qos),))
-  File "/usr/src/homeassistant/homeassistant/components/mqtt/client.py", line 556, in _async_perform_subscriptions
-    _raise_on_errors(errors)
-  File "/usr/src/homeassistant/homeassistant/components/mqtt/client.py", line 759, in _raise_on_errors
-    raise HomeAssistantError(f"Error talking to MQTT: {', '.join(messages)}")
-homeassistant.exceptions.HomeAssistantError: Error talking to MQTT: The client is not currently connected.
-
-2022-11-20 10:28:39.146 ERROR (MainThread) [homeassistant.util.logging] Exception in availability_message_received when handling msg on 'tele/poolrelays_2/LWT': 'Offline'
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.10/site-packages/hatasmota/entity.py", line 113, in availability_message_received
-    await self._on_availability_callback(False)
-  File "/usr/src/homeassistant/homeassistant/components/tasmota/mixins.py", line 130, in availability_updated
-    await self._tasmota_entity.poll_status()
-  File "/usr/local/lib/python3.10/site-packages/hatasmota/status_sensor.py", line 205, in poll_status
-    await self._poll_status()
-  File "/usr/local/lib/python3.10/site-packages/hatasmota/status_sensor.py", line 198, in _poll_status
-    await self.subscribe_topics()
-  File "/usr/local/lib/python3.10/site-packages/hatasmota/status_sensor.py", line 251, in subscribe_topics
-    self._sub_state = await self._mqtt_client.subscribe(
-  File "/usr/local/lib/python3.10/site-packages/hatasmota/mqtt.py", line 106, in subscribe
-    return await self._subscribe(sub_state, topics)
-  File "/usr/src/homeassistant/homeassistant/components/tasmota/__init__.py", line 61, in _subscribe_topics
-    await async_subscribe_topics(hass, sub_state)
-  File "/usr/src/homeassistant/homeassistant/components/mqtt/subscription.py", line 129, in async_subscribe_topics
-    await sub.subscribe()
-  File "/usr/src/homeassistant/homeassistant/components/mqtt/subscription.py", line 60, in subscribe
-    self.unsubscribe_callback = await self.subscribe_task
-  File "/usr/src/homeassistant/homeassistant/components/mqtt/client.py", line 220, in async_subscribe
-    async_remove = await mqtt_data.client.async_subscribe(
-  File "/usr/src/homeassistant/homeassistant/components/mqtt/client.py", line 485, in async_subscribe
-    await self._async_perform_subscriptions(((topic, qos),))
-  File "/usr/src/homeassistant/homeassistant/components/mqtt/client.py", line 556, in _async_perform_subscriptions
-    _raise_on_errors(errors)
-  File "/usr/src/homeassistant/homeassistant/components/mqtt/client.py", line 759, in _raise_on_errors
-    raise HomeAssistantError(f"Error talking to MQTT: {', '.join(messages)}")
-homeassistant.exceptions.HomeAssistantError: Error talking to MQTT: The client is not currently connected.
-
-2022-11-20 10:28:39.147 ERROR (MainThread) [homeassistant.util.logging] Exception in availability_message_received when handling msg on 'tele/poolrelays_4/LWT': 'Offline'
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.10/site-packages/hatasmota/entity.py", line 113, in availability_message_received
-    await self._on_availability_callback(False)
-  File "/usr/src/homeassistant/homeassistant/components/tasmota/mixins.py", line 130, in availability_updated
-    await self._tasmota_entity.poll_status()
-  File "/usr/local/lib/python3.10/site-packages/hatasmota/status_sensor.py", line 205, in poll_status
-    await self._poll_status()
-  File "/usr/local/lib/python3.10/site-packages/hatasmota/status_sensor.py", line 198, in _poll_status
-    await self.subscribe_topics()
-  File "/usr/local/lib/python3.10/site-packages/hatasmota/status_sensor.py", line 251, in subscribe_topics
-    self._sub_state = await self._mqtt_client.subscribe(
-  File "/usr/local/lib/python3.10/site-packages/hatasmota/mqtt.py", line 106, in subscribe
-    return await self._subscribe(sub_state, topics)
-  File "/usr/src/homeassistant/homeassistant/components/tasmota/__init__.py", line 61, in _subscribe_topics
-    await async_subscribe_topics(hass, sub_state)
-  File "/usr/src/homeassistant/homeassistant/components/mqtt/subscription.py", line 129, in async_subscribe_topics
-    await sub.subscribe()
-  File "/usr/src/homeassistant/homeassistant/components/mqtt/subscription.py", line 60, in subscribe
-    self.unsubscribe_callback = await self.subscribe_task
-  File "/usr/src/homeassistant/homeassistant/components/mqtt/client.py", line 220, in async_subscribe
-    async_remove = await mqtt_data.client.async_subscribe(
-  File "/usr/src/homeassistant/homeassistant/components/mqtt/client.py", line 485, in async_subscribe
-    await self._async_perform_subscriptions(((topic, qos),))
-  File "/usr/src/homeassistant/homeassistant/components/mqtt/client.py", line 556, in _async_perform_subscriptions
-    _raise_on_errors(errors)
-  File "/usr/src/homeassistant/homeassistant/components/mqtt/client.py", line 759, in _raise_on_errors
-    raise HomeAssistantError(f"Error talking to MQTT: {', '.join(messages)}")
-homeassistant.exceptions.HomeAssistantError: Error talking to MQTT: The client is not currently connected.
-
-2022-11-20 10:28:39.148 ERROR (MainThread) [homeassistant.util.logging] Exception in availability_message_received when handling msg on 'tele/poolrelays_4/LWT': 'Offline'
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.10/site-packages/hatasmota/entity.py", line 113, in availability_message_received
-    await self._on_availability_callback(False)
-  File "/usr/src/homeassistant/homeassistant/components/tasmota/mixins.py", line 130, in availability_updated
-    await self._tasmota_entity.poll_status()
-  File "/usr/local/lib/python3.10/site-packages/hatasmota/status_sensor.py", line 205, in poll_status
-    await self._poll_status()
-  File "/usr/local/lib/python3.10/site-packages/hatasmota/status_sensor.py", line 198, in _poll_status
-    await self.subscribe_topics()
-  File "/usr/local/lib/python3.10/site-packages/hatasmota/status_sensor.py", line 251, in subscribe_topics
-    self._sub_state = await self._mqtt_client.subscribe(
-  File "/usr/local/lib/python3.10/site-packages/hatasmota/mqtt.py", line 106, in subscribe
-    return await self._subscribe(sub_state, topics)
-  File "/usr/src/homeassistant/homeassistant/components/tasmota/__init__.py", line 61, in _subscribe_topics
-    await async_subscribe_topics(hass, sub_state)
-  File "/usr/src/homeassistant/homeassistant/components/mqtt/subscription.py", line 129, in async_subscribe_topics
-    await sub.subscribe()
-  File "/usr/src/homeassistant/homeassistant/components/mqtt/subscription.py", line 60, in subscribe
-    self.unsubscribe_callback = await self.subscribe_task
-  File "/usr/src/homeassistant/homeassistant/components/mqtt/client.py", line 220, in async_subscribe
-    async_remove = await mqtt_data.client.async_subscribe(
-  File "/usr/src/homeassistant/homeassistant/components/mqtt/client.py", line 485, in async_subscribe
-    await self._async_perform_subscriptions(((topic, qos),))
-  File "/usr/src/homeassistant/homeassistant/components/mqtt/client.py", line 556, in _async_perform_subscriptions
-    _raise_on_errors(errors)
-  File "/usr/src/homeassistant/homeassistant/components/mqtt/client.py", line 759, in _raise_on_errors
-    raise HomeAssistantError(f"Error talking to MQTT: {', '.join(messages)}")
-homeassistant.exceptions.HomeAssistantError: Error talking to MQTT: The client is not currently connected.
-
-2022-11-20 10:28:39.172 ERROR (Recorder) [homeassistant.components.recorder.core] SQLAlchemyError error processing task CommitTask(): This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (MySQLdb.OperationalError) (1927, 'Connection was killed')
-[SQL: INSERT INTO events (event_type, event_data, origin, origin_idx, time_fired, context_id, context_user_id, context_parent_id, data_id) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)]
-[parameters: ('call_service', None, None, 0, datetime.datetime(2022, 11, 20, 15, 28, 35, 259815, tzinfo=datetime.timezone.utc), '01GJATFNDVW0R3CTNMNPN49EHP', '1b419c7cc23f4af58869e44b978c6d3f', None, 383)]
-(Background on this error at: https://sqlalche.me/e/14/e3q8) (Background on this error at: https://sqlalche.me/e/14/7s2a)
-Traceback (most recent call last):
-  File "/usr/src/homeassistant/homeassistant/components/recorder/core.py", line 687, in _process_one_task_or_recover
-    return task.run(self)
-  File "/usr/src/homeassistant/homeassistant/components/recorder/tasks.py", line 264, in run
-    instance._commit_event_session_or_retry()
-  File "/usr/src/homeassistant/homeassistant/components/recorder/core.py", line 937, in _commit_event_session_or_retry
-    self._commit_event_session()
-  File "/usr/src/homeassistant/homeassistant/components/recorder/core.py", line 956, in _commit_event_session
-    self.event_session.commit()
-  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 1451, in commit
-    self._transaction.commit(_to_root=self.future)
-  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 827, in commit
-    self._assert_active(prepared_ok=True)
-  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 601, in _assert_active
-    raise sa_exc.PendingRollbackError(
-sqlalchemy.exc.PendingRollbackError: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (MySQLdb.OperationalError) (1927, 'Connection was killed')
-[SQL: INSERT INTO events (event_type, event_data, origin, origin_idx, time_fired, context_id, context_user_id, context_parent_id, data_id) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)]
-[parameters: ('call_service', None, None, 0, datetime.datetime(2022, 11, 20, 15, 28, 35, 259815, tzinfo=datetime.timezone.utc), '01GJATFNDVW0R3CTNMNPN49EHP', '1b419c7cc23f4af58869e44b978c6d3f', None, 383)]
-(Background on this error at: https://sqlalche.me/e/14/e3q8) (Background on this error at: https://sqlalche.me/e/14/7s2a)
-2022-11-20 10:28:39.273 WARNING (MainThread) [homeassistant.config_entries] Config entry 'Z-Wave JS' for zwave_js integration not ready yet: Failed to connect: Cannot connect to host 10.1.30.3:3000 ssl:default [Connect call failed ('10.1.30.3', 3000)]; Retrying in background
-2022-11-20 10:28:49.130 WARNING (MainThread) [homeassistant.components.mqtt.client] No ACK from MQTT server in 10 seconds (mid: 337)
+2022-11-20 10:34:24.007 WARNING (SyncWorker_0) [homeassistant.loader] We found a custom integration unifigateway which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2022-11-20 10:34:24.008 WARNING (SyncWorker_0) [homeassistant.loader] We found a custom integration xiaomi_cloud_map_extractor which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2022-11-20 10:34:24.008 WARNING (SyncWorker_0) [homeassistant.loader] We found a custom integration smartthinq_sensors which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2022-11-20 10:34:24.008 WARNING (SyncWorker_0) [homeassistant.loader] We found a custom integration nodered which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2022-11-20 10:34:24.009 WARNING (SyncWorker_0) [homeassistant.loader] We found a custom integration hacs which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2022-11-20 10:34:24.009 WARNING (SyncWorker_0) [homeassistant.loader] We found a custom integration xiaomi_miot which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2022-11-20 10:34:24.009 WARNING (SyncWorker_0) [homeassistant.loader] We found a custom integration tesla_custom which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2022-11-20 10:34:25.112 WARNING (Recorder) [homeassistant.components.recorder.util] Ended unfinished session (id=365 from 2022-11-20 15:03:41)
+2022-11-20 10:34:26.873 WARNING (SyncWorker_3) [homeassistant.util.yaml.loader] YAML file /config/includes/main.yaml contains duplicate key "type". Check lines 786 and 787
+2022-11-20 10:34:31.563 INFO (MainThread) [backoff] Backing off async_request(...) for 0.8s (tesla_wall_connector.exceptions.WallConnectorConnectionTimeoutError: Timeout while connecting to Wall Connector at 10.1.20.4)
+2022-11-20 10:34:31.565 WARNING (MainThread) [homeassistant.config_entries] Config entry 'Roku-Office' for roku integration not ready yet: Invalid response from API: Timeout occurred while connecting to device; Retrying in background
+2022-11-20 10:34:31.943 WARNING (MainThread) [homeassistant.components.unifiprotect.migrate] Failed to migate 1 reboot buttons
+2022-11-20 10:34:31.948 ERROR (MainThread) [snitun.client.client_peer] Challenge/Response error with SniTun server (0 bytes read on a total of 32 expected bytes)
+2022-11-20 10:34:31.951 ERROR (MainThread) [hass_nabucasa.remote] Connection problem to snitun server
+2022-11-20 10:34:32.399 WARNING (MainThread) [homeassistant.components.unifiprotect.migrate] Failed to migrate 24 entities
+2022-11-20 10:34:33.922 INFO (MainThread) [backoff] Backing off async_request(...) for 0.2s (tesla_wall_connector.exceptions.WallConnectorConnectionTimeoutError: Timeout while connecting to Wall Connector at 10.1.20.4)
+2022-11-20 10:34:34.455 WARNING (MainThread) [custom_components.xiaomi_miot] None device in xiaomi cloud: newlon@outlook.com
+2022-11-20 10:34:35.589 WARNING (MainThread) [homeassistant.helpers.service] Unable to find referenced entities switch.pool_speed_1 or it is/they are currently not available
+2022-11-20 10:34:35.985 WARNING (MainThread) [aioesphomeapi.reconnect_logic] Can't connect to ESPHome API for powermeter-18c @ 10.1.30.71: Error connecting to ('10.1.30.71', 6053): [Errno 113] Connect call failed ('10.1.30.71', 6053)
+2022-11-20 10:34:42.388 WARNING (MainThread) [zigpy_znp.zigbee.application] Your network is using the insecure Zigbee2MQTT network key!
+2022-11-20 10:34:42.925 WARNING (MainThread) [homeassistant.components.zwave_js.services] This service is deprecated in favor of the ping button entity. Service calls will still work for now but the service will be removed in a future release
+2022-11-20 10:34:42.934 WARNING (MainThread) [homeassistant.components.zwave_js.services] This service is deprecated in favor of the ping button entity. Service calls will still work for now but the service will be removed in a future release
+2022-11-20 10:34:42.969 WARNING (MainThread) [homeassistant.components.zwave_js.services] This service is deprecated in favor of the ping button entity. Service calls will still work for now but the service will be removed in a future release
+2022-11-20 10:34:42.971 WARNING (MainThread) [homeassistant.helpers.service] Unable to find referenced entities switch.spa_heater or it is/they are currently not available
+2022-11-20 10:34:42.978 WARNING (MainThread) [homeassistant.helpers.service] Unable to find referenced entities switch.spa_jets or it is/they are currently not available
+2022-11-20 10:34:43.001 WARNING (MainThread) [homeassistant.helpers.service] Unable to find referenced entities switch.spa_pump or it is/they are currently not available
+2022-11-20 10:34:43.002 WARNING (MainThread) [homeassistant.helpers.service] Unable to find referenced entities switch.spa_heater or it is/they are currently not available
+2022-11-20 10:34:43.003 WARNING (MainThread) [homeassistant.helpers.service] Unable to find referenced entities switch.pool_heater or it is/they are currently not available
+2022-11-20 10:34:43.005 WARNING (MainThread) [homeassistant.helpers.service] Unable to find referenced entities switch.valve_3_off_spa or it is/they are currently not available
+2022-11-20 10:34:43.007 WARNING (MainThread) [homeassistant.helpers.service] Unable to find referenced entities switch.pool_speed_1 or it is/they are currently not available
+2022-11-20 10:34:43.008 WARNING (MainThread) [homeassistant.helpers.service] Unable to find referenced entities switch.pool_pump or it is/they are currently not available
+2022-11-20 10:34:43.384 WARNING (MainThread) [homeassistant.helpers.service] Unable to find referenced entities switch.valve_1_off_24vac or it is/they are currently not available
+2022-11-20 10:34:43.385 WARNING (MainThread) [homeassistant.helpers.service] Unable to find referenced entities switch.valve_1_skim_off or it is/they are currently not available
+2022-11-20 10:34:43.472 WARNING (MainThread) [homeassistant.components.sonos.switch] Migration of Speech Enhancement switches on Living Room failed, manual cleanup required: ['switch.sonos_living_room_speech_enhancement', 'switch.sonos_living_room_speech_enhancement_2']
+2022-11-20 10:34:48.579 WARNING (MainThread) [homeassistant.helpers.service] Unable to find referenced entities switch.valve_2_off_24vac or it is/they are currently not available
+2022-11-20 10:34:48.584 WARNING (MainThread) [homeassistant.helpers.service] Unable to find referenced entities switch.valve_2_pool_spa or it is/they are currently not available
+2022-11-20 10:34:48.600 WARNING (MainThread) [homeassistant.helpers.service] Unable to find referenced entities switch.valve_2_pool_spa or it is/they are currently not available
+2022-11-20 10:34:48.707 WARNING (MainThread) [homeassistant.helpers.service] Unable to find referenced entities switch.valve_1_off_24vac or it is/they are currently not available
+2022-11-20 10:34:48.707 WARNING (MainThread) [homeassistant.helpers.service] Unable to find referenced entities switch.valve_1_skim_off or it is/they are currently not available
+2022-11-20 10:36:35.001 INFO (MainThread) [backoff] Backing off async_request(...) for 0.6s (tesla_wall_connector.exceptions.WallConnectorConnectionTimeoutError: Timeout while connecting to Wall Connector at 10.1.20.4)
+2022-11-20 10:36:36.591 INFO (MainThread) [backoff] Backing off async_request(...) for 0.2s (tesla_wall_connector.exceptions.WallConnectorConnectionTimeoutError: Timeout while connecting to Wall Connector at 10.1.20.4)
+2022-11-20 10:36:37.752 ERROR (MainThread) [backoff] Giving up async_request(...) after 3 tries (tesla_wall_connector.exceptions.WallConnectorConnectionTimeoutError: Timeout while connecting to Wall Connector at 10.1.20.4)
+2022-11-20 10:36:37.754 ERROR (MainThread) [homeassistant.components.tesla_wall_connector] Error fetching tesla-wallconnector data: Could not fetch data from Tesla WallConnector at 10.1.20.4: Timeout
+2022-11-20 10:38:38.001 INFO (MainThread) [backoff] Backing off async_request(...) for 0.7s (tesla_wall_connector.exceptions.WallConnectorConnectionTimeoutError: Timeout while connecting to Wall Connector at 10.1.20.4)
+2022-11-20 10:38:49.295 WARNING (MainThread) [aiounifi.models.message] Unsupported message key setting:sync
+2022-11-20 10:38:49.297 WARNING (MainThread) [aiounifi.models.message] Unsupported message {'meta': {'rc': 'ok', 'message': 'setting:sync'}, 'data': {'_id': '5e42db1f7a5dae02b9335559', 'site_id': '5e42db1c7a5dae02b933554d', 'key': 'usg', 'ftp_module': True, 'gre_module': True, 'h323_module': True, 'pptp_module': True, 'sip_module': True, 'tftp_module': True, 'broadcast_ping': False, 'receive_redirects': False, 'send_redirects': True, 'syn_cookies': True, 'offload_accounting': True, 'offload_sch': True, 'offload_l2_blocking': True, 'upnp_enabled': True, 'upnp_nat_pmp_enabled': True, 'upnp_secure_mode': True, 'mss_clamp': 'auto', 'geo_ip_filtering_enabled': False, 'geo_ip_filtering_block': 'block', 'geo_ip_filtering_countries': '', 'geo_ip_filtering_traffic_direction': 'both', 'upnp_wan_interface': 'WAN', 'icmp_timeout': 30, 'other_timeout': 600, 'tcp_close_timeout': 10, 'tcp_close_wait_timeout': 60, 'tcp_established_timeout': 7440, 'tcp_fin_wait_timeout': 120, 'tcp_last_ack_timeout': 30, 'tcp_syn_recv_timeout': 60, 'tcp_syn_sent_timeout': 120, 'tcp_time_wait_timeout': 120, 'udp_other_timeout': 30, 'udp_stream_timeout': 180, 'timeout_setting_preference': 'manual', 'mss_clamp_mss': 1452, 'arp_cache_timeout': 'normal', 'arp_cache_base_reachable': 30, 'echo_server': 'ping.ubnt.com', 'firewall_wan_default_log': True, 'dhcp_relay_agents_packets': '', 'dhcp_relay_port': '', 'dhcp_relay_hop_count': '', 'firewall_lan_default_log': True, 'firewall_guest_default_log': False}}
+2022-11-20 10:39:09.002 INFO (MainThread) [backoff] Backing off async_request(...) for 0.9s (tesla_wall_connector.exceptions.WallConnectorConnectionTimeoutError: Timeout while connecting to Wall Connector at 10.1.20.4)
+2022-11-20 10:40:40.003 INFO (MainThread) [backoff] Backing off async_request(...) for 0.7s (tesla_wall_connector.exceptions.WallConnectorConnectionTimeoutError: Timeout while connecting to Wall Connector at 10.1.20.4)
+2022-11-20 10:41:11.001 INFO (MainThread) [backoff] Backing off async_request(...) for 0.2s (tesla_wall_connector.exceptions.WallConnectorConnectionTimeoutError: Timeout while connecting to Wall Connector at 10.1.20.4)
+2022-11-20 10:41:22.411 WARNING (MainThread) [aiounifi.models.message] Unsupported message key setting:sync
+2022-11-20 10:41:22.412 WARNING (MainThread) [aiounifi.models.message] Unsupported message {'meta': {'rc': 'ok', 'message': 'setting:sync'}, 'data': {'_id': '5e43108f1c7bfa025b1e8c6a', 'key': 'ips', 'site_id': '5e42db1c7a5dae02b933554d', 'ips_mode': 'disabled', 'utm_token': '25eca604cdb690e65e93fefef7f41aa3467510da449d76e8f19badbf0c1128455', 'last_alert_id': '1781577873-2022-11-20T10:30:37.338628-0500', 'enabled_categories': [], 'restrict_ip_addresses': False, 'restrict_tor': False, 'suppression': {'alerts': [], 'whitelist': []}, 'endpoint_scanning': False, 'honeypot_enabled': True, 'last_nmap_id': '580600963-Mon Dec 27 09:52:41 2021', 'dns_filtering': True, 'dns_filters': [{'allowed_sites': [], 'blocked_sites': [], 'blocked_tld': [], 'description': '', 'filter': 'none', 'version': 'v4', 'network_id': '6266a4044ded3805c74272ad', 'name': ''}, {'allowed_sites': [], 'blocked_sites': [], 'blocked_tld': [], 'description': '', 'filter': 'none', 'version': 'v4', 'network_id': '62643910d2a98c05ccc7dd0d', 'name': ''}, {'allowed_sites': [], 'blocked_sites': [], 'blocked_tld': [], 'description': '', 'filter': 'none', 'version': 'v4', 'network_id': '62643d65d2a98c05ccc7de24', 'name': ''}, {'allowed_sites': [], 'blocked_sites': [], 'blocked_tld': [], 'description': '', 'filter': 'none', 'version': 'v4', 'network_id': '5e42db1f7a5dae02b933555d', 'name': ''}, {'allowed_sites': [], 'blocked_sites': [], 'blocked_tld': [], 'description': '', 'filter': 'none', 'version': 'v4', 'network_id': '5f70f18b72dbef4dca8df269', 'name': ''}], 'honeypot': []}}
+2022-11-20 10:41:22.414 WARNING (MainThread) [aiounifi.models.message] Unsupported message key setting:sync
+2022-11-20 10:41:22.414 WARNING (MainThread) [aiounifi.models.message] Unsupported message {'meta': {'rc': 'ok', 'message': 'setting:sync'}, 'data': {'_id': '5e42db1f7a5dae02b9335559', 'site_id': '5e42db1c7a5dae02b933554d', 'key': 'usg', 'ftp_module': True, 'gre_module': True, 'h323_module': True, 'pptp_module': True, 'sip_module': True, 'tftp_module': True, 'broadcast_ping': False, 'receive_redirects': False, 'send_redirects': True, 'syn_cookies': True, 'offload_accounting': True, 'offload_sch': True, 'offload_l2_blocking': True, 'upnp_enabled': True, 'upnp_nat_pmp_enabled': True, 'upnp_secure_mode': True, 'mss_clamp': 'auto', 'geo_ip_filtering_enabled': True, 'geo_ip_filtering_block': 'allow', 'geo_ip_filtering_countries': 'US', 'geo_ip_filtering_traffic_direction': 'ingress', 'upnp_wan_interface': 'WAN', 'icmp_timeout': 30, 'other_timeout': 600, 'tcp_close_timeout': 10, 'tcp_close_wait_timeout': 60, 'tcp_established_timeout': 7440, 'tcp_fin_wait_timeout': 120, 'tcp_last_ack_timeout': 30, 'tcp_syn_recv_timeout': 60, 'tcp_syn_sent_timeout': 120, 'tcp_time_wait_timeout': 120, 'udp_other_timeout': 30, 'udp_stream_timeout': 180, 'timeout_setting_preference': 'manual', 'mss_clamp_mss': 1452, 'arp_cache_timeout': 'normal', 'arp_cache_base_reachable': 30, 'echo_server': 'ping.ubnt.com', 'firewall_wan_default_log': True, 'dhcp_relay_agents_packets': '', 'dhcp_relay_port': '', 'dhcp_relay_hop_count': '', 'firewall_lan_default_log': True, 'firewall_guest_default_log': False}}
+2022-11-20 10:42:59.956 WARNING (MainThread) [aiounifi.models.message] Unsupported message key setting:sync
+2022-11-20 10:42:59.956 WARNING (MainThread) [aiounifi.models.message] Unsupported message {'meta': {'rc': 'ok', 'message': 'setting:sync'}, 'data': {'_id': '5e43108f1c7bfa025b1e8c6a', 'key': 'ips', 'site_id': '5e42db1c7a5dae02b933554d', 'ips_mode': 'disabled', 'utm_token': '25eca604cdb690e65e93fefef7f41aa3467510da449d76e8f19badbf0c1128455', 'last_alert_id': '1781577873-2022-11-20T10:30:37.338628-0500', 'enabled_categories': [], 'restrict_ip_addresses': False, 'restrict_tor': False, 'suppression': {'alerts': [], 'whitelist': []}, 'endpoint_scanning': False, 'honeypot_enabled': False, 'last_nmap_id': '580600963-Mon Dec 27 09:52:41 2021', 'dns_filtering': True, 'dns_filters': [{'allowed_sites': [], 'blocked_sites': [], 'blocked_tld': [], 'description': '', 'filter': 'none', 'version': 'v4', 'network_id': '6266a4044ded3805c74272ad', 'name': ''}, {'allowed_sites': [], 'blocked_sites': [], 'blocked_tld': [], 'description': '', 'filter': 'none', 'version': 'v4', 'network_id': '62643910d2a98c05ccc7dd0d', 'name': ''}, {'allowed_sites': [], 'blocked_sites': [], 'blocked_tld': [], 'description': '', 'filter': 'none', 'version': 'v4', 'network_id': '62643d65d2a98c05ccc7de24', 'name': ''}, {'allowed_sites': [], 'blocked_sites': [], 'blocked_tld': [], 'description': '', 'filter': 'none', 'version': 'v4', 'network_id': '5e42db1f7a5dae02b933555d', 'name': ''}, {'allowed_sites': [], 'blocked_sites': [], 'blocked_tld': [], 'description': '', 'filter': 'none', 'version': 'v4', 'network_id': '5f70f18b72dbef4dca8df269', 'name': ''}], 'honeypot': []}}
+2022-11-20 10:42:59.990 WARNING (MainThread) [aiounifi.models.message] Unsupported message key setting:sync
+2022-11-20 10:42:59.991 WARNING (MainThread) [aiounifi.models.message] Unsupported message {'meta': {'rc': 'ok', 'message': 'setting:sync'}, 'data': {'_id': '5e42db1f7a5dae02b9335559', 'site_id': '5e42db1c7a5dae02b933554d', 'key': 'usg', 'ftp_module': True, 'gre_module': True, 'h323_module': True, 'pptp_module': True, 'sip_module': True, 'tftp_module': True, 'broadcast_ping': False, 'receive_redirects': False, 'send_redirects': True, 'syn_cookies': True, 'offload_accounting': True, 'offload_sch': True, 'offload_l2_blocking': True, 'upnp_enabled': True, 'upnp_nat_pmp_enabled': True, 'upnp_secure_mode': True, 'mss_clamp': 'auto', 'geo_ip_filtering_enabled': False, 'geo_ip_filtering_block': 'block', 'geo_ip_filtering_countries': '', 'geo_ip_filtering_traffic_direction': 'both', 'upnp_wan_interface': 'WAN', 'icmp_timeout': 30, 'other_timeout': 600, 'tcp_close_timeout': 10, 'tcp_close_wait_timeout': 60, 'tcp_established_timeout': 7440, 'tcp_fin_wait_timeout': 120, 'tcp_last_ack_timeout': 30, 'tcp_syn_recv_timeout': 60, 'tcp_syn_sent_timeout': 120, 'tcp_time_wait_timeout': 120, 'udp_other_timeout': 30, 'udp_stream_timeout': 180, 'timeout_setting_preference': 'manual', 'mss_clamp_mss': 1452, 'arp_cache_timeout': 'normal', 'arp_cache_base_reachable': 30, 'echo_server': 'ping.ubnt.com', 'firewall_wan_default_log': True, 'dhcp_relay_agents_packets': '', 'dhcp_relay_port': '', 'dhcp_relay_hop_count': '', 'firewall_lan_default_log': True, 'firewall_guest_default_log': False}}
+2022-11-20 10:44:10.853 WARNING (MainThread) [aiounifi.models.message] Unsupported message key setting:sync
+2022-11-20 10:44:10.854 WARNING (MainThread) [aiounifi.models.message] Unsupported message {'meta': {'rc': 'ok', 'message': 'setting:sync'}, 'data': {'_id': '5e42db1f7a5dae02b9335559', 'site_id': '5e42db1c7a5dae02b933554d', 'key': 'usg', 'ftp_module': True, 'gre_module': True, 'h323_module': True, 'pptp_module': True, 'sip_module': True, 'tftp_module': True, 'broadcast_ping': False, 'receive_redirects': False, 'send_redirects': True, 'syn_cookies': True, 'offload_accounting': True, 'offload_sch': True, 'offload_l2_blocking': True, 'upnp_enabled': True, 'upnp_nat_pmp_enabled': True, 'upnp_secure_mode': True, 'mss_clamp': 'auto', 'geo_ip_filtering_enabled': False, 'geo_ip_filtering_block': 'block', 'geo_ip_filtering_countries': '', 'geo_ip_filtering_traffic_direction': 'both', 'upnp_wan_interface': 'WAN', 'icmp_timeout': 30, 'other_timeout': 600, 'tcp_close_timeout': 10, 'tcp_close_wait_timeout': 60, 'tcp_established_timeout': 7440, 'tcp_fin_wait_timeout': 120, 'tcp_last_ack_timeout': 30, 'tcp_syn_recv_timeout': 60, 'tcp_syn_sent_timeout': 120, 'tcp_time_wait_timeout': 120, 'udp_other_timeout': 30, 'udp_stream_timeout': 180, 'timeout_setting_preference': 'manual', 'mss_clamp_mss': 1452, 'arp_cache_timeout': 'normal', 'arp_cache_base_reachable': 30, 'echo_server': 'ping.ubnt.com', 'firewall_wan_default_log': True, 'dhcp_relay_agents_packets': '', 'dhcp_relay_port': '', 'dhcp_relay_hop_count': '', 'firewall_lan_default_log': True, 'firewall_guest_default_log': True}}
+2022-11-20 10:44:42.003 INFO (MainThread) [backoff] Backing off async_request(...) for 0.0s (tesla_wall_connector.exceptions.WallConnectorConnectionTimeoutError: Timeout while connecting to Wall Connector at 10.1.20.4)
+2022-11-20 10:49:13.002 INFO (MainThread) [backoff] Backing off async_request(...) for 0.4s (tesla_wall_connector.exceptions.WallConnectorConnectionTimeoutError: Timeout while connecting to Wall Connector at 10.1.20.4)
+2022-11-20 10:49:14.411 INFO (MainThread) [backoff] Backing off async_request(...) for 1.3s (tesla_wall_connector.exceptions.WallConnectorConnectionTimeoutError: Timeout while connecting to Wall Connector at 10.1.20.4)
+2022-11-20 10:52:16.002 INFO (MainThread) [backoff] Backing off async_request(...) for 0.4s (tesla_wall_connector.exceptions.WallConnectorConnectionTimeoutError: Timeout while connecting to Wall Connector at 10.1.20.4)
+2022-11-20 10:52:17.402 INFO (MainThread) [backoff] Backing off async_request(...) for 0.9s (tesla_wall_connector.exceptions.WallConnectorConnectionTimeoutError: Timeout while connecting to Wall Connector at 10.1.20.4)
+2022-11-20 10:52:19.359 INFO (MainThread) [backoff] Backing off async_request(...) for 0.2s (tesla_wall_connector.exceptions.WallConnectorConnectionTimeoutError: Timeout while connecting to Wall Connector at 10.1.20.4)
+2022-11-20 10:56:50.099 INFO (MainThread) [backoff] Backing off async_request(...) for 0.4s (tesla_wall_connector.exceptions.WallConnectorConnectionTimeoutError: Timeout while connecting to Wall Connector at 10.1.20.4)
+2022-11-20 10:59:21.001 INFO (MainThread) [backoff] Backing off async_request(...) for 0.9s (tesla_wall_connector.exceptions.WallConnectorConnectionTimeoutError: Timeout while connecting to Wall Connector at 10.1.20.4)
+2022-11-20 10:59:22.897 INFO (MainThread) [backoff] Backing off async_request(...) for 1.6s (tesla_wall_connector.exceptions.WallConnectorConnectionTimeoutError: Timeout while connecting to Wall Connector at 10.1.20.4)
+2022-11-20 10:59:25.660 INFO (MainThread) [backoff] Backing off async_request(...) for 1.0s (tesla_wall_connector.exceptions.WallConnectorConnectionTimeoutError: Timeout while connecting to Wall Connector at 10.1.20.4)
+2022-11-20 10:59:27.655 INFO (MainThread) [backoff] Backing off async_request(...) for 1.4s (tesla_wall_connector.exceptions.WallConnectorConnectionTimeoutError: Timeout while connecting to Wall Connector at 10.1.20.4)
+2022-11-20 11:00:30.001 INFO (MainThread) [backoff] Backing off async_request(...) for 0.3s (tesla_wall_connector.exceptions.WallConnectorConnectionTimeoutError: Timeout while connecting to Wall Connector at 10.1.20.4)
+2022-11-20 11:03:01.002 INFO (MainThread) [backoff] Backing off async_request(...) for 0.0s (tesla_wall_connector.exceptions.WallConnectorConnectionTimeoutError: Timeout while connecting to Wall Connector at 10.1.20.4)
+2022-11-20 11:07:32.002 INFO (MainThread) [backoff] Backing off async_request(...) for 0.7s (tesla_wall_connector.exceptions.WallConnectorConnectionTimeoutError: Timeout while connecting to Wall Connector at 10.1.20.4)
