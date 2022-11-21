@@ -1,4 +1,5 @@
 !*.yaml
+!*.gitignore
 !*.md
 !*.sh
 
@@ -49,4 +50,3 @@ ozwave/config/inovelli/OpenZWave/
 ozwave/open-zwave/
 *.db
 .HA_VERSION
-.gitignore

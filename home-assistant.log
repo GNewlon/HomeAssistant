@@ -26,3 +26,8 @@
 2022-11-20 18:54:24.965 ERROR (MainThread) [homeassistant.components.tesla_wall_connector] Error fetching tesla-wallconnector data: Could not fetch data from Tesla WallConnector at 10.1.20.4: Timeout
 2022-11-20 18:55:25.001 INFO (MainThread) [backoff] Backing off async_request(...) for 0.1s (tesla_wall_connector.exceptions.WallConnectorConnectionTimeoutError: Timeout while connecting to Wall Connector at 10.1.20.4)
 2022-11-20 19:00:26.002 INFO (MainThread) [backoff] Backing off async_request(...) for 0.7s (tesla_wall_connector.exceptions.WallConnectorConnectionTimeoutError: Timeout while connecting to Wall Connector at 10.1.20.4)
+2022-11-20 19:01:46.086 ERROR (MainThread) [homeassistant.components.github] An error occurred while processing new events - 'NoneType' object is not subscriptable
+2022-11-20 19:05:27.034 INFO (MainThread) [backoff] Backing off async_request(...) for 0.2s (tesla_wall_connector.exceptions.WallConnectorConnectionTimeoutError: Timeout while connecting to Wall Connector at 10.1.20.4)
+2022-11-20 19:07:28.003 INFO (MainThread) [backoff] Backing off async_request(...) for 0.1s (tesla_wall_connector.exceptions.WallConnectorConnectionTimeoutError: Timeout while connecting to Wall Connector at 10.1.20.4)
+2022-11-20 19:07:59.087 INFO (MainThread) [backoff] Backing off async_request(...) for 0.3s (tesla_wall_connector.exceptions.WallConnectorConnectionTimeoutError: Timeout while connecting to Wall Connector at 10.1.20.4)
+2022-11-20 19:09:30.001 INFO (MainThread) [backoff] Backing off async_request(...) for 0.3s (tesla_wall_connector.exceptions.WallConnectorConnectionTimeoutError: Timeout while connecting to Wall Connector at 10.1.20.4)
