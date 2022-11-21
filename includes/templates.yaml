@@ -1,0 +1,43 @@
+sensor:
+  - platform: template
+    sensors:
+      climate.ecobee_hvac_action:
+        device_class: climate
+        friendly_name: 'HVAC_Action'
+        value_template: "{{ states.climate.ecobee.attributes.hvac_action }}"
+  - platform: template
+    sensors:
+      climate.ecobee_hvac_action:
+        device_class: climate
+        friendly_name: 'HVAC_Action_1'
+        value_template: "  {{ state_attr('climate.ecobee', 'hvac_action') }}"
+  - platform: template
+    sensors:
+      side_door_lock_battery_level:
+        value_template: '{{ sensor.side_door_lock_battery_level }}'
+        unit_of_measurement: "%"
+        friendly_name: "Side Door Battery"
+        icon_template: 
+ '{% if (states.sensor.front_door_lock_battery.state) == "100" %}
+ mdi:battery
+ {% elif (states.sensor.front_door_lock_battery.state) >= "90" %}
+ mdi:battery-90
+ {% elif (states.sensor.front_door_lock_battery.state) >= "80" %}
+ mdi:battery-80
+ {% elif (states.sensor.front_door_lock_battery.state) >= "70" %}
+ mdi:battery-70
+ {% elif (states.sensor.front_door_lock_battery.state) >= "60" %}
+ mdi:battery-60
+ {% elif (states.sensor.front_door_lock_battery.state) >= "50" %}
+ mdi:battery-50
+ {% elif (states.sensor.front_door_lock_battery.state) >= "40" %}
+ mdi:battery-40
+ {% elif (states.sensor.front_door_lock_battery.state) >= "30" %}
+ mdi:battery-30
+ {% elif (states.sensor.front_door_lock_battery.state) >= "20" %}
+ mdi:battery-20
+ {% elif (states.sensor.front_door_lock_battery.state) >= "10" %}
+ mdi:battery-10
+ {% else %}
+ battery-alert
+ {% endif %}'
