@@ -3,6 +3,7 @@
 !*.sh
 
 /backups
+backups
 secrets.yaml
 *.tar
 .ssh

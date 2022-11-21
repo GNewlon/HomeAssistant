@@ -34,3 +34,4 @@
 2022-11-20 19:13:01.124 INFO (MainThread) [backoff] Backing off async_request(...) for 0.3s (tesla_wall_connector.exceptions.WallConnectorConnectionTimeoutError: Timeout while connecting to Wall Connector at 10.1.20.4)
 2022-11-20 19:14:32.001 INFO (MainThread) [backoff] Backing off async_request(...) for 0.8s (tesla_wall_connector.exceptions.WallConnectorConnectionTimeoutError: Timeout while connecting to Wall Connector at 10.1.20.4)
 2022-11-20 19:14:33.777 INFO (MainThread) [backoff] Backing off async_request(...) for 1.9s (tesla_wall_connector.exceptions.WallConnectorConnectionTimeoutError: Timeout while connecting to Wall Connector at 10.1.20.4)
+2022-11-20 19:15:36.001 INFO (MainThread) [backoff] Backing off async_request(...) for 0.8s (tesla_wall_connector.exceptions.WallConnectorConnectionTimeoutError: Timeout while connecting to Wall Connector at 10.1.20.4)
