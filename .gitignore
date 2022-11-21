@@ -2,8 +2,11 @@
 !*.md
 !*.sh
 
-/backups
+############ Below are my ignored files
+
 backups
+/backups
+/backups/*
 secrets.yaml
 *.tar
 .ssh
@@ -22,6 +25,11 @@ home-assistant.log
 home-assistant.log.1
 home-assistant.log.fault
 home-assistant_v2.db-DELETE
+*.db
+*.log
+*.1
+*.log.fault
+*.db-DELETE
 dns.json
 OZW_Log.txt
 zigbee.db
