@@ -37,3 +37,8 @@
 2022-11-20 19:15:36.001 INFO (MainThread) [backoff] Backing off async_request(...) for 0.8s (tesla_wall_connector.exceptions.WallConnectorConnectionTimeoutError: Timeout while connecting to Wall Connector at 10.1.20.4)
 2022-11-20 19:21:07.002 INFO (MainThread) [backoff] Backing off async_request(...) for 0.4s (tesla_wall_connector.exceptions.WallConnectorConnectionTimeoutError: Timeout while connecting to Wall Connector at 10.1.20.4)
 2022-11-20 19:23:08.001 INFO (MainThread) [backoff] Backing off async_request(...) for 0.1s (tesla_wall_connector.exceptions.WallConnectorConnectionTimeoutError: Timeout while connecting to Wall Connector at 10.1.20.4)
+2022-11-20 19:23:39.001 INFO (MainThread) [backoff] Backing off async_request(...) for 0.6s (tesla_wall_connector.exceptions.WallConnectorConnectionTimeoutError: Timeout while connecting to Wall Connector at 10.1.20.4)
+2022-11-20 19:30:10.034 INFO (MainThread) [backoff] Backing off async_request(...) for 0.7s (tesla_wall_connector.exceptions.WallConnectorConnectionTimeoutError: Timeout while connecting to Wall Connector at 10.1.20.4)
+2022-11-20 19:31:11.001 INFO (MainThread) [backoff] Backing off async_request(...) for 0.5s (tesla_wall_connector.exceptions.WallConnectorConnectionTimeoutError: Timeout while connecting to Wall Connector at 10.1.20.4)
+2022-11-20 19:32:42.001 INFO (MainThread) [backoff] Backing off async_request(...) for 0.0s (tesla_wall_connector.exceptions.WallConnectorConnectionTimeoutError: Timeout while connecting to Wall Connector at 10.1.20.4)
+2022-11-20 19:32:53.757 ERROR (MainThread) [homeassistant.components.github] An error occurred while processing new events - 'NoneType' object is not subscriptable

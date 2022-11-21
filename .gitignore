@@ -1,6 +1,19 @@
+############ Example .gitignore file for your config dir.
+############ An * ensures that everything will be ignored.
+*
+############ You can whitelist files/folders with !, these will not be ignored.
 !*.yaml
+!.gitignore
 !*.md
+!packages/
+!nodered/
+!*.json
 !*.sh
+
+############ Ignore folders.
+.storage
+.cloud
+.google.token
 
 ############ Below are my ignored files
 
@@ -25,11 +38,6 @@ home-assistant.log
 home-assistant.log.1
 home-assistant.log.fault
 home-assistant_v2.db-DELETE
-*.db
-*.log
-*.1
-*.log.fault
-*.db-DELETE
 dns.json
 OZW_Log.txt
 zigbee.db
@@ -42,20 +50,25 @@ flows_cred.json
 home-assistant_v2.db
 secrets.yaml
 auth
+*.db
+*.log
+*.1
+*.log.fault
+*.db-DELETE
 *.hacs
 *.repositories
 *.device_registry
 *.device_registry
 *.entity_registry
+*.HA_VERSION
+*.gitignore
 addons/core/
 addons/git/a0d7b954/
-*.db
-*.db
 packages/lockmanager/
 OZW_Log.txt
 zigbee.db
-ozwave/config/inovelli/OpenZWave/
+ozwave/config/inovelli/OpenZWave/*
 ozwave/open-zwave/
-*.db
-.HA_VERSION
-.gitignore
+ip_bans.yaml
+secrets.yaml
+known_devices.yaml
