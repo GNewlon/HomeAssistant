@@ -161,11 +161,6 @@
               name: Sink
               template: light_button
               type: 'custom:button-card'
-            - entity: light.living_room_fanlight_dimmer
-              name: Living
-              icon: 'mdi:ceiling-fan-light'
-              template: light_button
-              type: 'custom:button-card'
             - entity: light.master_bedroom_dimmer
               name: Master
               template: slide.dim_button
@@ -173,6 +168,11 @@
             - entity: cover.master_bedroom_curtains
               name:  Master
               template: curtain_button
+              type: 'custom:button-card'
+            - entity: switch.master_bedroom_closet_light
+              name:  Master
+              icon: 'mdi:hanger'
+              template: light_button
               type: 'custom:button-card'
           type: horizontal-stack
         - cards: ################################################## ROW 3

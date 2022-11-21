@@ -35,18 +35,11 @@
       data:
         topic: cmnd/sharkhouse/backlog
         payload_template: Backlog Time 0; Timezone 99; TimeDST 0,3,3,1,2,-240; TimeSTD 0,1,11,1,2,-300; NtpServer1 10.1.1.10; NtpServer2 10.1.1.10; NtpServer3 10.1.1.10
-        
-#        payload_template: ntpserver 10.1.1.10; time 0;timestd 0,1,11,1,2,-300; timedst 0,3,3,1,2,-240; Delay 100        
-
-#    - service: mqtt.publish
-#      data:
-#        topic: cmnd/sharkhouse/TimeZone
-#        payload_template: 99; Delay 100
-#- alias: "shell_command.pushupdates_to_github"
+- alias: "shell_command.pushupdates_to_github"
 # https://www.youtube.com/watch?v=hhv-WqGUy_o
 # https://www.home-assistant.io/integrations/shell_command
-#  trigger:
-#    platform: homeassistant
-#    event: start
-#  action:
-#    - service: shell_command.pushupdates_to_github
+  trigger:
+    platform: homeassistant
+    event: start
+  action:
+    - service: shell_command.pushupdates_to_github
