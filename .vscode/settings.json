@@ -1,8 +1,0 @@
-{
-    "files.associations": {
-        "*.yaml": "home-assistant"
-    },
-    "python.pythonPath": "C:\\Users\\ktm300\\AppData\\Local\\Programs\\Python\\Python38-32\\python.exe",
-    "vscode-home-assistant.longLivedAccessToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJhOGJiYTBiNTNhMTc0YjQxYjZkNDA3MTQ5YjcyODQ4OSIsImlhdCI6MTU5MDc2MjQxNSwiZXhwIjoxOTA2MTIyNDE1fQ.E5RIwXfeZDyhLge_jLGnuyrW69p4Fngh9GP1vaUSWFw",
-    "vscode-home-assistant.hostUrl": "http://10.1.1.200:8123"
-}

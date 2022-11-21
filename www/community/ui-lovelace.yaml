@@ -1,4 +1,0 @@
-resources:
-  - url: /www/community/button-card/button-card.js
-  - url: /www/community/mini-graph-card/mini-graph-card-bundle.js
-    type: module
