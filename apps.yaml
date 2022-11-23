@@ -1,6 +1,0 @@
-type: entities
-title: Check Configuration
-show_header_toggle: false
-entities:
-  - script.check_config
-  - sensor.config_result
