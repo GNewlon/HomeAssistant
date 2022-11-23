@@ -595,9 +595,9 @@
             name: false
 #                labels_secondary: true
           type: 'custom:mini-graph-card'
-      type: vertical-stack
-      icon: mdi:air-conditioner
+      type: vertical-stack      
 #  icon: mdi:pool-thermometer  
+  icon: mdi:air-conditioner
   title: HVAC
 #############################################
 #                                           #
