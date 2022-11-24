@@ -1,10 +1,40 @@
 # Node-RED Companion Integration
 
-#[![hacs][hacsbadge]][hacs] [![releasebadge]][release] ![buildbadge] [![License][license-shield]](LICENSE.md)
-
-#[![BuyMeCoffee][buymecoffeebadge]][buymecoffee]
+Here are all of my Config files from Home Assistant! It's a work in progress.
 
 _Companion Component to [Node-RED](https://github.com/GNewlon/Node-RED) to integrate Node-RED with Home Assistant._
+
+## Integrations
+- iPhones
+- Bond-RF Hub
+- Ecobee Wifi Thermostat
+- Inovelli Dimmers-(Zwave)
+- Inovelli Switches-(Zwave)
+- Inovelli Fan Switches-(Zwave)
+- Smartthings Multipurpose Sensor
+- HVAC Heat Exchanger: Waste Heat= Heats Pool Water
+- LG-Smart TV
+- LG Devices-SmartThinQ LGE Sensors
+- Sonoff Pro R3
+- Sonoff TH16
+- Sonoff Zigbee 3.0 USB Dongle Plus-Zigbee Home Automation
+- Zemismart ZWave smart curtains
+- Tesla-Wall Connector
+- Tesla-Custom Integration
+- Node-RED Companion
+- Tasmota
+- Roku
+- MQTT Broker
+- Sonos-Playbar
+- Sonos-Sub
+- Sonos-Play 3s
+- Sonos-Play 1s
+  * UDMPRO
+     * UniFi Protect
+     * UniFi Network	 
+- Roborock-Xiaomi Miot Auto
+- Z-Wave JS-Z-Wave
+- ESPHome-powermeter-18c
 
 ## Features
 * Create and update binary sensors, buttons, sensors, and switches from Node-RED
@@ -58,21 +88,3 @@ Install via [HACS](https://hacs.xyz) (Home Assistant Community Store)
     ```
 
 
-## Configuration
-
-Once installed and added via Home-Assistant Integrations all configuration is done from within Node-RED.
-
-## Contributions are welcome!
-
-#If you want to contribute please read the [Contribution guidelines](CONTRIBUTING.md)
-
-***
-
-#[buymecoffee]: https://www.buymeacoffee.com/zachowj
-#[buymecoffeebadge]: https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png
-#[license-shield]: https://img.shields.io/github/license/zachowj/hass-node-red.svg?style=for-the-badge
-#[hacs]: https://github.com/zachowj/hass-node-red
-#[hacsbadge]: https://img.shields.io/badge/HACS-Default-orange.svg?style=for-the-badge
-#[release]: https://github.com/zachowj/hass-node-red/releases
-#[releasebadge]: https://img.shields.io/github/v/release/zachowj/hass-node-red?style=for-the-badge
-#[buildbadge]: https://img.shields.io/github/workflow/status/zachowj/hass-node-red/pre-commit?style=for-the-badge
