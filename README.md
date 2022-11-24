@@ -5,50 +5,52 @@ Here are all of my Config files from Home Assistant
 _Companion Component to [Node-RED](https://github.com/GNewlon/Node-RED) to integrate Node-RED with Home Assistant._
 
 ## Integrations
-  * Node-RED Companion
-  * Roku
+  * ESPHome
+  * JS-Z-Wave 700
   * MQTT Broker
+  * Node-RED Companion
   * Tasmota
-  * JS-Z-Wave
+  * Zigbee 3.0 
   
 ## Devices  
-  * iPhones
   * Bond-RF Hub
   * Ecobee Wifi Thermostat
+  * ESPHome
+     * powermeter-18c
+  * HVAC Heat Exchanger: Waste Heat= Heats Pool Water
   * Inovelli
     *  Dimmers-(Zwave)
     *  Switches-(Zwave)
     *  Fan Switches-(Zwave)
-  * Smartthings 
-    * Multipurpose Sensor
-  * HVAC Heat Exchanger: Waste Heat= Heats Pool Water
+  * iPhones
   * LG
     * Smart TV
 	* SmartThinQ Dishwasher 
 	* SmartThinQ Washer
 	* SmartThinQ Dryer
 	* SmartThinQ Oven
+  * Rokus
+  * Smartthings 
+    * Multipurpose Sensor
   * Sonoff 
     * Zigbee 3.0 USB Dongle Plus
     * Pro R3
     * TH16
-  * Zemismart
-     * Z-Wave smart curtains
-  * Tesla
-	 * Wall Connector
-	 * Custom Integration
   * Sonos
      * Playbar
 	 * Sub
-	 * Play 3s
-	 * Play 1s
+	 * Play-3s
+	 * Play-1s
+  * Tesla
+	 * Wall Connector
+	 * Custom Integration-MY
   * UDMPRO
      * UniFi Protect
      * UniFi Network	 
   * Xiaomi Miot Auto
      * Roborock
-  * ESPHome
-     * powermeter-18c
+  * Zemismart
+     * Z-Wave smart curtains
 
 ## Features
 * Create and update binary sensors, buttons, sensors, and switches from Node-RED
