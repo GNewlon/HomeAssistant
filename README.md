@@ -1,10 +1,17 @@
-# Node-RED Companion Integration
+# Home Assistant Configuration
 
-Here are all of my Config files from Home Assistant! It's a work in progress.
+Here are all of my Config files from Home Assistant
 
 _Companion Component to [Node-RED](https://github.com/GNewlon/Node-RED) to integrate Node-RED with Home Assistant._
 
 ## Integrations
+  * Node-RED Companion
+  * Roku
+  * MQTT Broker
+  * Tasmota
+  * JS-Z-Wave
+  
+## Devices  
   * iPhones
   * Bond-RF Hub
   * Ecobee Wifi Thermostat
@@ -25,14 +32,11 @@ _Companion Component to [Node-RED](https://github.com/GNewlon/Node-RED) to integ
     * Zigbee 3.0 USB Dongle Plus
     * Pro R3
     * TH16
-  * Zemismart ZWave smart curtains
+  * Zemismart
+     * Z-Wave smart curtains
   * Tesla
 	 * Wall Connector
 	 * Custom Integration
-  * Node-RED Companion
-  * Tasmota
-  * Roku
-  * MQTT Broker
   * Sonos
      * Playbar
 	 * Sub
@@ -41,8 +45,8 @@ _Companion Component to [Node-RED](https://github.com/GNewlon/Node-RED) to integ
   * UDMPRO
      * UniFi Protect
      * UniFi Network	 
-  * Xiaomi Miot Auto - Roborock
-  * JS-Z-Wave
+  * Xiaomi Miot Auto
+     * Roborock
   * ESPHome
      * powermeter-18c
 
