@@ -5,36 +5,46 @@ Here are all of my Config files from Home Assistant! It's a work in progress.
 _Companion Component to [Node-RED](https://github.com/GNewlon/Node-RED) to integrate Node-RED with Home Assistant._
 
 ## Integrations
-- iPhones
-- Bond-RF Hub
-- Ecobee Wifi Thermostat
-- Inovelli Dimmers-(Zwave)
-- Inovelli Switches-(Zwave)
-- Inovelli Fan Switches-(Zwave)
-- Smartthings Multipurpose Sensor
-- HVAC Heat Exchanger: Waste Heat= Heats Pool Water
-- LG-Smart TV
-- LG Devices-SmartThinQ LGE Sensors
-- Sonoff Pro R3
-- Sonoff TH16
-- Sonoff Zigbee 3.0 USB Dongle Plus-Zigbee Home Automation
-- Zemismart ZWave smart curtains
-- Tesla-Wall Connector
-- Tesla-Custom Integration
-- Node-RED Companion
-- Tasmota
-- Roku
-- MQTT Broker
-- Sonos-Playbar
-- Sonos-Sub
-- Sonos-Play 3s
-- Sonos-Play 1s
+  * iPhones
+  * Bond-RF Hub
+  * Ecobee Wifi Thermostat
+  * Inovelli
+    *  Dimmers-(Zwave)
+    *  Switches-(Zwave)
+    *  Fan Switches-(Zwave)
+  * Smartthings 
+    * Multipurpose Sensor
+  * HVAC Heat Exchanger: Waste Heat= Heats Pool Water
+  * LG
+    * Smart TV
+	* SmartThinQ Dishwasher 
+	* SmartThinQ Washer
+	* SmartThinQ Dryer
+	* SmartThinQ Oven
+  * Sonoff 
+    * Zigbee 3.0 USB Dongle Plus
+    * Pro R3
+    * TH16
+  * Zemismart ZWave smart curtains
+  * Tesla
+	 * Wall Connector
+	 * Custom Integration
+  * Node-RED Companion
+  * Tasmota
+  * Roku
+  * MQTT Broker
+  * Sonos
+     * Playbar
+	 * Sub
+	 * Play 3s
+	 * Play 1s
   * UDMPRO
      * UniFi Protect
      * UniFi Network	 
-- Roborock-Xiaomi Miot Auto
-- Z-Wave JS-Z-Wave
-- ESPHome-powermeter-18c
+  * Xiaomi Miot Auto - Roborock
+  * JS-Z-Wave
+  * ESPHome
+     * powermeter-18c
 
 ## Features
 * Create and update binary sensors, buttons, sensors, and switches from Node-RED
