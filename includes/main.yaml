@@ -196,9 +196,9 @@
               name: Guest
               template: light_button
               type: 'custom:button-card'
-            - entity: light.guest_dimmer
-              icon: 'mdi:lamp'
-              name: Guest
+            - entity: switch.christmas_tree_outlet_switch
+              icon: 'mdi:pine-tree'
+              name: Xmas
               template: light_button
               type: 'custom:button-card'
           type: horizontal-stack
