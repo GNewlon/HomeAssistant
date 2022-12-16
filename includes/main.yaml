@@ -198,7 +198,7 @@
               type: 'custom:button-card'
             - entity: switch.christmas_tree_outlet_switch
               icon: 'mdi:pine-tree'
-              name: Xmas
+              name: Xmas Hello
               template: light_button
               type: 'custom:button-card'
           type: horizontal-stack
