@@ -211,7 +211,7 @@
     - cards: 
         - color: 'rgb(44, 109, 214)' ############################## POOL
           color_type: icon
-          name: Pool 
+          name: Poolzzz
           template: button-card-headers-2
           type: 'custom:button-card'
         - cards: ################################################## ROW 1
