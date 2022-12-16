@@ -196,9 +196,9 @@
               name: Guest
               template: light_button
               type: 'custom:button-card'
-            - entity: light.guest_dimmer
-              icon: 'mdi:lamp'
-              name: Guest
+            - entity: switch.christmas_tree_outlet_switch
+              icon: 'mdi:pine-tree'
+              name: Xmas Hello
               template: light_button
               type: 'custom:button-card'
           type: horizontal-stack
@@ -206,7 +206,7 @@
     - cards: 
         - color: 'rgb(44, 109, 214)' ############################## POOL
           color_type: icon
-          name: PoolZZZZZZZZZ
+          name: Pool
           template: button-card-headers-2
           type: 'custom:button-card'
         - cards: ################################################## ROW 1
