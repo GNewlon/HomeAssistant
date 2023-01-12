@@ -222,6 +222,7 @@
   spa_set_max_temp:
     name: Spa Set Max Temp
     options:
+      - 80
       - 85
       - 90      
       - 97
