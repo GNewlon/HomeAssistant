@@ -2482,7 +2482,7 @@ screendoor_magnet_button:
 #                                                               #
 #             screendoor_magnet_button-2                        #
 #################################################################
-pool_heat_select:      
+screendoor_magnet_button-2:      
   aspect_ratio: 1/1
   color: 'rgba(148, 148, 148)'
   tap_action:
