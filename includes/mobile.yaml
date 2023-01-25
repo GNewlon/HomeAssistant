@@ -201,8 +201,10 @@
               name: ScrnDr
               state:
                 - value: 'on'
+                  color: red
                   icon: 'mdi:door-open'
                 - value: 'off'
+                  color: yellow
                   icon: 'mdi:door-closed'
               template: screendoor_magnet_button
               type: 'custom:button-card'
