@@ -2414,7 +2414,7 @@ input_select.fph_2: !include input_select.fph_2.yaml
 #             (derived from slide.dim_button)                   #
 #                USED ONLY FOR SMALL BUTTONS                    #
 #################################################################
-screendoor_magnet_button:
+screendoor_magnet_button-delete:
   aspect_ratio: 1/1
   color: 'rgb(5, 147, 255)'
   hold_action:
@@ -2480,49 +2480,7 @@ screendoor_magnet_button:
     haptic: heavy
 #################################################################
 #                                                               #
-#             screendoor_magnet_button-2                        #
-#################################################################
-screendoor_magnet_button-2:      
-  aspect_ratio: 1/1
-  color: 'rgba(148, 148, 148)'
-  tap_action:
-    action: none
-  double_tap_action:
-    action: more-info
-    haptic: heavy 
-  hold_action:
-    action: more-info
-  show_label: true
-  show_name: true
-  show_state: true
-  size: 40%
-  styles:
-    card:
-      - '--paper-card-background-color': 'var(--secondary-background-color)'
-      - box-shadow: '0px 0px 1px 1px var(--secondary-background-color)'
-      - border-radius: 10px
-      - text-shadow: 0px 0px 5px black
-      - color: 'rgba(148, 148, 148)'
-      - padding: 5%
-      - text-transform: capitalize
-      - '--mdc-ripple-press-opacity': 0.5
-      - '--mdc-ripple-color': black
-    label:
-      - color: var(--secondary-text-color)
-      - font-size: 10px  
-    icon:
-      - color: var(--secondary-text-color)
-      - padding-top: 15%
-    name:
-      - color: var(--secondary-text-color)
-      - padding-top: 1%
-      - font-size: 10px     
-    state:
-      - color: var(--secondary-text-color)
-      - font-size: 10px  
-#################################################################
-#                                                               #
-#                 screendoor_magnet_button-3                    #
+#                 screendoor_magnet_button                      #
 #################################################################
 screendoor_magnet_button-3:
   aspect_ratio: 1/1
@@ -2554,8 +2512,7 @@ screendoor_magnet_button-3:
       - align-items: center
       - padding-top: 13%
   state:
-    - icon: 'mdi:currency-usd'
-      name: $PH 
+    - icon: 'mdi:door-open'
       styles:
         card:
           - '--paper-card-background-color': 'rgba(--accent-color)'
@@ -2571,8 +2528,7 @@ screendoor_magnet_button-3:
           - padding-top: 7%
           - font-size: 14px
       value: 'on'
-    - icon: 'mdi:pause'
-      name: Idle  
+    - icon: 'mdi:door-closed' 
       styles:
         card:
           - '--paper-card-background-color': 'var(--secondary-background-color)' #set no "ON" indication
