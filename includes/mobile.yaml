@@ -197,8 +197,13 @@
               template: light_button
               type: 'custom:button-card'
             - entity: switch.screendoor_magnet
-              icon: 'mdi:sensor_door'
+#              icon: 'mdi:sensor_door'
               name: ScrnDr
+              state:
+                - value: on
+                  icon: 'mdi:door-open'
+                - value: off
+                  icon: 'mdi:door-closed'
               template: light_button
               type: 'custom:button-card'
           type: horizontal-stack
