@@ -2430,30 +2430,34 @@ screendoor_magnet_button:
           - box-shadow: '0px 0px 13px 3px var(--box-shadow)'
           - border-radius: 10px
           - text-shadow: 0px 0px 5px black
+#          - icon: 'mdi:door-open'
         label:
           - color: 'var(--accent-color)'
         icon:
           - color: 'var(--accent-color)'
-          - icon: 'mdi:door-open'
+#          - icon: 'mdi:door-open'
         name:
           - color: 'var(--accent-color)'
           - padding-top: 7%
           - font-size: 14px
+        icon: 'mdi:door-open'  
       value: 'on'
     - styles:
         card:
           - '--paper-card-background-color': 'var(--secondary-background-color)'
           - box-shadow: '0px 0px 1px 1px var(--secondary-background-color)'
           - border-radius: 10px
+#          - icon: 'mdi:door-closed'
         label:
           - color: var(--secondary-text-color)
         icon:
           - color: var(--secondary-text-color)
-          - icon: 'mdi:door-closed'
+#          - icon: 'mdi:door-closed'
         name:
           - color: var(--secondary-text-color)
           - padding-top: 7%
           - font-size: 14px
+        icon: 'mdi:door-closed'  
       value: 'off'
   styles:
     card:
