@@ -206,7 +206,8 @@
                 - value: 'off'
                   color: yellow
                   icon: 'mdi:door-closed'
-              template: screendoor_magnet_button
+#              template: screendoor_magnet_button
+              template: light_button
               type: 'custom:button-card'
           type: horizontal-stack
       type: vertical-stack
