@@ -194,7 +194,7 @@
             - entity: light.guest_dimmer
               icon: 'mdi:lamp'
               name: Guest
-              template: pool_heat_select
+              template: light_button
               type: 'custom:button-card'
             - entity: switch.screendoor_magnet
 #              icon: 'mdi:sensor_door'
@@ -207,7 +207,7 @@
                   color: yellow
                   icon: 'mdi:door-closed'
 #              template: screendoor_magnet_button
-              template: light_button
+              template: pool_heat_select
               type: 'custom:button-card'
           type: horizontal-stack
       type: vertical-stack
