@@ -199,6 +199,7 @@
             - entity: switch.screendoor_magnet
 #              icon: 'mdi:sensor_door'
               name: ScrnDr
+              show_state: false
               state:
                 - value: 'on'
                   color: red
@@ -207,7 +208,7 @@
                   color: yellow
                   icon: 'mdi:door-closed'
 #              template: screendoor_magnet_button
-              template: pool_heat_select
+              template: screendoor_magnet_button-2
               type: 'custom:button-card'
           type: horizontal-stack
       type: vertical-stack
