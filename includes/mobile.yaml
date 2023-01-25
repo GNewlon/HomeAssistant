@@ -196,9 +196,9 @@
               name: Guest
               template: light_button
               type: 'custom:button-card'
-            - entity: switch.christmas_tree_outlet_switch
-              icon: 'mdi:pine-tree'
-              name: Xmas
+            - entity: switch.screendoor_magnet
+              icon: 'mdi:sensor_door'
+              name: ScrnDr
               template: light_button
               type: 'custom:button-card'
           type: horizontal-stack
