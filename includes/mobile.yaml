@@ -194,7 +194,7 @@
             - entity: light.guest_dimmer
               icon: 'mdi:lamp'
               name: Guest
-              template: light_button
+              template: pool_heat_select
               type: 'custom:button-card'
             - entity: switch.screendoor_magnet
 #              icon: 'mdi:sensor_door'
