@@ -200,15 +200,15 @@
 #              icon: 'mdi:sensor_door'
               name: ScrnDr
               show_state: false
-              state:
-                - value: 'on'
-                  color: red
-                  icon: 'mdi:door-open'
-                - value: 'off'
-                  color: yellow
-                  icon: 'mdi:door-closed'
+#              state:
+#                - value: 'on'
+#                  color: red
+#                  icon: 'mdi:door-open'
+#                - value: 'off'
+#                  color: yellow
+#                  icon: 'mdi:door-closed'
 #              template: screendoor_magnet_button
-              template: screendoor_magnet_button-2
+              template: screendoor_magnet_button-3
               type: 'custom:button-card'
           type: horizontal-stack
       type: vertical-stack
