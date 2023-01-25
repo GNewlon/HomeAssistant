@@ -2482,7 +2482,7 @@ screendoor_magnet_button-delete:
 #                                                               #
 #                 screendoor_magnet_button                      #
 #################################################################
-screendoor_magnet_button-3:
+screendoor_magnet_button:
   aspect_ratio: 1/1
   color: 'rgb(5, 147, 255)'
   tap_action:
