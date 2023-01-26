@@ -2407,77 +2407,6 @@ input_select.fph_3:
           - font-size: 14px
       value: 'FPH'
 input_select.fph_2: !include input_select.fph_2.yaml
-
-#################################################################
-#                                                               #
-#                   screendoor_magnet_button                    #
-#             (derived from slide.dim_button)                   #
-#                USED ONLY FOR SMALL BUTTONS                    #
-#################################################################
-screendoor_magnet_button-delete:
-  aspect_ratio: 1/1
-  color: 'rgb(5, 147, 255)'
-  hold_action:
-    action: more-info
-  show_label: true
-  show_name: true
-  show_state: false
-  size: 50%
-  state:
-    - styles:
-        card:
-          - '--paper-card-background-color': 'var(--accent-color)'
-          - box-shadow: '0px 0px 13px 3px var(--box-shadow)'
-          - border-radius: 10px
-          - text-shadow: 0px 0px 5px black
-#          - icon: 'mdi:door-open'
-        label:
-          - color: 'var(--accent-color)'
-        icon:
-          - color: 'var(--accent-color)'
-#          - icon: 'mdi:door-open'
-        name:
-          - color: 'var(--accent-color)'
-          - padding-top: 7%
-          - font-size: 14px
-      value: 'on'
-    - styles:
-        card:
-          - '--paper-card-background-color': 'var(--secondary-background-color)'
-          - box-shadow: '0px 0px 1px 1px var(--secondary-background-color)'
-          - border-radius: 10px
-#          - icon: 'mdi:door-closed'
-        label:
-          - color: var(--secondary-text-color)
-        icon:
-          - color: var(--secondary-text-color)
-#          - icon: 'mdi:door-closed'
-        name:
-          - color: var(--secondary-text-color)
-          - padding-top: 7%
-          - font-size: 14px
-      value: 'off'
-  styles:
-    card:
-      - color: 'rgb(5, 147, 255)'
-      - padding: 5%
-      - text-transform: capitalize
-      - '--mdc-ripple-press-opacity': 0.5
-      - '--mdc-ripple-color': black
-    grid:
-      - grid-template-areas: '"i" "n" "slider"'
-      - grid-template-columns: 100%
-      - grid-template-rows: 50% auto
-    img_cell:
-      - justify-content: center
-      - align-items: center
-      - padding-top: 13%
-  tap_action:
-    action: toggle
-    haptic: heavy
-  double_tap_action:
-    action: more-info
-    haptic: heavy
 #################################################################
 #                                                               #
 #                 screendoor_magnet_button                      #
@@ -2486,7 +2415,8 @@ screendoor_magnet_button:
   aspect_ratio: 1/1
   color: 'rgb(5, 147, 255)'
   tap_action:
-    action: more-info
+    action: toggle
+    haptic: heavy
   double_tap_action:
     action: more-info
     haptic: heavy
