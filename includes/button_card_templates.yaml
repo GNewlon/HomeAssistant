@@ -2440,7 +2440,7 @@ screendoor_magnet_button:
     img_cell:
       - justify-content: center
       - align-items: center
-      - padding-top: 13%
+      - padding-top: 20%
   state:
     - icon: 'mdi:door-open'
       styles:
