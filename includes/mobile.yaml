@@ -197,8 +197,7 @@
               template: light_button
               type: 'custom:button-card'
             - entity: switch.screendoor_magnet
-#              icon: 'mdi:sensor_door'
-              name: ScrnDr
+              name: Screen
               show_state: false
               template: screendoor_magnet_button
               type: 'custom:button-card'
