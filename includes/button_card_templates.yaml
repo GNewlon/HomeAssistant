@@ -2425,7 +2425,7 @@ screendoor_magnet_button:
   show_label: true
   show_name: true
   show_state: true
-  size: 40%
+  size: 70%
   styles:
     card:
       - color: 'rgb(5, 147, 255)'
