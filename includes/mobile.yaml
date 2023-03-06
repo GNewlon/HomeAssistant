@@ -486,9 +486,9 @@
               - entity: sensor.fph_outlet_temp
                 name:  FPH OUTLET
                 icon: 'mdi:coolant-temperature'               
-              - entity: sensor.hvac_liquid_temp
-                name: HVAC LIQUID
-                icon: 'mdi:coolant-temperature'            
+#              - entity: sensor.hvac_liquid_temp
+#                name: HVAC LIQUID
+#                icon: 'mdi:coolant-temperature'            
               type: glance 
           type: horizontal-stack      
         - entities:
@@ -500,10 +500,10 @@
               entity: sensor.fph_outlet_temp  # FPH OUTLET TEMP
               name: FPH Outlet
               show_fill: true
-            - color: green
-              entity: sensor.hvac_liquid_temp  # HVAC LIQUID TEMP
-              name: HVAC Liquid
-              show_fill: true
+#            - color: green
+#              entity: sensor.hvac_liquid_temp  # HVAC LIQUID TEMP
+#              name: HVAC Liquid
+#              show_fill: true
 #                - color: green
 #                  entity: input_select.hvac
 #                  name: HVAC
@@ -552,10 +552,10 @@
               entity: sensor.fph_outlet_temp  # FPH OUTLET TEMP
               name: FPH Outlet
               show_fill: true
-            - color: green
-              entity: sensor.hvac_liquid_temp  # HVAC LIQUID TEMP
-              name: HVAC Liquid
-              show_fill: true
+#            - color: green
+#              entity: sensor.hvac_liquid_temp  # HVAC LIQUID TEMP
+#              name: HVAC Liquid
+#              show_fill: true
 #                - color: green
 #                  entity: input_select.hvac
 #                  name: HVAC
