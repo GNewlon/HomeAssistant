@@ -1,6 +1,7 @@
 {
   "domain": "tesla_custom",
   "name": "Tesla Custom Integration",
+  "after_dependencies": ["mqtt"],
   "codeowners": ["@alandtse"],
   "config_flow": true,
   "dependencies": ["http"],
@@ -22,6 +23,6 @@
   "iot_class": "cloud_polling",
   "issue_tracker": "https://github.com/alandtse/tesla/issues",
   "loggers": ["teslajsonpy"],
-  "requirements": ["teslajsonpy==3.8.0"],
-  "version": "3.11.0"
+  "requirements": ["teslajsonpy==3.8.1"],
+  "version": "3.12.1"
 }
