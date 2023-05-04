@@ -333,8 +333,8 @@
 #                  show_legend: true
           font_size: 60
           hours_to_show: .5
-          points_per_hour: 60
-          update_interval: .05
+          points_per_hour: 120
+          update_interval: 1
           aggregate_func: avg
 #              lower_bound_secondary: 50
 #              upper_bound_secondary: 500
