@@ -598,7 +598,7 @@
 ###########  climate.sharkhouse GRAPH
         - entities:
             - color: blue
-              entity: '{{state_attr("climate.sharkhouse","temperature")  # FPH INLET TEMP
+              entity: '{{state_attr("climate.sharkhouse","temperature") | float(0) }}'  # FPH INLET TEMP
               name: House Temp
               show_fill: true
 #            - color: red
