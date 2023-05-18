@@ -597,10 +597,10 @@
           type: 'custom:mini-graph-card'
 ###########  climate.sharkhouse GRAPH
         - entities:
-#            - color: blue
-#              entity: climate.sharkhouse  # FPH INLET TEMP
-#              name: FPH Inlet
-#              show_fill: true
+            - color: blue
+              entity: climate.sharkhouse Temperature  # FPH INLET TEMP
+              name: House Temp
+              show_fill: true
 #            - color: red
 #              entity: sensor.fph_outlet_temp  # FPH OUTLET TEMP
 #              name: FPH Outlet
