@@ -597,7 +597,7 @@
           type: 'custom:mini-graph-card'
 ###########  climate.sharkhouse GRAPH
         - entities:
-            - color: blue
+#            - color: blue
               entity: climate.sharkhouse  # FPH INLET TEMP
               name: climate.sharkhouse
               show_fill: true
@@ -605,7 +605,7 @@
               entity: sensor.fph_outlet_temp  # FPH OUTLET TEMP
               name: FPH Outlet
               show_fill: true
-#            - color: green
+            - color: green
               entity: sensor.hvac_liquid_temp  # HVAC LIQUID TEMP
               name: HVAC Liquid
               show_fill: true
@@ -625,7 +625,7 @@
 #                  show_points: false
 #                  show_legend: true
           font_size: 60
-          hours_to_show: .4
+          hours_to_show: 2
           points_per_hour: 200
           update_interval: .1
           aggregate_func: avg
