@@ -598,13 +598,13 @@
 ###########  climate.sharkhouse GRAPH
         - entities:
 #            - color: blue
-              entity: climate.sharkhouse  # FPH INLET TEMP
-              name: climate.sharkhouse
-              show_fill: true
+#              entity: climate.sharkhouse  # FPH INLET TEMP
+#              name: FPH Inlet
+#              show_fill: true
 #            - color: red
-              entity: sensor.fph_outlet_temp  # FPH OUTLET TEMP
-              name: FPH Outlet
-              show_fill: true
+#              entity: sensor.fph_outlet_temp  # FPH OUTLET TEMP
+#              name: FPH Outlet
+#              show_fill: true
             - color: green
               entity: sensor.hvac_liquid_temp  # HVAC LIQUID TEMP
               name: HVAC Liquid
