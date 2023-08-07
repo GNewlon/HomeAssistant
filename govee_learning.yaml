@@ -1,5 +1,5 @@
 71:1D:D4:37:36:39:37:5B:
-  set_brightness_max:
+  set_brightness_max: 100
   get_brightness_max: 100
   before_set_brightness_turn_on: false
   config_offline_is_off: false
