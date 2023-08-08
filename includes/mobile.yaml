@@ -81,11 +81,17 @@
                 - value: night
                 - value: wind.down.2200 
                 - value: night.2300 
-            - entity: light.office_computer_light_bar
-              name: Office
-              icon: 'mdi:lamp'
-              template: light_button 
-              type: 'custom:button-card'
+            - type: 'custom:button-card'
+              template: input_select.pool_state 
+              entity: input_select.pool_state    
+              state:
+                - value: Waterfall
+                - value: Sleep
+                - value: Spa
+                - value: Skimmer
+                - value: Swim
+                - value: OFF
+                - value: WaterLevel
             - type: 'custom:button-card'
               template: input_select.alarm_mode  
               entity: input_select.alarm_mode  
@@ -150,10 +156,10 @@
               name: kitchen
               template: light_button
               type: 'custom:button-card'
-            - entity: light.kitchen_sink_dimmer
-              icon: 'mdi:lightbulb'
-              name: Sink
-              template: light_button
+            - entity: light.office_computer_light_bar
+              name: Office
+              icon: 'mdi:lamp'
+              template: light_button 
               type: 'custom:button-card'
             - entity: light.master_bedroom_dimmer
               name: Master
