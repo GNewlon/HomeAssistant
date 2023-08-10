@@ -879,7 +879,7 @@
               volume_mute:
                 tap_action:
                   action: call-service
-#                  service: media_player.volume_mute
+                  service: media_player.volume_mute
                   data:
                     entity_id: media_player.living_room
                     is_volume_muted: false
