@@ -864,6 +864,20 @@
                   app: 'Plex - Free Movies & TV'
                 - image: /local/youtube4.png
                   app: YouTube
+              volume_up:
+                tap_action:
+                  action: call-service
+                  service: remote.send_command
+                  service_data:
+                    entity_id: remote.roku_ultra_2023
+                    command: play
+              volume_down:
+                tap_action:
+                  action: call-service
+                  service: remote.send_command
+                  service_data:
+                    entity_id: remote.roku_ultra_2023
+                    command: play
               power:
                 service: switch.turn_on
               hide:
@@ -908,13 +922,20 @@
               entity: media_player.roku_ultra_2023
               theme: darkpurple
               tv: true
+              apps:
+                - image: /local/plex.png
+                  app: 'Plex - Free Movies & TV'
+                - image: /local/youtube4.png
+                  app: YouTube
+              volume_up:
+                tap_action:
+                  action: call-service
+                  service: remote.send_command
+                  service_data:
+                    entity_id: remote.basement_roku
+                    command: play
               power:
                 service: switch.turn_on
-              apps:
-                - image: /images/pool.png
-                  app: PLex
-                - image: /images/pool.png
-                  app: YouTube
                   hold_action:
                   action: call-service
                   service: media_player.select_source
