@@ -906,9 +906,9 @@
               power:
                 service: switch.turn_on
               apps:
-                - image: /images/plex.png
+                - image: /images/pool.png
                   app: PLex
-                - image: /images/youtube.png
+                - image: /images/pool.png
                   app: YouTube
                   hold_action:
                   action: call-service
