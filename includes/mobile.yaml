@@ -841,3 +841,43 @@
       type: vertical-stack
   icon: mdi:television-play
   title: Media
+#############################################
+#                                           #
+#               TAB: MEDIA TESTING          #
+#                                           #
+#############################################
+- badges: []
+  cards:
+    - cards:
+        - color: 'rgb(44, 109, 214)'
+          color_type: icon
+          name: Roku
+          template: button-card-headers
+          type: 'custom:button-card'
+        - cards:
+            - artwork: cover
+              entity: media_player.roku_ultra_2023
+              hide:
+                controls: false
+                icon: true
+                mute: true
+                power: true
+                source: true
+              speaker_group:
+                entities:
+                  - entity_id: media_player.living_room
+                    name: Sonos Livingroom
+                  - entity_id: media_player.living_room_left
+                    name: Sonos Pool
+                  - entity_id: media_player.p3_rs
+                    name: Sonos Hallway
+                  - entity_id: media_player.deck_dojo
+                    name: Sonos Master Bedroom
+                platform: sonos
+                show_group_count: true
+                type: 'custom:mini-media-player'
+              type: 'custom:mini-media-player'
+          type: horizontal-stack
+      type: vertical-stack
+  icon: mdi:television-play
+  title: Media Testing

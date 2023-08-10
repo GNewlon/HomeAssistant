@@ -31,3 +31,5 @@
   type: module 
 - url: /hacsfiles/custom-icons/custom-icons.js
   type: module
+- url: /hacsfiles/lovelace-card-tools/card-tools.js
+  type: module
