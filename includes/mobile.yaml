@@ -857,6 +857,10 @@
         - cards:
             - artwork: cover
               entity: media_player.roku_ultra_2023
+              theme: darkpurple
+              tv: true
+              power:
+                service: switch.turn_on
               hide:
                 controls: false
                 icon: true
@@ -875,8 +879,8 @@
                     name: Sonos Master Bedroom
                 platform: sonos
                 show_group_count: true
-                type: 'custom:mini-media-player'
-              type: 'custom:mini-media-player'
+                type: 'custom:roku-card'
+              type: 'custom:roku-card'
           type: horizontal-stack
       type: vertical-stack
   icon: mdi:television-play
