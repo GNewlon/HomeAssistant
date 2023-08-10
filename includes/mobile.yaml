@@ -861,7 +861,7 @@
               tv: true
               apps:
                 - image: /local/plex.png
-                  app: PLex
+                  app: 'Plex - Free Movies & TV'
                 - image: /local/youtube4.png
                   app: YouTube
               power:
