@@ -870,14 +870,18 @@
                   service: media_player.volume_up
                   service_data:
                     entity_id: media_player.living_room
-                    command: volume_up
               volume_down:
                 tap_action:
                   action: call-service
                   service: media_player.volume_down
                   service_data:
                     entity_id: media_player.living_room
-#                    command: volume_up
+              volume_mute:
+                tap_action:
+                  action: call-service
+                  service: media_player.volume_mute
+                  service_data:
+                    entity_id: media_player.living_room
               power:
                 service: switch.turn_on
               hide:
