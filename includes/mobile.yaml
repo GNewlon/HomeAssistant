@@ -862,7 +862,7 @@
               apps:
                 - image: /local/plex.png
                   app: PLex
-                - image: /local/youtube.png
+                - image: /local/youtube2.png
                   app: YouTube
               power:
                 service: switch.turn_on
