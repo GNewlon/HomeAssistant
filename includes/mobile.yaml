@@ -867,16 +867,16 @@
               volume_up:
                 tap_action:
                   action: call-service
-                  service: remote.send_command
+                  service: media_player.volume_up
                   service_data:
                     entity_id: media_player.living_room
                     command: volume_up
               volume_down:
                 tap_action:
                   action: call-service
-                  service: remote.send_command
+                  service: media_player.volume_down
                   service_data:
-                    entity_id: remote.roku_ultra_2023
+                    entity_id: media_player.living_room
                     command: volume_up
               power:
                 service: switch.turn_on
