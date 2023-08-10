@@ -877,7 +877,7 @@
                   service: media_player.volume_down
                   service_data:
                     entity_id: media_player.living_room
-                    command: volume_up
+#                    command: volume_up
               power:
                 service: switch.turn_on
               hide:
