@@ -5,8 +5,6 @@
   type: module
 - url: /hacsfiles/custom-header/custom-header.js
   type: module
-- url: /hacsfiles/lovelace-animated-background/animated-background.js
-  type: module
 - url: /hacsfiles/lovelace-slider-entity-row/slider-entity-row.js
   type: module
 - url: /hacsfiles/mini-graph-card/mini-graph-card-bundle.js
@@ -32,6 +30,4 @@
 - url: /hacsfiles/vacuum-card/vacuum-card.js
   type: module 
 - url: /hacsfiles/custom-icons/custom-icons.js
-  type: module
-- url: /hacsfiles/lovelace-swipe-navigation/swipe-navigation.js
   type: module
