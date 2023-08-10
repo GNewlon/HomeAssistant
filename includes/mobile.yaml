@@ -882,7 +882,6 @@
                   service: media_player.volume_mute
                   service_data:
                     is_volume_muted: false
-                  target:
                     entity_id: media_player.living_room
               power:
                 service: switch.turn_on
