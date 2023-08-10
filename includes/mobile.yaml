@@ -910,12 +910,12 @@
                   app: PLex
                 - image: /images/youtube.png
                   app: YouTube
-    hold_action:
-      action: call-service
-      service: media_player.select_source
-      service_data:
-        source: ESPN
-        entity_id: media_player.basement_roku
+                  hold_action:
+                  action: call-service
+                  service: media_player.select_source
+                  service_data:
+                    source: YouTube
+                    entity_id: media_player.roku_ultra_2023
               hide:
                 controls: false
                 icon: true
