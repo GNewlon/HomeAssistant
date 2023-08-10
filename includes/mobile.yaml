@@ -816,7 +816,7 @@
           type: 'custom:button-card'
         - cards:
             - artwork: cover
-              entity: media_player.roku_ultra_living_room
+              entity: media_player.roku_ultra_2023
               hide:
                 controls: false
                 icon: true
