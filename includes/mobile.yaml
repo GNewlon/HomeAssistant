@@ -860,9 +860,9 @@
               theme: darkpurple
               tv: true
               apps:
-                - image: /images/pool.png
+                - image: /local//images/pool.png
                   app: PLex
-                - image: /images/pool.png
+                - image: /local//images/skull.png
                   app: YouTube
               power:
                 service: switch.turn_on
