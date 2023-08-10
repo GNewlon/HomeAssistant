@@ -859,6 +859,11 @@
               entity: media_player.roku_ultra_2023
               theme: darkpurple
               tv: true
+              apps:
+                - image: /images/pool.png
+                  app: PLex
+                - image: /images/pool.png
+                  app: YouTube
               power:
                 service: switch.turn_on
               hide:
