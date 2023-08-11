@@ -864,7 +864,7 @@
                   app: 'Plex - Free Movies & TV'
                 - image: /local/youtube4.png
                   app: YouTube
-                - image: /local/youtube4.png
+                - image: /local/night.mode.png
                   app: YouTube
               volume_up:
                 tap_action:
