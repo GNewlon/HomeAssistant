@@ -35,3 +35,5 @@
   type: module
 - url: /hacsfiles/custom-sonos-card/custom-sonos-card.js
   type: module 
+- url: /hacsfiles/hass-bha-icons/hass-bha-icons.js
+  type: module
