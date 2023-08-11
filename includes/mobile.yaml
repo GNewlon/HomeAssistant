@@ -942,6 +942,6 @@
               type: 'custom:sonos-card'
           type: horizontal-stack
       type: vertical-stack
-  icon: 'mdi:speaker-wireless'
+  icon: 'mdi:sonos6'
 #  icon: 'mdi:garage-open'
   title: SONOS TESTING 
