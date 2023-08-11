@@ -958,10 +958,8 @@
                   service_data:
                     media_player: media_player.living_room  
                 double_tap_action:
-                  action: call-service
-#                  service: call-service
-                  service_data:
-                    media_player: switch.sonos_media_player.living_room_night_sound                                   
+                  action: toggle
+                  entity: switch.sonos_media_player.living_room_night_sound                                
               power:
                 service: switch.turn_on
               hide:
