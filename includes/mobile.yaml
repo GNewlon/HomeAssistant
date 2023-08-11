@@ -942,6 +942,6 @@
               type: 'custom:sonos-card'
           type: horizontal-stack
       type: vertical-stack
-  icon: 'fapro:sonos3'
+  icon: 'fapro:lamp'
 #  icon: 'mdi:garage-open'
   title: SONOS TESTING 
