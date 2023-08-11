@@ -866,12 +866,8 @@
                   app: YouTube
                 - image: /local/youtube4.png
                   app: YouTube
-                - image: /local/night.mode.png
-                  tap_action:
-                    action: call-service
-                        service: media_player.select_source
-                        service_data:
-                          entity_id: media_player.living_room                               
+                - image: /local/plex.png
+                  app: 'Plex - Free Movies & TV'                            
               volume_up:
                 tap_action:
                   action: call-service
@@ -941,13 +937,8 @@
                   app: YouTube
                 - image: /local/youtube4.png
                   app: YouTube
-                - image: /local/night.mode.png
-                  tap_action:
-                    action: call-service
-                        service: player.set.nightmode
-                        service_data:
-                          night_sound: yes
-                          entity_id: media_player.living_room                               
+                - image: /local/plex.png
+                  app: 'Plex - Free Movies & TV'                           
               volume_up:
                 tap_action:
                   action: call-service
@@ -965,7 +956,12 @@
                   action: call-service
                   service: script.mute
                   service_data:
-                    media_player: media_player.living_room          
+                    media_player: media_player.living_room  
+                double_tap_action:
+                  action: call-service
+                  service: player.set.nightmode
+                  service_data:
+                    media_player: media_player.living_room                                        
               power:
                 service: switch.turn_on
               hide:
