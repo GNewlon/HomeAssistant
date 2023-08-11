@@ -843,7 +843,7 @@
   title: Media
 #############################################
 #                                           #
-#               TAB: MEDIA TESTING          #
+#           TAB: MEDIA TESTING 2            #
 #                                           #
 #############################################
 - badges: []
@@ -866,8 +866,12 @@
                   app: YouTube
                 - image: /local/youtube4.png
                   app: YouTube
-                - image: /local/plex.png
-                  app: 'Plex - Free Movies & TV'
+                - image: /local/night.mode.png
+                  tap_action:
+                    action: call-service
+                        service: media_player.select_source
+                        service_data:
+                          entity_id: media_player.living_room                               
               volume_up:
                 tap_action:
                   action: call-service
@@ -911,4 +915,80 @@
           type: horizontal-stack
       type: vertical-stack
   icon: mdi:television-play
-  title: Media Testing
+  title: Media Testing 2
+#############################################
+#                                           #
+#         TAB: MEDIA TESTING 3              #
+#                                           #
+#############################################
+- badges: []
+  cards:
+    - cards:
+        - color: 'rgb(44, 109, 214)'
+          color_type: icon
+          name: Roku
+          template: button-card-headers
+          type: 'custom:button-card'
+        - cards:
+            - artwork: cover
+              entity: media_player.roku_ultra_2023
+              theme: darkpurple
+              tv: true
+              apps:
+                - image: /local/plex.png
+                  app: 'Plex - Free Movies & TV'
+                - image: /local/youtube4.png
+                  app: YouTube
+                - image: /local/youtube4.png
+                  app: YouTube
+                - image: /local/night.mode.png
+                  tap_action:
+                    action: call-service
+                        service: player.set.nightmode
+                        service_data:
+                          night_sound: yes
+                          entity_id: media_player.living_room                               
+              volume_up:
+                tap_action:
+                  action: call-service
+                  service: media_player.volume_up
+                  service_data:
+                    entity_id: media_player.living_room
+              volume_down:
+                tap_action:
+                  action: call-service
+                  service: media_player.volume_down
+                  service_data:
+                    entity_id: media_player.living_room
+              volume_mute:
+                tap_action:
+                  action: call-service
+                  service: script.mute
+                  service_data:
+                    media_player: media_player.living_room          
+              power:
+                service: switch.turn_on
+              hide:
+                controls: false
+                icon: true
+                mute: true
+                power: true
+                source: true
+              speaker_group:
+                entities:
+                  - entity_id: media_player.living_room
+                    name: Sonos Livingroom
+                  - entity_id: media_player.living_room_left
+                    name: Sonos Pool
+                  - entity_id: media_player.p3_rs
+                    name: Sonos Hallway
+                  - entity_id: media_player.deck_dojo
+                    name: Sonos Master Bedroom
+                platform: sonos
+                show_group_count: true
+                type: 'custom:roku-card'
+              type: 'custom:roku-card'
+          type: horizontal-stack
+      type: vertical-stack
+  icon: mdi:television-play
+  title: Media Testing 3
