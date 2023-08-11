@@ -919,7 +919,7 @@
   title: Media Testing 2
 #############################################
 #                                           #
-#         TAB: MEDIA TESTING 3              #
+#         TAB: SONOS TESTING                #
 #                                           #
 #############################################
 - badges: []
@@ -927,69 +927,20 @@
     - cards:
         - color: 'rgb(44, 109, 214)'
           color_type: icon
-          name: Roku
+          name: SONOS
           template: button-card-headers
           type: 'custom:button-card'
         - cards:
-            - artwork: cover
-              entity: media_player.roku_ultra_2023
-              theme: darkpurple
-              tv: true
-              apps:
-                - image: /local/plex.png
-                  app: 'Plex - Free Movies & TV'
-                - image: /local/youtube4.png
-                  app: YouTube
-                - image: /local/youtube4.png
-                  app: YouTube
-                - image: /local/plex.png
-                  app: 'Plex - Free Movies & TV'                           
-              volume_up:
-                tap_action:
-                  action: call-service
-                  service: media_player.volume_up
-                  service_data:
-                    entity_id: media_player.living_room
-              volume_down:
-                tap_action:
-                  action: call-service
-                  service: media_player.volume_down
-                  service_data:
-                    entity_id: media_player.living_room
-              volume_mute:
-                tap_action:
-                  action: call-service
-                  service: script.mute
-                  service_data:
-                    media_player: media_player.living_room  
-                double_tap_action:
-                  action: call-service
-                  service: switch.toggle
-                  service_data:
-                    entity_id: switch.sonos_living_room_night_sound 
-              power:
-                service: switch.turn_on
-              hide:
-                controls: false
-                icon: true
-                mute: true
-                power: true
-                source: true
-              speaker_group:
-                entities:
-                  - entity_id: media_player.living_room
-                    name: Sonos Livingroom
-                  - entity_id: media_player.living_room_left
-                    name: Sonos Pool
-                  - entity_id: media_player.p3_rs
-                    name: Sonos Hallway
-                  - entity_id: media_player.deck_dojo
-                    name: Sonos Master Bedroom
-                platform: sonos
-                show_group_count: true
-                type: 'custom:roku-card'
-              type: 'custom:roku-card'
+            - sections:
+              - player
+              - groups
+              - grouping
+              - volumes
+              - media browser
+              widthPercentage: 100
+              entity_id: media_player.living_room
+              type: 'custom:sonos-card'
           type: horizontal-stack
       type: vertical-stack
   icon: mdi:television-play
-  title: Media Testing 3
+  title: SONOS TESTING 
