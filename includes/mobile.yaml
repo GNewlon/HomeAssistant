@@ -959,6 +959,7 @@
                     media_player: media_player.living_room  
                 double_tap_action:
                   action: call-service
+                  service: set_option
                   service_data:
                     night_sound: yes
                     media_player: media_player.living_room                                        
