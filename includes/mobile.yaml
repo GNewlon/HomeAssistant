@@ -942,5 +942,5 @@
               type: 'custom:sonos-card'
           type: horizontal-stack
       type: vertical-stack
-  image: /local/sonos2.png
+  icon: fapro:sonos3
   title: SONOS TESTING 
