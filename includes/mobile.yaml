@@ -959,7 +959,7 @@
                     media_player: media_player.living_room  
                 double_tap_action:
                   action: toggle
-                  entity_id: switch.sonos_living_room_night_sound                                
+                  entity: switch.sonos_living_room_night_sound                                
               power:
                 service: switch.turn_on
               hide:
