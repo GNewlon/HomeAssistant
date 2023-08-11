@@ -959,8 +959,8 @@
                     media_player: media_player.living_room  
                 double_tap_action:
                   action: call-service
-                  service: player.set.nightmode
                   service_data:
+                    night_sound: yes
                     media_player: media_player.living_room                                        
               power:
                 service: switch.turn_on
