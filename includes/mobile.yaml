@@ -866,6 +866,8 @@
                   app: YouTube
                 - image: /local/youtube4.png
                   app: YouTube
+                - image: /local/plex.png
+                  app: 'Plex - Free Movies & TV'
               volume_up:
                 tap_action:
                   action: call-service
