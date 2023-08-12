@@ -37,3 +37,5 @@
   type: module 
 - url: /hacsfiles/hass-bha-icons/hass-bha-icons.js
   type: module
+- url: /hacsfiles/lovelace-mushroom/mushroom.js
+  type: module
