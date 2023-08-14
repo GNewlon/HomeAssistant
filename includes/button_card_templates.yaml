@@ -2691,7 +2691,7 @@ popup_light_button_2:
           show_header_toggle: true   
           entities:
             - type: custom:slider-entity-row
-#              entity: light.dining_dimmer
+              entity: '[[[ return entity.entity_id ]]]' 
               hide_state: true
               toggle: true
               step: 1
