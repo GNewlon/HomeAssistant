@@ -230,6 +230,7 @@
               template: slide.dim_button
               type: 'custom:button-card'
           type: horizontal-stack
+      type: vertical-stack
         - cards: ################################################## ROW 2
             - entity: light.kitchen_fan
               icon: 'mdi:ceiling-fan'
