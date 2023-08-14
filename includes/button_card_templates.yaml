@@ -2779,14 +2779,36 @@ popup_light_button_3:
           entities:
             - type: 'custom:button-card' 
               template: light_button
-              entity: '[[[ return entity.entity_id ]]]' 
+              entity: light.dining_dimmer
               hide_state: false
               toggle: true
               step: 1
-#              name: 'On'
+              name: 'Test 1'
               state_color: true
-#              tap_action:
-#                action: toggle
+            - type: 'custom:button-card' 
+              template: light_button
+              entity: light.dining_dimmer 
+              hide_state: false
+              toggle: true
+              step: 1
+              name: 'Test 2'
+              state_color: true
+            - type: 'custom:button-card' 
+              template: light_button
+              entity: light.dining_dimmer
+              hide_state: false
+              toggle: true
+              step: 1
+              name: 'Test 3'
+              state_color: true
+            - type: 'custom:button-card' 
+              template: light_button
+              entity: light.dining_dimmer 
+              hide_state: false
+              toggle: true
+              step: 1
+              name: 'Test 4'
+              state_color: true
   double_tap_action:
     action: more-info
     haptic: heavy
