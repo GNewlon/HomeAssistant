@@ -969,16 +969,6 @@
               template: popup_light_button
               icon: 'mdi:hot-tub'
               type: 'custom:button-card' 
-            - type: 'custom:button-card'   #3 BUTTON
-              template: popup_light_button
-              entity: input_select.pool_state    
-              state:
-                - value: Waterfall
-                - value: Sleep
-                - value: Spa
-                - value: Skimmer
-                - value: Swim
-                - value: OFF
             - entity: input_select.fph_2                  #4 BUTTON
               template: popup_light_button
               type: 'custom:button-card'   
