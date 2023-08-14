@@ -2844,7 +2844,8 @@ popup_roku_button_1:
           - color: 'var(--accent-color)'
           - padding-top: 7%
           - font-size: 14px
-      source: 'Plex - Free Movies & TV'
+      value: 'playing'
+      value: 'on'
     - styles:
         card:
           - '--paper-card-background-color': 'var(--secondary-background-color)'
@@ -2858,7 +2859,9 @@ popup_roku_button_1:
           - color: var(--secondary-text-color)
           - padding-top: 7%
           - font-size: 14px
-      value: 'playing'
+#      value: 'paused'
+#      value: 'off'
+      value: 'idle'
   styles:
     card:
       - color: 'rgb(5, 147, 255)'
