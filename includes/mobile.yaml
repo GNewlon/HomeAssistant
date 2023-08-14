@@ -969,7 +969,7 @@
               template: popup_light_button
               icon: 'mdi:hot-tub'
               type: 'custom:button-card' 
-            - entity: input_select.fph_2                  #3 BUTTON
+            - entity: light.dining_dimmer                  #3 BUTTON
               template: popup_light_button_2
               type: 'custom:button-card'     
             - entity: input_select.pool_heat_select  #4 BUTTON
