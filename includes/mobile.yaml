@@ -970,22 +970,9 @@
               icon: 'mdi:hot-tub'
               type: 'custom:button-card' 
             - template: popup_light_button_3              #3 BUTTON
-#              entity: light.office_computer_light_bar
               type: 'custom:button-card'     
-            - entity: input_select.pool_heat_select       #4 BUTTON
-              template: pool_heat_select
-              name: Pool Heat
-#              label: Heat
-              state:
-                - value: FPH
-                  icon: 'mdi:source-branch-sync'
-                - value: $PH
-                  icon: 'mdi:currency-usd'
-                - value: FPH+$PH
-                  icon: 'mdi:arrow-decision'
-                - value: NONE
-                  icon: 'mdi:set-none'
-              type: 'custom:button-card'                     
+            - template: popup_roku_button_1               #4 BUTTON
+              type: 'custom:button-card'                      
           type: horizontal-stack
       type: vertical-stack
   icon: 'mdi:home-assistant'
