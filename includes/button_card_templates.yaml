@@ -2845,7 +2845,7 @@ popup_roku_button_1:
           - color: 'var(--accent-color)'
           - padding-top: 7%
           - font-size: 14px
-      value: 'playing'
+#      value: 'playing'
       value: 'on'
     - styles:
         card:
@@ -2860,8 +2860,8 @@ popup_roku_button_1:
           - color: var(--secondary-text-color)
           - padding-top: 7%
           - font-size: 14px
-      value: 'paused'
-      value: 'off'
+#      value: 'paused'
+#      value: 'off'
       value: 'idle'
   styles:
     card:
