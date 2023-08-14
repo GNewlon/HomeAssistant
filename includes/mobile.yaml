@@ -126,7 +126,7 @@
           type: 'custom:button-card'
         - cards: ################################################## ROW 1
             - name: Roku                                  #4 BUTTON
-#              entity: media_player.roku_ultra_2023
+              entity: media_player.roku_ultra_2023
               template: popup_roku_button_1
               icon: 'mdi:speaker-wireless'
               type: 'custom:button-card' 
