@@ -2880,6 +2880,7 @@ popup_roku_button_1:
     browser_mod:
       service: browser_mod.popup
       data:
+        title: Roku
         content:
           type: entities
 #          state_color: true
