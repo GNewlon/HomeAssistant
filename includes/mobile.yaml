@@ -962,24 +962,17 @@
           service: browser_mod.popup
           data:
             title: HTML content
-            content:
+            content:        
+              entities:
+                - switch.fph_1_norm_fph
+                - switch.fph_hvac_compressor_24vac_no
+                - switch.nph_condenser_fan
+                - switch.nph_hvac_compressor_24vac_nc
+                - switch.valve_4_pool_spa
+                - switch.valve_5_off_he
               type: entities
-            - entities:   
-              - entity: switch.fph_1_norm_fph
-                icon: 'mdi:alpha-h-box'
-              - entity: switch.fph_hvac_compressor_24vac_no
-                icon: 'mdi:alpha-h-box'
-              - entity: switch.nph_condenser_fan
-                icon: 'mdi:alpha-h-box'
-              - entity: switch.nph_hvac_compressor_24vac_nc
-                icon: 'mdi:alpha-h-box'
-              - entity: switch.valve_4_pool_spa
-                icon: 'mdi:numeric-2-box'                
-              - entity: switch.valve_5_off_he
-                icon: 'mdi:numeric-3-box'
-              type: entities 
+            type: horizontal-stack 
           type: horizontal-stack 
-
         - cards:
             - sections:
               - player
