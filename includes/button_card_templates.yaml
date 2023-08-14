@@ -2604,11 +2604,6 @@ popup_light_button:
     haptic: heavy
     browser_mod:
       service: browser_mod.popup
-      data:
-        content:
- #         type: entities
-          state_color: true
-          show_header_toggle: true
   double_tap_action:
     action: more-info
     haptic: heavy
