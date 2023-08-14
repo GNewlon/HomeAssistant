@@ -945,3 +945,54 @@
   icon: 'mdi:speaker-wireless'
 #  icon: 'mdi:garage-open'
   title: SONOS TESTING 
+#############################################
+#                                           #
+#         TAB: POPUP TESTING                #
+#                                           #
+#############################################
+- badges: []
+  cards:
+    - cards:
+        - color: 'rgb(44, 109, 214)'
+          color_type: icon
+          name: POPUP TESING
+          template: button-card-headers
+          type: 'custom:button-card'      
+        - cards:
+            - entities:   
+              - entity: switch.fph_1_norm_fph
+                icon: 'mdi:alpha-h-box'
+                service: browser_mod.popup
+                data:
+                  title: The title
+                  content: The content
+                  right_button: Right button
+                  left_button: Left button
+              - entity: switch.fph_hvac_compressor_24vac_no
+                icon: 'mdi:alpha-h-box'
+              - entity: switch.nph_condenser_fan
+                icon: 'mdi:alpha-h-box'
+              - entity: switch.nph_hvac_compressor_24vac_nc
+                icon: 'mdi:alpha-h-box'
+              - entity: switch.valve_4_pool_spa
+                icon: 'mdi:numeric-2-box'                
+              - entity: switch.valve_5_off_he
+                icon: 'mdi:numeric-3-box'
+              type: entities 
+          type: horizontal-stack 
+
+        - cards:
+            - sections:
+              - player
+              - groups
+              - grouping
+              - volumes
+              - media browser
+              widthPercentage: 100
+              entity_id: media_player.living_room
+              type: 'custom:sonos-card'
+          type: horizontal-stack
+      type: vertical-stack
+  icon: 'mdi:home-assistant'
+#  icon: 'mdi:garage-open'
+  title: POPUP TESING
