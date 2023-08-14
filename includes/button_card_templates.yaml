@@ -2821,6 +2821,7 @@ popup_light_button_3:
 #                                                                             #
 ###############################################################################
 popup_roku_button_1:
+  entity: media_player.roku_ultra_2023
   aspect_ratio: 1/1
   color: 'rgb(5, 147, 255)'
   hold_action:
@@ -2859,8 +2860,8 @@ popup_roku_button_1:
           - color: var(--secondary-text-color)
           - padding-top: 7%
           - font-size: 14px
-#      value: 'paused'
-#      value: 'off'
+      value: 'paused'
+      value: 'off'
       value: 'idle'
   styles:
     card:
