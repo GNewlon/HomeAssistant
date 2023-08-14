@@ -959,20 +959,20 @@
           template: button-card-headers
           type: 'custom:button-card'
         - cards:
-            - entity: light.dining_dimmer #1 BUTTON
+            - entity: light.dining_dimmer               #1 BUTTON
               name: Test 1
               template: popup_light_button
               icon: 'mdi:pool-thermometer'
               type: 'custom:button-card' 
-            - entity: light.dining_dimmer  #2 BUTTON
+            - entity: light.dining_dimmer                #2 BUTTON
               name: Test 2
               template: popup_light_button
               icon: 'mdi:hot-tub'
               type: 'custom:button-card' 
-            - entity: light.dining_dimmer                  #3 BUTTON
+            - entity: light.office_computer_light_bar    #3 BUTTON
               template: popup_light_button_2
               type: 'custom:button-card'     
-            - entity: input_select.pool_heat_select  #4 BUTTON
+            - entity: input_select.pool_heat_select       #4 BUTTON
               template: pool_heat_select
               name: Pool Heat
 #              label: Heat

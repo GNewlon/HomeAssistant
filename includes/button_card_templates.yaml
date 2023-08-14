@@ -2697,6 +2697,10 @@ popup_light_button_2:
               hide_state: false
               toggle: true
               step: 1
+              name: 'On'
+              state_color: true
+              tap_action:
+                action: toggle
   double_tap_action:
     action: more-info
     haptic: heavy
