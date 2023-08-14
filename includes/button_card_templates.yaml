@@ -2619,12 +2619,14 @@ popup_light_button:
   double_tap_action:
     action: more-info
     haptic: heavy
-#################################################################
-#                                                               #
-#                     popup_light_button_2                        #
-#             (derived from slide.dim_button)                   #
-#                USED ONLY FOR SMALL BUTTONS                    #
-#################################################################
+###############################################################################
+#                                                                             #
+#                     popup_light_button_2                                    #
+#             (derived from slide.dim_button)                                 #
+#                USED ONLY FOR SMALL BUTTONS                                  #
+# https://community.home-assistant.io/t/custom-card-room-card/393846/329      #
+#                                                                             #
+###############################################################################
 popup_light_button_2:
   aspect_ratio: 1/1
   color: 'rgb(5, 147, 255)'
@@ -2688,11 +2690,11 @@ popup_light_button_2:
         content:
           type: entities
           state_color: true
-          show_header_toggle: true   
+#          show_header_toggle: true   
           entities:
             - type: custom:slider-entity-row
               entity: '[[[ return entity.entity_id ]]]' 
-              hide_state: true
+              hide_state: false
               toggle: true
               step: 1
   double_tap_action:
