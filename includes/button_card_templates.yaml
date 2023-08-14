@@ -2604,6 +2604,17 @@ popup_light_button:
     haptic: heavy
     browser_mod:
       service: browser_mod.popup
+      data:
+        content:
+          type: entities
+          state_color: true
+          show_header_toggle: true   
+          entities:
+            - type: custom:slider-entity-row
+              entity: light.dining_dimmer
+              hide_state: true
+              toggle: true
+              step: 1
   double_tap_action:
     action: more-info
     haptic: heavy
