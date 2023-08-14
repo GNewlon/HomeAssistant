@@ -957,17 +957,16 @@
           color_type: icon
           name: POPUP TESING
           template: button-card-headers
-          type: 'custom:button-card'      
+          type: 'custom:button-card'
         - cards:
+          service: browser_mod.popup
+          data:
+            title: HTML content
+            content:
+              type: entities
             - entities:   
               - entity: switch.fph_1_norm_fph
                 icon: 'mdi:alpha-h-box'
-                service: browser_mod.popup
-                data:
-                  title: The title
-                  content: The content
-                  right_button: Right button
-                  left_button: Left button
               - entity: switch.fph_hvac_compressor_24vac_no
                 icon: 'mdi:alpha-h-box'
               - entity: switch.nph_condenser_fan
