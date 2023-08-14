@@ -119,90 +119,33 @@
                 - value: C.Home
                 - value: C.Away          
           type: horizontal-stack
-        - color: 'rgb(44, 109, 214)' ############################## LIGHTS
+        - color: 'rgb(44, 109, 214)' ############################## ROKU
           color_type: icon
-          name: Lights
+          name: ROKU
           template: button-card-headers-2
           type: 'custom:button-card'
         - cards: ################################################## ROW 1
-            - entity: light.dining_dimmer
-              name: Dining
-              icon: 'mdi:chandelier'
-              template: light_button
-              type: 'custom:button-card'
-            - entity: light.dining_outlet_dimmer
-              name: Dining
-              icon: 'mdi:lamp'
-              template: light_button 
-              type: 'custom:button-card'
-            - entity: light.kitchen_dimmer
-              icon: 'mdi:lightbulb-group'           
-              name: Kitchen
-              template: light_button 
-              type: 'custom:button-card'
-            - entity: light.laundry_dimmer
-              name: Lndry
-              icon: 'mdi:wall-sconce-flat'
-              template: light_button 
-              type: 'custom:button-card'
-            - entity: light.bathroom_dimmer
-              name: Bathroom
-              template: slide.dim_button
-              type: 'custom:button-card'
+            - name: Roku                                  #4 BUTTON
+              template: popup_roku_button_1
+              icon: 'mdi:speaker-wireless'
+              type: 'custom:button-card' 
+            - name: Roku                                  #4 BUTTON
+              template: popup_roku_button_1
+              icon: 'mdi:speaker-wireless'
+              type: 'custom:button-card' 
+            - name: Roku                                  #4 BUTTON
+              template: popup_roku_button_1
+              icon: 'mdi:speaker-wireless'
+              type: 'custom:button-card' 
+            - name: Roku                                  #4 BUTTON
+              template: popup_roku_button_1
+              icon: 'mdi:speaker-wireless'
+              type: 'custom:button-card' 
+            - name: Roku                                  #4 BUTTON
+              template: popup_roku_button_1
+              icon: 'mdi:speaker-wireless'
+              type: 'custom:button-card' 
           type: horizontal-stack
-        - cards: ################################################## ROW 2
-            - entity: light.kitchen_fan
-              icon: 'mdi:ceiling-fan'
-              name: kitchen
-              template: light_button
-              type: 'custom:button-card'
-            - entity: light.office_computer_light_bar
-              name: Office
-              icon: 'mdi:lamp'
-              template: light_button 
-              type: 'custom:button-card'
-            - entity: light.master_bedroom_dimmer
-              name: Master
-              template: slide.dim_button
-              type: 'custom:button-card'
-            - entity: cover.master_bedroom_curtains
-              name:  Master
-              template: curtain_button
-              type: 'custom:button-card'
-            - entity: switch.master_bedroom_closet_light
-              name:  Master
-              icon: 'mdi:hanger'
-              template: light_button
-              type: 'custom:button-card'
-          type: horizontal-stack
-        - cards: ################################################## ROW 3
-            - entity: light.foyer_dimmer
-              icon: 'mdi:chandelier'
-              name: Foyer
-              template: light_button
-              type: 'custom:button-card'
-            - entity: light.hallway_dimmer
-              icon: 'mdi:lightbulb-group'
-              name: Hallway
-              template: light_button
-              type: 'custom:button-card'
-            - entity: light.guest_fanlight_dimmer
-              icon: 'mdi:ceiling-fan-light'
-              name: Guest
-              template: light_button
-              type: 'custom:button-card'
-            - entity: light.guest_dimmer
-              icon: 'mdi:lamp'
-              name: Guest
-              template: light_button
-              type: 'custom:button-card'
-            - entity: switch.screendoor_magnet
-              name: Screen
-              show_state: false
-              template: screendoor_magnet_button
-              type: 'custom:button-card'
-          type: horizontal-stack
-      type: vertical-stack
         - color: 'rgb(44, 109, 214)' ############################## LIGHTS
           color_type: icon
           name: Lights
