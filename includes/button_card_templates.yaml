@@ -3118,9 +3118,6 @@ popup_hvac_button:
           type: entities
 #          state_color: true
           show_header_toggle: true   
-          entities:
-            - artwork: cover
-              entity: '[[[ return entity.entity_id ]]]'  # <<----Future use with other Roku/Sonos Systems
           cards:
             - cards:
               - entity: climate.shark_house
