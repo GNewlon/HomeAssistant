@@ -3121,129 +3121,98 @@ popup_hvac_button:
           entities:
             - artwork: cover
               entity: '[[[ return entity.entity_id ]]]'  # <<----Future use with other Roku/Sonos Systems
-  cards:
-    - cards:
-        - entity: climate.shark_house
-          header: false
-          control: true
-          step_size: 1
-          sensors:
-            - id: state
-              label: 'State:'
-              template: "{{hvac_action|translate('state_attributes.climate.hvac_action.')}}"              
-            - id: temperature
-              label: 'Currently:'
-              template: '{{current_temperature|formatNumber}}'
-            - entity: sensor.shark_house_current_humidity
-              template: '{{state.text}}%'
-              label: 'Humidity:'
-          layout:
-            step: row
-          style: |
-            ha-card {
-              --st-font-size-xl: 50px;
-              --st-font-size-m: 10px;
-              --st-font-size-title: 33px;
-              --st-font-size-sensors: 14px;
-              --st-spacing: 0px;
-            }
+        cards:
+          - cards:
+              - entity: climate.shark_house
+                header: false
+                control: true
+                step_size: 1
+                sensors:
+                  - id: state
+                    label: 'State:'
+                    template: "{{hvac_action|translate('state_attributes.climate.hvac_action.')}}"              
+                  - id: temperature
+                    label: 'Currently:'
+                    template: '{{current_temperature|formatNumber}}'
+                  - entity: sensor.shark_house_current_humidity
+                    template: '{{state.text}}%'
+                    label: 'Humidity:'
+                layout:
+                  step: row
+                style: |
+                  ha-card {
+                    --st-font-size-xl: 50px;
+                    --st-font-size-m: 10px;
+                    --st-font-size-title: 33px;
+                    --st-font-size-sensors: 14px;
+                    --st-spacing: 0px;
+                  }
             ...
-          version: 3
-          type: 'custom:simple-thermostat'
-        - entities:
-            - entity: sensor.fph_inlet_temp
-              color: blue
-              name: FPH Inlet Temp
-              show_fill: true
-            - color: red
-              entity: sensor.fph_outlet_temp
-              name: FPH Outlet Temp
-              show_fill: true
-#                - color: green
-#                  entity: input_select.hvac
-#                  name: HVAC
-#                  show_fill: true
-#                - color: white
-#                  entity: sensor.pool_pump_electric_production_w
-#                  attribute: Pump Watts
-#                  entity: input_select.hvac
-#                  name: Watts
-#                  y_axis: secondary                
-#                  show_graph: bar                  
-#                  show_fill: true
-#                  show_line: false
-#                  show_points: false
-#                  show_legend: true
-          font_size: 60
-          hours_to_show: .5
-          points_per_hour: 120
-          update_interval: 1
-          aggregate_func: avg
-#              lower_bound_secondary: 50
-#              upper_bound_secondary: 500
-#              value_factor: -10
-          line_width: 2
-          smoothing: true
-#              min_bound_range_secondary: 100
-#              upper_bound_secondary: 1   
-#              min_bound_range_secondary: 0
-#              group_by: second           
-#              icon: 'mdi:thermometer'
-#              name: Pool Temperature
-          show:
-            fill: true
-            hour24: true
-            icon: false
-            labels: true
-            name: false
-#                labels_secondary: true
-          type: 'custom:mini-graph-card'
-        - cards:
-            - entity: input_select.pool_fph_set_max_temp #1 BUTTON
-              name: FPH MAX
-              template: set_max_temp
-              icon: 'mdi:pool-thermometer'
-              type: 'custom:button-card' 
-            - entity: input_select.spa_set_max_temp  #2 BUTTON
-              name: Spa MAX
-              template: set_max_temp
-              icon: 'mdi:hot-tub'
-              type: 'custom:button-card' 
-            - type: 'custom:button-card'   #3 BUTTON
-              template: input_select.pool_state 
-              entity: input_select.pool_state    
-              state:
-                - value: Waterfall
-                - value: Sleep
-                - value: Spa
-                - value: Skimmer
-                - value: Swim
-                - value: OFF
-            - entity: input_select.fph_2                  #4 BUTTON
-              template: input_select.fph_2
-              type: 'custom:button-card'   
-#            - entity: input_select.fph  #4 BUTTON
-#              template: input_select.fph
-#              state:
-#                - value: FPH
-#                - value: $PH
-#                - value: IDLE
-#                - value: NPH
-#                - value: HOT                
-#              name: FPH
-#              type: 'custom:button-card'   
-            - entity: input_select.pool_heat_select  #5 BUTTON
-              template: pool_heat_select
-              name: Pool Heat
-#              label: Heat
-              state:
-                - value: FPH
-                  icon: 'mdi:source-branch-sync'
-                - value: $PH
-                  icon: 'mdi:currency-usd'
-                - value: FPH+$PH
-                  icon: 'mdi:arrow-decision'
-                - value: NONE
-                  icon: 'mdi:set-none'
-              type: 'custom:button-card'              
-          type: horizontal-stack     
+                version: 3
+                type: 'custom:simple-thermostat'
+              - entities:
+                  - entity: sensor.fph_inlet_temp
+                    color: blue
+                    name: FPH Inlet Temp
+                    show_fill: true
+                  - color: red
+                    entity: sensor.fph_outlet_temp
+                    name: FPH Outlet Temp
+                    show_fill: true
+                font_size: 60
+                hours_to_show: .5
+                points_per_hour: 120
+                update_interval: 1
+                aggregate_func: avg
+                line_width: 2
+                smoothing: true
+                show:
+                  fill: true
+                  hour24: true
+                  icon: false
+                  labels: true
+                  name: false
+#                      labels_secondary: true
+                type: 'custom:mini-graph-card'
+              - cards:
+                  - entity: input_select.pool_fph_set_max_temp #1 BUTTON
+                    name: FPH MAX
+                    template: set_max_temp
+                    icon: 'mdi:pool-thermometer'
+                    type: 'custom:button-card' 
+                  - entity: input_select.spa_set_max_temp  #2 BUTTON
+                    name: Spa MAX
+                    template: set_max_temp
+                    icon: 'mdi:hot-tub'
+                    type: 'custom:button-card' 
+                  - type: 'custom:button-card'   #3 BUTTON
+                    template: input_select.pool_state 
+                    entity: input_select.pool_state    
+                    state:
+                      - value: Waterfall
+                      - value: Sleep
+                      - value: Spa
+                      - value: Skimmer
+                      - value: Swim
+                      - value: OFF
+                  - entity: input_select.fph_2                  #4 BUTTON
+                    template: input_select.fph_2
+                    type: 'custom:button-card'    
+                  - entity: input_select.pool_heat_select  #5 BUTTON
+                    template: pool_heat_select
+                    name: Pool Heat
+#                    label: Heat
+                    state:
+                      - value: FPH
+                        icon: 'mdi:source-branch-sync'
+                      - value: $PH
+                        icon: 'mdi:currency-usd'
+                      - value: FPH+$PH
+                        icon: 'mdi:arrow-decision'
+                      - value: NONE
+                        icon: 'mdi:set-none'
+                    type: 'custom:button-card'              
+                type: horizontal-stack     
+  double_tap_action:
+    action: more-info
+    haptic: heavy
