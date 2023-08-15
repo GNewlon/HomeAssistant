@@ -3213,7 +3213,9 @@ popup_hvac_button:
                       - value: NONE
                         icon: 'mdi:set-none'
                     type: 'custom:button-card'              
-                type: horizontal-stack           
+                type: horizontal-stack  
+#          type: horizontal-stack  
+       type: vertical-stack            
   double_tap_action:
     action: more-info
     haptic: heavy
