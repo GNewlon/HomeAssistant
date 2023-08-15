@@ -3121,8 +3121,8 @@ popup_hvac_button:
           entities:
             - artwork: cover
               entity: '[[[ return entity.entity_id ]]]'  # <<----Future use with other Roku/Sonos Systems
-        cards:
-          - cards:
+          cards:
+            - cards:
               - entity: climate.shark_house
                 header: false
                 control: true
@@ -3147,7 +3147,7 @@ popup_hvac_button:
                     --st-font-size-sensors: 14px;
                     --st-spacing: 0px;
                   }
-            ...
+                  ...
                 version: 3
                 type: 'custom:simple-thermostat'
               - entities:
