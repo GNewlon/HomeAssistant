@@ -3115,7 +3115,7 @@ popup_hvac_button:
       data:
         title: HVAC
         content:
-          type: entities
+#          type: entities
 #          state_color: true
           show_header_toggle: true   
           cards:
@@ -3209,7 +3209,8 @@ popup_hvac_button:
                       - value: NONE
                         icon: 'mdi:set-none'
                     type: 'custom:button-card'              
-                type: horizontal-stack     
+                type: horizontal-stack  
+          type: horizontal-stack                    
   double_tap_action:
     action: more-info
     haptic: heavy
