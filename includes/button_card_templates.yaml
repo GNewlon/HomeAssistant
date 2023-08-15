@@ -3115,8 +3115,12 @@ popup_hvac_button:
       data:
         title: HVAC
         content:
-#          type: entities
+          type: entities
 #          state_color: true
+          show_header_toggle: true   
+          entities:
+            - artwork: cover
+              entity: '[[[ return entity.entity_id ]]]'
           show_header_toggle: true   
           cards:
             - cards:
