@@ -2863,6 +2863,22 @@ popup_roku_button_1:
           - font-size: 14px
 #      value: 'paused'
 #      value: 'off'
+      value: 'on'
+    - styles:
+        card:
+          - '--paper-card-background-color': 'var(--secondary-background-color)'
+          - box-shadow: '0px 0px 1px 1px var(--secondary-background-color)'
+          - border-radius: 10px
+        label:
+          - color: var(--secondary-text-color)
+        icon:
+          - color: var(--secondary-text-color)
+        name:
+          - color: var(--secondary-text-color)
+          - padding-top: 7%
+          - font-size: 14px
+#      value: 'paused'
+#      value: 'off'
       value: 'idle'
   styles:
     card:
@@ -2892,8 +2908,7 @@ popup_roku_button_1:
           show_header_toggle: true   
           entities:
             - artwork: cover
-#              entity: media_player.roku_ultra_2023
-              entity: '[[[ return entity.entity_id ]]]'
+              entity: '[[[ return entity.entity_id ]]]'  # <<----Future use with other Roku/Sonos Systems
               theme: darkpurple
               tv: true
               apps:
@@ -2911,24 +2926,24 @@ popup_roku_button_1:
                   service: media_player.volume_up
                   service_data:
                     entity_id: media_player.living_room
-#                    entity: '[[[ return entity.entity_id ]]]'
+#                    entity: '[[[ return entity.entity_id ]]]'   # <<----Future use with other Roku/Sonos Systems
               volume_down:
                 tap_action:
                   action: call-service
                   service: media_player.volume_down
                   service_data:
-                    entity_id: media_player.living_room
+                    entity_id: media_player.living_room   # <<----Future use with other Roku/Sonos Systems
               volume_mute:
                 tap_action:
                   action: call-service
                   service: script.mute
                   service_data:
-                    media_player: media_player.living_room  
+                    media_player: media_player.living_room   # <<----Future use with other Roku/Sonos Systems
                 double_tap_action:
                   action: call-service
                   service: switch.toggle
                   service_data:
-                    entity_id: switch.sonos_living_room_night_sound 
+                    entity_id: switch.sonos_living_room_night_sound  # <<----Future use with other Roku/Sonos Systems
               power:
                 service: switch.turn_on
               hide:
