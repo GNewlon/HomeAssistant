@@ -3215,7 +3215,7 @@ popup_hvac_button:
                     type: 'custom:button-card'              
                 type: horizontal-stack  
 #          type: horizontal-stack  
-       type: vertical-stack            
+#       type: vertical-stack            
   double_tap_action:
     action: more-info
     haptic: heavy

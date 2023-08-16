@@ -150,6 +150,15 @@
               template: popup_hvac_button
               icon: 'mdi:pool-thermometer'
               type: 'custom:button-card' 
+            - name: HVAC
+              <<: *light_button_with_slider
+              entity: light.basement_lights_no_strip
+              tap_action:
+                action: fire-dom-event
+                browser_mod:
+                  service: browser_mod.popup
+                  data: !include popups.yaml
+#
           type: horizontal-stack
         - color: 'rgb(44, 109, 214)' ############################## LIGHTS
           color_type: icon

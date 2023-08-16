@@ -1,0 +1,33 @@
+title: 'Dining Lights'
+content:
+  type: custom:button-card
+  name: Dining
+  icon: mdi:floor-lamp-torchiere
+  entity: light.dining_dimmer
+  tap_action:
+    action: toggle
+    haptic: medium
+  hold_action:
+    action: more-info
+    haptic: medium
+  state:
+    - value: 'on'
+      styles:
+        card:
+          - background: |
+              var rgb = states['light.basement_upper_lights'].attributes.rgb_color;
+              if (rgb) {
+                return 'rgb(' + rgb[0] + ',' + rgb[1] + ',' + rgb[2] + ')';
+              } else {
+                return 'rgb(255, 218, 120)';  # Default yellow color if RGB attribute is missing
+              }
+        icon:
+          - color: '#000000'
+        name:
+          - color: '#000000'
+    - value: 'off'
+      styles:
+        icon:
+          - color: '#FFFFFF'
+        name:
+          - color: '#FFFFFF'
