@@ -151,8 +151,7 @@
               icon: 'mdi:pool-thermometer'
               type: 'custom:button-card' 
             - name: HVAC
-              #<<: *light_button_with_slider
-              entity: light.basement_lights_no_strip
+#              entity: light.basement_lights_no_strip
               type: 'custom:button-card' 
               tap_action:
                 action: fire-dom-event
