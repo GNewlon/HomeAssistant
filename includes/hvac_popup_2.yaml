@@ -1,4 +1,3 @@
-        - cards: ################################################## ROW 2
             - type: 'custom:button-card'
               template: input_select.time_triggers    
               entity: input_select.time_triggers  
@@ -53,4 +52,3 @@
                 - value: G.Away                 
                 - value: C.Home
                 - value: C.Away          
-          type: horizontal-stack
