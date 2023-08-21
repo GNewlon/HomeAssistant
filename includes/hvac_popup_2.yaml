@@ -1,31 +1,56 @@
-title: 'HVAC POPUP TESTING'
-aspect_ratio: 1/1
-color: 'rgb(5, 147, 255)'
-hold_action:
-  action: more-info
-show_label: true
-show_name: true
-show_state: false
-size: 50%
-entities:   
-   - entity: light.portico_dimmer
-     icon: 'mdi:alpha-h-box'
-     template: light_button
-     type: 'custom:button-card'
-   - entity: light.portico_dimmer
-     icon: 'mdi:alpha-h-box'
-     template: light_button
-     type: 'custom:button-card'
-   - entity: light.portico_dimmer
-     icon: 'mdi:alpha-h-box'
-     template: light_button
-     type: 'custom:button-card'
-   - entity: light.portico_dimmer
-     icon: 'mdi:alpha-h-box'
-     template: light_button
-     type: 'custom:button-card'
-   - entity: light.portico_dimmer
-     icon: 'mdi:numeric-2-box'
-     template: light_button
-     type: 'custom:button-card'     
-# type: entities 
+        - cards: ################################################## ROW 2
+            - type: 'custom:button-card'
+              template: input_select.time_triggers    
+              entity: input_select.time_triggers  
+              state:
+                - value: sunrise 
+                - value: sunrise.end              
+                - value: day.0800 
+                - value: day.0900    
+                - value: solar.noon  
+                - value: afternoon                  
+                - value: sunset.start 
+                - value: sunset
+                - value: dusk
+                - value: nautical.dusk
+                - value: night
+                - value: wind.down.2200 
+                - value: night.2300 
+            - type: 'custom:button-card'
+              template: input_select.pool_state 
+              entity: input_select.pool_state    
+              state:
+                - value: Waterfall
+                - value: Sleep
+                - value: Spa
+                - value: Skimmer
+                - value: Swim
+                - value: OFF
+                - value: WaterLevel
+            - type: 'custom:button-card'
+              template: input_select.alarm_mode  
+              entity: input_select.alarm_mode  
+              state:
+                - value: Fire
+                - value: CO2              
+                - value: Clear
+                - value: master.fireco.alarm.battery.not.ok
+                - value: office.fireco.alarm.battery.not.ok
+            - type: 'custom:button-card'
+              template: input_select.guest_mode 
+              entity: input_select.guest_mode    
+              state:
+                - value: Guest.Home
+                - value: Guest.Away
+                - value: No.Guest
+            - type: 'custom:button-card'
+              template: input_select_security_mode 
+              entity: input_select.security_mode    
+              state:
+                - value: Home
+                - value: Away               
+                - value: G.Home                   
+                - value: G.Away                 
+                - value: C.Home
+                - value: C.Away          
+          type: horizontal-stack
