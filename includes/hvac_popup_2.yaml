@@ -1,82 +1,17 @@
-#############################################
-#                                           #
-#              hvac_popup_2                 #
-#                                           #
-#############################################
-hvac_popup_2:
-  entity: '[[[ return entity.entity_id ]]]'
-  aspect_ratio: 1/1
-  color: 'rgb(5, 147, 255)'
-  hold_action:
-    action: more-info
-  show_label: true
-  show_name: true
-  show_state: false
-  size: 50%
-  state:
-    - styles:
-        card:
-          - '--paper-card-background-color': 'var(--accent-color)'
-          - box-shadow: '0px 0px 13px 3px var(--box-shadow)'
-          - border-radius: 10px
-          - text-shadow: 0px 0px 5px black
-        label:
-          - color: 'var(--accent-color)'
-        icon:
-          - color: 'var(--accent-color)'
-        name:
-          - color: 'var(--accent-color)'
-          - padding-top: 7%
-          - font-size: 14px
-      value: 'on'
-    - styles:
-        card:
-          - '--paper-card-background-color': 'var(--secondary-background-color)'
-          - box-shadow: '0px 0px 1px 1px var(--secondary-background-color)'
-          - border-radius: 10px
-        label:
-          - color: var(--secondary-text-color)
-        icon:
-          - color: var(--secondary-text-color)
-        name:
-          - color: var(--secondary-text-color)
-          - padding-top: 7%
-          - font-size: 14px
-      value: 'off'
-  styles:
-    card:
-      - color: 'rgb(5, 147, 255)'
-      - padding: 5%
-      - text-transform: capitalize
-      - '--mdc-ripple-press-opacity': 0.5
-      - '--mdc-ripple-color': black
-    grid:
-      - grid-template-areas: '"i" "n" "slider"'
-      - grid-template-columns: 100%
-      - grid-template-rows: 50% auto
-    img_cell:
-      - justify-content: center
-      - align-items: center
-      - padding-top: 13%
-  tap_action:
-    action: fire-dom-event
-    haptic: heavy
-    browser_mod:
-      service: browser_mod.popup
-      data:
-        title: HVAC
-        content:
-          type: entities
-            entity: light.laundry_dimmer
-            name: Lndry
-            icon: 'mdi:wall-sconce-flat'
-            template: light_button 
-            type: 'custom:button-card'
-          show_header_toggle: true              
-          entities: 
-            - entity: light.laundry_dimmer
-              name: Lndry
-              icon: 'mdi:wall-sconce-flat'
+        - cards: ################################################## ROW 1
+            - entity: light.dining_dimmer
+              name: Dining
+              icon: 'mdi:chandelier'
+              template: light_button
+              type: 'custom:button-card'
+            - entity: light.dining_outlet_dimmer
+              name: Dining
+              icon: 'mdi:lamp'
+              template: light_button 
+              type: 'custom:button-card'
+            - entity: light.kitchen_dimmer
+              icon: 'mdi:lightbulb-group'           
+              name: Kitchen
               template: light_button 
               type: 'custom:button-card'
             - entity: light.laundry_dimmer
@@ -84,20 +19,8 @@ hvac_popup_2:
               icon: 'mdi:wall-sconce-flat'
               template: light_button 
               type: 'custom:button-card'
-            - entity: light.laundry_dimmer
-              name: Lndry
-              icon: 'mdi:wall-sconce-flat'
-              template: light_button 
+            - entity: light.bathroom_dimmer
+              name: Bathroom
+              template: slide.dim_button
               type: 'custom:button-card'
-            - entity: light.laundry_dimmer
-              name: Lndry
-              icon: 'mdi:wall-sconce-flat'
-              template: light_button 
-              type: 'custom:button-card'      
-  double_tap_action:
-    action: more-info
-    haptic: heavy
-  entity: lock.front_door_lock
-  name: Front
-  template: lock_button
-  type: 'custom:button-card'
+          type: horizontal-stack
