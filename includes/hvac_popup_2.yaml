@@ -7,10 +7,8 @@
   aspect_ratio: 1/1
   color: 'rgb(5, 147, 255)'
   entities:
-    - type: custom:slider-entity-row
-      entity: light.dining_dimmer
-    - type: custom:slider-entity-row
-      entity: light.dining_dimmer
+    - entity: light.dining_dimmer
+    - entity: light.dining_dimmer
   hold_action:
     action: more-info
   show_label: true
