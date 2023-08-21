@@ -1,21 +1,4 @@
-title: 'Dining Lights'
-content:
-  - entity: light.dining_dimmer
-    type: custom:button-card
-    name: Dining
-    icon: mdi:floor-lamp-torchiere
-  - entity: light.dining_dimmer
-    type: custom:button-card
-    name: Dining
-    icon: mdi:floor-lamp-torchiere
-  - entity: light.dining_dimmer
-    type: custom:button-card
-    name: Dining
-    icon: mdi:floor-lamp-torchiere
-  - entity: light.dining_dimmer
-    type: custom:button-card
-    name: Dining
-    icon: mdi:floor-lamp-torchiere
+title: 'HVAC POPUP TESTING'
 aspect_ratio: 1/1
 color: 'rgb(5, 147, 255)'
 hold_action:
