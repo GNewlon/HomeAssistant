@@ -39,4 +39,3 @@ content:
           - color: var(--secondary-text-color)
           - font-size: 15px
           - padding-bottom: 6%
-      value: 'off'
