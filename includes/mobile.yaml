@@ -154,7 +154,7 @@
               type: 'custom:button-card' 
               entity: light.kitchen_dimmer
               icon: 'mdi:lightbulb-group'           
-              name: Kitchen
+              name: PopUp
               template: popup_hvac_button_2  
               tap_action:
                 action: fire-dom-event
