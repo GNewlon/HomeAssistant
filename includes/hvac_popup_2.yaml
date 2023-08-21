@@ -67,9 +67,12 @@ hvac_popup_2:
         title: HVAC
         content:
           type: entities
-#          state_color: true
+            entity: light.laundry_dimmer
+            name: Lndry
+            icon: 'mdi:wall-sconce-flat'
+            template: light_button 
+            type: 'custom:button-card'
           show_header_toggle: true              
-                type: horizontal-stack  
           entities: 
             - entity: light.laundry_dimmer
               name: Lndry
