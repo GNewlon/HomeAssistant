@@ -25,21 +25,30 @@ show_name: true
 show_state: false
 size: 50%
 tap_action:
-  action: fire-dom-event
+  action: toggle
   haptic: heavy
 double_tap_action:
   action: more-info
   haptic: heavy
 entities:   
-   - entity: switch.fph_1_norm_fph
+   - entity: light.portico_dimmer
      icon: 'mdi:alpha-h-box'
-   - entity: switch.fph_hvac_compressor_24vac_no
+     template: light_button
+     type: 'custom:button-card'
+   - entity: light.portico_dimmer
      icon: 'mdi:alpha-h-box'
-   - entity: switch.nph_condenser_fan
+     template: light_button
+     type: 'custom:button-card'
+   - entity: light.portico_dimmer
      icon: 'mdi:alpha-h-box'
-   - entity: switch.nph_hvac_compressor_24vac_nc
+     template: light_button
+     type: 'custom:button-card'
+   - entity: light.portico_dimmer
      icon: 'mdi:alpha-h-box'
-   - entity: switch.valve_4_pool_spa
-     icon: 'mdi:numeric-2-box'                
-     icon: 'mdi:numeric-3-box'
+     template: light_button
+     type: 'custom:button-card'
+   - entity: light.portico_dimmer
+     icon: 'mdi:numeric-2-box'
+     template: light_button
+     type: 'custom:button-card'     
 # type: entities 
