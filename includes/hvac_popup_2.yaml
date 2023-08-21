@@ -24,12 +24,6 @@ show_label: true
 show_name: true
 show_state: false
 size: 50%
-tap_action:
-  action: toggle
-  haptic: heavy
-double_tap_action:
-  action: more-info
-  haptic: heavy
 entities:   
    - entity: light.portico_dimmer
      icon: 'mdi:alpha-h-box'
