@@ -150,17 +150,11 @@
               template: popup_hvac_button
               icon: 'mdi:pool-thermometer'
               type: 'custom:button-card' 
-            - name: HVAC
+            - name: Roku                                  #4 BUTTON
+              entity: media_player.roku_ultra_2023
+              template: popup_roku_button_1
+              icon: 'mdi:speaker-wireless'
               type: 'custom:button-card' 
-              entity: light.kitchen_dimmer
-              icon: 'mdi:lightbulb-group'           
-              name: PopUp
-              template: popup_hvac_button_2  
-              tap_action:
-                action: fire-dom-event
-                browser_mod:
-                  service: browser_mod.popup
-                  data: !include hvac_popup_2.yaml
           type: horizontal-stack
         - color: 'rgb(44, 109, 214)' ############################## LIGHTS
           color_type: icon
