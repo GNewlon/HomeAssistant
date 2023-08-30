@@ -1,0 +1,60 @@
+  aspect_ratio: 1/1
+  color: 'rgb(5, 147, 255)'
+  hold_action:
+    action: more-info
+  tap_action:
+    action: toggle
+    haptic: heavy
+  show_label: true
+  show_name: true
+  show_state: false
+  size: 50%
+  state:
+    - icon: 'mdi:curtains'
+      styles:    
+#        icon: 'mdi:curtains-closed'
+        card:
+          - '--paper-card-background-color': 'var(--accent-color)'
+          - box-shadow: '0px 0px 13px 3px var(--box-shadow)'
+          - border-radius: 10px
+          - text-shadow: 0px 0px 5px black
+        label:
+          - color: 'var(--accent-color)'
+        icon:
+          - color: 'var(--accent-color)'
+        name:
+          - color: 'var(--accent-color)'
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'closed'
+    - icon: 'mdi:curtains-closed'
+      styles:    
+#        icon: 'mdi:curtains'
+        card:
+          - '--paper-card-background-color': 'var(--secondary-background-color)'
+          - box-shadow: '0px 0px 1px 1px var(--secondary-background-color)'
+          - border-radius: 10px
+        label:
+          - color: var(--secondary-text-color)
+        icon:
+          - color: var(--secondary-text-color)
+        name:
+          - color: var(--secondary-text-color)
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'open'
+  styles:
+    card:
+      - color: 'rgb(5, 147, 255)'
+      - padding: 5%
+      - text-transform: capitalize
+      - '--mdc-ripple-press-opacity': 0.5
+      - '--mdc-ripple-color': black
+    grid:
+      - grid-template-areas: '"i" "n" "slider"'
+      - grid-template-columns: 100%
+      - grid-template-rows:  50% auto auto auto
+    img_cell:
+      - justify-content: center
+      - align-items: center
+      - padding-top: 13%

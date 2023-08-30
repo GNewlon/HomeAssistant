@@ -1,0 +1,37 @@
+  aspect_ratio: 1/1
+  color: 'rgba(148, 148, 148)'
+  tap_action:
+    action: none
+  double_tap_action:
+    action: more-info
+    haptic: heavy 
+  hold_action:
+    action: more-info
+  show_label: true
+  show_name: true
+  show_state: true
+  size: 40%
+  styles:
+    card:
+      - '--paper-card-background-color': 'var(--secondary-background-color)'
+      - box-shadow: '0px 0px 1px 1px var(--secondary-background-color)'
+      - border-radius: 10px
+      - text-shadow: 0px 0px 5px black
+      - color: 'rgba(148, 148, 148)'
+      - padding: 5%
+      - text-transform: capitalize
+      - '--mdc-ripple-press-opacity': 0.5
+      - '--mdc-ripple-color': black
+    label:
+      - color: var(--secondary-text-color)
+      - font-size: 10px  
+    icon:
+      - color: var(--secondary-text-color)
+      - padding-top: 15%
+    name:
+      - color: var(--secondary-text-color)
+      - padding-top: 1%
+      - font-size: 10px     
+    state:
+      - color: var(--secondary-text-color)
+      - font-size: 10px  
