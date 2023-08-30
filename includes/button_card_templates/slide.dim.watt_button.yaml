@@ -1,0 +1,92 @@
+#################################################################
+#                                                               #
+#               slide.dim.watt_button                           #
+#                                                               #
+#################################################################
+  aspect_ratio: 1/1
+  color: 'rgb(5, 147, 255)'
+  custom_fields:
+    label: >
+      [[[ var bri = Math.round(entity.attributes.brightness / 2.55);  if
+      (entity.state === 'on') return (bri ? (bri+"%") : '') ]]]
+    power: |
+      [[[ return entity.attributes.power_consumption + 'W' ]]]
+    slider:
+      card:
+        entity: '[[[ return entity.entity_id ]]]'
+        full_row: true
+        hide_state: true
+        hide_when_off: true
+        type: 'custom:slider-entity-row'
+      overflow: unset
+  hold_action:
+    action: more-info
+  show_label: true
+  show_name: true
+  show_state: false
+  size: 66%
+  state:
+    - icon: 'mdi:hanger'
+      styles:
+        card:
+          - '--paper-card-background-color': 'rgba(40, 40, 40)'
+          - box-shadow: '0px 0px 12px 3px #0593ff'
+          - border-radius: 10px
+          - text-shadow: 0px 0px 5px black
+        custom_fields:
+        label:
+          - color: 'rgb(5, 147, 255)'
+        name:
+          - color: 'rgb(5, 147, 255)'
+      value: 'on'
+    - icon: 'mdi:lightbulb-outline'
+      styles:
+        card:
+          - '--paper-card-background-color': 'var(--secondary-background-color)'
+          - box-shadow: '0px 0px 1px 1px var(--secondary-background-color)'
+          - border-radius: 10px
+        custom_fields:
+        label:
+          - color: var(--secondary-text-color)
+        icon:
+          - color: var(--secondary-text-color)
+        name:
+          - color: var(--secondary-text-color)
+          - font-size: 15px
+          - padding-bottom: 15%
+      value: 'off'
+  styles:
+    card:
+      - color: 'rgb(5, 147, 255)'
+      - text-transform: capitalize
+      - '--mdc-ripple-press-opacity': 0.75
+      - '--mdc-ripple-color': black
+    custom_fields:
+      label:
+#        - font-size: 7px
+#      power:
+#        - align-self: start
+#        - justify-self: end
+#        - font-size: 9px
+#        - padding-top: 5px
+#        - padding-right: 1px
+    grid:
+      - grid-template-areas: '"n" "i" "l" "slider"'
+      - grid-template-columns: 1fr
+      - grid-template-rows: min-content fr min-content min-content    
+#      - grid-template-areas: '"i power" "i power" "n n" "label label" "slider slider"'
+#      - grid-template-columns: 1fr 1fr
+#      - grid-template-rows: 50% auto auto auto
+#########
+#      - grid-template-areas: '"i" "n" "slider"'
+#      - grid-template-columns: 100%
+#      - grid-template-rows: min-content min-content 1fr
+#    img_cell:
+#      - justify-content: end
+#      - align-items: end
+#      - margin: none
+#      - padding-top: 0%
+#      - padding-left: 0%
+  tap_action:
+    action: toggle
+    haptic: heavy

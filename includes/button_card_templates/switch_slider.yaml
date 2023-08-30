@@ -1,0 +1,35 @@
+  show_label: false
+  show_name: false
+  show_state: false
+  state:
+    - styles:
+        icon:
+          - color: var(--accent-color)
+      value: 'off'
+    - styles:
+        icon:
+          - color: 'rgb(5, 147, 255)'
+      value: 'on'
+    - styles:
+        icon:
+          - color: red
+      value: unavailable
+  styles:
+    card:
+      - background-color: 'rgb(44, 109, 214)'
+      - box-shadow: none;
+      - overflow: unset
+    custom_fields:
+      slider:
+        - filter: opacity(80%)
+        - overflow: unset
+        - color: 'rgb(3, 169, 244)'
+    grid:
+      - grid-template-areas: '"n" "i" "l" "slider"'
+      - grid-template-columns: 1fr
+      - grid-template-rows: 'min-content fr min-conten>    size: 10%'
+    label:
+      - color: yellow
+    name:
+      - color: orange
+  value: 'off'

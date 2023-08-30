@@ -1,0 +1,161 @@
+#################################################################
+#                                                               #
+#                 input_select.pool_state                        #
+#################################################################
+  aspect_ratio: 1/1
+  color: 'rgb(5, 147, 255)'
+  tap_action:
+    action: more-info
+  double_tap_action:
+    action: more-info
+    haptic: heavy
+  hold_action:
+    action: more-info
+  show_label: true
+  show_name: true
+  show_state: false
+  size: 50%
+  state:
+    - icon: 'mdi:swim'
+      name: Swim  
+      styles:
+        card:
+          - '--paper-card-background-color': 'var(--secondary-background-color)'
+          - box-shadow: '0px 0px 1px 1px var(--secondary-background-color)'
+          - border-radius: 10px
+        label:
+          - color: var(--secondary-text-color)
+        icon:
+          - color: var(--secondary-text-color)
+        name:
+          - color: var(--secondary-text-color)
+          - padding-top: 8%
+          - font-size: 14px
+      value: 'Swim'
+    - icon: 'mdi:waterfall'
+      name: Waterfall 
+      styles:
+        card:
+          - '--paper-card-background-color': 'var(--secondary-background-color)'
+          - box-shadow: '0px 0px 1px 1px var(--secondary-background-color)'
+          - border-radius: 10px
+        label:
+          - color: var(--secondary-text-color)
+        icon:
+          - color: var(--secondary-text-color)
+        name:
+          - color: var(--secondary-text-color)
+          - padding-top: 8%
+          - font-size: 14px
+      value: 'Waterfall'
+    - icon: 'mdi:waves'
+      name: Skimmer  
+      styles:
+        card:
+          - '--paper-card-background-color': 'var(--secondary-background-color)'
+          - box-shadow: '0px 0px 1px 1px var(--secondary-background-color)'
+          - border-radius: 10px
+        label:
+          - color: var(--secondary-text-color)
+        icon:
+          - color: var(--secondary-text-color)
+        name:
+          - color: var(--secondary-text-color)
+          - padding-top: 8%
+          - font-size: 14px
+      value: 'Skimmer'
+    - icon: 'mdi:coolant-temperature'
+      name: Pool Heater
+      styles:
+        card:
+          - '--paper-card-background-color': 'var(--secondary-background-color)'
+          - box-shadow: '0px 0px 1px 1px var(--secondary-background-color)'
+          - border-radius: 10px
+        label:
+          - color: var(--secondary-text-color)
+        icon:
+          - color: var(--secondary-text-color)
+        name:
+          - color: var(--secondary-text-color)
+          - padding-top: 8%
+          - font-size: 14px
+      value: 'PoolHeater'
+    - icon: 'mdi:coolant-temperature'
+      name: Spa
+      styles:
+        card:
+          - '--paper-card-background-color': 'var(--secondary-background-color)'
+          - box-shadow: '0px 0px 1px 1px var(--secondary-background-color)'
+          - border-radius: 10px
+        label:
+          - color: var(--secondary-text-color)
+        icon:
+          - color: var(--secondary-text-color)
+        name:
+          - color: var(--secondary-text-color)
+          - padding-top: 8%
+          - font-size: 14px
+      value: 'Spa'
+    - icon: 'mdi:water-pump-off'
+      name: OFF 
+      styles:
+        card:
+          - '--paper-card-background-color': 'var(--secondary-background-color)'
+          - box-shadow: '0px 0px 1px 1px var(--secondary-background-color)'
+          - border-radius: 10px
+        label:
+          - color: var(--secondary-text-color)
+        icon:
+          - color: var(--secondary-text-color)
+        name:
+          - color: var(--secondary-text-color)
+          - padding-top: 8%
+          - font-size: 14px
+      value: 'OFF'
+    - icon: 'mdi:sleep'
+      name: Sleep 
+      styles:
+        card:
+          - '--paper-card-background-color': 'var(--secondary-background-color)'
+          - box-shadow: '0px 0px 1px 1px var(--secondary-background-color)'
+          - border-radius: 10px
+        label:
+          - color: var(--secondary-text-color)
+        icon:
+          - color: var(--secondary-text-color)
+        name:
+          - color: var(--secondary-text-color)
+          - padding-top: 8%
+          - font-size: 14px
+      value: 'Sleep'
+    - icon: 'mdi:pool-thermometer'
+      name: WaterLevel 
+      styles:
+        card:
+          - '--paper-card-background-color': 'var(--secondary-background-color)'
+          - box-shadow: '0px 0px 1px 1px var(--secondary-background-color)'
+          - border-radius: 10px
+        label:
+          - color: var(--secondary-text-color)
+        icon:
+          - color: var(--secondary-text-color)
+        name:
+          - color: var(--secondary-text-color)
+          - padding-top: 8%
+          - font-size: 14px
+      value: 'WaterLevel'
+  styles:
+    card:
+      - color: 'rgb(5, 147, 255)'
+      - padding: 5%
+      - text-transform: capitalize
+      - '--mdc-ripple-press-opacity': 0.5
+      - '--mdc-ripple-color': black
+    grid:
+      - grid-template-areas: '"i" "n" "slider"'
+      - grid-template-columns: 100%
+      - grid-template-rows: 50% auto
+    img_cell:
+      - justify-content: center
+      - align-items: center
+      - padding-top: 13%
