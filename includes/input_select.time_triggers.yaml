@@ -1,0 +1,264 @@
+  aspect_ratio: 1/1
+  color: 'rgb(5, 147, 255)'
+  tap_action:
+    action: none
+  double_tap_action:
+    action: more-info
+    haptic: heavy
+  hold_action:
+    action: more-info
+  show_label: true
+  show_name: true
+  show_state: false
+  size: 50%
+  state:
+    - icon: 'mdi:theme-light-dark'
+      name: Dawn  
+      styles:
+        card:
+          - '--paper-card-background-color': 'var(--accent-color)'
+          - box-shadow: '0px 0px 13px 3px var(--box-shadow)'
+          - border-radius: 10px
+          - text-shadow: 0px 0px 5px black
+        label:
+          - color: 'var(--accent-color)'
+        icon:
+          - color: 'var(--accent-color)'
+        name:
+          - color: 'var(--accent-color)'
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'dawn'
+    - icon: 'mdi:theme-light-dark'
+      name: Rise  
+      styles:
+        card:
+          - '--paper-card-background-color': 'var(--accent-color)'
+          - box-shadow: '0px 0px 13px 3px var(--box-shadow)'
+          - border-radius: 10px
+          - text-shadow: 0px 0px 5px black
+        label:
+          - color: 'var(--accent-color)'
+        icon:
+          - color: 'var(--accent-color)'
+        name:
+          - color: 'var(--accent-color)'
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'sunrise'
+    - icon: 'mdi:weather-sunset-up'
+      name: Up  
+      styles:
+        card:
+          - '--paper-card-background-color': 'var(--accent-color)'
+          - box-shadow: '0px 0px 13px 3px var(--box-shadow)'
+          - border-radius: 10px
+          - text-shadow: 0px 0px 5px black
+        label:
+          - color: 'var(--accent-color)'
+        icon:
+          - color: 'var(--accent-color)'
+        name:
+          - color: 'var(--accent-color)'
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'sunrise.end'
+    - icon: 'mdi:white-balance-sunny'
+      name: Day
+      styles:
+        card:
+          - '--paper-card-background-color': 'var(--accent-color)'
+          - box-shadow: '0px 0px 13px 3px var(--box-shadow)'
+          - border-radius: 10px
+          - text-shadow: 0px 0px 5px black
+        label:
+          - color: 'var(--accent-color)'
+        icon:
+          - color: 'var(--accent-color)'
+        name:
+          - color: 'var(--accent-color)'
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'day.0800'
+    - icon: 'mdi:white-balance-sunny'
+      name: Day
+      styles:
+        card:
+          - '--paper-card-background-color': 'var(--accent-color)'
+          - box-shadow: '0px 0px 13px 3px var(--box-shadow)'
+          - border-radius: 10px
+          - text-shadow: 0px 0px 5px black
+        label:
+          - color: 'var(--accent-color)'
+        icon:
+          - color: 'var(--accent-color)'
+        name:
+          - color: 'var(--accent-color)'
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'day.0900'
+    - icon: 'mdi:white-balance-sunny'
+      name: Solar
+      styles:
+        card:
+          - '--paper-card-background-color': 'var(--accent-color)'
+          - box-shadow: '0px 0px 13px 3px var(--box-shadow)'
+          - border-radius: 10px
+          - text-shadow: 0px 0px 5px black
+        label:
+          - color: 'var(--accent-color)'
+        icon:
+          - color: 'var(--accent-color)'
+        name:
+          - color: 'var(--accent-color)'
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'solar.noon'
+    - icon: 'mdi:white-balance-sunny'
+      name: Afternoon
+      styles:
+        card:
+          - '--paper-card-background-color': 'var(--accent-color)'
+          - box-shadow: '0px 0px 13px 3px var(--box-shadow)'
+          - border-radius: 10px
+          - text-shadow: 0px 0px 5px black
+        label:
+          - color: 'var(--accent-color)'
+        icon:
+          - color: 'var(--accent-color)'
+        name:
+          - color: 'var(--accent-color)'
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'afternoon'
+    - icon: 'mdi:weather-sunset-down'
+      name: Start
+      styles:
+        card:
+          - '--paper-card-background-color': 'var(--accent-color)'
+          - box-shadow: '0px 0px 13px 3px var(--box-shadow)'
+          - border-radius: 10px
+          - text-shadow: 0px 0px 5px black
+        label:
+          - color: 'var(--accent-color)'
+        icon:
+          - color: 'var(--accent-color)'
+        name:
+          - color: 'var(--accent-color)'
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'sunset.start'
+    - icon: 'mdi:weather-sunset'
+      name: Sunset  
+      styles:
+        card:
+          - '--paper-card-background-color': 'var(--accent-color)'
+          - box-shadow: '0px 0px 13px 3px var(--box-shadow)'
+          - border-radius: 10px
+          - text-shadow: 0px 0px 5px black
+        label:
+          - color: 'var(--accent-color)'
+        icon:
+          - color: 'var(--accent-color)'
+        name:
+          - color: 'var(--accent-color)'
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'sunset'
+    - icon: 'mdi:weather-night-partly-cloudy'
+      name: Dusk
+      styles:
+        card:
+          - '--paper-card-background-color': 'var(--accent-color)'
+          - box-shadow: '0px 0px 13px 3px var(--box-shadow)'
+          - border-radius: 10px
+          - text-shadow: 0px 0px 5px black
+        label:
+          - color: 'var(--accent-color)'
+        icon:
+          - color: 'var(--accent-color)'
+        name:
+          - color: 'var(--accent-color)'
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'dusk'
+    - icon: 'mdi:weather-night-partly-cloudy'
+      name: Nautical
+      styles:
+        card:
+          - '--paper-card-background-color': 'var(--accent-color)'
+          - box-shadow: '0px 0px 13px 3px var(--box-shadow)'
+          - border-radius: 10px
+          - text-shadow: 0px 0px 5px black
+        label:
+          - color: 'var(--accent-color)'
+        icon:
+          - color: 'var(--accent-color)'
+        name:
+          - color: 'var(--accent-color)'
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'nautical.dusk'
+    - icon: 'mdi:weather-night'
+      name: Night 
+      styles:
+        card:
+          - '--paper-card-background-color': 'var(--secondary-background-color)'
+          - box-shadow: '0px 0px 1px 1px var(--secondary-background-color)'
+          - border-radius: 10px
+        label:
+          - color: var(--secondary-text-color)
+        icon:
+          - color: var(--secondary-text-color)
+        name:
+          - color: var(--secondary-text-color)
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'night'
+    - icon: 'mdi:weather-night-partly-cloudy'
+      name: Wnd Dn 
+      styles:
+        card:
+          - '--paper-card-background-color': 'var(--secondary-background-color)'
+          - box-shadow: '0px 0px 1px 1px var(--secondary-background-color)'
+          - border-radius: 10px
+        label:
+          - color: var(--secondary-text-color)
+        icon:
+          - color: var(--secondary-text-color)
+        name:
+          - color: var(--secondary-text-color)
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'wind.down.2200'
+    - icon: 'mdi:star-shooting-outline'
+      name: Late 
+      styles:
+        card:
+          - '--paper-card-background-color': 'var(--secondary-background-color)'
+          - box-shadow: '0px 0px 1px 1px var(--secondary-background-color)'
+          - border-radius: 10px
+        label:
+          - color: var(--secondary-text-color)
+        icon:
+          - color: var(--secondary-text-color)
+        name:
+          - color: var(--secondary-text-color)
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'night.2300'
+  styles:
+    card:
+      - color: 'rgb(5, 147, 255)'
+      - padding: 5%
+      - text-transform: capitalize
+      - '--mdc-ripple-press-opacity': 0.5
+      - '--mdc-ripple-color': black
+    grid:
+      - grid-template-areas: '"i" "n" "slider"'
+      - grid-template-columns: 100%
+      - grid-template-rows: 50% auto
+    img_cell:
+      - justify-content: center
+      - align-items: center
+      - padding-top: 13%

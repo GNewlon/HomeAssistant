@@ -35,6 +35,7 @@
               template: input_select.time_triggers    
               entity: input_select.time_triggers  
               state:
+                - value: dawn 
                 - value: sunrise 
                 - value: sunrise.end              
                 - value: day.0800 

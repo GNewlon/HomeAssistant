@@ -30,6 +30,7 @@
   time_triggers:
     name: Time Triggers
     options:
+      - dawn
       - sunrise
       - sunrise.end
       - day.0800
