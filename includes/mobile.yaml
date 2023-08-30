@@ -18,6 +18,7 @@
               template: lock_button
               type: 'custom:button-card'
             - aspect_ratio: 1/1
+              device_class: garage
               entity: >-
                 cover.garage_door
               name: Garage
@@ -724,6 +725,7 @@
       template: button-card-headers-2
       type: 'custom:button-card'
     - entities:
+        - entity: binary_sensor.screendoor_multisensor_motion
         - entity: binary_sensor.portico_motion
         - entity: binary_sensor.side_door_motion
         - entity: binary_sensor.garage_motion_1
