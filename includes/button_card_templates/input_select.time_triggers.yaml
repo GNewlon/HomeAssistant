@@ -29,7 +29,7 @@
           - padding-top: 7%
           - font-size: 14px
       value: 'dawn'
-    - icon: 'mdi:theme-light-dark'
+    - icon: 'mdi:weather-sunset-up'
       name: Rise  
       styles:
         card:
@@ -46,7 +46,7 @@
           - padding-top: 7%
           - font-size: 14px
       value: 'sunrise'
-    - icon: 'mdi:weather-sunset-up'
+    - icon: 'mdi:weather-sunny'
       name: Up  
       styles:
         card:
