@@ -2473,6 +2473,7 @@ input_select.fph_3:
           - font-size: 14px
       value: 'FPH'
 input_select.fph_2: !include input_select.fph_2.yaml
+garage_button: !include garage_button.yaml
 #################################################################
 #                                                               #
 #                 screendoor_magnet_button                      #
