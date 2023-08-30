@@ -1,0 +1,112 @@
+  aspect_ratio: 1/1
+  color: 'rgb(5, 147, 255)'
+  tap_action:
+    action: more-info
+  double_tap_action:
+    action: more-info
+    haptic: heavy
+  hold_action:
+    action: more-info
+  show_label: true
+  show_name: true
+  show_state: true
+  size: 40%
+  styles:
+    card:
+      - color: 'rgb(5, 147, 255)'
+      - padding: 5%
+      - text-transform: capitalize
+      - '--mdc-ripple-press-opacity': 0.5
+      - '--mdc-ripple-color': black
+    grid:
+      - grid-template-areas: '"i" "n" "slider"'
+      - grid-template-columns: 100%
+      - grid-template-rows: 50% auto
+    img_cell:
+      - justify-content: center
+      - align-items: center
+      - padding-top: 13%
+  state:
+    - icon: 'mdi:currency-usd'
+      name: $PH 
+      styles:
+        card:
+          - '--paper-card-background-color': 'rgba(--accent-color)'
+          - box-shadow: '0px 0px 16px 4px  #93c47d'  # LIGHT GREEN
+          - border-radius: 10px
+          - text-shadow: 0px 0px 5px black
+        label:
+          - color: 'var(--accent-color)'
+        icon:
+          - color: 'var(--accent-color)'
+        name:
+          - color: 'var(--accent-color)'
+          - padding-top: 7%
+          - font-size: 14px
+      value: '$PH'
+    - icon: 'mdi:pause'
+      name: Idle  
+      styles:
+        card:
+          - '--paper-card-background-color': 'var(--secondary-background-color)' #set no "ON" indication
+          - box-shadow: '0px 0px 1px 1px var(--secondary-background-color)'
+          - border-radius: 10px
+        label:
+          - color: var(--secondary-text-color)
+        icon:
+          - color: var(--secondary-text-color)
+        name:
+          - color: var(--secondary-text-color)
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'IDLE'
+    - icon: 'mdi:approximately-equal'
+      name: NPH
+      styles:
+        card:
+          - '--paper-card-background-color': 'var(--secondary-background-color)' #set no "ON" indication
+          - box-shadow: '0px 0px 1px 1px var(--secondary-background-color)'
+          - border-radius: 10px
+        label:
+          - color: var(--secondary-text-color)
+        icon:
+          - color: var(--secondary-text-color)
+        name:
+          - color: var(--secondary-text-color)
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'NPH'
+    - icon: 'mdi:thermometer-alert'
+      name: HOT  
+      styles:
+        card:
+          - '--paper-card-background-color': 'rgba(--accent-color)'
+          - box-shadow: '0px 0px 16px 4px  #e06666'
+          - border-radius: 10px
+          - text-shadow: 0px 0px 5px black
+        label:
+          - color: 'var(--accent-color)'
+        icon:
+          - color: 'rgba(255, 76, 48)'
+        name:
+          - color: 'var(--accent-color)'
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'HOT'
+    - icon: 'mdi:recycle'
+      name: FPH  
+      styles:
+        card:
+          - '--paper-card-background-color': 'rgba(--accent-color)'
+          - box-shadow: '0px 0px 16px 4px  #6fa8dc' # LIGHT BLUE
+          - border-radius: 10px
+          - text-shadow: 0px 0px 5px black
+        label:
+          - color: 'var(--accent-color)'
+        icon:
+          - color: 'var(--accent-color)'
+        name:
+          - color: 'var(--accent-color)'
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'FPH'
