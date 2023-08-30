@@ -1,0 +1,181 @@
+  aspect_ratio: 1/1
+  color: 'rgb(5, 147, 255)'
+  tap_action:
+    action: none
+  double_tap_action:
+    action: more-info
+    haptic: heavy
+  hold_action:
+    action: more-info
+  show_label: false
+  show_name: true
+  show_state: false
+  size: 50%
+  state:
+    - icon: 'mdi:battery-low'
+      name: Garage1  
+      styles:
+        card:
+          - '--paper-card-background-color': 'rgba(--accent-color)'
+          - box-shadow: '0px 0px 16px 4px  #faafaf'
+          - border-radius: 10px
+          - text-shadow: 0px 0px 5px black
+        label:
+          - color: 'var(--accent-color)'
+        icon:
+          - color: 'rgba(255, 76, 48)'
+        name:
+          - color: 'var(--accent-color)'
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'garage.motion.1.battery.not.ok'
+    - icon: 'mdi:battery-low'
+      name: Garage2
+      styles:
+        card:
+          - '--paper-card-background-color': 'rgba(--accent-color)'
+          - box-shadow: '0px 0px 16px 4px  #faafaf'
+          - border-radius: 10px
+          - text-shadow: 0px 0px 5px black
+        label:
+          - color: 'var(--accent-color)'
+        icon:
+          - color: 'rgba(255, 76, 48)'
+        name:
+          - color: 'var(--accent-color)'
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'garage.motion.2.battery.not.ok'
+    - icon: 'mdi:battery-low'
+      name: Lanai
+      styles:
+        card:
+          - '--paper-card-background-color': 'rgba(--accent-color)'
+          - box-shadow: '0px 0px 16px 4px  #faafaf'
+          - border-radius: 10px
+          - text-shadow: 0px 0px 5px black
+        label:
+          - color: 'var(--accent-color)'
+        icon:
+          - color: 'rgba(255, 76, 48)'
+        name:
+          - color: 'var(--accent-color)'
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'lanai.motion.battery.not.ok'
+    - icon: 'mdi:battery-low'
+      name: Laundry 
+      styles:
+        card:
+          - '--paper-card-background-color': 'rgba(--accent-color)'
+          - box-shadow: '0px 0px 16px 4px  #faafaf'
+          - border-radius: 10px
+          - text-shadow: 0px 0px 5px black
+        label:
+          - color: 'var(--accent-color)'
+        icon:
+          - color: 'rgba(255, 76, 48)'
+        name:
+          - color: 'var(--accent-color)'
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'laundry.motion.battery.not.ok'
+    - icon: 'mdi:battery-low'
+      name: Portico 
+      styles:
+        card:
+          - '--paper-card-background-color': 'rgba(--accent-color)'
+          - box-shadow: '0px 0px 16px 4px  #faafaf'
+          - border-radius: 10px
+          - text-shadow: 0px 0px 5px black
+        label:
+          - color: 'var(--accent-color)'
+        icon:
+          - color: 'rgba(255, 76, 48)'
+        name:
+          - color: 'var(--accent-color)'
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'portico.motion.battery.not.ok'
+    - icon: 'mdi:battery-low'
+      name: SD.Motion  
+      styles:
+        card:
+          - '--paper-card-background-color': 'rgba(--accent-color)'
+          - box-shadow: '0px 0px 16px 4px  #faafaf'
+          - border-radius: 10px
+          - text-shadow: 0px 0px 5px black
+        label:
+          - color: 'var(--accent-color)'
+        icon:
+          - color: 'rgba(255, 76, 48)'
+        name:
+          - color: 'var(--accent-color)'
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'side.door.motion.battery.not.ok'
+    - icon: 'mdi:battery-low'
+      name: ATTIC  
+      styles:
+        card:
+          - '--paper-card-background-color': 'rgba(--accent-color)'
+          - box-shadow: '0px 0px 16px 4px  #faafaf'
+          - border-radius: 10px
+          - text-shadow: 0px 0px 5px black
+        label:
+          - color: 'var(--accent-color)'
+        icon:
+          - color: 'rgba(255, 76, 48)'
+        name:
+          - color: 'var(--accent-color)'
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'attic.motion.battery.not.ok'
+    - icon: 'mdi:emoticon-dead'
+      name: MIA 
+      styles:
+        card:
+          - '--paper-card-background-color': 'rgba(--accent-color)'
+          - box-shadow: '0px 0px 16px 4px  #faafaf'
+          - border-radius: 10px
+          - text-shadow: 0px 0px 5px black
+        label:
+          - color: 'var(--accent-color)'
+        icon:
+          - color: 'rgba(255, 76, 48)'
+        name:
+          - color: 'var(--accent-color)'
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'MIA'
+    - icon: 'mdi:battery-high'
+      name: OK  
+      styles:
+        card:
+          - '--paper-card-background-color': 'var(--secondary-background-color)'
+          - box-shadow: '0px 0px 1px 1px var(--secondary-background-color)'
+          - border-radius: 10px
+        label:
+          - color: var(--secondary-text-color)
+        icon:
+          - color: var(--secondary-text-color)
+        name:
+          - color: var(--secondary-text-color)
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'ok'
+  styles:
+    card:
+      - color: 'rgb(5, 147, 255)'
+      - padding: 5%
+      - text-transform: capitalize
+      - '--mdc-ripple-press-opacity': 0.5
+      - '--mdc-ripple-color': black
+    grid:
+      - grid-template-areas: '"i" "n" "slider"'
+      - grid-template-columns: 100%
+      - grid-template-rows: 50% auto
+    img_cell:
+      - justify-content: center
+      - align-items: center
+      - padding-top: 13%
