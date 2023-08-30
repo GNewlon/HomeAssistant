@@ -1,0 +1,23 @@
+  aspect_ratio: auto
+  show_icon: false
+  custom_fields:
+    vacuum:
+      card:
+        entity: vacuum.roborock
+        name: false
+        type: 'custom:xiaomi-vacuum-card'
+  styles:
+    custom_fields:
+      vacuum:
+        - position: absolute
+        - height: 100%
+        - width: 100%
+        - bottom: .25%
+        - z-index: 0
+    card:
+      - border-radius: 10px
+      - '--paper-card-background-color': 'var(--secondary-background-color)'
+      - box-shadow: '0px 0px 2px 2px var(--secondary-background-color)'
+  color_type: card
+  hold_action:
+    action: more-info

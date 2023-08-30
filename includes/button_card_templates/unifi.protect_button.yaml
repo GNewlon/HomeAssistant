@@ -1,0 +1,28 @@
+  aspect_ratio: 1/1
+  show_icon: false
+  custom_fields:
+    camera_image: |
+      [[[
+        return html`
+          <hui-image
+            .hass=${hass}
+            .cameraImage=${entity.entity_id}
+            .entity=${entity.entity_id}
+            .cameraView="auto"
+            aspectRatio="1"
+          ></hui-image>
+        `;
+      ]]]
+  styles:
+    custom_fields:
+      camera_image:
+        - position: absolute
+        - height: 100%
+        - width: 100%
+        - bottom: .25%
+        - z-index: 0
+    card:
+      - border-radius: 10px
+  color_type: card
+  hold_action:
+    action: more-info

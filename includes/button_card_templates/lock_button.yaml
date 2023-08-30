@@ -1,0 +1,52 @@
+  aspect_ratio: 1/1
+  color: 'rgb(5, 147, 255)'
+  hold_action:
+    action: more-info
+  layout: vertical
+  show_label: true
+  show_name: true
+  show_state: false
+  size: 35%
+  state:
+    - icon: 'mdi:lock-open-variant'
+      styles:
+        card:
+          - aspect_ratio: 1/1
+          - '--paper-card-background-color': 'var(--accent-color)'
+          - box-shadow: '0px 0px 13px 3px var(--box-shadow)'
+          - border-radius: 10px
+          - text-shadow: 0px 0px 5px black
+        label:
+          - color: 'var(--accent-color)'
+        icon:
+          - color: 'var(--accent-color)'
+        name:
+          - color: 'var(--accent-color)'
+          - font-size: 14px
+          - padding-bottom: 10px
+          - text-shadow: 0px 0px 5px black
+        state:
+          - color: var(--accent-color)
+      value: unlocked
+    - color: var(--accent-color)
+      icon: 'mdi:lock'
+      styles:
+        card:
+          - '--paper-card-background-color': 'var(--secondary-background-color)'
+          - box-shadow: '0px 0px 1px 1px var(--secondary-background-color)'
+          - border-radius: 10px
+        label:
+          - color: var(--secondary-text-color)
+        icon:
+          - color: var(--secondary-text-color)
+        name:
+          - color: var(--secondary-text-color)
+          - font-size: 14px
+          - padding-bottom: 10px
+      value: locked
+  tap_action:
+    action: call-service
+    haptic: heavy
+    service: '[[[ return entity.state === "locked" ? "lock.unlock" : "lock.lock" ]]]'
+    service_data:
+      entity_id: entity

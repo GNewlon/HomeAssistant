@@ -1,4 +1,4 @@
-  styles:
+styles:
     card:
       - text-transform: uppercase
       - font-size: 150%
