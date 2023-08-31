@@ -418,6 +418,8 @@
             - entities:   
               - entity: switch.fph_1_norm_fph
                 icon: 'mdi:alpha-h-box'
+#                show_header_toggle: false
+                type: simple-entity
                 tap_action:
                   action: call-service
                   service: none
@@ -426,6 +428,7 @@
                   service: input_boolean.toggle
               - entity: switch.fph_hvac_compressor_24vac_no
                 icon: 'mdi:alpha-h-box'
+                type: simple-entity
               - entity: switch.nph_condenser_fan
                 icon: 'mdi:alpha-h-box'
               - entity: switch.nph_hvac_compressor_24vac_nc
