@@ -419,6 +419,13 @@
               - entity: switch.fph_1_norm_fph
                 icon: 'mdi:alpha-h-box'
                 type: simple-entity
+                state_color: true
+                style: |
+                  :host {
+                    {% if states(config.entity)=='on' %}
+                      --paper-item-icon-color: red;
+                    {% endif %};
+                  }
               - entity: switch.fph_hvac_compressor_24vac_no
                 icon: 'mdi:alpha-h-box'
                 type: simple-entity
