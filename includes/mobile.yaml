@@ -418,6 +418,10 @@
             - entities:   
               - entity: switch.fph_1_norm_fph
                 icon: 'mdi:alpha-h-box'
+                  tap_action:
+                    action: none
+                  double_tap_action:
+                    action: none
               - entity: switch.fph_hvac_compressor_24vac_no
                 icon: 'mdi:alpha-h-box'
               - entity: switch.nph_condenser_fan
