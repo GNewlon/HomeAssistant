@@ -418,25 +418,22 @@
             - entities:   
               - entity: switch.fph_1_norm_fph
                 icon: 'mdi:alpha-h-box'
-#                show_header_toggle: false
                 type: simple-entity
-                tap_action:
-                  action: call-service
-                  service: none
-                double_tap_action:
-                  action: call-service
-                  service: input_boolean.toggle
               - entity: switch.fph_hvac_compressor_24vac_no
                 icon: 'mdi:alpha-h-box'
                 type: simple-entity
               - entity: switch.nph_condenser_fan
                 icon: 'mdi:alpha-h-box'
+                type: simple-entity
               - entity: switch.nph_hvac_compressor_24vac_nc
                 icon: 'mdi:alpha-h-box'
+                type: simple-entity
               - entity: switch.valve_4_pool_spa
-                icon: 'mdi:numeric-2-box'                
+                icon: 'mdi:numeric-2-box'
+                type: simple-entity
               - entity: switch.valve_5_off_he
                 icon: 'mdi:numeric-3-box'
+                type: simple-entity
               type: entities 
           type: horizontal-stack  
         - color: 'rgb(44, 109, 214)'
