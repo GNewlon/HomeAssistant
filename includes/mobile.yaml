@@ -759,10 +759,10 @@
                   entity: sensor.portico_motion_temperature
                   name: Portico
                   show_fill: false
-#                - color: firebrick
-#                  entity: sensor.kitchen_motion_air_temperature
-#                  name: Kitchen
-#                  show_fill: false
+                - color: red
+                  entity: sensor.screendoor_multisensor_air_temperature
+                  name: Screen Door
+                  show_fill: false
 #                - color: Blue
 #                  entity: sensor.lanai_motion_temperature
 #                  name: Lanai
