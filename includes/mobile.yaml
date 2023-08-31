@@ -438,9 +438,23 @@
               - entity: switch.valve_4_pool_spa
                 icon: 'mdi:numeric-2-box'
                 type: simple-entity
+                state_color: false
+                style: |
+                  :host {
+                    {% if states(config.entity)=='on' %}
+                      --paper-item-icon-color: red;
+                    {% endif %};
+                  }
               - entity: switch.valve_5_off_he
                 icon: 'mdi:numeric-3-box'
                 type: simple-entity
+                state_color: true
+                style: |
+                  :host {
+                    {% if states(config.entity)=='on' %}
+                      --paper-item-icon-color: red;
+                    {% endif %};
+                  }
               type: entities 
           type: horizontal-stack  
         - color: 'rgb(44, 109, 214)'
