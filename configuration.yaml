@@ -85,6 +85,17 @@ ios:
             title: 'Leave FPH: FPH'
           - identifier: 'FPH_NONE'
             title: 'Set FPH: NONE' 
+      - name: "FPH Control" 
+        identifier: 'alarm_notification' 
+        actions: 
+          - identifier: 'SOUND_ALARM'
+            title: 'Sound Alarm'
+            destructive: true
+            authenticationRequired: false
+          - identifier: 'SILENCE_ALARM'
+            title: 'Dismiss Alarm'
+            destructive: false
+            authenticationRequired: true
 ####################################################
 #                                                  #
 #                      Logger                      #
