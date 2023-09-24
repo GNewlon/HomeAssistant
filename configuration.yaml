@@ -89,9 +89,9 @@ ios:
         identifier: 'set_fph' 
         actions: 
           - identifier: 'FPH'
-            title: 'Set FPH'
+            title: 'FPH'
           - identifier: 'NONE'
-            title: 'Set NONE' 
+            title: 'NONE' 
       - name: "FPH Control" 
         identifier: 'alarm_notification' 
         actions: 
