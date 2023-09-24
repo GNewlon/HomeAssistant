@@ -96,6 +96,24 @@ ios:
             title: 'Dismiss Alarm'
             destructive: false
             authenticationRequired: true
+      - name: 'Robot Vacuum'
+        identifier: 'robovac'
+        actions:
+          - identifier: 'CLEAN_NOW'
+            title: 'Begin cleaning now'
+            activationMode: 'background'
+            authenticationRequired: false
+            destructive: false
+          - identifier: 'DELAY_CLEAN'
+            title: 'Delay cleaning'
+            activationMode: 'background'
+            authenticationRequired: false
+            destructive: false
+          - identifier: 'CLEAN_CANCEL'
+            title: 'Cancel cleaning'
+            activationMode: 'background'
+            authenticationRequired: false
+            destructive: true
 ####################################################
 #                                                  #
 #                      Logger                      #
