@@ -88,8 +88,12 @@ ios:
       - name: "Set FPH" 
         identifier: 'set_fph' 
         actions: 
+          - identifier: 'FPH+$PH'
+            title: 'FPH+$PH'
           - identifier: 'FPH'
-            title: 'FPH'
+            title: 'FPH' 
+          - identifier: '$PH'
+            title: '$PH' 
           - identifier: 'NONE'
             title: 'NONE' 
       - name: "FPH Control" 
