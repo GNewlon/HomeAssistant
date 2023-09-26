@@ -70,42 +70,13 @@ tts:
 ###########################################################
 homekit:
   - filter:
-      include_domains:
-        - binary_sensor
-        - camera
-        - climate
-        - cover
-        - input_boolean
-        - input_select
-        - light
-        - lock
-        - person
-        - media_player
-        - switch
-      include_entity_globs:
-        - binary_sensor.*_occupancy
       include_entities:
         - cover.garage_door
         - lock.side_door_lock
         - lock.front_door_lock
-    entity_config:
-#      alarm_control_panel.home:
-#        code: 1234
-#      binary_sensor.living_room_motion:
-#        linked_battery_sensor: sensor.living_room_motion_battery
-#        low_battery_threshold: 31
-#      light.kitchen_table:
-#        name: Kitchen Table Light
-      lock.side_door_lock:
-        code: 1000
-      media_player.living_room:
-        feature_list:
-          - feature: on_off
-          - feature: play_pause
-          - feature: play_stop
-          - feature: toggle_mute
-      camera.portico_front:
-        support_audio: True
+#    entity_config:
+#      lock.side_door_lock:
+#        code: 1000
 ####################################################
 #                                                  #
 #                 iOS Actions                      #
