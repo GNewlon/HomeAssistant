@@ -74,9 +74,14 @@ homekit:
         - cover.garage_door
         - lock.side_door_lock
         - lock.front_door_lock
-#    entity_config:
-#      lock.side_door_lock:
-#        code: 1000
+        - input_boolean.skimmer
+        - input_boolean.swim
+        - input_boolean.waterfall
+        - input_boolean.waterlevel
+        - input_select.pool_mode
+    entity_config:
+      lock.side_door_lock:
+        code: 1000
 ####################################################
 #                                                  #
 #                 iOS Actions                      #

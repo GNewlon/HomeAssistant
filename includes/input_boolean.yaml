@@ -34,10 +34,6 @@ door_notify:
   name: Door Notifications
   icon: mdi:alert-circle
 #currently in testing
-buzz_home:
-  name: Buzz Home
-  initial: off
-  icon: mdi:contact-phone-outline
 reset_internet:
   name: Reset Internet
   initial: off
