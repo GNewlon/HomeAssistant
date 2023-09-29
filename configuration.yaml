@@ -130,7 +130,7 @@ ios:
         identifier: 'MRA' 
         actions: 
           - identifier: 'not_today'
-            title: 'Not Today?'
+            title: 'not_today'
       - name: 'Robot Vacuum'
         identifier: 'robovac'
         actions:
