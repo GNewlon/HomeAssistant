@@ -126,7 +126,7 @@ ios:
             title: 'Dismiss Alarm'
             destructive: false
             authenticationRequired: true
-      - name: "MRA" 
+      - name: "mra" 
         identifier: 'mra' 
         actions: 
           - identifier: 'Not_Today'
