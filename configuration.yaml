@@ -127,7 +127,7 @@ ios:
             destructive: false
             authenticationRequired: true
       - name: "MRA" 
-        identifier: 'MRA' 
+        identifier: 'mra' 
         actions: 
           - identifier: 'not_today'
             title: 'not_today'
