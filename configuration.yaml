@@ -126,17 +126,11 @@ ios:
             title: 'Dismiss Alarm'
             destructive: false
             authenticationRequired: true
-      - name: "testing" 
-        identifier: 'testing' 
+      - name: "MRA" 
+        identifier: 'MRA' 
         actions: 
-          - identifier: 'Not_Today'
-            title: 'Not_Today'
-          - identifier: 'FPH'
-            title: 'FPH' 
-          - identifier: '$PH'
-            title: '$PH' 
-          - identifier: 'NONE'
-            title: 'NONE'
+          - identifier: 'Not_Today?'
+            title: 'Not Today?'
       - name: 'Robot Vacuum'
         identifier: 'robovac'
         actions:
