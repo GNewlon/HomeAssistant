@@ -129,8 +129,14 @@ ios:
       - name: "MRA" 
         identifier: 'mra' 
         actions: 
-          - identifier: 'not_today'
-            title: 'not_today'
+          - identifier: 'Not_Today'
+            title: 'Not_Today'
+          - identifier: 'FPH'
+            title: 'FPH' 
+          - identifier: '$PH'
+            title: '$PH' 
+          - identifier: 'NONE'
+            title: 'NONE'
       - name: 'Robot Vacuum'
         identifier: 'robovac'
         actions:
