@@ -134,7 +134,7 @@ ios:
       - name: "HVAC WATTS" 
         identifier: 'HVAC_WATTS' 
         actions: 
-          - identifier: 'OFF?'
+          - identifier: 'HVAC:OFF?'
             title: 'OFF?'
           - identifier: 'FPH:NONE'
             title: 'FPH:NONE'
