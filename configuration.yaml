@@ -136,7 +136,7 @@ ios:
         actions: 
           - identifier: 'HVAC:OFF?'
             title: 'OFF?'
-          - identifier: 'FPH:NONE'
+          - identifier: 'NONE'
             title: 'FPH:NONE'
       - name: 'Robot Vacuum'
         identifier: 'robovac'
