@@ -131,6 +131,13 @@ ios:
         actions: 
           - identifier: 'Not_Today?'
             title: 'Not Today?'
+      - name: "HVAC WATTS" 
+        identifier: 'HVAC_WATTS' 
+        actions: 
+          - identifier: 'OFF?'
+            title: 'OFF?'
+          - identifier: 'FPH:NONE'
+            title: 'FPH:NONE'
       - name: 'Robot Vacuum'
         identifier: 'robovac'
         actions:
