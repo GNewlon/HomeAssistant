@@ -100,10 +100,10 @@ ios:
       - name: "FPH Watchdog" 
         identifier: 'fph_alarm_notification' 
         actions: 
-          - identifier: 'FPH_FPH'
-            title: 'Leave FPH: FPH'
-          - identifier: 'FPH_NONE'
-            title: 'Set FPH: NONE' 
+          - identifier: 'OFF'
+            title: 'HVAC:OFF?'
+          - identifier: 'NONE'
+            title: 'FPH:NONE?'
       - name: "Set FPH" 
         identifier: 'set_fph' 
         actions: 
