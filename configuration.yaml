@@ -97,8 +97,8 @@ ios:
             title: 'Sound Alarm'
           - identifier: 'SILENCE_ALARM'
             title: 'Dismiss Alarm'
-      - name: "FPH Watchdog" 
-        identifier: 'fph_alarm_notification' 
+      - name: "FPH_Watchdog" 
+        identifier: 'FPH_Watchdog' 
         actions: 
           - identifier: 'OFF'
             title: 'HVAC:OFF?'
