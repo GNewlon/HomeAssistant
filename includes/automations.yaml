@@ -43,3 +43,35 @@
     event: start
   action:
     - service: shell_command.pushupdates_to_github
+#################################################################################################
+#                                                                                               #
+#                  notify on zone enter/leave                                                   #
+#   https://community.home-assistant.io/t/automation-for-entering-and-leaving-zones/265000/4    #
+#################################################################################################
+- alias: notify on zone enter/leave
+  trigger:
+    - platform: zone
+      entity_id:
+         - person.graham
+         - person.christina
+      zone: zone.shark_house_proximity
+      event: enter
+    - platform: zone
+      entity_id:
+         - person.graham
+#         - person.christina
+      zone: zone.shark_house_proximity
+      event: leave
+  action:
+    - variables:
+        event: "{{ 'left' if trigger.event == 'leave' else 'arrived at' }}"
+        person: "{{ trigger.to_state.attributes.shark_house_proximity }}"
+        zone: "{{ trigger.zone.attributes.shark_house_proximity }}"
+    - service: notify.mobile_app_grahams_iphone_14
+      data:
+        message: >
+          {{ person + ' ' + event ' ' + zone }}
+#    - service: notify.mobile_app_christinas_iphone_13
+#      data:
+#        message: >
+#          {{ person + ' ' + event ' ' + zone }}
