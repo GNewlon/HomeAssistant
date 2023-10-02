@@ -523,18 +523,15 @@
                 icon: 'mdi:coolant-temperature'            
               type: glance 
           type: horizontal-stack      
+#############################################
+#                                           #
+#          Graph: Total KWH                 #
+#                                           #
+#############################################
         - entities:
             - color: blue
-              entity: sensor.fph_inlet_temp  # FPH INLET TEMP
-              name: FPH Inlet1
-              show_fill: true
-            - color: red
-              entity: sensor.fph_outlet_temp  # FPH OUTLET TEMP
-              name: FPH Outlet
-              show_fill: true
-            - color: green
-              entity: sensor.hvac_liquid_temp  # HVAC LIQUID TEMP
-              name: HVAC Liquid
+              entity: sensor.powermeter_18c_total_kwh_2  # FPH INLET TEMP
+              name: Total KWH
               show_fill: true
 #                - color: green
 #                  entity: input_select.hvac
@@ -552,8 +549,8 @@
 #                  show_points: false
 #                  show_legend: true
           font_size: 60
-          hours_to_show: .4
-          points_per_hour: 200
+          hours_to_show: 720
+          points_per_hour: 2
           update_interval: .1
           aggregate_func: avg
 #              lower_bound_secondary: 50
@@ -569,6 +566,7 @@
 #              name: Pool Temperature
           show:
             fill: true
+            graph: bar
             hour24: true
             icon: false
             labels: true
