@@ -526,7 +526,7 @@
         - entities:
             - color: blue
               entity: sensor.fph_inlet_temp  # FPH INLET TEMP
-              name: FPH Inlet
+              name: FPH Inlet1
               show_fill: true
             - color: red
               entity: sensor.fph_outlet_temp  # FPH OUTLET TEMP

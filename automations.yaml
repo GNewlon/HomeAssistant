@@ -82,3 +82,12 @@
       - device_id: ''
         domain: ''
         entity_id: ''
+- id: '1696277196235'
+  alias: Shark House proximity Zone Notification
+  description: ''
+  use_blueprint:
+    path: homeassistant/notify_leaving_zone.yaml
+    input:
+      person_entity: person.graham
+      zone_entity: zone.shark_house_proximity
+      notify_device: 526f3eeaea39816e5f04c3aa99e1bef4
