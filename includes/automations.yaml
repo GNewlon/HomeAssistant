@@ -70,7 +70,7 @@
     - service: notify.mobile_app_grahams_iphone_14
       data:
         message: >
-          {{ person + ' ' + event ' ' + zone }}
+          "{{ person + ' ' + event ' ' + zone }}"
 #    - service: notify.mobile_app_christinas_iphone_13
 #      data:
 #        message: >
