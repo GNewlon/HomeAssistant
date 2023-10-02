@@ -49,6 +49,7 @@
 #   https://community.home-assistant.io/t/automation-for-entering-and-leaving-zones/265000/4    #
 #################################################################################################
 - alias: "notify on shark house proximity zone enter/leave"
+  id: 9417305840
   trigger:
     - platform: zone
       entity_id:
