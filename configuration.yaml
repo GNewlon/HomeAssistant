@@ -205,7 +205,7 @@ proximity:
       - person.graham
       - person.christina
     tolerance: 50
-    unit_of_measurement: 'mi'
+    unit_of_measurement: 'm'
 ####################################################
 #                                                  #
 #                     Recorder                     #
