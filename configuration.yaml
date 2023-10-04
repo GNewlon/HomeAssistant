@@ -194,6 +194,18 @@ panel_iframe:
 #     title: 'Node-RED'
 #     url: 'http://10.1.1.203:1880'
 #     icon: mdi:sitemap
+#################################################################
+#                                                               #
+#               Proximity Integration                           #
+#                                                               #
+#################################################################
+proximity:
+  home:
+    devices:
+      - person.graham
+      - person.christina
+    tolerance: 50
+    unit_of_measurement: 'mi'
 ####################################################
 #                                                  #
 #                     Recorder                     #
