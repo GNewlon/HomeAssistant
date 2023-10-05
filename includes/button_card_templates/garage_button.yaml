@@ -57,3 +57,6 @@
                 service_data:
                   entity_id: >-
                     cover.garage_door
+              double_tap_action:
+                action: more-info
+                haptic: heavy
