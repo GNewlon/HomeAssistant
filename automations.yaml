@@ -91,3 +91,21 @@
       person_entity: person.graham
       zone_entity: zone.shark_house_proximity
       notify_device: 526f3eeaea39816e5f04c3aa99e1bef4
+- id: '1696939382066'
+  alias: Christina Home!!
+  description: ''
+  use_blueprint:
+    path: homeassistant/notify_leaving_zone.yaml
+    input:
+      person_entity: person.christina
+      zone_entity: zone.home
+      notify_device: 526f3eeaea39816e5f04c3aa99e1bef4
+- id: '1696939912300'
+  alias: Christina’s Home!!!!!!!
+  description: Christina’s Home!!!!!!!
+  use_blueprint:
+    path: homeassistant/notify_leaving_zone.yaml
+    input:
+      person_entity: person.christina
+      zone_entity: zone.home
+      notify_device: 526f3eeaea39816e5f04c3aa99e1bef4
