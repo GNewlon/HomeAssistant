@@ -580,13 +580,13 @@
           type: 'custom:mini-graph-card'
 #############################################
 #                                           #
-#          Graph: Total KWH                 #
+#          Graph: HVAC WATTS                #
 #                                           #
 #############################################
         - entities:
-            - color: blue
-              entity: sensor.powermeter_18c_total_kwh_2  # FPH INLET TEMP
-              name: Total KWH
+            - color: green
+              entity: sensor.powermeter_18c_ct4_hvac_2_watts  # FPH INLET TEMP
+              name: HVAC KWH
               show_fill: true
 #                - color: green
 #                  entity: input_select.hvac
@@ -604,8 +604,8 @@
 #                  show_points: false
 #                  show_legend: true
           font_size: 60
-          hours_to_show: 168
-          points_per_hour: 2
+          hours_to_show: 1
+          points_per_hour: 600
           update_interval: .1
           aggregate_func: avg
 #              lower_bound_secondary: 50
@@ -618,10 +618,8 @@
 #              min_bound_range_secondary: 0
 #              group_by: second           
 #              icon: 'mdi:thermometer'
-#              name: Pool Temperature
           show:
             fill: true
-            graph: bar
             hour24: true
             icon: false
             labels: true
