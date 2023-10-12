@@ -575,7 +575,7 @@
 #                                           #
 #############################################
         - entities:
-            - color: green
+            - color: purple
               entity: sensor.powermeter_18c_ct4_hvac_2_watts  # FPH INLET TEMP
               name: HVAC KWH
               show_fill: true
