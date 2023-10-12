@@ -595,8 +595,8 @@
 #                  show_points: false
 #                  show_legend: true
           font_size: 60
-          hours_to_show: .5
-          points_per_hour: 120
+          hours_to_show: .2
+          points_per_hour: 220
           update_interval: 1
           aggregate_func: avg
           line_width: 2
