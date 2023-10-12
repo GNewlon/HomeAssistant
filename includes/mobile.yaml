@@ -346,17 +346,8 @@
           points_per_hour: 120
           update_interval: 1
           aggregate_func: avg
-#              lower_bound_secondary: 50
-#              upper_bound_secondary: 500
-#              value_factor: -10
           line_width: 2
           smoothing: true
-#              min_bound_range_secondary: 100
-#              upper_bound_secondary: 1   
-#              min_bound_range_secondary: 0
-#              group_by: second           
-#              icon: 'mdi:thermometer'
-#              name: Pool Temperature
           show:
             fill: true
             hour24: true
@@ -604,20 +595,12 @@
 #                  show_points: false
 #                  show_legend: true
           font_size: 60
-          hours_to_show: .6
-          points_per_hour: 600
-          update_interval: .1
+          hours_to_show: .5
+          points_per_hour: 120
+          update_interval: 1
           aggregate_func: avg
-#              lower_bound_secondary: 50
-#              upper_bound_secondary: 500
-#              value_factor: -10
           line_width: 2
           smoothing: true
-#              min_bound_range_secondary: 100
-#              upper_bound_secondary: 1   
-#              min_bound_range_secondary: 0
-#              group_by: second           
-#              icon: 'mdi:thermometer'
           show:
             fill: true
             hour24: true
