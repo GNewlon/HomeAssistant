@@ -699,11 +699,12 @@
                   EVAL:function(min) {
                     return min;
                   }
-                min: 900
-                max: 1200
-                decimals: 0
-                apex_config:
-                  tickAmount: 4
+                forceNiceScale: true
+#                min: 900
+#                max: 1200
+#                decimals: 0
+#                apex_config:
+#                  tickAmount: 4
               - title:
                   text: Axis 2
                 opposite: true
