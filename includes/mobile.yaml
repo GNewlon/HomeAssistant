@@ -661,6 +661,34 @@
             name: false
 #                labels_secondary: true
           type: 'custom:mini-graph-card'
+#############################################
+#                                           #
+#  Graph: HVAC Watts & FPH IN/OUTLET TEMP   #
+#                                           #
+#############################################
+        - type: 'custom:apexcharts-card'
+          graph_span: 6h
+          header:
+            show: false
+          series:
+            - entity: sensor.powermeter_18c_ct4_hvac_2_watts
+              type: line
+              name: HVAC Watts
+              group_by:
+                func: avg
+                duration: 30min
+            - entity: sensor.fph_inlet_temp
+              type: line
+              name: FPH Inlet Temp
+              group_by:
+                func: avg
+                duration: 30min
+            - entity: sensor.fph_outlet_temp
+              type: line
+              name: NPH Outlet Temp
+              group_by:
+                func: avg
+                duration: 30min
 ###########  climate.sharkhouse GRAPH
         - entities:
 #            - color: blue
