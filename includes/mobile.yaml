@@ -702,9 +702,9 @@
                 forceNiceScale: true
 #                min: 900
 #                max: 1200
-#                decimals: 0
-#                apex_config:
-#                  tickAmount: 4
+                decimals: 0
+                apex_config:
+                  tickAmount: 4
               - title:
                   text: Axis 2
                 opposite: true
@@ -713,8 +713,8 @@
                     return min;
                   }
                 forceNiceScale: true
-                min: 75
-                max: 90
+#                min: 75
+#                max: 90
                 decimals: 0
                 apex_config:
                   tickAmount: 4
