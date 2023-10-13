@@ -688,6 +688,7 @@
 #                                           #
 #############################################
         - type: 'custom:apexcharts-card'
+          graph_span: 5min
           apex_config:
             yaxis:
               - title:
