@@ -699,6 +699,11 @@
                   EVAL:function(min) {
                     return min;
                   }
+                min: 700
+                max: '~1300'
+                decimals: 0
+                apex_config:
+                  tickAmount: 4
               - title:
                   text: Axis 2
                 opposite: true
@@ -706,6 +711,7 @@
                   EVAL:function(min) {
                     return min;
                   }
+
           series:
             - entity: sensor.powermeter_18c_ct4_hvac_2_watts
               name: HVAC Watts
