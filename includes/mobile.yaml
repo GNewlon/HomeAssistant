@@ -674,22 +674,19 @@
             - entity: sensor.powermeter_18c_ct4_hvac_2_watts
               type: line
               name: HVAC Watts
-              transform: return x / 1024;
-              group_by:
-                func: avg
-                duration: 30min
+              transform: "return x / 1024;"
             - entity: sensor.fph_inlet_temp
               type: line
               name: FPH Inlet Temp
               group_by:
                 func: avg
-                duration: 30min
+                duration: 1min
             - entity: sensor.fph_outlet_temp
               type: line
               name: NPH Outlet Temp
               group_by:
                 func: avg
-                duration: 30min
+                duration: 1min
 ###########  climate.sharkhouse GRAPH
         - entities:
 #            - color: blue
