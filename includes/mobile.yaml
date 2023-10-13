@@ -680,14 +680,14 @@
               type: line
               name: FPH Inlet Temp
               group_by:
-                func: avg
-                duration: 1min
+                func: last
+                duration: 10s
             - entity: sensor.fph_outlet_temp
               type: line
               name: NPH Outlet Temp
               group_by:
-                func: avg
-                duration: 1min
+                func: last
+                duration: 10s
 ###########  climate.sharkhouse GRAPH
         - entities:
 #            - color: blue
