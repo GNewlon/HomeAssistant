@@ -699,8 +699,8 @@
                   EVAL:function(min) {
                     return min;
                   }
-                min: 700
-                max: '~1300'
+                min: 900
+                max: '~1200'
                 decimals: 0
                 apex_config:
                   tickAmount: 4
