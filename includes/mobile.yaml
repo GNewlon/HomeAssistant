@@ -674,6 +674,9 @@
             - entity: sensor.powermeter_18c_ct4_hvac_2_watts
               type: line
               name: HVAC Watts
+              group_by:
+                func: last
+                duration: 1s
 #              transform: 'return Number(x) + 80;' # We make it go fom 30 to 130
               transform: "return x / 100;"
             - entity: sensor.fph_inlet_temp
@@ -681,13 +684,13 @@
               name: FPH Inlet Temp
               group_by:
                 func: last
-                duration: 10s
+                duration: 1s
             - entity: sensor.fph_outlet_temp
               type: line
               name: NPH Outlet Temp
               group_by:
                 func: last
-                duration: 10s
+                duration: 1s
 ###########  climate.sharkhouse GRAPH
         - entities:
 #            - color: blue
