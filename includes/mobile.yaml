@@ -667,7 +667,7 @@
 #                                           #
 #############################################
         - type: 'custom:apexcharts-card'
-          graph_span: 6h
+          graph_span: .5h
           header:
             show: false
           series:
@@ -678,7 +678,7 @@
                 func: last
                 duration: 1s
 #              transform: 'return Number(x) + 80;' # We make it go fom 30 to 130
-              transform: "return x / 100;"
+              transform: "return x / 10;"
             - entity: sensor.fph_inlet_temp
               type: line
               name: FPH Inlet Temp
