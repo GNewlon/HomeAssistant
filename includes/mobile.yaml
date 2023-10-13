@@ -690,7 +690,7 @@
         - type: 'custom:apexcharts-card'
           graph_span: 15min
           all_series_config:
-            stroke_width: 2
+            stroke_width: 1
           apex_config:
             yaxis:
               - title:
@@ -711,6 +711,9 @@
               name: HVAC Watts
             - entity: sensor.fph_inlet_temp
               name: FPH Inlet Temp
+            - entity: sensor.fph_outlet_temp
+              type: line
+              name: NPH Outlet Temp
 #############################################
 #                                           #
 #           HVAC Liquid                     #
