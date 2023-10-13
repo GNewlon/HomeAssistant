@@ -682,6 +682,37 @@
             - entity: sensor.fph_outlet_temp
               type: line
               name: NPH Outlet Temp
+#############################################
+#                                           #
+#  Graph: HVAC Watts &FPH IN/OUTLET TEMP 2  #
+#                                           #
+#############################################
+        - type: 'custom:apexcharts-card'
+          apex_config:
+            yaxis:
+              - title:
+                  text: Axis 1
+                min: |
+                  EVAL:function(min) {
+                    return min;
+                  }
+              - title:
+                  text: Axis 2
+                opposite: true
+                min: |
+                  EVAL:function(min) {
+                    return min;
+                  }
+          series:
+            - entity: sensor.powermeter_18c_ct4_hvac_2_watts
+              name: HVAC Watts
+            - entity: sensor.fph_inlet_temp
+              name: FPH Inlet Temp
+#############################################
+#                                           #
+#           HVAC Liquid                     #
+#                                           #
+#############################################
 #              group_by:
 #                 func: last
 #                 duration: 1s
