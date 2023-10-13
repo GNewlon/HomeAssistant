@@ -668,6 +668,7 @@
 #############################################
         - type: 'custom:apexcharts-card'
           graph_span: 6h
+          autoScaleYaxis: true
           header:
             show: false
           series:
