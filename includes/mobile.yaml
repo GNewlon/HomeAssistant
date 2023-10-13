@@ -688,7 +688,7 @@
 #                                           #
 #############################################
         - type: 'custom:apexcharts-card'
-          graph_span: 180min
+          graph_span: 35min
           all_series_config:
             stroke_width: 1
           apex_config:
@@ -713,7 +713,7 @@
                     return min;
                   }
                 forceNiceScale: true
-                min: 80
+                min: 81
 #                max: 90
                 decimals: 0
                 apex_config:
