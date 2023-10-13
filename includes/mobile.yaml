@@ -674,6 +674,7 @@
             - entity: sensor.powermeter_18c_ct4_hvac_2_watts
               type: line
               name: HVAC Watts
+              transform: return x / 1024;
               group_by:
                 func: avg
                 duration: 30min
