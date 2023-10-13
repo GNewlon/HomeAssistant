@@ -700,7 +700,7 @@
                     return min;
                   }
                 min: 900
-                max: '~1200'
+                max: 1200
                 decimals: 0
                 apex_config:
                   tickAmount: 4
@@ -712,7 +712,7 @@
                     return min;
                   }
                 min: 70
-                max: '~100'
+                max: 100
                 decimals: 0
                 apex_config:
                   tickAmount: 4
