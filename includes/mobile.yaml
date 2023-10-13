@@ -688,7 +688,7 @@
 #                                           #
 #############################################
         - type: 'custom:apexcharts-card'
-          graph_span: 15min
+          graph_span: 180min
           all_series_config:
             stroke_width: 1
           apex_config:
