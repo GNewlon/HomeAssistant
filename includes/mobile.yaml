@@ -711,11 +711,12 @@
                   EVAL:function(min) {
                     return min;
                   }
-                min: 75
-                max: 90
-                decimals: 0
-                apex_config:
-                  tickAmount: 4
+                forceNiceScale: true
+#                min: 75
+#                max: 90
+#                decimals: 0
+#                apex_config:
+#                  tickAmount: 4
           series:
             - entity: sensor.powermeter_18c_ct4_hvac_2_watts
               name: HVAC Watts
