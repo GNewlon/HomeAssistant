@@ -43,5 +43,5 @@
   type: module
 - url: /hacsfiles/light-popup-card/light-popup-card.js
   type: module
-- url: /hacsfiles/apexcharts-card/apexcharts-card.js?v=2.0.4
+- url: /hacsfiles/apexcharts-card/apexcharts-card.js
   type: module
