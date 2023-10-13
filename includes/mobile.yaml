@@ -674,6 +674,11 @@
             - entity: sensor.powermeter_18c_ct4_hvac_2_watts
               type: line
               name: HVAC Watts
+              yaxis: {
+                min: 100,
+                max: 145,
+                tickAmount: 9
+                     }
 #              transform: 'return Number(x) + 80;' # We make it go fom 30 to 130
 #              transform: "return x / 1024;"
             - entity: sensor.fph_inlet_temp
