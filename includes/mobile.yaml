@@ -702,7 +702,7 @@
             - color: green
               entity: sensor.hvac_liquid_temp  # HVAC LIQUID TEMP
               name: HVAC Liquid
-              show_fill: true
+              show_fill: fade
 #                - color: green
 #                  entity: input_select.hvac
 #                  name: HVAC
