@@ -340,7 +340,7 @@
 #              show_points: true
 #              show_legend: true             
           font_size: 60
-          hours_to_show: .75
+          hours_to_show: .50
           points_per_hour: 120
           update_interval: 1
           aggregate_func: avg
