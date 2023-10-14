@@ -323,6 +323,14 @@
 #                                           #
 #############################################
         - entities:
+            - color: green
+              entity: sensor.powermeter_18c_ct4_hvac_2_watts
+              name: Watts
+              y_axis: secondary                               
+              show_fill: true
+              show_line: false
+#              show_points: true
+#              show_legend: true  
             - color: blue
               entity: sensor.fph_inlet_temp  # FPH INLET TEMP
               name: FPH Inlet
@@ -336,7 +344,7 @@
               name: Watts
               y_axis: secondary                               
               show_fill: true
-#              show_line: true
+              show_line: false
 #              show_points: true
 #              show_legend: true             
           font_size: 60
