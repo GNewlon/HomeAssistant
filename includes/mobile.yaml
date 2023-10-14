@@ -518,7 +518,7 @@
           type: horizontal-stack      
 #############################################
 #                                           #
-#          Graph: Total KWH                 #
+#        Graph 2: Total KWH                 #
 #                                           #
 #############################################
         - entities:
@@ -568,7 +568,7 @@
           type: 'custom:mini-graph-card'
 #############################################
 #                                           #
-#          Graph: HVAC WATTS                #
+#      Graph 3:   HVAC WATTS                #
 #                                           #
 #############################################
         - entities:
@@ -606,11 +606,11 @@
             name: false
 #                labels_secondary: true
           type: 'custom:mini-graph-card'
-#############################################
-#                                           #
-#  Graph: HVAC Watts & FPH IN/OUTLET TEMP   #
-#                                           #
-#############################################
+##################################################
+#                                                #
+#    Graph 4 HVAC Watts & FPH IN/OUTLET TEMP     #
+#                                                #
+##################################################
         - entities:
             - color: blue
               entity: sensor.fph_inlet_temp  # FPH INLET TEMP
@@ -622,37 +622,29 @@
               show_fill: true
             - color: green
               entity: sensor.powermeter_18c_ct4_hvac_2_watts
-              attribute: Pump Watts
               name: Watts
-              y_axis: secondary                
-              show_graph: bar                  
+              y_axis: secondary                               
               show_fill: true
-              show_line: false
-              show_points: false
-              show_legend: true
+#              show_line: true
+#              show_points: true
+#              show_legend: true             
           font_size: 60
           hours_to_show: 10
-          points_per_hour: 120
-          update_interval: .1
+          points_per_hour: 60
+          update_interval: 1
+          aggregate_func: avg
           line_width: 2
           smoothing: true
-#              min_bound_range_secondary: 100
-#              upper_bound_secondary: 1   
-#              min_bound_range_secondary: 0
-#              group_by: second           
-#              icon: 'mdi:thermometer'
-#              name: Pool Temperature
           show:
             fill: true
             hour24: true
             icon: false
             labels: true
             name: false
-#                labels_secondary: true
           type: 'custom:mini-graph-card'
 #############################################
 #                                           #
-#   Graph HVAC Watts&FPH IN/OUTLET    3     #
+#   Graph 5 HVAC Watts&FPH IN/OUTLET        #
 #                                           #
 #############################################
         - entities:
