@@ -338,7 +338,7 @@
             - color: red
               entity: sensor.fph_outlet_temp  # FPH OUTLET TEMP
               name: FPH Outlet
-              show_fill: true           
+              show_fill: false           
           font_size: 60
           hours_to_show: .50
           points_per_hour: 120
