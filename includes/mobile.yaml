@@ -667,7 +667,7 @@
 #                                           #
 #############################################
         - type: 'custom:apexcharts-card'
-          graph_span: 10min
+          graph_span: 60min
           header:
             show: false
           all_series_config:
