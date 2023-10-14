@@ -633,32 +633,10 @@
               show_line: false
               show_points: false
               show_legend: true
-#            - color: green
-#              entity: sensor.hvac_liquid_temp  # HVAC LIQUID TEMP
-#              name: HVAC Liquid
-#              show_fill: true
-#                - color: green
-#                  entity: input_select.hvac
-#                  name: HVAC
-#                  show_fill: true
-#                - color: white
-#                  entity: sensor.powermeter_18c_ct4_hvac_2_watts
-#                  attribute: Pump Watts
-#                  name: Watts
-#                  y_axis: secondary                
-#                  show_graph: bar                  
-#                  show_fill: true
-#                  show_line: false
-#                  show_points: false
-#                  show_legend: true
           font_size: 60
           hours_to_show: 10
           points_per_hour: 120
           update_interval: .1
-          aggregate_func: avg
-              lower_bound_secondary: 50
-              upper_bound_secondary: 500
-              value_factor: -10
           line_width: 2
           smoothing: true
 #              min_bound_range_secondary: 100
