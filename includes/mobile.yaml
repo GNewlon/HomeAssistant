@@ -675,7 +675,7 @@
             group_by:
               func: diff
               start_with_last: true
-              duration: 1d          
+              duration: 1min        
           series:
             - entity: sensor.powermeter_18c_ct4_hvac_2_watts
               type: line
