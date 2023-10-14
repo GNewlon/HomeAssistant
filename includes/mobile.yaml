@@ -322,16 +322,7 @@
 #   Graph 1   HVAC Watts&FPH IN/OUTLET      #
 #                                           #
 #############################################
-        - entities:
-            - color: grey
-              entity: sensor.powermeter_18c_ct4_hvac_2_watts
-              name: Watts
-              y_axis: secondary
-              upper_bound_secondary: ~1200
-              show_fill: true
-              show_line: false
-#              show_points: true
-#              show_legend: true  
+        - entities: 
             - color: blue
               entity: sensor.fph_inlet_temp  # FPH INLET TEMP
               name: FPH Inlet
@@ -341,7 +332,16 @@
               entity: sensor.fph_outlet_temp  # FPH OUTLET TEMP
               name: FPH Outlet
               upper_bound: 100
-              show_fill: false           
+              show_fill: false  
+            - color: "#706f6f"
+              entity: sensor.powermeter_18c_ct4_hvac_2_watts
+              name: Watts
+              y_axis: secondary
+              upper_bound_secondary: ~1200
+              show_fill: true
+              show_line: false
+#              show_points: true
+#              show_legend: true               
           font_size: 60
           hours_to_show: .50
           points_per_hour: 120
