@@ -323,16 +323,16 @@
 #                                           #
 #############################################
         - entities: 
-            - color: blue
-              entity: sensor.fph_inlet_temp  # FPH INLET TEMP
-              name: FPH Inlet
-              upper_bound: 100
-              show_fill: false
             - color: red
               entity: sensor.fph_outlet_temp  # FPH OUTLET TEMP
               name: FPH Outlet
               upper_bound: 100
               show_fill: false  
+            - color: blue
+              entity: sensor.fph_inlet_temp  # FPH INLET TEMP
+              name: FPH Inlet
+              upper_bound: 100
+              show_fill: false
             - color: "#706f6f"
               entity: sensor.powermeter_18c_ct4_hvac_2_watts
               name: Watts
