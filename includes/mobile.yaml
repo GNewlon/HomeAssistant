@@ -335,7 +335,7 @@
               show_fill: false
             - color: "#706f6f"
               entity: sensor.powermeter_18c_ct4_hvac_2_watts
-              name: Watts
+              name: HVAC Watts
               y_axis: secondary
               upper_bound_secondary: ~1200
               show_fill: true
