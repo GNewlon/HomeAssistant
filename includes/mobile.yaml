@@ -323,7 +323,7 @@
 #                                           #
 #############################################
         - entities:
-            - color: green
+            - color: grey
               entity: sensor.powermeter_18c_ct4_hvac_2_watts
               name: Watts
               y_axis: secondary                               
@@ -338,15 +338,7 @@
             - color: red
               entity: sensor.fph_outlet_temp  # FPH OUTLET TEMP
               name: FPH Outlet
-              show_fill: true
-            - color: green
-              entity: sensor.powermeter_18c_ct4_hvac_2_watts
-              name: Watts
-              y_axis: secondary                               
-              show_fill: true
-              show_line: false
-#              show_points: true
-#              show_legend: true             
+              show_fill: true           
           font_size: 60
           hours_to_show: .50
           points_per_hour: 120
