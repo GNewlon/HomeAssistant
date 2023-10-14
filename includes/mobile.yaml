@@ -655,7 +655,7 @@
           type: 'custom:mini-graph-card'
 #############################################
 #                                           #
-#  Graph:HVAC Watts & FPH IN/OUTLET TEMP 3  #
+#     HVAC Watts & FPH IN/OUTLET TEMP 3     #
 #                                           #
 #############################################
         - entities:
@@ -669,19 +669,18 @@
               show_fill: true
             - color: green
               entity: sensor.powermeter_18c_ct4_hvac_2_watts
-              attribute: Pump Watts
               name: Watts
               y_axis: secondary                               
               show_fill: true
-              show_line: true
-              show_points: true
-              show_legend: true             
+#              show_line: true
+#              show_points: true
+#              show_legend: true             
           font_size: 60
           hours_to_show: 10
           points_per_hour: 120
           update_interval: .1
           line_width: 2
-          smoothing: true
+#          smoothing: true
           show:
             fill: true
             hour24: true
