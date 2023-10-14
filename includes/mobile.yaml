@@ -673,7 +673,7 @@
           all_series_config:
             type: column
             group_by:
-              func: diff
+              func: delta
 #              start_with_last: true
               duration: 1min        
           series:
