@@ -655,7 +655,7 @@
           type: 'custom:mini-graph-card'
 #############################################
 #                                           #
-#     HVAC Watts & FPH IN/OUTLET TEMP 3     #
+#   Graph HVAC Watts&FPH IN/OUTLET    3     #
 #                                           #
 #############################################
         - entities:
@@ -676,18 +676,18 @@
 #              show_points: true
 #              show_legend: true             
           font_size: 60
-          hours_to_show: 10
+          hours_to_show: .5
           points_per_hour: 120
-          update_interval: .1
+          update_interval: 1
+          aggregate_func: avg
           line_width: 2
-#          smoothing: true
+          smoothing: true
           show:
             fill: true
             hour24: true
             icon: false
             labels: true
             name: false
-#                labels_secondary: true
           type: 'custom:mini-graph-card'
 #############################################
 #                                           #
