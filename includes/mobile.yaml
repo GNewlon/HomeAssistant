@@ -688,7 +688,7 @@
 #                                           #
 #############################################
         - type: 'custom:apexcharts-card'
-          graph_span: 35min
+          graph_span: 60min
           all_series_config:
             stroke_width: 1
           apex_config:
@@ -726,6 +726,8 @@
             - entity: sensor.fph_outlet_temp
               type: line
               name: NPH Outlet Temp
+              show:
+                extremas: max
 #############################################
 #                                           #
 #           HVAC Liquid                     #
