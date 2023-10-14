@@ -317,32 +317,30 @@
             ...
           version: 3
           type: 'custom:simple-thermostat'
+#############################################
+#                                           #
+#   Graph 1   HVAC Watts&FPH IN/OUTLET      #
+#                                           #
+#############################################
         - entities:
-            - entity: sensor.fph_inlet_temp
-              color: blue
-              name: FPH Inlet Temp
+            - color: blue
+              entity: sensor.fph_inlet_temp  # FPH INLET TEMP
+              name: FPH Inlet
               show_fill: true
             - color: red
-              entity: sensor.fph_outlet_temp
-              name: FPH Outlet Temp
+              entity: sensor.fph_outlet_temp  # FPH OUTLET TEMP
+              name: FPH Outlet
               show_fill: true
-#                - color: green
-#                  entity: input_select.hvac
-#                  name: HVAC
-#                  show_fill: true
-#                - color: white
-#                  entity: sensor.pool_pump_electric_production_w
-#                  attribute: Pump Watts
-#                  entity: input_select.hvac
-#                  name: Watts
-#                  y_axis: secondary                
-#                  show_graph: bar                  
-#                  show_fill: true
-#                  show_line: false
-#                  show_points: false
-#                  show_legend: true
+            - color: green
+              entity: sensor.powermeter_18c_ct4_hvac_2_watts
+              name: Watts
+              y_axis: secondary                               
+              show_fill: true
+#              show_line: true
+#              show_points: true
+#              show_legend: true             
           font_size: 60
-          hours_to_show: .5
+          hours_to_show: .75
           points_per_hour: 120
           update_interval: 1
           aggregate_func: avg
@@ -354,7 +352,6 @@
             icon: false
             labels: true
             name: false
-#                labels_secondary: true
           type: 'custom:mini-graph-card'
         - cards:
             - entity: input_select.pool_fph_set_max_temp #1 BUTTON
