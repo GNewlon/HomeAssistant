@@ -655,6 +655,44 @@
           type: 'custom:mini-graph-card'
 #############################################
 #                                           #
+#  Graph:HVAC Watts & FPH IN/OUTLET TEMP 3  #
+#                                           #
+#############################################
+        - entities:
+            - color: blue
+              entity: sensor.fph_inlet_temp  # FPH INLET TEMP
+              name: FPH Inlet
+              show_fill: true
+            - color: red
+              entity: sensor.fph_outlet_temp  # FPH OUTLET TEMP
+              name: FPH Outlet
+              show_fill: true
+            - color: green
+              entity: sensor.powermeter_18c_ct4_hvac_2_watts
+              attribute: Pump Watts
+              name: Watts
+              y_axis: secondary                
+              show_graph: bar                  
+              show_fill: true
+              show_line: false
+              show_points: false
+              show_legend: true             
+          font_size: 60
+          hours_to_show: 10
+          points_per_hour: 120
+          update_interval: .1
+          line_width: 2
+          smoothing: true
+          show:
+            fill: true
+            hour24: true
+            icon: false
+            labels: true
+            name: false
+                labels_secondary: true
+          type: 'custom:mini-graph-card'
+#############################################
+#                                           #
 #  Graph: HVAC Watts & FPH IN/OUTLET TEMP   #
 #                                           #
 #############################################
