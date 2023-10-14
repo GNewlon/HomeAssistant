@@ -609,6 +609,11 @@
             name: false
 #                labels_secondary: true
           type: 'custom:mini-graph-card'
+#############################################
+#                                           #
+#  Graph: HVAC Watts & FPH IN/OUTLET TEMP   #
+#                                           #
+#############################################
         - entities:
             - color: blue
               entity: sensor.fph_inlet_temp  # FPH INLET TEMP
@@ -626,25 +631,25 @@
 #                  entity: input_select.hvac
 #                  name: HVAC
 #                  show_fill: true
-#                - color: white
-#                  entity: sensor.pool_pump_electric_production_w
-#                  attribute: Pump Watts
-#                  entity: input_select.hvac
-#                  name: Watts
-#                  y_axis: secondary                
-#                  show_graph: bar                  
-#                  show_fill: true
-#                  show_line: false
-#                  show_points: false
-#                  show_legend: true
+                - color: white
+                  entity: sensor.powermeter_18c_ct4_hvac_2_watts
+                  attribute: Pump Watts
+                  entity: input_select.hvac
+                  name: Watts
+                  y_axis: secondary                
+                  show_graph: bar                  
+                  show_fill: true
+                  show_line: false
+                  show_points: false
+                  show_legend: true
           font_size: 60
           hours_to_show: 10
           points_per_hour: 120
           update_interval: .1
           aggregate_func: avg
-#              lower_bound_secondary: 50
-#              upper_bound_secondary: 500
-#              value_factor: -10
+              lower_bound_secondary: 50
+              upper_bound_secondary: 500
+              value_factor: -10
           line_width: 2
           smoothing: true
 #              min_bound_range_secondary: 100
@@ -667,7 +672,7 @@
 #                                           #
 #############################################
         - type: 'custom:apexcharts-card'
-          graph_span: 60min
+          graph_span: 30min
           header:
             show: false
           all_series_config:
