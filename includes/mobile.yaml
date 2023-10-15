@@ -353,15 +353,15 @@
           line_width: 2
           smoothing: false   #101523.1406
           show:
-            labels_secondary: true
             fill: true
             hour24: true
-            icon: false
+            icon: true
             labels: true
-            name: false
-            upper_bound_secondary: 4
+            name: true
+            labels_secondary: true            
+            upper_bound_secondary: 2.5
           type: 'custom:mini-graph-card'
-          
+###################################################          
         - cards:
             - entity: input_select.pool_fph_set_max_temp #1 BUTTON
               name: FPH MAX
@@ -567,12 +567,12 @@
 #              icon: 'mdi:thermometer'
 #              name: Pool Temperature
           show:
-            fill: true
             graph: bar
+            fill: true
             hour24: true
-            icon: false
+            icon: true
             labels: true
-            name: false
+            name: true
 #                labels_secondary: true
           type: 'custom:mini-graph-card'
 #############################################
