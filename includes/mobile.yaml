@@ -335,7 +335,7 @@
               show_fill: false
             - color: green # "#706f6f"
               entity: sensor.powermeter_18c_hvac_kilowatts  # HVAC POWERMETER WATTS
-              name: HVAC Compressor KiloWatts
+              name: HVAC KiloWatts
               y_axis: secondary
               upper_bound_secondary: 4
               show_fill: fade
@@ -525,7 +525,7 @@
           type: horizontal-stack      
 #############################################
 #                                           #
-#        Graph 2: Total KWH                 #
+#        Graph 2: SharkHouse Total KWH      #
 #                                           #
 #############################################
         - entities:
@@ -580,9 +580,15 @@
 #############################################
         - entities:
             - color: purple
-              entity: sensor.powermeter_18c_ct4_hvac_2_watts  # FPH INLET TEMP
+              entity: sensor.powermeter_18c_hvac_kilowatts  # FPH INLET TEMP
               name: HVAC KWH
               show_fill: true
+              show_fill: fade
+              show_line: false
+              show_legend: true 
+              show_state: true
+              decimals: 2
+              unit: kW
 #                - color: green
 #                  entity: input_select.hvac
 #                  name: HVAC
@@ -620,13 +626,16 @@
 ##################################################
         - entities:
             - color: grey
-              entity: sensor.powermeter_18c_ct4_hvac_2_watts
-              name: Watts
-              y_axis: secondary                               
+              entity: sensor.powermeter_18c_hvac_kilowatts
+              name: HVAC Watts
+              y_axis: secondary 
+              upper_bound_secondary: 4
               show_fill: fade
               show_line: false
-#              show_points: true
-#              show_legend: true   
+              show_legend: true 
+              show_state: true
+              decimals: 2
+              unit: kW               
             - color: blue
               entity: sensor.fph_inlet_temp  # FPH INLET TEMP
               name: FPH Inlet
@@ -664,13 +673,16 @@
               name: FPH Outlet
               show_fill: true
             - color: green
-              entity: sensor.powermeter_18c_ct4_hvac_2_watts
-              name: Watts
-              y_axis: secondary                               
-              show_fill: true
-#              show_line: true
-#              show_points: true
-#              show_legend: true             
+              entity: sensor.powermeter_18c_hvac_kilowatts
+              name: HVAC Watts
+              y_axis: secondary 
+              upper_bound_secondary: 4
+              show_fill: fade
+              show_line: false
+              show_legend: true 
+              show_state: true
+              decimals: 2
+              unit: kW            
           font_size: 60
           hours_to_show: .5
           points_per_hour: 120
