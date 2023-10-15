@@ -337,27 +337,29 @@
               entity: sensor.powermeter_18c_hvac_kilowatts  # HVAC POWERMETER WATTS
               name: HVAC kW
               y_axis: secondary
-              upper_bound_secondary: 4
+#              upper_bound_secondary: 4 #101523.1406
               show_fill: fade
               show_line: false
               show_legend: true 
               show_state: true
               decimals: 2
               unit: kW
-#              show_points: true              
+#              show_points: true      #101523.1406         
           font_size: 60
           hours_to_show: .50
           points_per_hour: 120
           update_interval: 1
-          aggregate_func: avg
+#          aggregate_func: avg  #101523.1406
           line_width: 2
-          smoothing: true
+          smoothing: false   #101523.1406
           show:
+            labels_secondary: true
             fill: true
             hour24: true
             icon: false
             labels: true
             name: false
+            upper_bound_secondary: 4
           type: 'custom:mini-graph-card'
           
         - cards:
@@ -589,21 +591,6 @@
               show_state: true
               decimals: 2
               unit: kW
-#                - color: green
-#                  entity: input_select.hvac
-#                  name: HVAC
-#                  show_fill: true
-#                - color: white
-#                  entity: sensor.pool_pump_electric_production_w
-#                  attribute: Pump Watts
-#                  entity: input_select.hvac
-#                  name: Watts
-#                  y_axis: secondary                
-#                  show_graph: bar                  
-#                  show_fill: true
-#                  show_line: false
-#                  show_points: false
-#                  show_legend: true
           font_size: 60
           hours_to_show: .2
           points_per_hour: 220
@@ -614,9 +601,9 @@
           show:
             fill: true
             hour24: true
-            icon: false
+            icon: true
             labels: true
-            name: false
+            name: true
 #                labels_secondary: true
           type: 'custom:mini-graph-card'
 ##################################################
