@@ -539,6 +539,10 @@
               entity: sensor.powermeter_18c_total_kwh_2  # FPH INLET TEMP
               name: SharkHouse Total KWH
               show_fill: true
+            - color: green
+              entity: sensor.powermeter_18c_hvac_total_kwh  # HVAC POWERMETER WATTS
+              name: HVAC Total KWH
+              show_fill: true              
 #                - color: green
 #                  entity: input_select.hvac
 #                  name: HVAC
