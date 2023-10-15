@@ -337,7 +337,7 @@
               entity: sensor.powermeter_18c_hvac_kilowatts  # HVAC POWERMETER WATTS
               name: HVAC kW
               y_axis: secondary
-#              upper_bound_secondary: 4 #101523.1406
+              upper_bound_secondary: 2 #101523.1406
               show_fill: fade
               show_line: false
               show_legend: true 
@@ -359,7 +359,7 @@
             labels: true
             name: false
             labels_secondary: true            
-            upper_bound_secondary: 2.5
+            upper_bound_secondary: 2
           type: 'custom:mini-graph-card'
 ###################################################          
         - cards:
