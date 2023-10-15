@@ -334,13 +334,16 @@
               upper_bound: 100
               show_fill: false
             - color: green # "#706f6f"
-              entity: sensor.powermeter_18c_ct4_hvac_2_watts
-              name: HVAC Watts
+              entity: sensor.powermeter_18c_hvac_kilowatts  # HVAC POWERMETER WATTS
+              name: HVAC Compressor KiloWatts
               y_axis: secondary
-              upper_bound_secondary: 1275
+              upper_bound_secondary: 4
               show_fill: fade
               show_line: false
               show_legend: true 
+              show_state: true
+              decimals: 2
+              unit: kW
 #              show_points: true              
           font_size: 60
           hours_to_show: .50
