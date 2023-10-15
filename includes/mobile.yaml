@@ -355,9 +355,9 @@
           show:
             fill: true
             hour24: true
-            icon: true
+            icon: false
             labels: true
-            name: true
+            name: false
             labels_secondary: true            
             upper_bound_secondary: 2.5
           type: 'custom:mini-graph-card'
