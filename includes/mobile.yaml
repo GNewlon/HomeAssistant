@@ -337,7 +337,7 @@
               entity: sensor.powermeter_18c_hvac_kilowatts  # HVAC POWERMETER WATTS
               name: HVAC kW
               y_axis: secondary
-#              upper_bound_secondary: 2 #101523.1406
+              upper_bound_secondary: 1 #101523.1406
               show_fill: fade
               show_line: false
               show_legend: true 
@@ -349,10 +349,10 @@
           hours_to_show: .25
           points_per_hour: 120
           update_interval: 1
-          lower_bound: 0
-          upper_bound: ~100
-          lower_bound_secondary: 0
-          upper_bound_secondary: 1
+#          lower_bound: 0
+#          upper_bound: ~100
+#          lower_bound_secondary: 0
+#          upper_bound_secondary: 1
           line_width: 2
           smoothing: false   #101523.1406
 #          aggregate_func: avg  #101523.1406
