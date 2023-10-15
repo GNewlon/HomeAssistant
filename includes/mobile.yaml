@@ -337,11 +337,11 @@
               entity: sensor.powermeter_18c_ct4_hvac_2_watts
               name: HVAC Watts
               y_axis: secondary
-              upper_bound_secondary: ~1200
+              upper_bound_secondary: 1275
               show_fill: fade
               show_line: false
-#              show_points: true
-#              show_legend: true               
+              show_legend: true 
+#              show_points: true              
           font_size: 60
           hours_to_show: .50
           points_per_hour: 120
@@ -356,6 +356,7 @@
             labels: true
             name: false
           type: 'custom:mini-graph-card'
+          
         - cards:
             - entity: input_select.pool_fph_set_max_temp #1 BUTTON
               name: FPH MAX
