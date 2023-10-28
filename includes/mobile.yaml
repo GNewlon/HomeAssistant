@@ -362,7 +362,7 @@
             icon: false
             labels: true
             name: false
-            labels_secondary: true            
+            labels_secondary: false        # changed this to false 112823    
 #            upper_bound_secondary: 2
           type: 'custom:mini-graph-card'
 ###################################################          
