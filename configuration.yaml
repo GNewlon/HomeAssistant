@@ -47,7 +47,7 @@ mqtt:
       qos: 1
       availability:
         - topic: "tele/dockrelays_1/LWT"
-      qos: 0
+#      qos: 0
       retain: true
       payload_open: "ON"
       payload_close: "ON"
