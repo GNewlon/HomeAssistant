@@ -23,6 +23,14 @@ mute:
       entity_id: "{{ media_player }}"
     data:
       is_volume_muted: "{{ not state_attr(media_player , 'is_volume_muted') }}"
+
+boat_lift_up_2:
+  sequence:
+  - service: mqtt.publish
+    data:
+      topic: cmnd/boatliftstate/backlog
+      payload_template: Backlog Status 1; Power2 on; Status 4
+  alias: boat_lift_up_2
       
 boat_lift_up:
   alias: "Boat Lift Up"
