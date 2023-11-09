@@ -51,7 +51,7 @@ mqtt:
 #      qos: 0
       payload_available: "Online"
       payload_not_available: "Offline"
-      payload_open: "ON"
+      payload_open: "open"
       payload_close: "ON"
       payload_stop: "ON"
       state_open: "open"
