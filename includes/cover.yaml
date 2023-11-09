@@ -9,23 +9,8 @@
       boat_lift:
         device_class: garage
         friendly_name: "Boat Lift"
-#        value_template: "{{ states('binary_sensor.gates_sensors_large_gate')|float > 0 }}"
-        value_template: "{{ is_state('binary_sensor.boat_lift','on') }}"
+        value_template: "{{ 'Closed' if is_state('switch.dock_relays_1_boatliftstate_down', 'on') else 'Open' }}"
         open_cover:
-          service: script.boat_lift_up
-#          data:
-#            entity_id: binary_sensor.gates_sensors_large_gate
+          service: script.open_garage_door
         close_cover:
-          service: script.boat_lift_down
-#          data:
-#            entity_id: binary_sensor.gates_sensors_large_gate
-        stop_cover:
-          service: script.boat_lift_stop
-#          data:
-#            entity_id: binary_sensor.gates_sensors_large_gate
-        icon_template: >-
-          {% if is_state('binary_sensor.boat_lift', 'open') %}
-            mdi:gate-open
-          {% else %}
-            mdi:gate
-          {% endif %} 
+          service: script.close_garage_door
