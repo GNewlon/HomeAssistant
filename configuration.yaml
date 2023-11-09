@@ -33,22 +33,33 @@ frontend:
 lovelace:
   mode: yaml
   resources: !include /config/resources.yaml
-cover:
-  - platform: mqtt
-    name: "Boat Lift"
-    command_topic: "cmnd/dockrelays_1/Power3"
-    command_topic: "cmnd/dockrelays_1/Power4"
-    state_topic: "stat/dockrelays_1/status"
-#    availability_topic: "tele/dockrelays_1/LWT"
-    qos: 1
-    payload_available: "Online"
-    payload_not_available: "Offline"
-    payload_open: "ON"
-    payload_close: "ON"
-    payload_stop: "ON"
-    state_open: "open"
-    state_closed: "closed"
-    optimistic: false  
+#################################################################
+#                                                               #
+#                      MQTT Cover                               #
+#                                                               #
+#################################################################
+mqtt:
+  - cover:
+      name: "MQTT Cover"
+      command_topic: "home-assistant/cover/set"
+      state_topic: "home-assistant/cover/state"
+      availability:
+        - topic: "home-assistant/cover/availability"
+      qos: 0
+      retain: true
+      payload_open: "OPEN"
+      payload_close: "CLOSE"
+      payload_stop: "STOP"
+      state_open: "open"
+      state_opening: "opening"
+      state_closed: "closed"
+      state_closing: "closing"
+      payload_available: "online"
+      payload_not_available: "offline"
+      optimistic: false
+#      value_template: "{{ value.x }}"
+###########################################################################
+
 ####################################################
 #                                                  #
 #                    Includes                      #
