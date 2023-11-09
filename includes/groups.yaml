@@ -11,6 +11,13 @@ all_covers:
   entities: 
       #Garage Door  
       - cover.garage_door
+Boat Lift:
+  name: Boat Lift
+#  view: no
+#  control: hidden
+  icon: mdi:ferry
+  entities:
+    - cover.boat_lift
 goodnite:
   name: "GoodNite"
   entities:
@@ -70,4 +77,8 @@ goodnite:
 #      #ScreenDoor
 #     - light.caseta_r_wireless_in_wall_dimmer_3
 
-
+all_covers:
+  name: "all_covers"
+  entities: 
+      #Garage Door  
+      - cover.garage_door
