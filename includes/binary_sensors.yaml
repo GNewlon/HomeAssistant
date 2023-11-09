@@ -6,3 +6,9 @@
         value_template: >-
           {{ is_state('group.all_locks', 'unlocked') 
           or is_state('group.all_covers', 'open') }}
+  - platform: mqtt
+    name: "Reed Switch"
+    state_topic: "stat/tasmota_01/SWITCH2"
+    payload_on: '{"STATE":"ON"}'
+    payload_off: '{"STATE":"OFF"}'
+    device_class: door  # or some other device class, see: https://www.home-assistant.io/integrations/binary_sensor/#device-class
