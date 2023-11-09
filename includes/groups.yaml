@@ -6,18 +6,6 @@ all_locks:
       - lock.front_door_lock
       #Front Door Lock
       - lock.side_door_lock
-all_covers:
-  name: "all_covers"
-  entities: 
-      #Garage Door  
-      - cover.garage_door
-Boat Lift:
-  name: Boat Lift
-#  view: no
-#  control: hidden
-  icon: mdi:ferry
-  entities:
-    - cover.boat_lift
 goodnite:
   name: "GoodNite"
   entities:

@@ -40,4 +40,4 @@ switch.pooldrain_fph:
 cover.boatlift:
   friendly_name: BoatLift
   device_class: garage
-  assumed_state: true
+#  assumed_state: true
