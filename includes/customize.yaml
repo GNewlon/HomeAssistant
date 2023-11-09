@@ -38,6 +38,6 @@ switch.pooldrain_fph:
   assumed_state: true
   entity_picture: /config/images/pool.png
 cover.boatlift:
-  friendly_name: BoatLift
+  friendly_name: Boat Lift
   device_class: garage
 #  assumed_state: true
