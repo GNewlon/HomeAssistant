@@ -6,14 +6,3 @@
         value_template: >-
           {{ is_state('group.all_locks', 'unlocked') 
           or is_state('group.all_covers', 'open') }}
-
-  - platform: mqtt
-    name: "Boat Lift State"
-    state_topic: "stat/dockrelays_1/status"
-    payload_on: "open"
-    payload_off: "closed"
-    availability_topic: "tele/dockrelays_1/LWT"
-    payload_available: "Online"
-    payload_not_available: "Offline"
-    qos: 1
-    device_class: opening  
