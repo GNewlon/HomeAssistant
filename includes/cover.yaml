@@ -3,18 +3,29 @@
 #                      cover                       #
 #                                                  #
 #################################################### 
-  - platform: mqtt
-    name: "Boat Lift"
-    command_topic: "cmnd/dockrelays_1/Power3"
-    command_topic: "cmnd/dockrelays_1/Power4"
-    state_topic: "stat/dockrelays_1/status"
-#    availability_topic: "tele/dockrelays_1/LWT"
-    qos: 1
-    payload_available: "Online"
-    payload_not_available: "Offline"
-    payload_open: "ON"
-    payload_close: "ON"
-    payload_stop: "ON"
-    state_open: "open"
-    state_closed: "closed"
-    optimistic: false
+  - platform: template
+  # https://community.home-assistant.io/t/configure-a-cover-for-gate/605258
+    covers:
+      boat_lift:
+        device_class: garage
+        friendly_name: "Boat Lift"
+#        value_template: "{{ states('binary_sensor.gates_sensors_large_gate')|float > 0 }}"
+        value_template: "{{ is_state('binary_sensor.boat_lift','on') }}"
+        open_cover:
+          service: script.boat_lift_up
+#          data:
+#            entity_id: binary_sensor.gates_sensors_large_gate
+        close_cover:
+          service: script.boat_lift_down
+#          data:
+#            entity_id: binary_sensor.gates_sensors_large_gate
+        stop_cover:
+          service: script.boat_lift_stop
+#          data:
+#            entity_id: binary_sensor.gates_sensors_large_gate
+        icon_template: >-
+          {% if is_state('binary_sensor.boat_lift', 'open') %}
+            mdi:gate-open
+          {% else %}
+            mdi:gate
+          {% endif %} 

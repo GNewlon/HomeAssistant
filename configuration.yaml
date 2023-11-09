@@ -41,19 +41,19 @@ lovelace:
 mqtt:
   - cover:
       unique_id: '15912322314808'
-      name: "Boat Lift"
+      name: "Boat Lift 1"
       command_topic: "cmnd/dockrelays_1/POWER"
       state_topic: "stat/dockrelays_1/status"
       availability_topic: "tele/dockrelays_1/LWT"
       qos: 1
+#      availability:
+#        - topic: "tele/dockrelays_1/LWT"
+#      qos: 0
       payload_available: "Online"
       payload_not_available: "Offline"
-      payload_open:
-        - service: "script.boat_lift_up"
-      payload_close:
-        - service: "script.boat_lift_down"
-      payload_stop:
-        - service: "script.boat_lift_stop"
+      payload_open: "ON"
+      payload_close: "ON"
+      payload_stop: "ON"
       state_open: "open"
       state_closed: "closed"
       device_class: garage
