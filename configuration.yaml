@@ -40,7 +40,7 @@ lovelace:
 #################################################################
 mqtt:
   - cover:
-      name: "Boat Lift"
+      name: "boat_lift"
       command_topic: "cmnd/dockrelays_1/POWER"
       state_topic: "stat/dockrelays_1/status"
       availability_topic: "tele/dockrelays_1/LWT"
