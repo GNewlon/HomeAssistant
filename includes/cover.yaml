@@ -1,0 +1,20 @@
+####################################################
+#                                                  #
+#                  sensors                         #
+#                                                  #
+#################################################### 
+  - platform: mqtt
+    name: "Boat Lift"
+    command_topic: "cmnd/dockrelays_1/Power3"
+    command_topic: "cmnd/dockrelays_1/Power4"
+    state_topic: "stat/dockrelays_1/status"
+    availability_topic: "tele/dockrelays_1/LWT"
+    qos: 1
+    payload_available: "Online"
+    payload_not_available: "Offline"
+    payload_open: "ON"
+    payload_close: "ON"
+    payload_stop: "ON"
+    state_open: "open"
+    state_closed: "closed"
+    optimistic: false

@@ -39,6 +39,7 @@ lovelace:
 #                                                  #
 ####################################################
 automation: !include includes/automations.yaml
+cover: !include includes/cover.yaml
 group: !include includes/groups.yaml
 input_boolean: !include includes/input_boolean.yaml
 input_number: !include includes/input_number.yaml
