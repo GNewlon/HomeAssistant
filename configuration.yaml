@@ -40,7 +40,7 @@ lovelace:
 #################################################################
 mqtt:
   - cover:
-      id: '15912322314808'
+      unique_id: '15912322314808'
       name: "Boat Lift"
       command_topic: "cmnd/dockrelays_1/POWER"
       state_topic: "stat/dockrelays_1/status"
