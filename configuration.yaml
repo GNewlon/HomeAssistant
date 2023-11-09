@@ -40,11 +40,11 @@ lovelace:
 #################################################################
 mqtt:
   - cover:
-      name: "MQTT Cover"
-      command_topic: "home-assistant/cover/set"
-      state_topic: "home-assistant/cover/state"
+      name: "Boat Lift"
+      command_topic: "cmnd/dockrelays_1/Power3"
+      state_topic: "stat/dockrelays_1/status"
       availability:
-        - topic: "home-assistant/cover/availability"
+        - topic: "tele/dockrelays_1"
       qos: 0
       retain: true
       payload_open: "OPEN"
