@@ -49,11 +49,11 @@ mqtt:
       payload_available: "Online"
       payload_not_available: "Offline"
       payload_open:
-        service: "script.boat_lift_up"
+        - service: "script.boat_lift_up"
       payload_close:
-        service: "script.boat_lift_down"
+        - service: "script.boat_lift_down"
       payload_stop:
-        service: "script.boat_lift_stop"
+        - service: "script.boat_lift_stop"
       state_open: "open"
       state_closed: "closed"
       device_class: garage
