@@ -48,8 +48,6 @@ mqtt:
       qos: 1
       payload_available: "Online"
       payload_not_available: "Offline"
-      open_cover:
-        service: script.boat_lift_up
       payload_open:
         service: script.boat_lift_up
       payload_close:
