@@ -1,0 +1,7 @@
+  - platform: mqtt
+    state_topic: "stat/dockrelays_1/status"
+    name: "BoatLiftStatus"
+    qos: 1
+    payload_on: "open"
+    payload_off: "close"
+    device_class: garage
