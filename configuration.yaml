@@ -47,6 +47,9 @@ mqtt:
       availability:
         - topic: "tele/dockrelays_1/LWT"
       qos: 1
+#      availability:
+#        - topic: "tele/dockrelays_1/LWT"
+#      qos: 0
       payload_available: "Online"
       payload_not_available: "Offline"
       payload_open: "ON"
