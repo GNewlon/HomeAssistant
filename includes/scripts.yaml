@@ -36,7 +36,7 @@ boat_lift_down:
   sequence:
   - service: mqtt.publish
     data:
-      topic: cmnd/boatliftstate/backlog
+      topic: cmnd/dockrelays_1/backlog
       payload_template: Backlog Status 1; Power2 on;  Status 4
   alias: boat_lift_down
   
@@ -44,6 +44,6 @@ boat_lift_stop:
   sequence:
   - service: mqtt.publish
     data:
-      topic: cmnd/boatliftstate/backlog
+      topic: cmnd/dockrelays_1/backlog
       payload_template: Backlog Status 1; Power1 off; Power2 off;  Status 4
   alias: boat_lift_stop
