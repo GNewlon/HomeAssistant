@@ -52,8 +52,8 @@ mqtt:
       payload_available: "Online"
       payload_not_available: "Offline"
       payload_open: "open"
-      payload_close: "ON"
-      payload_stop: "ON"
+      payload_close: "close"
+      payload_stop: "OFF"
       state_open: "open"
       state_closed: "closed"
       device_class: garage
