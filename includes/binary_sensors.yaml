@@ -6,7 +6,7 @@
     payload_off: "close"
     payload_open: "open"
     payload_close: "close"
-    payload_stop: "OFF"
+    payload_stop: "off"
     state_open: "open"
     state_closed: "closed"
     device_class: garage
