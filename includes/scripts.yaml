@@ -23,3 +23,23 @@ mute:
       entity_id: "{{ media_player }}"
     data:
       is_volume_muted: "{{ not state_attr(media_player , 'is_volume_muted') }}"
+      
+boat_lift_up:
+- alias: "Boat Lift Up"
+  action:
+    - service: mqtt.publish
+      data:
+        topic: cmnd/boatliftstate/backlog
+        payload_template: Backlog Status 1; Power2 on; Status 4
+      
+boat_lift_down:
+- alias: "Boat Lift Down"
+# https://community.home-assistant.io/t/does-anyone-know-how-to-configure-tasmota-dst-st-settings/52861/13
+  trigger:
+    platform: homeassistant
+    event: start
+  action:
+    - service: mqtt.publish
+      data:
+        topic: cmnd/boatliftstate/backlog
+        payload_template: Backlog Status 1; Power2 on; Status 4
