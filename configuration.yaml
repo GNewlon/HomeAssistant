@@ -41,14 +41,15 @@ lovelace:
 mqtt:
   - cover:
       name: "Boat Lift"
-      command_topic: "cmnd/dockrelays_1/Power3"
+      command_topic: "cmnd/dockrelays_1/POWER"
       state_topic: "stat/dockrelays_1/status"
+      state_topic: "cmnd/2/POWER2"
       availability:
         - topic: "tele/dockrelays_1"
       qos: 0
-      retain: true
-      payload_open: "OPEN"
-      payload_close: "CLOSE"
+#      retain: true
+      payload_open: "ON"
+      payload_close: "ON"
       payload_stop: "STOP"
       state_open: "open"
       state_opening: "opening"
