@@ -46,14 +46,16 @@ mqtt:
       state_topic: "stat/dockrelays_1/status"
       availability_topic: "tele/dockrelays_1/LWT"
       qos: 1
-#      availability:
-#        - topic: "tele/dockrelays_1/LWT"
-#      qos: 0
       payload_available: "Online"
       payload_not_available: "Offline"
-      payload_open: "open"
-      payload_close: "close"
-      payload_stop: "OFF"
+      open_cover:
+        service: script.boat_lift_up
+      payload_open:
+        service: script.boat_lift_up
+      payload_close:
+        service: script.boat_lift_down
+      payload_stop:
+        service: script.boat_lift_stop
       state_open: "open"
       state_closed: "closed"
       device_class: garage
