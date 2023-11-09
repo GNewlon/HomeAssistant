@@ -42,9 +42,7 @@ sensor:
  battery-alert
  {% endif %}'
 
-  - platform: template
-    binary_sensor:
-      test_delete:
-        device_class: climate
-        friendly_name: 'HVAC_Action_1'
-        value_template: "  {{ state_attr('climate.ecobee', 'hvac_action') }}"
+- binary_sensor:
+    - name: "TV"
+      state: >
+        {{ states('sensor.plug_tv_power')|float(0) > 10}}
