@@ -45,10 +45,10 @@ mqtt:
       state_topic: "stat/dockrelays_1/status"
       availability_topic: "tele/dockrelays_1/LWT"
       qos: 1
-#      availability:
-#        - topic: "tele/dockrelays_1"
+      availability:
+        - topic: "tele/dockrelays_1/LWT"
       qos: 0
-#      retain: true
+      retain: true
       payload_open: "ON"
       payload_close: "ON"
       payload_stop: "STOP"
