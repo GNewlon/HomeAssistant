@@ -48,18 +48,15 @@ mqtt:
 #      availability:
 #        - topic: "tele/dockrelays_1/LWT"
 #      qos: 0
-      retain: true
+      payload_available: "Online"
+      payload_not_available: "Offline"
       payload_open: "ON"
       payload_close: "ON"
-      payload_stop: "STOP"
+      payload_stop: "ON"
       state_open: "open"
-      state_opening: "opening"
       state_closed: "closed"
-      state_closing: "closing"
-      payload_available: "online"
-      payload_not_available: "offline"
-      optimistic: false
-#      value_template: "{{ value.x }}"
+      device_class: garage
+      retain: true
 ###########################################################################
 
 ####################################################
