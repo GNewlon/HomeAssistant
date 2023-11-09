@@ -44,11 +44,9 @@ mqtt:
       name: "Boat Lift"
       command_topic: "cmnd/dockrelays_1/POWER"
       state_topic: "stat/dockrelays_1/status"
-      availability_topic: "tele/dockrelays_1/LWT"
+      availability:
+        - topic: "tele/dockrelays_1/LWT"
       qos: 1
-#      availability:
-#        - topic: "tele/dockrelays_1/LWT"
-#      qos: 0
       payload_available: "Online"
       payload_not_available: "Offline"
       payload_open: "ON"
