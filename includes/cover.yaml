@@ -9,7 +9,7 @@
       boat_lift_2:
         device_class: garage
         friendly_name: "Boat Lift"
-        value_template: "{{ 'Closed' if is_state('switch.dock_relays_1_boatliftstate_down', 'on') else 'Open' }}"
+        value_template: "{{ 'Closed' if is_state('switch.dock_relays_1_boatliftstate_down', 'on'), 'Open' if is_state('switch.dock_relays_1_boatliftstate_up', 'on') else 'Open' }}"
         open_cover:
           service: script.boat_lift_up
 #          data:
