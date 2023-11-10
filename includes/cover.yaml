@@ -6,10 +6,11 @@
   - platform: template
   # https://community.home-assistant.io/t/configure-a-cover-for-gate/605258
     covers:
-      boat_lift_2:
+      boat_lift:
+        unique_id: '15912322314808'
         device_class: garage
         friendly_name: "Boat Lift"
-        value_template: "{{ 'Closed' if is_state('switch.dock_relays_1_boatliftstate_down', 'on'), 'Open' if is_state('switch.dock_relays_1_boatliftstate_up', 'on') else 'Open' }}"
+        value_template: "{{ 'Closed' if is_state('switch.dock_relays_1_boatliftstate_down', 'on') else 'Open' }}"
         open_cover:
           service: script.boat_lift_up
 #          data:
@@ -22,3 +23,9 @@
           service: script.boat_lift_stop
 #          data:
 #            entity_id: binary_sensor.gates_sensors_large_gate
+        icon_template: >-
+          {% if is_state('binary_sensor.boat_lift', 'open') %}
+            mdi:gate-open
+          {% else %}
+            mdi:gate
+          {% endif %} 

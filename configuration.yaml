@@ -41,7 +41,7 @@ lovelace:
 mqtt:
   - cover:
       unique_id: '15912322314808'
-      name: "Boat Lift 1"
+      name: "Boat Lift MQTT"
       command_topic: "cmnd/dockrelays_1/POWER"
       state_topic: "stat/dockrelays_1/status"
       availability_topic: "tele/dockrelays_1/LWT"
