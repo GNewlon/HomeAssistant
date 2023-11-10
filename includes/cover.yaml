@@ -11,6 +11,14 @@
         friendly_name: "Boat Lift"
         value_template: "{{ 'Closed' if is_state('switch.dock_relays_1_boatliftstate_down', 'on') else 'Open' }}"
         open_cover:
-          service: script.open_garage_door
+          service: script.boat_lift_up
+#          data:
+#            entity_id: binary_sensor.gates_sensors_large_gate
         close_cover:
-          service: script.close_garage_door
+          service: script.boat_lift_down
+#          data:
+#            entity_id: binary_sensor.gates_sensors_large_gate
+        stop_cover:
+          service: script.boat_lift_stop
+#          data:
+#            entity_id: binary_sensor.gates_sensors_large_gate
