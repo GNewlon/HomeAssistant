@@ -10,7 +10,7 @@
         unique_id: '15912322314808'
         device_class: garage
         friendly_name: "Boat Lift"
-        value_template: "{{ 'Closed' if is_state('switch.dock_relays_1_boatliftstate_down', 'on') else 'Open' }}"
+        value_template: "{{ 'Down' if is_state('switch.dock_relays_1_boatliftstate_down', 'on') else 'Up' }}"
         open_cover:
           service: script.boat_lift_up
 #          data:
@@ -24,7 +24,7 @@
 #          data:
 #            entity_id: binary_sensor.gates_sensors_large_gate
         icon_template: >-
-          {% if is_state('binary_sensor.boat_lift', 'open') %}
+          {% if is_state('switch.dock_relays_1_boatliftstate_up', 'open') %}
             mdi:gate-open
           {% else %}
             mdi:gate
