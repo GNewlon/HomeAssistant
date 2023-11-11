@@ -10,7 +10,20 @@
         unique_id: '15912322314808'
 #        device_class: garage
         friendly_name: "Boat Lift"
-        value_template: "{{ 'open' if states('switch.dock_relays_1_boatliftstate_up') == 'on' else 'closed' }}"
+        value_template: >-
+          {% set open = is_state('switch.dock_relays_1_boatliftstate_up','on') %}
+          {% set closed = is_state('switch.dock_relays_1_boatliftstate_down','on') %}
+          {% if open and not closed %}
+            open
+          {% elif closed and not open %}
+            closed
+          {% elif not closed and not open %}
+            opening
+          {% elif closed and open %}
+            sensor error
+          {% else %}
+            none
+          {% endif %}         
         open_cover:
           service: script.boat_lift_up
         close_cover:
