@@ -24,20 +24,20 @@ mute:
     data:
       is_volume_muted: "{{ not state_attr(media_player , 'is_volume_muted') }}"
 
-boat_lift_up:
+boat_lift_opening:
   sequence:
   - service: mqtt.publish
     data:
       topic: cmnd/dockrelays_1/backlog
-      payload_template: Backlog Status 1; Power1 on; Status 4
+      payload_template: Backlog Power1 1
   alias: boat_lift_up
   
-boat_lift_down:
+boat_lift_closing:
   sequence:
   - service: mqtt.publish
     data:
       topic: cmnd/dockrelays_1/backlog
-      payload_template: Backlog Status 1; Power2 on;  Status 4
+      payload_template: Backlog Power2 1
   alias: boat_lift_down
   
 boat_lift_stop:
@@ -45,5 +45,5 @@ boat_lift_stop:
   - service: mqtt.publish
     data:
       topic: cmnd/dockrelays_1/backlog
-      payload_template: Backlog Status 1; Power1 off; Power2 off;  Status 4
+      payload_template: Backlog Power1 0; Power2 0
   alias: boat_lift_stop
