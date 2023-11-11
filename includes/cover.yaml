@@ -19,9 +19,9 @@
             Fully open
           {%- elif closed and not closing and not opening and not open -%}
             Fully closed
-          {%- elif opening and not closing and not open and not closed -%}
+          {%- elif opening and not open -%}
             Opening
-          {%- elif closing and not opening and not open and not closed -%}
+          {%- elif closing and not closed -%}
             Closing
           {%- elif not closing and not opening and not open and not closed -%}
             Sensor read error - check sensors
