@@ -15,12 +15,10 @@
           {% set closing = is_state('switch.dock_relays_1_boatliftstate_closing','on') %}
           {% set open = is_state('switch.dock_relays_1_boatliftstate_open','on') %}
           {% set closed = is_state('switch.dock_relays_1_boatliftstate_closed','on') %}
-          {% if open and not closed %}
-            open
-          {% elif closed and not open %}
-            closed
-          {% elif not closed and not open %}
+          {% if opening and not open %}
             opening
+          {% elif closing and not closed %}
+            closing
           {% elif closed and open %}
             sensor error
           {% else %}
