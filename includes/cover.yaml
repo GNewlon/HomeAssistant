@@ -18,7 +18,7 @@
           {% if opening and not open %}
             opening
           {% elif closing and not closed %}
-            closing
+            closing 
           {% elif closed and open %}
             sensor error
           {% else %}
@@ -31,9 +31,9 @@
         stop_cover:
           service: script.boat_lift_stop
         icon_template: >-
-          {% if is_state('switch.dock_relays_1_boatliftstate_up', 'on') %}
+          {% if is_state('switch.dock_relays_1_boatliftstate_open', 'on') %}
             mdi:garage-open
-          {% elif states('switch.dock_relays_1_boatliftstate_down', 'on') %}
+          {% elif states('switch.dock_relays_1_boatliftstate_closed', 'on') %}
             mdi:garage
           {% else %}
             mdi:garage-alert
