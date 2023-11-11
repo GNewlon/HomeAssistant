@@ -15,7 +15,7 @@
           {%- set closed = is_state('switch.dock_relays_1_boatliftstate_closed', 'on') -%}
           {%- set opening = is_state('switch.dock_relays_1_boatliftstate_opening', 'on') -%}
           {%- set closing = is_state('switch.dock_relays_1_boatliftstate_closing', 'on') -%}
-          {%- if open and not closed and not closing and not opening -%}                   
+          {%- if open and opening -%}                   
             open
           {%- elif closed and not closing and not opening and not open -%}
             closed
