@@ -17,12 +17,14 @@
           {%- set closing = is_state('switch.dock_relays_1_boatliftstate_closing', 'on') -%}
           {%- if open and opening -%}                   
             open
-          {%- elif open and not opening and not closing-%}                   
+          {%- elif open and not opening and not closing -%}                   
             open
-          {%- elif closed and not closing and not opening and not open -%}
-            closed
           {%- elif opening and not open -%}
             Opening
+          {%- elif closed and closing -%}
+            closed
+          {%- elif closed and not closing and not opening -%}
+            closed
           {%- elif closing and not closed -%}
             Closing
           {%- elif not closing and not opening and not open and not closed -%}
