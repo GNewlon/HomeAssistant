@@ -8,7 +8,7 @@
     covers:
       boat_lift:
         unique_id: '15912322314808'
-#        device_class: garage
+        device_class: garage
         friendly_name: "Boat Lift"
         value_template: >-
           {%- set open = is_state('switch.dock_relays_1_boatliftstate_open', 'on') -%}
