@@ -40,9 +40,13 @@
           service: script.boat_lift_stop
         icon_template: >-
           {% if is_state('switch.dock_relays_1_boatliftstate_open', 'on') %}
-            mdi:garage-open
+            mdi:ferry
           {% elif states('switch.dock_relays_1_boatliftstate_closed', 'on') %}
-            mdi:garage
+            mdi:ferry
+          {% elif states('switch.dock_relays_1_boatliftstate_opening', 'on') %}
+            mdi:transfer-up
+          {% elif states('switch.dock_relays_1_boatliftstate_closing', 'on') %}
+            mdi:transfer-down
           {% else %}
             mdi:garage-alert
           {% endif %}
