@@ -28,7 +28,7 @@
           {%- elif closing and not closed -%}
             Closing
           {%- elif not closing and not opening and not open and not closed -%}
-            Sensor read error - check sensors
+            Stopped
           {%- elif unavailable -%}
             MCU not responding
           {%- else -%}
