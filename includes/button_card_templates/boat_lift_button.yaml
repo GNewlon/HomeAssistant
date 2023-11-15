@@ -58,5 +58,15 @@
                   entity_id: >-
                     cover.boat_lift
               double_tap_action:
+                action: call-service
+                haptic: heavy
+                service: cover.stop_cover
+                service_data:
+                  entity_id: >-
+                    cover.boat_lift
+              hold_action:
                 action: more-info
                 haptic: heavy
+                service_data:
+                  entity_id: >-
+                    cover.boat_lift

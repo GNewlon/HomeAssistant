@@ -1,4 +1,4 @@
-boat_lift_button: !boat_lift_button.yaml
+boat_lift_button: !include boat_lift_button.yaml
 button-card-headers: !include button-card-headers.yaml
 button-card-headers-2: !include button-card-headers-2.yaml
 button: !include button.yaml
