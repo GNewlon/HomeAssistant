@@ -72,7 +72,7 @@
 #                - value: Clear
 #                - value: master.fireco.alarm.battery.not.ok
 #                - value: office.fireco.alarm.battery.not.ok
-#            - type: 'custom:button-card'
+            - type: 'custom:button-card'
               template: input_select.guest_mode 
               entity: input_select.guest_mode    
               state:
