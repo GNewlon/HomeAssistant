@@ -49,17 +49,13 @@
                 - value: night
                 - value: wind.down.2200 
                 - value: night.2300 
-            - type: 'custom:button-card'
-              template: input_select.pool_state 
-              entity: input_select.pool_state    
-              state:
-                - value: Waterfall
-                - value: Sleep
-                - value: Spa
-                - value: Skimmer
-                - value: Swim
-                - value: OFF
-                - value: WaterLevel
+            - aspect_ratio: 1/1
+              template: boat_lift_button
+              device_class: garage
+              entity: >-
+                cover.boat_lift
+              name: Lift
+              type: 'custom:button-card'
             - type: 'custom:button-card'
               template: input_select.alarm_mode  
               entity: input_select.alarm_mode  
