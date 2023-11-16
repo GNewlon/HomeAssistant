@@ -38,7 +38,7 @@
                       - font-size: 14px
                       - color: 'var(--accent-color)'
                 - value: closed
-                  icon: 'fapro:ferry_down_closed'
+                  icon: 'fapro:boat_open1'   
 #                  icon: 'mdi:garage'
                   color: 'var(--secondary-text-color)'
                   styles:
