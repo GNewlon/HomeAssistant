@@ -50,3 +50,50 @@
           {% else %}
             mdi:garage-alert
           {% endif %}
+  - platform: template
+  # https://community.home-assistant.io/t/configure-a-cover-for-gate/605258
+    covers:
+      boat_lift_testing:
+        unique_id: '15912322314810'
+        device_class: garage
+        friendly_name: "Boat Lift Testing"
+        optimistic: true
+        value_template: >-
+          {%- set open = is_state('switch.dock_relays_1_boatliftstate_open', 'on') -%}
+          {%- set closed = is_state('switch.dock_relays_1_boatliftstate_closed', 'on') -%}
+          {%- set opening = is_state('switch.dock_relays_1_boatliftstate_opening', 'on') -%}
+          {%- set closing = is_state('switch.dock_relays_1_boatliftstate_closing', 'on') -%}
+          {%- if open and opening -%}                   
+            open
+          {%- elif open and not opening and not closing -%}                   
+            open
+          {%- elif opening and not open -%}
+            Opening
+          {%- elif closed and closing -%}
+            closed
+          {%- elif closed and not closing and not opening -%}
+            closed
+          {%- elif closing and not closed -%}
+            Closing
+          {%- else -%}
+            Stopped
+          {%- endif -%} 
+#### NEED TO CHANGE OVER, SEE: https://www.home-assistant.io/integrations/cover.template/          
+        open_cover:
+          service: script.boat_lift_opening
+        close_cover:
+          service: script.boat_lift_closing
+        stop_cover:
+          service: script.boat_lift_stop
+        icon_template: >-
+          {% if is_state('switch.dock_relays_1_boatliftstate_open', 'on') %}
+            mdi:ferry
+          {% elif states('switch.dock_relays_1_boatliftstate_closed', 'on') %}
+            mdi:ferry
+          {% elif states('switch.dock_relays_1_boatliftstate_opening', 'on') %}
+            mdi:transfer-up
+          {% elif states('switch.dock_relays_1_boatliftstate_closing', 'on') %}
+            mdi:transfer-down
+          {% else %}
+            mdi:garage-alert
+          {% endif %}

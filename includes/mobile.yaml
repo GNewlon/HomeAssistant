@@ -60,7 +60,7 @@
               template: boat_lift_button_testing
               device_class: garage
               entity: >-
-                cover.boat_lift
+                cover.boat_lift_testing
               name: Lift2
               type: 'custom:button-card'
 #            - type: 'custom:button-card'
