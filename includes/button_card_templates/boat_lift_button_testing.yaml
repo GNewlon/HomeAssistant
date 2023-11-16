@@ -1,7 +1,7 @@
               size: 45%
               state:
                 - color: 'var(--accent-color)'
-                  icon: 'cil:ferry_up_open.svg.svg'
+                  icon: 'cil:ferry_up_open.svg'
                   styles:
                     card:
                       - '--paper-card-background-color': 'var(--accent-color)'
