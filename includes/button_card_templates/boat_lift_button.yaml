@@ -42,7 +42,7 @@
                       - font-size: 14px
                       - color: 'var(--accent-color)'
                 - value: closed
-                  icon: 'fapro:boat_closed'   
+                  icon: 'fapro:boat_closed2'   
                   color: 'var(--accent-color)'                  
                   styles:
                     card:
