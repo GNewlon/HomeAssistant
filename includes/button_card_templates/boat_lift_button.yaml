@@ -14,7 +14,7 @@
                     label:
                       - color: 'var(--secondary-text-color)'
                     name:
-                      - padding-bottom: 10px
+                      - padding-bottom: 1px
                       - font-size: 14px
                       - color: 'var(--secondary-text-color)'
                 - value: opening
