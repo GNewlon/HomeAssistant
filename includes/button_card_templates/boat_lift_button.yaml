@@ -1,7 +1,7 @@
               size: 45%
               state:
                 - value: open
-                  icon: 'ferry_up_open.svg'               
+                  icon: 'fapro:boat_open.svg'               
                   color: 'var(--accent-color)'                  
                   styles:
                     card:
