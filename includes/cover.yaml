@@ -55,7 +55,7 @@
     covers:
       boat_lift_testing:
         unique_id: '15912322314810'
-        device_class: garage
+#        device_class: garage
         friendly_name: "Boat Lift Testing"
 #        optimistic: true
         value_template: >-
