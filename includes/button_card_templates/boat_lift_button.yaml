@@ -1,6 +1,6 @@
 # https://github.com/thomasloven/hass-fontawesome
               size: 45%
-              icon: 'fapro:boat_stopped3'
+              icon: 'fapro:boat_stopped4'
               state:
                 - value: open
                   icon: 'fapro:boat_up3'               
