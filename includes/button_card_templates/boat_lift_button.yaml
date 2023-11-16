@@ -2,7 +2,7 @@
               size: 45%
               state:
                 - value: open
-                  icon: 'fapro:boat_up2'               
+                  icon: 'fapro:boat_up3'               
                   color: 'var(--accent-color)'                  
                   styles:
                     card:
