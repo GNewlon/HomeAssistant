@@ -1,7 +1,7 @@
               size: 45%
               state:
                 - color: 'var(--accent-color)'
-                  icon: 'cil:skull.svg'
+                  icon: mdi:garage-alert
                   styles:
                     card:
                       - '--paper-card-background-color': 'var(--accent-color)'
