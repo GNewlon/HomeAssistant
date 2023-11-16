@@ -1,4 +1,4 @@
 button_card_templates: !include includes/button_card_templates/button_card_templates.yaml
 title: Shark House
-#views: !include includes/main.yaml
-#views: !include includes/mobile.yaml
+views: !include includes/main.yaml
+views: !include includes/mobile.yaml
