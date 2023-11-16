@@ -3,7 +3,7 @@
               icon: 'fapro:boat_stopped4'
               state:
                 - value: open
-                  icon: 'fapro:boat_open'      
+                  icon: 'fapro:boat_open3'      
 #                  icon: 'fapro:boat_up3'  #         <<<<--------WORKING                  
                   color: 'var(--secondary-text-color)'
                   styles:
