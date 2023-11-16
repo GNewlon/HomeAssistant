@@ -1,7 +1,8 @@
+# https://github.com/thomasloven/hass-fontawesome
               size: 45%
               state:
                 - value: open
-                  icon: 'fapro:boat_open'               
+                  icon: 'fapro:boat_weird'               
                   color: 'var(--accent-color)'                  
                   styles:
                     card:
