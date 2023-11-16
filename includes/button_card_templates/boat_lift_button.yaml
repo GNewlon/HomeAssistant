@@ -1,6 +1,6 @@
 # https://github.com/thomasloven/hass-fontawesome
               size: 45%
-              icon: icon: 'mdi:garage-open' 
+              icon: 'fapro:boat_stopped'
               state:
                 - value: open
                   icon: 'fapro:boat_up3'               
@@ -54,19 +54,6 @@
                       - padding-bottom: 10px
                       - font-size: 14px
                       - color: 'var(--secondary-text-color)'
-                - value: Unknown             ##<<---delete if not working!!
-#                  icon: 'mdi:garage-open'
-                  icon: 'fapro:boat_stopped'  
-                  color: 'var(--accent-color)'
-                  styles:
-                    card:
-                      - '--paper-card-background-color': 'var(--accent-color)'
-                      - box-shadow: '0px 0px 13px 3px var(--box-shadow)'
-                      - border-radius: 10px
-                    name:
-                      - padding-bottom: 10px
-                      - font-size: 14px
-                      - color: 'var(--accent-color)'
               tap_action:
                 action: call-service
                 haptic: heavy
