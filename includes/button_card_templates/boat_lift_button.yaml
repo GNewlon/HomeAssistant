@@ -1,6 +1,6 @@
 # https://github.com/thomasloven/hass-fontawesome
               size: 45%
-              icon: 'fapro:boat_stopped'
+              icon: 'fapro:boat_stopped1'
               state:
                 - value: open
                   icon: 'fapro:boat_up3'               
@@ -27,7 +27,7 @@
                       - font-size: 14px
                       - color: 'var(--accent-color)'
                 - value: closing
-                  icon: 'fapro:boat_closing5'
+                  icon: 'fapro:boat_closing6'
                   color: 'var(--accent-color)'
                   styles:
                     card:
