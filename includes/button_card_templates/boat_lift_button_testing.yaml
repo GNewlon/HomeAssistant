@@ -1,7 +1,7 @@
               size: 45%
               state:
                 - color: 'var(--accent-color)'
-                  icon: 'cil:ferry.svg'
+                  icon: 'cil:skull.svg'
                   styles:
                     card:
                       - '--paper-card-background-color': 'var(--accent-color)'
@@ -13,7 +13,7 @@
                       - color: 'var(--accent-color)'
                   value: open
                 - color: 'var(--accent-color)'
-                  icon: 'cil:ferry_midway_stopped.svg'
+                  icon: 'cil:skull.svg'
                   styles:
                     card:
                       - '--paper-card-background-color': 'var(--accent-color)'
@@ -39,7 +39,7 @@
                   value: closing
                 - color: 'var(--secondary-text-color)'
 #                  icon: 'cil:ferry.svg'
-                  entity_picture: '/local/sonos2.png'
+                  entity_picture: '/local/skull.svg'
                   styles:
                     card:
                       - '--paper-card-background-color': 'var(--secondary-background-color)'
