@@ -1,7 +1,7 @@
               size: 45%
               state:
                 - color: 'var(--accent-color)'
-                  icon: 'cil:ferry_up_open.svg'
+                  icon: 'cil:ferry.svg'
                   styles:
                     card:
                       - '--paper-card-background-color': 'var(--accent-color)'
@@ -26,7 +26,7 @@
                   value: opening
                 - color: 'var(--accent-color)'
 #                  icon: 'mdi:garage-open'
-                  entity_picture: /local/ferry.svg
+                  entity_picture: '/local/ferry.svg'
                   styles:
                     card:
                       - '--paper-card-background-color': 'var(--accent-color)'
