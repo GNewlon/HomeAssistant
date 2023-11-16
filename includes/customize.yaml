@@ -37,3 +37,5 @@ switch.pooldrain_fph:
   friendly_name: pooldrain
   assumed_state: true
   entity_picture: /config/images/pool.png
+cover.garage_door:
+  entity_picture: /local/skull.svg
