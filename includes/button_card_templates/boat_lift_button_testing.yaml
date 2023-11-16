@@ -1,7 +1,7 @@
               size: 45%
               state:
                 - color: 'var(--accent-color)'
-                  entity_picture: /local/skull.png
+                  entity_picture: /local/ferry.svg
                   styles:
                     card:
                       - '--paper-card-background-color': 'var(--accent-color)'
@@ -13,7 +13,7 @@
                       - color: 'var(--accent-color)'
                   value: open
                 - color: 'var(--accent-color)'
-                  icon: cil:skull.svg
+                  icon: 'cil:skull.svg'
                   styles:
                     card:
                       - '--paper-card-background-color': 'var(--accent-color)'
@@ -25,7 +25,7 @@
                       - color: 'var(--accent-color)'
                   value: opening
                 - color: 'var(--accent-color)'
-#                  icon: 'mdi:speaker-wireless'
+                  icon: 'cil:skull.svg'
                   entity_picture: '/local/ferry.svg'
                   styles:
                     card:
