@@ -53,6 +53,19 @@
                       - padding-bottom: 10px
                       - font-size: 14px
                       - color: 'var(--secondary-text-color)'
+                - value: Unknown             ##<<---delete if not working!!
+#                  icon: 'mdi:garage-open'
+                  icon: 'fapro:boat_stopped'  
+                  color: 'var(--accent-color)'
+                  styles:
+                    card:
+                      - '--paper-card-background-color': 'var(--accent-color)'
+                      - box-shadow: '0px 0px 13px 3px var(--box-shadow)'
+                      - border-radius: 10px
+                    name:
+                      - padding-bottom: 10px
+                      - font-size: 14px
+                      - color: 'var(--accent-color)'
               tap_action:
                 action: call-service
                 haptic: heavy
@@ -61,6 +74,7 @@
                   entity_id: >-
                     cover.boat_lift
               double_tap_action:
+                icon: 'fapro:boat_stopped'  ##<<---delete if not working!!
                 action: call-service
                 haptic: heavy
                 service: cover.stop_cover
