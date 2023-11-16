@@ -38,7 +38,8 @@
                       - color: 'var(--accent-color)'
                   value: closing
                 - color: 'var(--secondary-text-color)'
-                  icon: 'cil:ferry.svg'
+#                  icon: 'cil:ferry.svg'
+                  entity_picture: /config/images/skull.png
 #                  entity_picture: '/local/skull.svg'
                   styles:
                     card:

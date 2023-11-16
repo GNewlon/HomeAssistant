@@ -57,7 +57,7 @@
         unique_id: '15912322314810'
         device_class: garage
         friendly_name: "Boat Lift Testing"
-        optimistic: true
+#        optimistic: true
         value_template: >-
           {%- set open = is_state('switch.dock_relays_1_boatliftstate_open', 'on') -%}
           {%- set closed = is_state('switch.dock_relays_1_boatliftstate_closed', 'on') -%}
