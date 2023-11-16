@@ -1,5 +1,6 @@
 # https://github.com/thomasloven/hass-fontawesome
               size: 45%
+              icon: icon: 'mdi:garage-open' 
               state:
                 - value: open
                   icon: 'fapro:boat_up3'               
@@ -74,11 +75,11 @@
                   entity_id: >-
                     cover.boat_lift
               double_tap_action:
-                icon: 'fapro:boat_stopped'  ##<<---delete if not working!!
                 action: call-service
                 haptic: heavy
                 service: cover.stop_cover
                 service_data:
+                  icon: 'fapro:boat_stopped'  ##<<---delete if not working!!
                   entity_id: >-
                     cover.boat_lift
               hold_action:
