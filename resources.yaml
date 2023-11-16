@@ -45,3 +45,10 @@
   type: module
 - url: /hacsfiles/apexcharts-card/apexcharts-card.js
   type: module
+- url: /local/custom-icons.js
+  type: module
+- url: /local/custom-icons/custom-icons.js
+  type: module
+- url: /hacsfiles/custom-icons/custom-icons.js
+  type: module
+
