@@ -38,8 +38,8 @@
                       - color: 'var(--accent-color)'
                   value: closing
                 - color: 'var(--secondary-text-color)'
-                  icon: 'cil:ferry.svg'
-                  entity_picture: /local/sonos2.png
+#                  icon: 'cil:ferry.svg'
+                  entity_picture: '/local/sonos2.png'
                   styles:
                     card:
                       - '--paper-card-background-color': 'var(--secondary-background-color)'
