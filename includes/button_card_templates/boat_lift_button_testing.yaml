@@ -26,7 +26,7 @@
                   value: opening
                 - color: 'var(--accent-color)'
 #                  icon: 'mdi:garage-open'
-                  entity_picture: /local/sonos2.png
+                  entity_picture: /local/ferry.svg
                   styles:
                     card:
                       - '--paper-card-background-color': 'var(--accent-color)'
@@ -38,7 +38,7 @@
                       - color: 'var(--accent-color)'
                   value: closing
                 - color: 'var(--secondary-text-color)'
-#                  icon: 'mdi:garage-open'
+                  icon: 'cil:ferry.svg'
                   entity_picture: /local/sonos2.png
                   styles:
                     card:
