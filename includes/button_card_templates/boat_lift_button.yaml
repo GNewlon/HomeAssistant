@@ -13,7 +13,8 @@
                       - color: 'var(--accent-color)'
                   value: open
                 - color: 'var(--accent-color)'
-                  icon: 'mdi:garage-open'
+#                  icon: 'mdi:garage-open'
+                  icon: 'cil:skull.svg'                  
                   styles:
                     card:
                       - '--paper-card-background-color': 'var(--accent-color)'
@@ -25,7 +26,8 @@
                       - color: 'var(--accent-color)'
                   value: opening
                 - color: 'var(--accent-color)'
-                  icon: 'mdi:garage-open'
+#                  icon: 'mdi:garage-open'
+                  icon: 'cil:ferry.svg'
                   styles:
                     card:
                       - '--paper-card-background-color': 'var(--accent-color)'

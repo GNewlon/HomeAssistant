@@ -1,7 +1,7 @@
               size: 45%
               state:
                 - color: 'var(--accent-color)'
-                  icon: mdi:garage-alert
+                  icon: 'mdi:garage-alert'
                   styles:
                     card:
                       - '--paper-card-background-color': 'var(--accent-color)'
@@ -25,8 +25,8 @@
                       - color: 'var(--accent-color)'
                   value: opening
                 - color: 'var(--accent-color)'
-#                  icon: 'mdi:garage-open'
-                  entity_picture: '/local/ferry.svg'
+                  icon: 'mdi:speaker-wireless'
+#                  entity_picture: '/local/ferry.svg'
                   styles:
                     card:
                       - '--paper-card-background-color': 'var(--accent-color)'
@@ -38,8 +38,8 @@
                       - color: 'var(--accent-color)'
                   value: closing
                 - color: 'var(--secondary-text-color)'
-#                  icon: 'cil:ferry.svg'
-                  entity_picture: '/local/skull.svg'
+                  icon: 'cil:ferry.svg'
+#                  entity_picture: '/local/skull.svg'
                   styles:
                     card:
                       - '--paper-card-background-color': 'var(--secondary-background-color)'
