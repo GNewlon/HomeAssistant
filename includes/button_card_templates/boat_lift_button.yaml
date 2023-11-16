@@ -2,7 +2,7 @@
               size: 45%
               state:
                 - value: open
-                  icon: 'fapro:boat_weird'               
+                  icon: 'fapro:boat_up'               
                   color: 'var(--accent-color)'                  
                   styles:
                     card:
