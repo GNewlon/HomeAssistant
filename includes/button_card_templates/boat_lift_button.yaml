@@ -27,7 +27,7 @@
                       - font-size: 14px
                       - color: 'var(--accent-color)'
                 - value: closing
-                  icon: 'fapro:boat_closing'
+                  icon: 'fapro:boat_closing1'
                   color: 'var(--accent-color)'
                   styles:
                     card:
