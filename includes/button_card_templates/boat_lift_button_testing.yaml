@@ -1,7 +1,7 @@
               size: 45%
               state:
                 - color: 'var(--accent-color)'
-                  icon: 'mdi:garage-alert'
+                  entity_picture: /config/images/skull.png
                   styles:
                     card:
                       - '--paper-card-background-color': 'var(--accent-color)'

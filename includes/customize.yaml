@@ -38,4 +38,4 @@ switch.pooldrain_fph:
   assumed_state: true
   entity_picture: /config/images/pool.png
 cover.garage_door:
-  entity_picture: /local/sonos2.png
+  entity_picture: /config/images/skull.png
