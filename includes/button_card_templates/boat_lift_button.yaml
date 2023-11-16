@@ -15,7 +15,7 @@
                       - font-size: 14px
                       - color: 'var(--accent-color)'
                 - value: opening
-                  icon: 'ferry_midway_stopped.svg'    
+                  icon: 'fapro:boat_opening'    
                   color: 'var(--accent-color)'                  
                   styles:
                     card:
@@ -27,8 +27,7 @@
                       - font-size: 14px
                       - color: 'var(--accent-color)'
                 - value: closing
-#                  icon: 'mdi:garage-open'
-                  icon: 'cil:ferry.svg'
+                  icon: 'fapro:boat_closing'
                   color: 'var(--accent-color)'
                   styles:
                     card:
@@ -40,7 +39,7 @@
                       - font-size: 14px
                       - color: 'var(--accent-color)'
                 - value: closed
-                  icon: 'fapro:boat_open1'   
+                  icon: 'fapro:ferry'   
 #                  icon: 'mdi:garage'
                   color: 'var(--secondary-text-color)'
                   styles:
@@ -66,7 +65,6 @@
                 haptic: heavy
                 service: cover.stop_cover
                 service_data:
-                  icon: 'fapro:boat_stopped'  ##<<---delete if not working!!
                   entity_id: >-
                     cover.boat_lift
               hold_action:

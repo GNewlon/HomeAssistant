@@ -58,7 +58,7 @@
               type: 'custom:button-card'
             - aspect_ratio: 1/1
               template: boat_lift_button_testing
-              icon: 'fapro:boat_stopped'     
+#              icon: 'fapro:boat_stopped'     
 #              device_class: garage
               entity: >-
                 cover.boat_lift_testing
