@@ -21,8 +21,6 @@
   type: module
 - url: /hacsfiles/swipe-card/swipe-card.js
   type: module
-- url: /hacsfiles/custom-sidebar/custom-sidebar.js
-  type: module
 - url: /local/fan-control-entity-row.js
   type: js
 - url: /hacsfiles/lovelace-xiaomi-vacuum-card/xiaomi-vacuum-card.js
@@ -44,6 +42,9 @@
 - url: /hacsfiles/light-popup-card/light-popup-card.js
   type: module
 - url: /hacsfiles/apexcharts-card/apexcharts-card.js
+  type: module
+############### BELOW IS MY TESTING AREA, CLEAN IT UP AFTER!!!!!!!!!!!!!!!!!!
+- url: /local/community/custom-sidebar/custom-sidebar.js
   type: module
 - url: /local/custom-icons.js
   type: module
