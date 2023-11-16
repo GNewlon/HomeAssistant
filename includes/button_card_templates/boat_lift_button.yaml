@@ -1,7 +1,7 @@
               size: 45%
               state:
                 - value: open
-                  icon: 'cil:ferry.svg' 
+                  icon: 'ferry_up_open.svg'               
                   color: 'var(--accent-color)'                  
                   styles:
                     card:
@@ -13,8 +13,7 @@
                       - font-size: 14px
                       - color: 'var(--accent-color)'
                 - value: opening
-#                  icon: 'mdi:garage-open'
-                  icon: 'cil:sonos2.png'     
+                  icon: 'ferry_midway_stopped.svg'    
                   color: 'var(--accent-color)'                  
                   styles:
                     card:
@@ -39,7 +38,7 @@
                       - font-size: 14px
                       - color: 'var(--accent-color)'
                 - value: closed
-                  icon: 'bha:floor-lamp'
+                  icon: 'fapro:ferry_down_closed'
 #                  icon: 'mdi:garage'
                   color: 'var(--secondary-text-color)'
                   styles:
