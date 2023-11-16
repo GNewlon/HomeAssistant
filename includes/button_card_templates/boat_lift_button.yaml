@@ -4,16 +4,18 @@
               state:
                 - value: open
                   icon: 'fapro:boat_up3'               
-                  color: 'var(--accent-color)'                  
+                  color: 'var(--secondary-text-color)'
                   styles:
                     card:
-                      - '--paper-card-background-color': 'var(--accent-color)'
-                      - box-shadow: '0px 0px 13px 3px var(--box-shadow)'
+                      - '--paper-card-background-color': 'var(--secondary-background-color)'
+                      - box-shadow: '0px 0px 1px 1px var(--secondary-background-color)'
                       - border-radius: 10px
+                    label:
+                      - color: 'var(--secondary-text-color)'
                     name:
                       - padding-bottom: 10px
                       - font-size: 14px
-                      - color: 'var(--accent-color)'
+                      - color: 'var(--secondary-text-color)'
                 - value: opening
                   icon: 'fapro:boat_opening'    
                   color: 'var(--accent-color)'                  
@@ -40,19 +42,16 @@
                       - color: 'var(--accent-color)'
                 - value: closed
                   icon: 'fapro:ferry'   
-#                  icon: 'mdi:garage'
-                  color: 'var(--secondary-text-color)'
+                  color: 'var(--accent-color)'                  
                   styles:
                     card:
-                      - '--paper-card-background-color': 'var(--secondary-background-color)'
-                      - box-shadow: '0px 0px 1px 1px var(--secondary-background-color)'
+                      - '--paper-card-background-color': 'var(--accent-color)'
+                      - box-shadow: '0px 0px 13px 3px var(--box-shadow)'
                       - border-radius: 10px
-                    label:
-                      - color: 'var(--secondary-text-color)'
                     name:
                       - padding-bottom: 10px
                       - font-size: 14px
-                      - color: 'var(--secondary-text-color)'
+                      - color: 'var(--accent-color)'
               tap_action:
                 action: call-service
                 haptic: heavy
