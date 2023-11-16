@@ -4,7 +4,7 @@
               state:
                 - value: open
                   icon: 'fapro:boat_open'      
-                  icon: 'fapro:boat_up3'  #         <<<<--------WORKING                  
+#                  icon: 'fapro:boat_up3'  #         <<<<--------WORKING                  
                   color: 'var(--secondary-text-color)'
                   styles:
                     card:
