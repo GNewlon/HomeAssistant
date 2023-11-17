@@ -102,8 +102,8 @@
           - color: var(--secondary-text-color)
         name:
           - color: var(--secondary-text-color)
-#          - padding-top: 20%
-          - padding-botoom: 1%
+          - padding-top: 15%
+#          - padding-botoom: 1%
           - font-size: 14px
       value: 'Clear'
   styles:
