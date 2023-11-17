@@ -102,7 +102,7 @@
           - color: var(--secondary-text-color)
         name:
           - color: var(--secondary-text-color)
-          - padding-top: 2%
+          - padding-top: 7%
           - font-size: 14px
       value: 'Clear'
   styles:
