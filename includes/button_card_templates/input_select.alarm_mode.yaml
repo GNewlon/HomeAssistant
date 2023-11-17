@@ -98,7 +98,7 @@
         label:
           - color: var(--secondary-text-color)
         icon:
-          - padding-top: 10%
+          - padding-top: 12%
           - color: var(--secondary-text-color)
         name:
           - color: var(--secondary-text-color)
