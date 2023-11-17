@@ -98,13 +98,13 @@
         label:
           - color: var(--secondary-text-color)
         icon:
-          - padding-top: 12%
+          - padding-top: 10%
 #          - padding-top: 1%
           - color: var(--secondary-text-color)
         name:
           - color: var(--secondary-text-color)
-#          - padding-top: 15%
-          - padding-bottom: 1%
+          - padding-top: 10%
+#          - padding-bottom: 1%
           - font-size: 14px
       value: 'Clear'
   styles:
