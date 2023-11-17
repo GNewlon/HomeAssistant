@@ -1,23 +1,21 @@
 # https://github.com/thomasloven/hass-fontawesome
               aspect_ratio: 1/1
-              size: 45%
+              size: 50%
               state:
                 - value: 'unknown'
                   icon: 'fapro:boat_stopped10'                  
-                  color: 'var(--secondary-text-color)'
+                  color: 'var(--accent-color)'                  
                   styles:
                     card:
-                      - '--paper-card-background-color': 'var(--secondary-background-color)'
-                      - box-shadow: '0px 0px 1px 1px var(--secondary-background-color)'
+                      - '--paper-card-background-color': 'var(--accent-color)'
+                      - box-shadow: '0px 0px 13px 3px var(--box-shadow)'
                       - border-radius: 10px
-                    label:
-                      - color: 'var(--secondary-text-color)'
                     icon:
-                      - padding-top: 7%
+                      - padding-top: 12%
                     name:
-                      - padding-bottom: 2%
+                      - padding-top: 3%
                       - font-size: 14px
-                      - color: 'var(--secondary-text-color)'
+                      - color: 'var(--accent-color)'
                 - value: open
                   icon: 'fapro:boat_open7'      
 #                  icon: 'fapro:boat_up3'  #         <<<<--------WORKING                  
@@ -30,9 +28,10 @@
                     label:
                       - color: 'var(--secondary-text-color)'
                     icon:
-                      - padding-top: 7%
+                      - padding-top: 12%
                     name:
-                      - padding-bottom: 2%
+#                      - padding-bottom: 2%
+                      - padding-top: 3%
                       - font-size: 14px
                       - color: 'var(--secondary-text-color)'
                 - value: opening
@@ -44,23 +43,23 @@
                       - box-shadow: '0px 0px 13px 3px var(--box-shadow)'
                       - border-radius: 10px
                     icon:
-                      - padding-top: 7%
+                      - padding-top: 12%
                     name:
-                      - padding-bottom: 2%
+                      - padding-top: 3%
                       - font-size: 14px
                       - color: 'var(--accent-color)'
                 - value: closing
                   icon: 'fapro:boat_closing10'    
-                  color: 'var(--accent-color)'
+                  color: 'var(--accent-color)'                  
                   styles:
                     card:
                       - '--paper-card-background-color': 'var(--accent-color)'
                       - box-shadow: '0px 0px 13px 3px var(--box-shadow)'
                       - border-radius: 10px
                     icon:
-                      - padding-top: 7%
+                      - padding-top: 12%
                     name:
-                      - padding-bottom: 2%
+                      - padding-top: 3%
                       - font-size: 14px
                       - color: 'var(--accent-color)'
                 - value: closed
@@ -72,9 +71,9 @@
                       - box-shadow: '0px 0px 13px 3px var(--box-shadow)'
                       - border-radius: 10px
                     icon:
-                      - padding-top: 7%
+                      - padding-top: 12%
                     name:
-                      - padding-bottom: 2%
+                      - padding-top: 3%
                       - font-size: 14px
                       - color: 'var(--accent-color)'
               tap_action:

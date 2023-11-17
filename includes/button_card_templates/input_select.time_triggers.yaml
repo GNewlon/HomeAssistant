@@ -10,7 +10,7 @@
   show_label: true
   show_name: true
   show_state: false
-  size: 50%
+  size: 55%
   state:
     - icon: 'mdi:theme-light-dark'
       name: Dawn  
@@ -23,10 +23,11 @@
         label:
           - color: 'var(--accent-color)'
         icon:
+          - padding-top: 18%
           - color: 'var(--accent-color)'
         name:
           - color: 'var(--accent-color)'
-          - padding-top: 7%
+          - padding-top: 15%
           - font-size: 14px
       value: 'dawn'
     - icon: 'mdi:weather-sunset-up'
@@ -40,10 +41,11 @@
         label:
           - color: 'var(--accent-color)'
         icon:
+          - padding-top: 18%
           - color: 'var(--accent-color)'
         name:
           - color: 'var(--accent-color)'
-          - padding-top: 7%
+          - padding-top: 15%
           - font-size: 14px
       value: 'sunrise'
     - icon: 'mdi:weather-sunny'
@@ -57,10 +59,11 @@
         label:
           - color: 'var(--accent-color)'
         icon:
+          - padding-top: 18%
           - color: 'var(--accent-color)'
         name:
           - color: 'var(--accent-color)'
-          - padding-top: 7%
+          - padding-top: 15%
           - font-size: 14px
       value: 'sunrise.end'
     - icon: 'mdi:white-balance-sunny'
@@ -74,10 +77,11 @@
         label:
           - color: 'var(--accent-color)'
         icon:
+          - padding-top: 18%
           - color: 'var(--accent-color)'
         name:
           - color: 'var(--accent-color)'
-          - padding-top: 7%
+          - padding-top: 15%
           - font-size: 14px
       value: 'day.0800'
     - icon: 'mdi:white-balance-sunny'
@@ -91,10 +95,11 @@
         label:
           - color: 'var(--accent-color)'
         icon:
+          - padding-top: 18%
           - color: 'var(--accent-color)'
         name:
           - color: 'var(--accent-color)'
-          - padding-top: 7%
+          - padding-top: 15%
           - font-size: 14px
       value: 'day.0900'
     - icon: 'mdi:white-balance-sunny'
@@ -108,10 +113,11 @@
         label:
           - color: 'var(--accent-color)'
         icon:
+          - padding-top: 18%
           - color: 'var(--accent-color)'
         name:
           - color: 'var(--accent-color)'
-          - padding-top: 7%
+          - padding-top: 15%
           - font-size: 14px
       value: 'solar.noon'
     - icon: 'mdi:white-balance-sunny'
@@ -125,10 +131,11 @@
         label:
           - color: 'var(--accent-color)'
         icon:
+          - padding-top: 18%
           - color: 'var(--accent-color)'
         name:
           - color: 'var(--accent-color)'
-          - padding-top: 7%
+          - padding-top: 15%
           - font-size: 14px
       value: 'afternoon'
     - icon: 'mdi:weather-sunset-down'
@@ -145,7 +152,7 @@
           - color: 'var(--accent-color)'
         name:
           - color: 'var(--accent-color)'
-          - padding-top: 7%
+          - padding-top: 15%
           - font-size: 14px
       value: 'sunset.start'
     - icon: 'mdi:weather-sunset'
@@ -159,10 +166,11 @@
         label:
           - color: 'var(--accent-color)'
         icon:
+          - padding-top: 18%
           - color: 'var(--accent-color)'
         name:
           - color: 'var(--accent-color)'
-          - padding-top: 7%
+          - padding-top: 15%
           - font-size: 14px
       value: 'sunset'
     - icon: 'mdi:weather-night-partly-cloudy'
@@ -176,10 +184,11 @@
         label:
           - color: 'var(--accent-color)'
         icon:
+          - padding-top: 18%
           - color: 'var(--accent-color)'
         name:
           - color: 'var(--accent-color)'
-          - padding-top: 7%
+          - padding-top: 15%
           - font-size: 14px
       value: 'dusk'
     - icon: 'mdi:weather-night-partly-cloudy'
@@ -193,10 +202,11 @@
         label:
           - color: 'var(--accent-color)'
         icon:
+          - padding-top: 18%
           - color: 'var(--accent-color)'
         name:
           - color: 'var(--accent-color)'
-          - padding-top: 7%
+          - padding-top: 15%
           - font-size: 14px
       value: 'nautical.dusk'
     - icon: 'mdi:weather-night'
@@ -209,10 +219,11 @@
         label:
           - color: var(--secondary-text-color)
         icon:
+          - padding-top: 18%
           - color: var(--secondary-text-color)
         name:
           - color: var(--secondary-text-color)
-          - padding-top: 7%
+          - padding-top: 15%
           - font-size: 14px
       value: 'night'
     - icon: 'mdi:weather-night-partly-cloudy'
@@ -225,10 +236,11 @@
         label:
           - color: var(--secondary-text-color)
         icon:
+          - padding-top: 18%
           - color: var(--secondary-text-color)
         name:
           - color: var(--secondary-text-color)
-          - padding-top: 7%
+          - padding-top: 15%
           - font-size: 14px
       value: 'wind.down.2200'
     - icon: 'mdi:star-shooting-outline'
@@ -241,10 +253,11 @@
         label:
           - color: var(--secondary-text-color)
         icon:
+          - padding-top: 18%
           - color: var(--secondary-text-color)
         name:
           - color: var(--secondary-text-color)
-          - padding-top: 7%
+          - padding-top: 15%
           - font-size: 14px
       value: 'night.2300'
   styles:

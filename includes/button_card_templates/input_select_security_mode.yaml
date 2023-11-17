@@ -23,10 +23,12 @@
         label:
           - color: 'var(--accent-color)'
         icon:
+          - padding-top: 18%
           - color: 'var(--accent-color)'
+          - padding-top: 18%
         name:
           - color: 'var(--accent-color)'
-          - padding-top: 7%
+          - padding-top: 15%
           - font-size: 14px
       value: 'Away'
     - icon: 'mdi:shield-account'
@@ -40,10 +42,11 @@
         label:
           - color: 'var(--accent-color)'
         icon:
+          - padding-top: 18%
           - color: 'var(--accent-color)'
         name:
           - color: 'var(--accent-color)'
-          - padding-top: 7%
+          - padding-top: 15%
           - font-size: 14px
       value: 'G.Home'
     - icon: 'mdi:account-arrow-right'
@@ -57,10 +60,11 @@
         label:
           - color: 'var(--accent-color)'
         icon:
+          - padding-top: 18%
           - color: 'var(--accent-color)'
         name:
           - color: 'var(--accent-color)'
-          - padding-top: 7%
+          - padding-top: 15%
           - font-size: 14px
       value: 'G.Away'
     - icon: 'mdi:shield-account'
@@ -74,10 +78,11 @@
         label:
           - color: 'var(--accent-color)'
         icon:
+          - padding-top: 18%
           - color: 'var(--accent-color)'
         name:
           - color: 'var(--accent-color)'
-          - padding-top: 7%
+          - padding-top: 15%
           - font-size: 14px
       value: 'C.Home'
     - icon: 'mdi:account-arrow-right'
@@ -91,10 +96,11 @@
         label:
           - color: 'var(--accent-color)'
         icon:
+          - padding-top: 18%
           - color: 'var(--accent-color)'
         name:
           - color: 'var(--accent-color)'
-          - padding-top: 7%
+          - padding-top: 15%
           - font-size: 14px
       value: 'C.Away'
     - icon: 'mdi:shield-home'
@@ -107,10 +113,11 @@
         label:
           - color: var(--secondary-text-color)
         icon:
+          - padding-top: 18%
           - color: var(--secondary-text-color)
         name:
           - color: var(--secondary-text-color)
-          - padding-top: 7%
+          - padding-top: 15%
           - font-size: 14px
       value: 'Home'
   styles:
