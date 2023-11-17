@@ -1,5 +1,5 @@
 # https://github.com/thomasloven/hass-fontawesome
-              size: 60%
+              size: 50%
               icon: 'fapro:boat_stopped10'
               state:
                 - value: open
@@ -14,7 +14,7 @@
                     label:
                       - color: 'var(--secondary-text-color)'
                     name:
-                      - padding-bottom: 1px
+                      - padding-bottom: 5px
                       - font-size: 14px
                       - color: 'var(--secondary-text-color)'
                 - value: opening
