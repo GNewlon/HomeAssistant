@@ -14,7 +14,7 @@
   show_label: false
   show_name: true
   show_state: false
-  size: 50%
+  size: 55%
   state:
     - icon: 'mdi:fire'
       name: Fire  
@@ -104,7 +104,7 @@
         name:
           - color: var(--secondary-text-color)
           - padding-top: 25%
-#          - padding-bottom: 1%
+#          - padding-bottom: 1% ################################################
           - font-size: 14px
       value: 'Clear'
   styles:
