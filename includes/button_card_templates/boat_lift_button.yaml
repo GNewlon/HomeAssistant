@@ -3,7 +3,7 @@
               icon: 'fapro:boat_stopped4'
               state:
                 - value: open
-                  icon: 'fapro:boat_open6'      
+                  icon: 'fapro:boat_open7'      
 #                  icon: 'fapro:boat_up3'  #         <<<<--------WORKING                  
                   color: 'var(--secondary-text-color)'
                   styles:
@@ -42,7 +42,7 @@
                       - font-size: 14px
                       - color: 'var(--accent-color)'
                 - value: closed
-                  icon: 'fapro:boat_closed2'   
+                  icon: 'fapro:boat_closed7'   
                   color: 'var(--accent-color)'                  
                   styles:
                     card:
