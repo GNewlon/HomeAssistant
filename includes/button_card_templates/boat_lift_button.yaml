@@ -1,11 +1,9 @@
 # https://github.com/thomasloven/hass-fontawesome
               aspect_ratio: 1/1
               size: 45%
-#              icon: 'fapro:boat_stopped10'
               state:
                 - value: 'unknown'
-                  icon: 'fapro:skull'      
-#                  icon: 'fapro:boat_up3'  #         <<<<--------WORKING                  
+                  icon: 'fapro:boat_stopped10'                  
                   color: 'var(--secondary-text-color)'
                   styles:
                     card:
@@ -45,8 +43,10 @@
                       - '--paper-card-background-color': 'var(--accent-color)'
                       - box-shadow: '0px 0px 13px 3px var(--box-shadow)'
                       - border-radius: 10px
+                    icon:
+                      - padding-top: 5px
                     name:
-                      - padding-bottom: 1px
+                      - padding-bottom: 2px
                       - font-size: 14px
                       - color: 'var(--accent-color)'
                 - value: closing
@@ -57,8 +57,10 @@
                       - '--paper-card-background-color': 'var(--accent-color)'
                       - box-shadow: '0px 0px 13px 3px var(--box-shadow)'
                       - border-radius: 10px
+                    icon:
+                      - padding-top: 5px
                     name:
-                      - padding-bottom: 1px
+                      - padding-bottom: 2px
                       - font-size: 14px
                       - color: 'var(--accent-color)'
                 - value: closed
@@ -69,8 +71,10 @@
                       - '--paper-card-background-color': 'var(--accent-color)'
                       - box-shadow: '0px 0px 13px 3px var(--box-shadow)'
                       - border-radius: 10px
+                    icon:
+                      - padding-top: 5px
                     name:
-                      - padding-bottom: 1px
+                      - padding-bottom: 2px
                       - font-size: 14px
                       - color: 'var(--accent-color)'
               tap_action:
