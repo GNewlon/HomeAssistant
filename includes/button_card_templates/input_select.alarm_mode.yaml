@@ -27,10 +27,11 @@
         label:
           - color: 'var(--accent-color)'
         icon:
+          - padding-top: 7%
           - color: 'rgba(255, 76, 48)'
         name:
           - color: 'var(--accent-color)'
-          - padding-top: 7%
+          - padding-bottom: 2%
           - font-size: 14px
       value: 'Fire'
     - icon: 'mdi:skull-crossbones'
@@ -44,10 +45,11 @@
         label:
           - color: 'var(--accent-color)'
         icon:
+          - padding-top: 7%
           - color: 'rgba(255, 76, 48)'
         name:
           - color: 'var(--accent-color)'
-          - padding-top: 7%
+          - padding-bottom: 2%
           - font-size: 14px
       value: 'CO2'
     - icon: 'mdi:battery-low'
@@ -61,10 +63,11 @@
         label:
           - color: 'var(--accent-color)'
         icon:
+          - padding-top: 7%
           - color: 'rgba(255, 76, 48)'
         name:
           - color: 'var(--accent-color)'
-          - padding-top: 7%
+          - padding-bottom: 2%
           - font-size: 14px
       value: 'master.fireco.alarm.battery.not.ok'
     - icon: 'mdi:battery-low'
@@ -78,10 +81,11 @@
         label:
           - color: 'var(--accent-color)'
         icon:
+          - padding-top: 7%
           - color: 'rgba(255, 76, 48)'
         name:
           - color: 'var(--accent-color)'
-          - padding-top: 7%
+          - padding-bottom: 2%
           - font-size: 14px
       value: 'office.fireco.alarm.battery.not.ok'
     - icon: 'mdi:home-assistant'
@@ -94,10 +98,11 @@
         label:
           - color: var(--secondary-text-color)
         icon:
+          - padding-top: 7%
           - color: var(--secondary-text-color)
         name:
           - color: var(--secondary-text-color)
-          - padding-top: 7%
+          - padding-bottom: 2%
           - font-size: 14px
       value: 'Clear'
   styles:
