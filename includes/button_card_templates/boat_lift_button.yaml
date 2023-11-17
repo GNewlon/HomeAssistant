@@ -3,7 +3,7 @@
               size: 45%
 #              icon: 'fapro:boat_stopped10'
               state:
-                - value: 
+                - value: ''
                   icon: 'fapro:skull'      
 #                  icon: 'fapro:boat_up3'  #         <<<<--------WORKING                  
                   color: 'var(--secondary-text-color)'
