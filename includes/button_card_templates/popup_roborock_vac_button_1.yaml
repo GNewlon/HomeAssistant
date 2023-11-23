@@ -32,7 +32,7 @@
           - color: 'var(--accent-color)'
           - padding-top: 7%
           - font-size: 14px
-      value: 'charging'
+      value: 'Charging'
     - styles:
         card:
           - '--paper-card-background-color': 'var(--accent-color)'
@@ -47,8 +47,23 @@
           - color: 'var(--accent-color)'
           - padding-top: 7%
           - font-size: 14px
-      value: 'playing'
-#      value: 'on'
+      value: 'Cleaning'
+    - styles:
+        card:
+          - '--paper-card-background-color': 'var(--secondary-background-color)'
+          - box-shadow: '0px 0px 1px 1px var(--secondary-background-color)'
+          - border-radius: 10px
+        label:
+          - color: var(--secondary-text-color)
+        icon:
+          - color: red
+          - icon: 'mdi:speaker-wireless'
+#          - color: var(--secondary-text-color)
+        name:
+          - color: var(--secondary-text-color)
+          - padding-top: 7%
+          - font-size: 14px
+      value: 'Paused'
     - styles:
         card:
           - '--paper-card-background-color': 'var(--secondary-background-color)'
@@ -62,23 +77,7 @@
           - color: var(--secondary-text-color)
           - padding-top: 7%
           - font-size: 14px
-      value: 'paused'
-    - styles:
-        card:
-          - '--paper-card-background-color': 'var(--secondary-background-color)'
-          - box-shadow: '0px 0px 1px 1px var(--secondary-background-color)'
-          - border-radius: 10px
-        label:
-          - color: var(--secondary-text-color)
-        icon:
-          - color: var(--secondary-text-color)
-        name:
-          - color: var(--secondary-text-color)
-          - padding-top: 7%
-          - font-size: 14px
-#      value: 'paused'
-#      value: 'off'
-      value: 'on'
+      value: 'docked'
     - styles:
         card:
           - '--paper-card-background-color': 'var(--secondary-background-color)'
