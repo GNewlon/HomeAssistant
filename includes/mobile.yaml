@@ -17,6 +17,27 @@
               name: Front
               template: lock_button
               type: 'custom:button-card'
+            - aspect_ratio: 1/1
+              template: boat_lift_button
+              device_class: garage
+              entity: >-
+                cover.boat_lift
+              name: Lift
+              type: 'custom:button-card' 
+            - aspect_ratio: 1/1
+              template: garage_button
+              device_class: garage
+              entity: >-
+                cover.garage_door
+              name: Garage
+              type: 'custom:button-card'
+            - aspect_ratio: 1/1
+              entity: input_boolean.goodnite            
+              name: GoodNite
+              template: goodnite_button
+              type: 'custom:button-card'
+          type: horizontal-stack              
+        - cards: ################################################## ROW 2
             - type: 'custom:button-card'
               template: input_select.time_triggers    
               entity: input_select.time_triggers  
@@ -34,28 +55,7 @@
                 - value: nautical.dusk
                 - value: night
                 - value: wind.down.2200 
-                - value: night.2300 
-            - aspect_ratio: 1/1
-              template: garage_button
-              device_class: garage
-              entity: >-
-                cover.garage_door
-              name: Garage
-              type: 'custom:button-card'
-            - aspect_ratio: 1/1
-              entity: input_boolean.goodnite            
-              name: GoodNite
-              template: goodnite_button
-              type: 'custom:button-card'
-          type: horizontal-stack              
-        - cards: ################################################## ROW 2
-            - aspect_ratio: 1/1
-              template: boat_lift_button
-              device_class: garage
-              entity: >-
-                cover.boat_lift
-              name: Lift
-              type: 'custom:button-card'
+                - value: night.2300
             - type: 'custom:button-card'
               template: input_select.alarm_mode  
               entity: input_select.alarm_mode  
@@ -89,25 +89,26 @@
           template: button-card-headers-2
           type: 'custom:button-card'
         - cards: ################################################## ROW 1
-            - name: Vac                                 ## ROBOROCK VACCUUM # 1
+            - name: Vac                                 ## ROBOROCK VACCUUM
               entity: vacuum.roborock_s7
               template: popup_roborock_vac_button_1
               icon: 'bha:roborock'
               type: 'custom:button-card' 
-            - name: Vac                                 ## ROBOROCK VACCUUM # 2
+            - name: Vac                                 ## ROBOROCK VACCUUM
               entity: vacuum.roborock_s7
+              template: popup_roborock_vac_button_1
+              icon: 'bha:roborock'
+              type: 'custom:button-card' 
+#            - name: Vac                                 ## ROBOROCK VACCUUM # 2
+#              entity: vacuum.roborock_s7
+#              template: vacuum_button_1
+#              icon: 'bha:roborock'
+#              type: 'custom:button-card' 
+#            - name: Vac                                 ## ROBOROCK VACCUUM # 3
+#              entity: vacuum.roborock_s7
 #              template: popup_roku_button_1
-              template: vacuum_button_1
-              icon: 'bha:roborock'
-#              icon: 'mdi:speaker-wireless'
-              type: 'custom:button-card' 
-            - name: Vac                                 ## ROBOROCK VACCUUM # 3
-              entity: vacuum.roborock_s7
-              template: popup_roku_button_1
-#              template: vacuum_button
-              icon: 'bha:roborock'
-#              icon: 'mdi:speaker-wireless'
-              type: 'custom:button-card' 
+#              icon: 'bha:roborock'
+#              type: 'custom:button-card' 
             - name: Roku                                  #4 BUTTON
               entity: media_player.roku_ultra_2023
               template: popup_roku_button_1
