@@ -6,7 +6,6 @@
 # https://community.home-assistant.io/t/custom-card-room-card/393846/329      #
 #                                                                             #
 ###############################################################################
-#  entity: media_player.roku_ultra_2023
   entity: '[[[ return entity.entity_id ]]]'
   aspect_ratio: 1/1
   color: 'rgb(5, 147, 255)'
@@ -89,8 +88,6 @@
           - color: var(--secondary-text-color)
           - padding-top: 7%
           - font-size: 14px
-#      value: 'paused'
-#      value: 'off'
       value: 'idle'
   styles:
     card:
