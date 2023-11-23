@@ -10,8 +10,6 @@
   entity: '[[[ return entity.entity_id ]]]'
   aspect_ratio: 1/1
   color: 'rgb(5, 147, 255)'
-  hold_action:
-    action: more-info
   show_label: true
   show_name: true
   show_state: false
@@ -31,7 +29,7 @@
           - color: 'var(--accent-color)'
           - padding-top: 7%
           - font-size: 14px
-      value: 'Charging'
+      value: 'charging'
     - styles:
         card:
           - '--paper-card-background-color': 'var(--accent-color)'
@@ -62,7 +60,7 @@
           - color: var(--secondary-text-color)
           - padding-top: 7%
           - font-size: 14px
-      value: 'Paused'
+      value: 'paused'
     - styles:
         card:
           - '--paper-card-background-color': 'var(--secondary-background-color)'
@@ -127,3 +125,5 @@
   double_tap_action:
     action: more-info
     haptic: heavy
+  hold_action:
+    action: more-info
