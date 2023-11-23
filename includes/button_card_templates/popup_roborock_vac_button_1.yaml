@@ -39,7 +39,6 @@
           - color: 'var(--accent-color)'
         icon:
           - color: green
-#          - color: 'var(--accent-color)'
         name:
           - color: 'var(--accent-color)'
           - padding-top: 7%
@@ -104,22 +103,6 @@
       - justify-content: center
       - align-items: center
       - padding-top: 13%
-  tap_action:
-    action: fire-dom-event
-    haptic: heavy
-    browser_mod:
-      service: browser_mod.popup
-      data:
-        title: Vac
-        content:
-          type: entities  
-          entities:
-            - artwork: cover
-              entity: '[[[ return entity.entity_id ]]]'  # <<----Future use with other Roku/Sonos Systems
-              power:
-                service: switch.turn_on
-              type: 'custom:xiaomi-vacuum-card'
-#          type: horizontal-stack
   double_tap_action:
     action: more-info
     haptic: heavy
