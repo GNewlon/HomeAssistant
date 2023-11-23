@@ -116,71 +116,15 @@
     browser_mod:
       service: browser_mod.popup
       data:
-        title: Roku
+        title: Vac
         content:
-          type: entities
-#          state_color: true
-          show_header_toggle: true   
+          type: entities  
           entities:
             - artwork: cover
               entity: '[[[ return entity.entity_id ]]]'  # <<----Future use with other Roku/Sonos Systems
-              theme: darkpurple
-              tv: true
-              apps:
-                - image: /local/plex.png
-                  app: 'Plex - Free Movies & TV'
-                - image: /local/youtube4.png
-                  app: YouTube
-                - image: /local/youtube4.png
-                  app: YouTube
-                - image: /local/plex.png
-                  app: 'Plex - Free Movies & TV'                           
-              volume_up:
-                tap_action:
-                  action: call-service
-                  service: media_player.volume_up
-                  service_data:
-                    entity_id: media_player.living_room
-#                    entity: '[[[ return entity.entity_id ]]]'   # <<----Future use with other Roku/Sonos Systems
-              volume_down:
-                tap_action:
-                  action: call-service
-                  service: media_player.volume_down
-                  service_data:
-                    entity_id: media_player.living_room   # <<----Future use with other Roku/Sonos Systems
-              volume_mute:
-                tap_action:
-                  action: call-service
-                  service: script.mute
-                  service_data:
-                    media_player: media_player.living_room   # <<----Future use with other Roku/Sonos Systems
-                double_tap_action:
-                  action: call-service
-                  service: switch.toggle
-                  service_data:
-                    entity_id: switch.sonos_living_room_night_sound  # <<----Future use with other Roku/Sonos Systems
               power:
                 service: switch.turn_on
-              hide:
-                controls: false
-                icon: true
-                mute: true
-                power: true
-                source: true
-              speaker_group:
-                entities:
-                  - entity_id: media_player.living_room
-                    name: Sonos Livingroom
-                  - entity_id: media_player.living_room_left
-                    name: Sonos Pool
-                  - entity_id: media_player.p3_rs
-                    name: Sonos Hallway
-                  - entity_id: media_player.deck_dojo
-                    name: Sonos Master Bedroom
-                platform: sonos
-                show_group_count: true
-                type: 'custom:roku-card'
-              type: 'custom:roku-card'
+              type: 'custom:xiaomi-vacuum-card'
 #          type: horizontal-stack
   double_tap_action:
     action: more-info
