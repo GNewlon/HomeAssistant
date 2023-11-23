@@ -1,4 +1,5 @@
-  aspect_ratio: auto
+#  aspect_ratio: auto
+  aspect_ratio: 1/1
   show_icon: false
   custom_fields:
     vacuum:
