@@ -27,7 +27,6 @@
           - color: 'var(--accent-color)'
         icon:
           - color: 'var(--accent-color)'
-          - icon: 'bha:roborock'
         name:
           - color: 'var(--accent-color)'
           - padding-top: 7%
