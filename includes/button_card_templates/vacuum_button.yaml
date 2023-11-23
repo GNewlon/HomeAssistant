@@ -3,7 +3,7 @@
   custom_fields:
     vacuum:
       card:
-        entity: vacuum.roborock
+        entity: vacuum.roborock_s7
         name: false
         type: 'custom:xiaomi-vacuum-card'
   styles:
