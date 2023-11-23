@@ -1,6 +1,6 @@
 ###############################################################################
 #                                                                             #
-#                     popup_roku_button_1                                     #
+#                    popup_roborock_vac_button_1                              #
 #             (derived from slide.dim_button)                                 #
 #                USED ONLY FOR SMALL BUTTONS                                  #
 # https://community.home-assistant.io/t/custom-card-room-card/393846/329      #
@@ -27,11 +27,12 @@
           - color: 'var(--accent-color)'
         icon:
           - color: 'var(--accent-color)'
+          - icon: 'bha:roborock'
         name:
           - color: 'var(--accent-color)'
           - padding-top: 7%
           - font-size: 14px
-      value: 'on'
+      value: 'charging'
     - styles:
         card:
           - '--paper-card-background-color': 'var(--accent-color)'
