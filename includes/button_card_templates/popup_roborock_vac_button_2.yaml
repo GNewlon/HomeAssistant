@@ -146,7 +146,17 @@
       entity_id: >-
         vacuum.roborock_s7
   double_tap_action:
-    action: more-info
+    action: fire-dom-event
     haptic: heavy
+    browser_mod:
+      service: browser_mod.popup
+      data:
+        title: Vac
+        content:
+          type: entities  
+          entities:
+            - artwork: cover
+              entity: '[[[ return entity.entity_id ]]]'  # <<----Future use with other Roku/Sonos Systems
+              type: 'custom:xiaomi-vacuum-card'
   hold_action:
     action: more-info
