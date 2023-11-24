@@ -139,13 +139,6 @@
       - align-items: center
       - padding-top: 13%
   tap_action:
-    action: call-service
-    haptic: heavy
-    service: roborock.vacuum_remote_control_start
-    service_data:
-      entity_id: >-
-        vacuum.roborock_s7
-  double_tap_action:
     action: fire-dom-event
     haptic: heavy
     browser_mod:
@@ -158,5 +151,12 @@
             - artwork: cover
               entity: '[[[ return entity.entity_id ]]]'  # <<----Future use with other Roku/Sonos Systems
               type: 'custom:vacuum-card'
+  double_tap_action:
+    action: call-service
+    haptic: heavy
+    service: roborock.vacuum_remote_control_start
+    service_data:
+      entity_id: >-
+        vacuum.roborock_s7
   hold_action:
     action: more-info
