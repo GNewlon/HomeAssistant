@@ -14,8 +14,9 @@
   show_state: false
   size: 50%
   state:
-    - styles:
+    - value: 'docked'
       icon: 'bha:roborock'  
+      styles:
         card:
           - '--paper-card-background-color': 'var(--secondary-background-color)'
           - box-shadow: '0px 0px 1px 1px var(--secondary-background-color)'
@@ -28,9 +29,9 @@
           - color: var(--secondary-text-color)
           - padding-top: 7%
           - font-size: 14px
-      value: 'docked'
-    - styles:
+    - value: 'charging'
       icon: 'bha:roborock'   
+      styles:
         card:
           - '--paper-card-background-color': 'var(--secondary-background-color)'
           - box-shadow: '0px 0px 1px 1px var(--secondary-background-color)'
@@ -43,9 +44,9 @@
           - color: var(--secondary-text-color)
           - padding-top: 7%
           - font-size: 14px
-      value: 'charging'
-    - styles:
-      icon: 'mdi:robot-vacuum'
+    - value: 'cleaning'
+      icon: 'bha:roborock' 
+      styles:
         card:
           - '--paper-card-background-color': 'var(--accent-color)'
           - box-shadow: '0px 0px 13px 3px var(--box-shadow)'
@@ -59,9 +60,9 @@
           - color: 'var(--accent-color)'
           - padding-top: 7%
           - font-size: 14px
-      value: 'cleaning'
-    - styles:
-      icon: 'mdi:robot-vacuum'
+    - value: 'paused'
+      icon: 'bha:roborock' 
+      styles:
         card:
           - '--paper-card-background-color': 'var(--accent-color)'
           - box-shadow: '0px 0px 13px 3px var(--box-shadow)'
@@ -76,25 +77,25 @@
           - color: 'var(--accent-color)'
           - padding-top: 7%
           - font-size: 14px
-      value: 'paused'
-    - styles:
+    - value: 'error'
       icon: 'mdi:robot-vacuum-alert'
+      styles:
         card:
-          - '--paper-card-background-color': 'var(--accent-color)'
-          - box-shadow: '0px 0px 13px 3px var(--box-shadow)'
+          - '--paper-card-background-color': 'rgba(--accent-color)'  # Red Glow
+          - box-shadow: '0px 0px 16px 4px  #faafaf'
           - border-radius: 10px
           - text-shadow: 0px 0px 5px black
         label:
           - color: 'var(--accent-color)'
         icon:
-          - color: red
+          - color: 'rgba(255, 76, 48)' # Red
         name:
           - color: 'var(--accent-color)'
           - padding-top: 7%
           - font-size: 14px
-      value: 'error'
-    - styles:
-      icon: 'mdi:robot-vacuum'
+    - value: 'idle'
+      icon: 'bha:roborock' 
+      styles:
         card:
           - '--paper-card-background-color': 'var(--secondary-background-color)'
           - box-shadow: '0px 0px 1px 1px var(--secondary-background-color)'
@@ -107,9 +108,9 @@
           - color: var(--secondary-text-color)
           - padding-top: 7%
           - font-size: 14px
-      value: 'idle'
-    - styles:
-      icon: 'mdi:robot-vacuum'
+    - value: 'unknown'
+      icon: 'bha:roborock' 
+      styles:
         card:
           - '--paper-card-background-color': 'var(--secondary-background-color)'
           - box-shadow: '0px 0px 1px 1px var(--secondary-background-color)'
@@ -123,7 +124,6 @@
           - color: var(--secondary-text-color)
           - padding-top: 7%
           - font-size: 14px
-      value: 'unknown'
   styles:
     card:
       - color: 'rgb(5, 147, 255)'
