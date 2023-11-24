@@ -138,21 +138,13 @@
       - justify-content: center
       - align-items: center
       - padding-top: 13%
-#  tap_action:
-    action: fire-dom-event
+  tap_action:
+    action: call-service
     haptic: heavy
-    browser_mod:
-      service: browser_mod.popup
-      data:
-        title: Vac
-        content:
-          type: entities  
-          entities:
-            - artwork: cover
-              entity: '[[[ return entity.entity_id ]]]'  # <<----Future use with other Roku/Sonos Systems
-              power:
-                service: switch.turn_on
-              type: 'custom:xiaomi-vacuum-card'
+    service: roborock.vacuum_remote_control_start
+    service_data:
+      entity_id: >-
+        vacuum.roborock_s7
   double_tap_action:
     action: more-info
     haptic: heavy
