@@ -92,12 +92,11 @@
             - name: Vac                                 ## ROBOROCK VACCUUM
               entity: vacuum.roborock_s7
               template: popup_roborock_vac_button_1
-              icon: 'bha:roborock'
+#              icon: 'bha:roborock'
               type: 'custom:button-card' 
             - name: Vac                                 ## ROBOROCK VACCUUM
               entity: vacuum.roborock_s7
               template: popup_roborock_vac_button_1
-              icon: 'bha:roborock'
               type: 'custom:button-card' 
 #            - name: Vac                                 ## ROBOROCK VACCUUM # 2
 #              entity: vacuum.roborock_s7
