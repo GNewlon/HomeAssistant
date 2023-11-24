@@ -43,6 +43,8 @@
   type: module
 - url: /hacsfiles/apexcharts-card/apexcharts-card.js
   type: module
+- url: /hacsfiles/lovelace-xiaomi-vacuum-map-card/xiaomi-vacuum-map-card.js
+  type: module
 ############### BELOW IS MY TESTING AREA, CLEAN IT UP AFTER!!!!!!!!!!!!!!!!!!
 - url: /local/community/custom-sidebar/custom-sidebar.js
   type: module
