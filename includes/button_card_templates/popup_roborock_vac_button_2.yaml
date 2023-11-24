@@ -157,6 +157,6 @@
           entities:
             - artwork: cover
               entity: '[[[ return entity.entity_id ]]]'  # <<----Future use with other Roku/Sonos Systems
-              type: 'custom:xiaomi-vacuum-card'
+              type: 'custom:vacuum-card'
   hold_action:
     action: more-info
