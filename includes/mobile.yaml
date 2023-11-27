@@ -39,6 +39,22 @@
           type: horizontal-stack              
         - cards: ################################################## ROW 2
             - type: 'custom:button-card'
+              template: input_select.alarm_mode  
+              entity: input_select.alarm_mode  
+              state:
+                - value: Fire
+                - value: CO2              
+                - value: Clear
+                - value: master.fireco.alarm.battery.not.ok
+                - value: office.fireco.alarm.battery.not.ok
+            - type: 'custom:button-card'
+              template: input_select.guest_mode 
+              entity: input_select.guest_mode    
+              state:
+                - value: Guest.Home
+                - value: Guest.Away
+                - value: No.Guest
+            - type: 'custom:button-card'
               template: input_select.time_triggers    
               entity: input_select.time_triggers  
               state:
@@ -57,22 +73,6 @@
                 - value: wind.down.2200 
                 - value: night.2300
             - type: 'custom:button-card'
-              template: input_select.alarm_mode  
-              entity: input_select.alarm_mode  
-              state:
-                - value: Fire
-                - value: CO2              
-                - value: Clear
-                - value: master.fireco.alarm.battery.not.ok
-                - value: office.fireco.alarm.battery.not.ok
-            - type: 'custom:button-card'
-              template: input_select.guest_mode 
-              entity: input_select.guest_mode    
-              state:
-                - value: Guest.Home
-                - value: Guest.Away
-                - value: No.Guest
-            - type: 'custom:button-card'
               template: input_select_security_mode 
               entity: input_select.security_mode    
               state:
@@ -81,7 +81,12 @@
                 - value: G.Home                   
                 - value: G.Away                 
                 - value: C.Home
-                - value: C.Away          
+                - value: C.Away 
+            - aspect_ratio: 1/1
+              entity: input_boolean.goodnite            
+              name: GoodNite
+              template: goodnite_button
+              type: 'custom:button-card'                
           type: horizontal-stack
         - color: 'rgb(44, 109, 214)' ############################## ROKU
           color_type: icon
@@ -108,11 +113,11 @@
 #              template: popup_roku_button_1
 #              icon: 'bha:roborock'
 #              type: 'custom:button-card' 
-            - name: Roku                                  #4 BUTTON
-              entity: media_player.roku_ultra_2023
-              template: popup_roku_button_1
-              icon: 'mdi:speaker-wireless'
-              type: 'custom:button-card' 
+            - entity: switch.christmas_tree_outlet_switch
+              icon: 'mdi:pine-tree'
+              name: Lights
+              template: light_button
+              type: 'custom:button-card'
             - name: Roku                                  #4 BUTTON
               entity: media_player.roku_ultra_2023
               template: popup_roku_button_1
