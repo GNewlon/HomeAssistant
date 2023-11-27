@@ -31,11 +31,6 @@
                 cover.garage_door
               name: Garage
               type: 'custom:button-card'
-            - aspect_ratio: 1/1
-              entity: input_boolean.goodnite            
-              name: GoodNite
-              template: goodnite_button
-              type: 'custom:button-card'
           type: horizontal-stack              
         - cards: ################################################## ROW 2
             - type: 'custom:button-card'
