@@ -88,51 +88,70 @@
               template: goodnite_button
               type: 'custom:button-card'                
           type: horizontal-stack
-        - color: 'rgb(44, 109, 214)' ############################## ROKU
-          color_type: icon
-          name: ROKU
-          template: button-card-headers-2
-          type: 'custom:button-card'
+#        - color: 'rgb(44, 109, 214)' ############################## ROKU
+#          color_type: icon
+#          name: ROKU
+#          template: button-card-headers-2
+#          type: 'custom:button-card'
         - cards: ################################################## ROW 1
-            - name: Vac                                 ## ROBOROCK VACCUUM
+            - name: Vac                                 ## 1 ROBOROCK VACCUUM
               entity: vacuum.roborock_s7
               template: popup_roborock_vac_button_1
 #              icon: 'bha:roborock'
               type: 'custom:button-card' 
-            - name: Vac #################################### ROKU## ROBOROCK VACCUUM TESTING
-              entity: vacuum.roborock_s7
-              template: popup_roborock_vac_button_2
+            - name: Roku                                 ## 2 ROKU BUTTON
+              entity: media_player.roku_ultra_2023
+              template: popup_roku_button_1
+              icon: 'mdi:speaker-wireless'
               type: 'custom:button-card' 
-#            - name: Vac                                 ## ROBOROCK VACCUUM # 2
+#            - name: Vac ###                             ##  ROBOROCK VACCUUM TESTING
+#              entity: vacuum.roborock_s7
+#              template: popup_roborock_vac_button_2
+#              type: 'custom:button-card' 
+#            - name: Vac                                 ##  ROBOROCK VACCUUM
 #              entity: vacuum.roborock_s7
 #              template: vacuum_button_1
 #              icon: 'bha:roborock'
 #              type: 'custom:button-card' 
-#            - name: Vac                                 ## ROBOROCK VACCUUM # 3
+#            - name: Vac                                 ## ROBOROCK VACCUUM 
 #              entity: vacuum.roborock_s7
 #              template: popup_roku_button_1
 #              icon: 'bha:roborock'
 #              type: 'custom:button-card' 
-            - entity: switch.christmas_tree_outlet_switch
+            - entity: switch.christmas_tree_outlet_switch   ## 3 CHRISTMAS BUTTON
               icon: 'mdi:pine-tree'
               name: Lights
               template: light_button
               type: 'custom:button-card'
-            - name: Roku                                  #4 BUTTON
-              entity: media_player.roku_ultra_2023
-              template: popup_roku_button_1
-              icon: 'mdi:speaker-wireless'
-              type: 'custom:button-card' 
-#            - name: HVAC                                  #4 BUTTON
+            - entity: input_select.pool_state             ## 4 POOL MODE BUTTON
+              type: 'custom:button-card'  
+              template: input_select.pool_state   
+              state:
+                - value: Waterfall
+                - value: Sleep
+                - value: Spa
+                - value: Skimmer
+                - value: Swim
+                - value: OFF
+            - entity: input_select.pool_heat_select       ##5 BUTTON POOL HEAT SELECT
+              template: pool_heat_select
+              name: Pool Heat
+#              label: Heat
+              state:
+                - value: FPH
+                  icon: 'mdi:source-branch-sync'
+                - value: $PH
+                  icon: 'mdi:currency-usd'
+                - value: FPH+$PH
+                  icon: 'mdi:arrow-decision'
+                - value: NONE
+                  icon: 'mdi:set-none'
+              type: 'custom:button-card'   
+#            - name: HVAC                                  # 
 #              entity: climate.shark_house
 #              template: popup_hvac_button
 #              icon: 'mdi:pool-thermometer'
 #              type: 'custom:button-card' 
-            - name: Roku                                  #4 BUTTON
-              entity: media_player.roku_ultra_2023
-              template: popup_roku_button_1
-              icon: 'mdi:speaker-wireless'
-              type: 'custom:button-card' 
           type: horizontal-stack
         - color: 'rgb(44, 109, 214)' ############################## LIGHTS
           color_type: icon
