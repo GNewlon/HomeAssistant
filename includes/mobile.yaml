@@ -609,7 +609,8 @@
 #############################################
         - entities:
             - color: purple
-              entity: sensor.powermeter_18c_hvac_compressor_kilowatts  # FPH INLET TEMP
+#              entity: sensor.powermeter_18c_hvac_compressor_kilowatts  # FPH INLET TEMP
+              entity: sensor.powermeter_18c_ct3_hvac_1_watts
               name: HVAC Compressor kW
               show_fill: true
               show_fill: fade
