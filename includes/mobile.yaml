@@ -407,9 +407,9 @@
               entity: sensor.powermeter_18c_hvac_kilowatts  # return id(ct3Watts).state + id(ct4Watts).state + id(ct5Watts).state + id(ct6Watts).state;
               name: HVAC Total kW
               y_axis: secondary 
-              upper_bound_secondary: 4
+#              upper_bound_secondary: 4
               show_fill: true
-              show_fill: fade
+#              show_fill: fade
               show_line: true
               show_legend: true 
               show_state: true
@@ -419,9 +419,9 @@
               entity: sensor.powermeter_18c_hvac_compressor_kilowatts  # return id(ct3Watts).state + id(ct4Watts).state;
               name: HVAC Compressor kW
               y_axis: secondary 
-              upper_bound_secondary: 4
+#              upper_bound_secondary: 4
               show_fill: true
-              show_fill: fade
+#              show_fill: fade
               show_line: true
               show_legend: true 
               show_state: true
@@ -432,9 +432,9 @@
               entity: sensor.powermeter_18c_hvac_air_handlers_kilowatts
               name: HVAC Air Handlers kW
               y_axis: secondary 
-              upper_bound_secondary: 4
+#              upper_bound_secondary: 4
               show_fill: true
-              show_fill: fade
+#              show_fill: fade
               show_line: true
               show_legend: true 
               show_state: true
