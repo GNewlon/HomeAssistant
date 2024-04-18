@@ -338,6 +338,48 @@
           type: 'custom:simple-thermostat'
 #############################################
 #                                           #
+#      Graph 3:   HVAC WATTS                #
+#                                           #
+#############################################
+        - entities:
+            - color: purple
+              entity: sensor.powermeter_18c_hvac_compressor_kilowatts  # return id(ct3Watts).state + id(ct4Watts).state;
+              name: HVAC Compressor kW
+              show_fill: true
+              show_fill: fade
+              show_line: true
+              show_legend: true 
+              show_state: true
+              decimals: 2
+              unit: kW
+            - color: orange
+#              entity: sensor.powermeter_18c_hvac_air_handlers_kilowatts  # return id(ct5Watts).state + id(ct6Watts).state;
+              entity: sensor.powermeter_18c_hvac_air_handlers_kilowatts
+              name: HVAC Air Handlers kW
+              show_fill: true
+              show_fill: fade
+              show_line: true
+              show_legend: true 
+              show_state: true
+              decimals: 2
+              unit: kW
+          font_size: 60
+          hours_to_show: 1
+          points_per_hour: 220
+          update_interval: 1
+          aggregate_func: avg
+          line_width: 2
+          smoothing: true
+          show:
+            fill: true
+            hour24: true
+            icon: true
+            labels: true
+            name: true
+#                labels_secondary: true
+          type: 'custom:mini-graph-card'
+#############################################
+#                                           #
 #   Graph 1   HVAC Watts&FPH IN/OUTLET      #
 #                                           #
 #############################################
@@ -609,8 +651,7 @@
 #############################################
         - entities:
             - color: purple
-#              entity: sensor.powermeter_18c_hvac_compressor_kilowatts  # FPH INLET TEMP
-              entity: sensor.powermeter_18c_ct3_hvac_1_watts
+              entity: sensor.powermeter_18c_hvac_compressor_kilowatts  # return id(ct3Watts).state + id(ct4Watts).state;
               name: HVAC Compressor kW
               show_fill: true
               show_fill: fade
@@ -619,8 +660,19 @@
               show_state: true
               decimals: 2
               unit: kW
+            - color: orange
+#              entity: sensor.powermeter_18c_hvac_air_handlers_kilowatts  # return id(ct5Watts).state + id(ct6Watts).state;
+              entity: sensor.powermeter_18c_hvac_air_handlers_kilowatts
+              name: HVAC Air Handlers kW
+              show_fill: true
+              show_fill: fade
+              show_line: true
+              show_legend: true 
+              show_state: true
+              decimals: 2
+              unit: kW
           font_size: 60
-          hours_to_show: .2
+          hours_to_show: 1
           points_per_hour: 220
           update_interval: 1
           aggregate_func: avg
@@ -779,7 +831,7 @@
   title: HVAC
 #############################################
 #                                           #
-#               TAB: HVAC 2                 #
+#               TAB: HVAC FPH               #
 #                                           #
 #############################################
 - badges: []
@@ -1252,7 +1304,7 @@
       type: vertical-stack  
 # icon: mdi:air-conditioner      
   icon: mdi:pool-thermometer  
-  title: HVAC 2
+  title: HVAC FPH
 #############################################
 #                                           #
 #              TAB: SECURITY                #
