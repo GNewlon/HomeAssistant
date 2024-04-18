@@ -401,8 +401,8 @@
               show_line: false
               show_legend: true 
               show_state: true
-              decimals: 2
-              unit: F            
+              decimals: 1
+#              unit: F            
             - color: blue
               entity: sensor.powermeter_18c_hvac_kilowatts  # return id(ct3Watts).state + id(ct4Watts).state + id(ct5Watts).state + id(ct6Watts).state;
               name: HVAC Total kW
