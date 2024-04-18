@@ -338,7 +338,7 @@
           type: 'custom:simple-thermostat'
 #############################################
 #                                           #
-#      Graph 3:   HVAC WATTS                #
+#      Graph 1:   HVAC WATTS                #
 #                                           #
 #############################################
         - entities:
@@ -352,7 +352,7 @@
               show_state: true
               decimals: 2
               unit: kW
-            - color: orange
+            - color: coral
 #              entity: sensor.powermeter_18c_hvac_air_handlers_kilowatts  # return id(ct5Watts).state + id(ct6Watts).state;
               entity: sensor.powermeter_18c_hvac_air_handlers_kilowatts
               name: HVAC Air Handlers kW
@@ -380,51 +380,131 @@
           type: 'custom:mini-graph-card'
 #############################################
 #                                           #
-#   Graph 1   HVAC Watts&FPH IN/OUTLET      #
+#        Graph 2: SharkHouse Total KWH      #
 #                                           #
 #############################################
-        - entities: 
-            - color: red
-              entity: sensor.fph_outlet_temp  # FPH OUTLET TEMP
-              name: FPH Outlet
-              upper_bound: 100
-              show_fill: false  
+        - entities:
             - color: blue
-              entity: sensor.fph_inlet_temp  # FPH INLET TEMP
-              name: FPH Inlet
-              upper_bound: 100
-              show_fill: false
-            - color: green # "#706f6f"
-              entity: sensor.powermeter_18c_hvac_kilowatts  # HVAC POWERMETER WATTS
-              name: HVAC kW
-              y_axis: secondary
-#              upper_bound_secondary: 1 #101523.1406
+              entity: sensor.powermeter_18c_total_kwh_2  # FPH INLET TEMP
+              name: SharkHouse Total KWH
+              show_fill: true
+            - color: green
+              entity: sensor.powermeter_18c_hvac_total_kwh  # HVAC POWERMETER WATTS
+              name: HVAC Total KWH
+              show_fill: true              
+#                - color: green
+#                  entity: input_select.hvac
+#                  name: HVAC
+#                  show_fill: true
+#                - color: white
+#                  entity: sensor.pool_pump_electric_production_w
+#                  attribute: Pump Watts
+#                  entity: input_select.hvac
+#                  name: Watts
+#                  y_axis: secondary                
+#                  show_graph: bar                  
+#                  show_fill: true
+#                  show_line: false
+#                  show_points: false
+#                  show_legend: true
+          font_size: 60
+          hours_to_show: 24
+          points_per_hour: 2
+          update_interval: .1
+          aggregate_func: avg
+#              lower_bound_secondary: 50
+#              upper_bound_secondary: 500
+#              value_factor: -10
+          line_width: 2
+          smoothing: true
+#              min_bound_range_secondary: 100
+#              upper_bound_secondary: 1   
+#              min_bound_range_secondary: 0
+#              group_by: second           
+#              icon: 'mdi:thermometer'
+#              name: Pool Temperature
+          show:
+            graph: bar
+            fill: true
+            hour24: true
+            icon: true
+            labels: true
+            name: true
+#                labels_secondary: true
+          type: 'custom:mini-graph-card'
+##################################################
+#                                                #
+#    Graph 3 HVAC Watts & OUTDOOR TEMP           #
+#                                                #
+##################################################
+        - entities:
+            - color: grey
+              entity: sensor.powermeter_18c_hvac_kilowatts
+              name: HVAC Watts
+              y_axis: secondary 
+              upper_bound_secondary: 4
               show_fill: fade
-              show_line: false
+              show_line: true
               show_legend: true 
               show_state: true
               decimals: 2
-              unit: kW
-#              show_points: true      #101523.1406         
+              unit: kW               
+            - color: red
+              entity: sensor.screendoor_multisensor_air_temperature  # OUTSIDE TEMP
+              name: FPH Inlet
+              show_fill: true         
           font_size: 60
-          hours_to_show: .25
-          points_per_hour: 120
+          hours_to_show: 10
+          points_per_hour: 60
           update_interval: 1
-#          lower_bound: 0
-#          upper_bound: ~100
-#          lower_bound_secondary: 0
-          upper_bound_secondary: ~2
+          aggregate_func: avg
           line_width: 2
-          smoothing: false   #101523.1406
-#          aggregate_func: avg  #101523.1406
+          smoothing: true
           show:
             fill: true
             hour24: true
             icon: false
             labels: true
             name: false
-            labels_secondary: false        # changed this to false 112823    
-#            upper_bound_secondary: 2
+          type: 'custom:mini-graph-card'
+#############################################
+#                                           #
+#   Graph 4 HVAC Watts&FPH IN/OUTLET        #
+#                                           #
+#############################################
+        - entities:
+            - color: blue
+              entity: sensor.fph_inlet_temp  # FPH INLET TEMP
+              name: FPH Inlet
+              show_fill: true
+            - color: red
+              entity: sensor.fph_outlet_temp  # FPH OUTLET TEMP
+              name: FPH Outlet
+              show_fill: true
+            - color: green
+              entity: sensor.powermeter_18c_hvac_kilowatts
+              name: HVAC Watts
+              y_axis: secondary 
+              upper_bound_secondary: 4
+              show_fill: fade
+              show_line: false
+              show_legend: true 
+              show_state: true
+              decimals: 2
+              unit: kW            
+          font_size: 60
+          hours_to_show: .5
+          points_per_hour: 120
+          update_interval: 1
+          aggregate_func: avg
+          line_width: 2
+          smoothing: true
+          show:
+            fill: true
+            hour24: true
+            icon: false
+            labels: true
+            name: false
           type: 'custom:mini-graph-card'
 ###################################################          
         - cards:
@@ -475,55 +555,7 @@
                 - value: NONE
                   icon: 'mdi:set-none'
               type: 'custom:button-card'              
-          type: horizontal-stack                  
-        - color: 'rgb(44, 109, 214)'
-          color_type: icon
-          name: FPH RELAYS
-          template: button-card-headers-2
-          type: custom:button-card
-        - cards:
-            - entities:   
-              - entity: switch.fph_1_norm_fph
-                icon: 'mdi:alpha-h-box'
-                type: simple-entity
-                state_color: true
-                style: |
-                  :host {
-                    {% if states(config.entity)=='on' %}
-                      --paper-item-icon-color: red;
-                    {% endif %};
-                  }
-              - entity: switch.fph_hvac_compressor_24vac_no
-                icon: 'mdi:alpha-h-box'
-                type: simple-entity
-              - entity: switch.nph_condenser_fan
-                icon: 'mdi:alpha-h-box'
-                type: simple-entity
-              - entity: switch.nph_hvac_compressor_24vac_nc
-                icon: 'mdi:alpha-h-box'
-                type: simple-entity
-              - entity: switch.valve_4_pool_spa
-                icon: 'mdi:numeric-2-box'
-                type: simple-entity
-                state_color: false
-                style: |
-                  :host {
-                    {% if states(config.entity)=='on' %}
-                      --paper-item-icon-color: red;
-                    {% endif %};
-                  }
-              - entity: switch.valve_5_off_he
-                icon: 'mdi:numeric-3-box'
-                type: simple-entity
-                state_color: true
-                style: |
-                  :host {
-                    {% if states(config.entity)=='on' %}
-                      --paper-item-icon-color: red;
-                    {% endif %};
-                  }
-              type: entities 
-          type: horizontal-stack  
+          type: horizontal-stack                   
         - color: 'rgb(44, 109, 214)'
           color_type: icon
           name: POOL SPEEDS
@@ -590,241 +622,6 @@
                 icon: 'mdi:coolant-temperature'            
               type: glance 
           type: horizontal-stack      
-#############################################
-#                                           #
-#        Graph 2: SharkHouse Total KWH      #
-#                                           #
-#############################################
-        - entities:
-            - color: blue
-              entity: sensor.powermeter_18c_total_kwh_2  # FPH INLET TEMP
-              name: SharkHouse Total KWH
-              show_fill: true
-            - color: green
-              entity: sensor.powermeter_18c_hvac_total_kwh  # HVAC POWERMETER WATTS
-              name: HVAC Total KWH
-              show_fill: true              
-#                - color: green
-#                  entity: input_select.hvac
-#                  name: HVAC
-#                  show_fill: true
-#                - color: white
-#                  entity: sensor.pool_pump_electric_production_w
-#                  attribute: Pump Watts
-#                  entity: input_select.hvac
-#                  name: Watts
-#                  y_axis: secondary                
-#                  show_graph: bar                  
-#                  show_fill: true
-#                  show_line: false
-#                  show_points: false
-#                  show_legend: true
-          font_size: 60
-          hours_to_show: 24
-          points_per_hour: 2
-          update_interval: .1
-          aggregate_func: avg
-#              lower_bound_secondary: 50
-#              upper_bound_secondary: 500
-#              value_factor: -10
-          line_width: 2
-          smoothing: true
-#              min_bound_range_secondary: 100
-#              upper_bound_secondary: 1   
-#              min_bound_range_secondary: 0
-#              group_by: second           
-#              icon: 'mdi:thermometer'
-#              name: Pool Temperature
-          show:
-            graph: bar
-            fill: true
-            hour24: true
-            icon: true
-            labels: true
-            name: true
-#                labels_secondary: true
-          type: 'custom:mini-graph-card'
-#############################################
-#                                           #
-#      Graph 3:   HVAC WATTS                #
-#                                           #
-#############################################
-        - entities:
-            - color: purple
-              entity: sensor.powermeter_18c_hvac_compressor_kilowatts  # return id(ct3Watts).state + id(ct4Watts).state;
-              name: HVAC Compressor kW
-              show_fill: true
-              show_fill: fade
-              show_line: true
-              show_legend: true 
-              show_state: true
-              decimals: 2
-              unit: kW
-            - color: orange
-#              entity: sensor.powermeter_18c_hvac_air_handlers_kilowatts  # return id(ct5Watts).state + id(ct6Watts).state;
-              entity: sensor.powermeter_18c_hvac_air_handlers_kilowatts
-              name: HVAC Air Handlers kW
-              show_fill: true
-              show_fill: fade
-              show_line: true
-              show_legend: true 
-              show_state: true
-              decimals: 2
-              unit: kW
-          font_size: 60
-          hours_to_show: 1
-          points_per_hour: 220
-          update_interval: 1
-          aggregate_func: avg
-          line_width: 2
-          smoothing: true
-          show:
-            fill: true
-            hour24: true
-            icon: true
-            labels: true
-            name: true
-#                labels_secondary: true
-          type: 'custom:mini-graph-card'
-##################################################
-#                                                #
-#    Graph 4 HVAC Watts & FPH IN/OUTLET TEMP     #
-#                                                #
-##################################################
-        - entities:
-            - color: grey
-              entity: sensor.powermeter_18c_hvac_kilowatts
-              name: HVAC Watts
-              y_axis: secondary 
-              upper_bound_secondary: 4
-              show_fill: fade
-              show_line: false
-              show_legend: true 
-              show_state: true
-              decimals: 2
-              unit: kW               
-            - color: blue
-              entity: sensor.fph_inlet_temp  # FPH INLET TEMP
-              name: FPH Inlet
-              show_fill: true
-            - color: red
-              entity: sensor.fph_outlet_temp  # FPH OUTLET TEMP
-              name: FPH Outlet
-              show_fill: true          
-          font_size: 60
-          hours_to_show: 10
-          points_per_hour: 60
-          update_interval: 1
-          aggregate_func: avg
-          line_width: 2
-          smoothing: true
-          show:
-            fill: true
-            hour24: true
-            icon: false
-            labels: true
-            name: false
-          type: 'custom:mini-graph-card'
-#############################################
-#                                           #
-#   Graph 5 HVAC Watts&FPH IN/OUTLET        #
-#                                           #
-#############################################
-        - entities:
-            - color: blue
-              entity: sensor.fph_inlet_temp  # FPH INLET TEMP
-              name: FPH Inlet
-              show_fill: true
-            - color: red
-              entity: sensor.fph_outlet_temp  # FPH OUTLET TEMP
-              name: FPH Outlet
-              show_fill: true
-            - color: green
-              entity: sensor.powermeter_18c_hvac_kilowatts
-              name: HVAC Watts
-              y_axis: secondary 
-              upper_bound_secondary: 4
-              show_fill: fade
-              show_line: false
-              show_legend: true 
-              show_state: true
-              decimals: 2
-              unit: kW            
-          font_size: 60
-          hours_to_show: .5
-          points_per_hour: 120
-          update_interval: 1
-          aggregate_func: avg
-          line_width: 2
-          smoothing: true
-          show:
-            fill: true
-            hour24: true
-            icon: false
-            labels: true
-            name: false
-          type: 'custom:mini-graph-card'
-#############################################
-#                                           #
-#           HVAC Liquid                     #
-#                                           #
-#############################################
-#              group_by:
-#                 func: last
-#                 duration: 1s
-###########  climate.sharkhouse GRAPH
-        - entities:
-#            - color: blue
-#              entity: '{{state_attr("climate.sharkhouse","temperature") | float(0) }}'  # FPH INLET TEMP
-#              name: House Temp
-#              show_fill: true
-#            - color: red
-#              entity: sensor.fph_outlet_temp  # FPH OUTLET TEMP
-#              name: FPH Outlet
-#              show_fill: true
-            - color: green
-              entity: sensor.hvac_liquid_temp  # HVAC LIQUID TEMP
-              name: HVAC Liquid
-              show_fill: fade
-#                - color: green
-#                  entity: input_select.hvac
-#                  name: HVAC
-#                  show_fill: true
-#                - color: white
-#                  entity: sensor.pool_pump_electric_production_w
-#                  attribute: Pump Watts
-#                  name: Watts
-#                  y_axis: secondary                
-#                  show_graph: bar                  
-#                  show_fill: true
-#                  show_line: false
-#                  show_points: false
-#                  show_legend: true
-          font_size: 60
-          hours_to_show: 2
-          points_per_hour: 200
-          update_interval: .1
-          aggregate_func: avg
-#              lower_bound_secondary: 50
-#              upper_bound_secondary: 500
-#              value_factor: -10
-          line_width: 2
-          smoothing: true
-#              min_bound_range_secondary: 100
-#              upper_bound_secondary: 1   
-#              min_bound_range_secondary: 0
-#              group_by: second           
-#              icon: 'mdi:thermometer'
-#              name: Pool Temperature
-          show:
-            fill: true
-            hour24: true
-            icon: false
-            labels: true
-            name: false
-#                labels_secondary: true
-          type: 'custom:mini-graph-card'
-########### END climate.sharkhouse GRAPH
       type: vertical-stack  
 # icon: mdi:air-conditioner      
   icon: mdi:pool-thermometer  
