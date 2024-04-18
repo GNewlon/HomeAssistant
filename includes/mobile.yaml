@@ -380,6 +380,58 @@
           type: 'custom:mini-graph-card'
 #############################################
 #                                           #
+#      Graph 2: HVAC TOTAL WATTS            #
+#                                           #
+#############################################
+        - entities:
+            - color: blue
+              entity: sensor.powermeter_18c_hvac_kilowatts  # return id(ct3Watts).state + id(ct4Watts).state + id(ct5Watts).state + id(ct6Watts).state;
+              name: HVAC Total kW
+              show_fill: true
+              show_fill: fade
+              show_line: true
+              show_legend: true 
+              show_state: true
+              decimals: 2
+              unit: kW
+            - color: purple
+              entity: sensor.powermeter_18c_hvac_compressor_kilowatts  # return id(ct3Watts).state + id(ct4Watts).state;
+              name: HVAC Compressor kW
+              show_fill: true
+              show_fill: fade
+              show_line: true
+              show_legend: true 
+              show_state: true
+              decimals: 2
+              unit: kW
+            - color: coral
+#              entity: sensor.powermeter_18c_hvac_air_handlers_kilowatts  # return id(ct5Watts).state + id(ct6Watts).state;
+              entity: sensor.powermeter_18c_hvac_air_handlers_kilowatts
+              name: HVAC Air Handlers kW
+              show_fill: true
+              show_fill: fade
+              show_line: true
+              show_legend: true 
+              show_state: true
+              decimals: 2
+              unit: kW
+          font_size: 60
+          hours_to_show: 1
+          points_per_hour: 220
+          update_interval: 1
+          aggregate_func: avg
+          line_width: 2
+          smoothing: true
+          show:
+            fill: true
+            hour24: true
+            icon: true
+            labels: true
+            name: true
+#                labels_secondary: true
+          type: 'custom:mini-graph-card'
+#############################################
+#                                           #
 #        Graph 2: SharkHouse Total KWH      #
 #                                           #
 #############################################
@@ -451,7 +503,7 @@
               unit: kW               
             - color: red
               entity: sensor.screendoor_multisensor_air_temperature  # OUTSIDE TEMP
-              name: FPH Inlet
+              name: Outdoor Temp
               show_fill: true         
           font_size: 60
           hours_to_show: 10
