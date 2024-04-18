@@ -378,7 +378,7 @@
           update_interval: 1
           aggregate_func: avg
           line_width: 2
-          smoothing: true
+          smoothing: false
           show:
             fill: true
             hour24: true
@@ -425,12 +425,12 @@
               decimals: 2
               unit: kW
           font_size: 60
-          hours_to_show: .5
-          points_per_hour: 60
+          hours_to_show: 6
+          points_per_hour: 220
           update_interval: 1
-          aggregate_func: avg
+#          aggregate_func: avg
           line_width: 2
-          smoothing: true
+          smoothing: false
           show:
             fill: true
             hour24: true
