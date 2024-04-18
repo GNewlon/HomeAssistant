@@ -373,8 +373,8 @@
               decimals: 2
               unit: W
           font_size: 60
-          hours_to_show: .5
-          points_per_hour: 220
+          hours_to_show: 10
+          points_per_hour: 60
           update_interval: 1
           aggregate_func: avg
           line_width: 2
