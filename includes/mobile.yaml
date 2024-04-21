@@ -529,6 +529,56 @@
             name: true
 #                labels_secondary: true
           type: 'custom:mini-graph-card'
+#############################################
+#                                           #
+# Graph 3a: SharkHouse Total KWH Testing Area     #
+#                                           #
+#############################################
+        - entities:
+            - color: blue
+              entity: sensor.powermeter_18c_total_kwh_2  # FPH INLET TEMP
+              name: SharkHouse Total KWH
+              show_fill: true
+            - color: green
+              entity: sensor.powermeter_18c_hvac_total_kwh  # HVAC POWERMETER WATTS
+              name: HVAC Total KWH
+              show_fill: true              
+#                - color: green
+#                  entity: input_select.hvac
+#                  name: HVAC
+#                  show_fill: true
+#                - color: white
+#                  entity: sensor.pool_pump_electric_production_w
+#                  attribute: Pump Watts
+#                  entity: input_select.hvac
+#                  name: Watts
+#                  y_axis: secondary                
+#                  show_graph: bar                  
+#                  show_fill: true
+#                  show_line: false
+#                  show_points: false
+#                  show_legend: true
+          font_size: 60
+##          hours_to_show: 24
+##          points_per_hour: 2
+          update_interval: .1
+          aggregate_func: max
+          group_by: date
+          show:
+            graph: bar
+#              lower_bound_secondary: 50
+#              upper_bound_secondary: 500
+#              value_factor: -10
+##          line_width: 2
+##          smoothing: true
+#              min_bound_range_secondary: 100
+#              upper_bound_secondary: 1   
+#              min_bound_range_secondary: 0
+#              group_by: second           
+#              icon: 'mdi:thermometer'
+#              name: Pool Temperature
+#                labels_secondary: true
+          type: 'custom:mini-graph-card'
 ##################################################
 #                                                #
 #    Graph 4: HVAC Watts & OUTDOOR TEMP          #
