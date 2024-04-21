@@ -1301,6 +1301,19 @@
 #        - entity: binary_sensor.kitchen_motion
       show_header_toggle: false
       type: entities   
+    - entities:
+        - entity: sensor.screendoor_multisensor_air_temperature
+        - entity: sensor.portico_multisensor_air_temperature
+        - entity: sensor.portico_multisensor_air_temperature
+        - entity: sensor.lanai_multisensor_air_temperature
+        - entity: sensor.side_door_motion_temperature
+        - entity: sensor.garage_motion_1_temperature
+        - entity: sensor.garage_motion_2_temperature
+        - entity: sensor.attic_motion_temperature
+        - entity: sensor.lanai_motion_temperature
+        - entity: sensor.laundry_motion_temperature
+      show_header_toggle: false
+      type: entities 
   icon: mdi:shield-lock-outline
   title: Security
 #############################################
