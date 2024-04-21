@@ -1310,7 +1310,7 @@
     - entities:
         - entity: sensor.screendoor_multisensor_air_temperature
         - entity: sensor.portico_multisensor_air_temperature
-        - entity: sensor.portico_multisensor_air_temperature
+        - entity: sensor.master_bathroom_multisensor_air_temperature
         - entity: sensor.lanai_multisensor_air_temperature
         - entity: sensor.side_door_motion_temperature
         - entity: sensor.garage_motion_1_temperature
