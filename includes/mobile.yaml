@@ -1289,7 +1289,9 @@
       type: 'custom:button-card'
     - entities:
         - entity: binary_sensor.screendoor_multisensor_motion
-#        - entity: binary_sensor.portico_motion
+        - entity: binary_sensor.portico_multisensor_motion_detection
+        - entity: binary_sensor.master_bathroom_multisensor_motion_detection
+        - entity: binary_sensor.lanai_multisensor_motion_detection
         - entity: binary_sensor.side_door_motion
         - entity: binary_sensor.garage_motion_1
         - entity: binary_sensor.garage_motion_2
