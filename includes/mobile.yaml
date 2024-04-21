@@ -1301,6 +1301,12 @@
 #        - entity: binary_sensor.kitchen_motion
       show_header_toggle: false
       type: entities   
+    - cards:
+      color: 'rgb(44, 109, 214)'
+      color_type: icon
+      name: Temperatures
+      template: button-card-headers-2
+      type: 'custom:button-card'
     - entities:
         - entity: sensor.screendoor_multisensor_air_temperature
         - entity: sensor.portico_multisensor_air_temperature
