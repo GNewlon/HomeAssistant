@@ -336,7 +336,7 @@
             ...
           version: 3
           type: 'custom:simple-thermostat'
-#############################################
+          #############################################
 #                                           #
 #      Graph 1: HVAC TOTAL WATTS            #
 #                                           #
@@ -373,8 +373,59 @@
               decimals: 2
               unit: W
           font_size: 60
-          hours_to_show: 10
-          points_per_hour: 60
+          hours_to_show: 1
+          points_per_hour: 220
+          update_interval: 1
+          aggregate_func: avg
+          line_width: 2
+          smoothing: false
+          show:
+            fill: true
+            hour24: true
+            icon: true
+            labels: true
+            name: true
+#                labels_secondary: true
+          type: 'custom:mini-graph-card'
+#############################################
+#                                           #
+#      Graph 1a: HVAC TOTAL WATTS           #
+#                                           #
+#############################################
+        - entities:
+            - color: blue
+              entity: sensor.powermeter_18c_hvac_watts  # return id(ct3Watts).state + id(ct4Watts).state + id(ct5Watts).state + id(ct6Watts).state;
+              name: HVAC Total Watts
+              show_fill: true
+              show_fill: fade
+              show_line: true
+              show_legend: true 
+              show_state: true
+              decimals: 2
+              unit: W
+            - color: purple
+              entity: sensor.powermeter_18c_hvac_compressor_watts  # return id(ct3Watts).state + id(ct4Watts).state;
+              name: HVAC Compressor Watts
+              show_fill: true
+              show_fill: fade
+              show_line: true
+              show_legend: true 
+              show_state: true
+              decimals: 2
+              unit: W
+            - color: coral
+              entity: sensor.powermeter_18c_hvac_air_handlers_watts #   watts  # return id(ct5Watts).state + id(ct6Watts).state;
+              name: HVAC Air Handlers Watts
+              show_fill: true
+              show_fill: fade
+              show_line: true
+              show_legend: true 
+              show_state: true
+              decimals: 2
+              unit: W
+          font_size: 60
+          hours_to_show: 2
+          points_per_hour: 220
           update_interval: 1
           aggregate_func: avg
           line_width: 2
@@ -435,7 +486,7 @@
               decimals: 1
 #              unit: F     
           font_size: 60
-          hours_to_show: 6
+          hours_to_show: 4
           points_per_hour: 220
           update_interval: 1
 #          aggregate_func: avg
