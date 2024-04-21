@@ -566,6 +566,11 @@
           group_by: date
           show:
             graph: bar
+            fill: true
+            hour24: true
+            icon: true
+            labels: true
+            name: true
 #              lower_bound_secondary: 50
 #              upper_bound_secondary: 500
 #              value_factor: -10
