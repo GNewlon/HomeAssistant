@@ -758,33 +758,6 @@
 - badges: []
   cards:
     - cards:
-        - entity: climate.shark_house
-          header: false
-          control: true
-          step_size: 1
-          sensors:
-            - id: state
-              label: 'State:'
-              template: "{{hvac_action|translate('state_attributes.climate.hvac_action.')}}"              
-            - id: temperature
-              label: 'Currently:'
-              template: '{{current_temperature|formatNumber}}'
-            - entity: sensor.shark_house_current_humidity
-              template: '{{state.text}}%'
-              label: 'Humidity:'
-          layout:
-            step: row
-          style: |
-            ha-card {
-              --st-font-size-xl: 50px;
-              --st-font-size-m: 10px;
-              --st-font-size-title: 33px;
-              --st-font-size-sensors: 14px;
-              --st-spacing: 0px;
-            }
-            ...
-          version: 3
-          type: 'custom:simple-thermostat'
 #############################################
 #                                           #
 #   Graph 1   HVAC Watts&FPH IN/OUTLET      #
