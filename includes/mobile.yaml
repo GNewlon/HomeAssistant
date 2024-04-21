@@ -425,7 +425,7 @@
               unit: W
           font_size: 60
           hours_to_show: 2
-          points_per_hour: 60
+          points_per_hour: 120
           update_interval: 1
           aggregate_func: avg
           line_width: 2
@@ -487,7 +487,7 @@
 #              unit: F     
           font_size: 60
           hours_to_show: 4
-          points_per_hour: 30
+          points_per_hour: 60
           update_interval: 1
 #          aggregate_func: avg
           line_width: 2
