@@ -938,7 +938,7 @@
           version: 3
           type: 'custom:simple-thermostat'
         - entity: climate.hvaczone_2
-          header: false
+          header: true
           control: false
           step_size: 1
           sensors:
@@ -965,7 +965,7 @@
           version: 3
           type: 'custom:simple-thermostat'
         - entity: climate.hvaczone_3
-          header: false
+          header: true
           control: false
           step_size: 1
           sensors:
