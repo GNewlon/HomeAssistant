@@ -309,6 +309,24 @@
 - badges: []
   cards:
     - cards:
+#########################################
+##     Climate Zones                    #
+#########################################
+        - color: 'rgb(44, 109, 214)'
+          color_type: icon
+          name: Climate Zones
+          template: button-card-headers-2
+          type: custom:button-card
+        - cards:
+            - entities:   
+              - entity: climate.hvaczone_1
+                icon: 'mdi:numeric-1-box'
+              - entity: climate.hvaczone_2
+                icon: 'mdi:numeric-2-box'
+              - entity: climate.hvaczone_3
+                icon: 'mdi:numeric-3-box'
+              type: entities 
+          type: horizontal-stack           
 #############################################
 #                                           #
 #      Graph 1: HVAC TOTAL WATTS            #
