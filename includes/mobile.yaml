@@ -531,6 +531,58 @@
           type: 'custom:mini-graph-card'
 #############################################
 #                                           #
+#      Graph 4: CLIMATE ACTION              #
+#                                           #
+#############################################
+        - entities:
+            - color: blue
+              entity: climate.hvaczone_1
+              name: Zone 1
+              show_fill: true
+              show_fill: fade
+              show_line: true
+              show_legend: true 
+              show_state: true
+              decimals: 2
+              unit: F
+            - color: purple
+              entity: climate.hvaczone_2
+              name: Zone 2
+              show_fill: true
+              show_fill: fade
+              show_line: true
+              show_legend: true 
+              show_state: true
+              decimals: 2
+              unit: F
+            - color: coral
+              entity: climate.hvaczone_3
+              name: Zone 3
+              name: HVAC Air Handlers Watts
+              show_fill: true
+              show_fill: fade
+              show_line: true
+              show_legend: true 
+              show_state: true
+              decimals: 2
+              unit: f
+          font_size: 60
+          hours_to_show: 2
+          points_per_hour: 90
+          update_interval: 1
+          aggregate_func: avg
+          line_width: 2
+          smoothing: false
+          show:
+            fill: true
+            hour24: true
+            icon: true
+            labels: true
+            name: true
+#                labels_secondary: true
+          type: 'custom:mini-graph-card'
+#############################################
+#                                           #
 # Graph 3a: SharkHouse Total KWH Testing Area     #
 #                                           #
 #############################################
@@ -707,7 +759,25 @@
                 - value: NONE
                   icon: 'mdi:set-none'
               type: 'custom:button-card'              
-          type: horizontal-stack                   
+          type: horizontal-stack   
+#########################################
+##     Climate Zones                    #
+#########################################
+        - color: 'rgb(44, 109, 214)'
+          color_type: icon
+          name: Climate Zones
+          template: button-card-headers-2
+          type: custom:button-card
+        - cards:
+            - entities:   
+              - entity: climate.hvaczone_1
+                icon: 'mdi:numeric-1-box'
+              - entity: climate.hvaczone_2
+                icon: 'mdi:numeric-2-box'
+              - entity: climate.hvaczone_3
+                icon: 'mdi:numeric-3-box'
+              type: entities 
+          type: horizontal-stack            
         - color: 'rgb(44, 109, 214)'
           color_type: icon
           name: POOL SPEEDS
