@@ -555,6 +555,8 @@
         - entities:
             - color: blue
               entity: climate.hvaczone_1
+              label: 'State:'
+              template: "{{hvac_action|translate('state_attributes.climate.hvac_action.')}}"    
               name: Zone 1
               show_fill: true
               show_fill: fade
@@ -908,7 +910,61 @@
 - badges: []
   cards:
     - cards:
-        - entity: climate.shark_house
+        - entity: climate.hvaczone_1
+          header: false
+          control: true
+          step_size: 1
+          sensors:
+            - id: state
+              label: 'State:'
+              template: "{{hvac_action|translate('state_attributes.climate.hvac_action.')}}"              
+            - id: temperature
+              label: 'Currently:'
+              template: '{{current_temperature|formatNumber}}'
+            - entity: sensor.shark_house_current_humidity
+              template: '{{state.text}}%'
+              label: 'Humidity:'
+          layout:
+            step: row
+          style: |
+            ha-card {
+              --st-font-size-xl: 50px;
+              --st-font-size-m: 10px;
+              --st-font-size-title: 33px;
+              --st-font-size-sensors: 14px;
+              --st-spacing: 0px;
+            }
+            ...
+          version: 3
+          type: 'custom:simple-thermostat'
+        - entity: climate.hvaczone_2
+          header: false
+          control: true
+          step_size: 1
+          sensors:
+            - id: state
+              label: 'State:'
+              template: "{{hvac_action|translate('state_attributes.climate.hvac_action.')}}"              
+            - id: temperature
+              label: 'Currently:'
+              template: '{{current_temperature|formatNumber}}'
+            - entity: sensor.shark_house_current_humidity
+              template: '{{state.text}}%'
+              label: 'Humidity:'
+          layout:
+            step: row
+          style: |
+            ha-card {
+              --st-font-size-xl: 50px;
+              --st-font-size-m: 10px;
+              --st-font-size-title: 33px;
+              --st-font-size-sensors: 14px;
+              --st-spacing: 0px;
+            }
+            ...
+          version: 3
+          type: 'custom:simple-thermostat'
+        - entity: climate.hvaczone_3
           header: false
           control: true
           step_size: 1
