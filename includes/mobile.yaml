@@ -911,8 +911,8 @@
   cards:
     - cards:
         - entity: climate.hvaczone_1
-          header: false
-          control: true
+          header: true
+          control: false
           step_size: 1
           sensors:
             - id: state
@@ -921,9 +921,9 @@
             - id: temperature
               label: 'Currently:'
               template: '{{current_temperature|formatNumber}}'
-            - entity: sensor.shark_house_current_humidity
-              template: '{{state.text}}%'
-              label: 'Humidity:'
+#            - entity: sensor.shark_house_current_humidity
+#              template: '{{state.text}}%'
+#              label: 'Humidity:'
           layout:
             step: row
           style: |
@@ -939,7 +939,7 @@
           type: 'custom:simple-thermostat'
         - entity: climate.hvaczone_2
           header: false
-          control: true
+          control: false
           step_size: 1
           sensors:
             - id: state
@@ -948,9 +948,9 @@
             - id: temperature
               label: 'Currently:'
               template: '{{current_temperature|formatNumber}}'
-            - entity: sensor.shark_house_current_humidity
-              template: '{{state.text}}%'
-              label: 'Humidity:'
+#            - entity: sensor.shark_house_current_humidity
+#              template: '{{state.text}}%'
+#              label: 'Humidity:'
           layout:
             step: row
           style: |
@@ -966,7 +966,7 @@
           type: 'custom:simple-thermostat'
         - entity: climate.hvaczone_3
           header: false
-          control: true
+          control: false
           step_size: 1
           sensors:
             - id: state
@@ -975,9 +975,9 @@
             - id: temperature
               label: 'Currently:'
               template: '{{current_temperature|formatNumber}}'
-            - entity: sensor.shark_house_current_humidity
-              template: '{{state.text}}%'
-              label: 'Humidity:'
+#            - entity: sensor.shark_house_current_humidity
+#              template: '{{state.text}}%'
+#              label: 'Humidity:'
           layout:
             step: row
           style: |
