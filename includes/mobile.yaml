@@ -544,7 +544,7 @@
               show_legend: true 
               show_state: true
               decimals: 2
-              unit: F
+#              unit: F
             - color: purple
               entity: climate.hvaczone_2
               name: Zone 2
@@ -554,18 +554,17 @@
               show_legend: true 
               show_state: true
               decimals: 2
-              unit: F
+#              unit: F
             - color: coral
               entity: climate.hvaczone_3
               name: Zone 3
-              name: HVAC Air Handlers Watts
               show_fill: true
               show_fill: fade
               show_line: true
               show_legend: true 
               show_state: true
               decimals: 2
-              unit: f
+#              unit: f
           font_size: 60
           hours_to_show: 2
           points_per_hour: 90
@@ -655,6 +654,41 @@
               unit: kW               
             - color: red
               entity: sensor.screendoor_multisensor_air_temperature  # OUTSIDE TEMP
+              name: Outdoor Temp
+              show_fill: true         
+          font_size: 60
+          hours_to_show: 10
+          points_per_hour: 60
+          update_interval: 1
+          aggregate_func: avg
+          line_width: 2
+          smoothing: true
+          show:
+            fill: true
+            hour24: true
+            icon: false
+            labels: true
+            name: false
+          type: 'custom:mini-graph-card'
+##################################################
+#                                                #
+#    Graph testing: Climate Action               #
+#                                                #
+##################################################
+        - entities:
+            - color: grey
+              entity: sensor.powermeter_18c_hvac_kilowatts
+              name: HVAC Watts
+              y_axis: secondary 
+              upper_bound_secondary: 4
+              show_fill: fade
+              show_line: true
+              show_legend: true 
+              show_state: true
+              decimals: 2
+              unit: kW               
+            - color: red
+              entity: climate.hvaczone_1
               name: Outdoor Temp
               show_fill: true         
           font_size: 60
