@@ -549,7 +549,7 @@
           type: 'custom:mini-graph-card'
 #############################################
 #                                           #
-#      Graph 4: CLIMATE ACTION              #
+#    Graph 4: ZONE 1 CLIMATE ACTION         #
 #                                           #
 #############################################
         - entities:
@@ -566,10 +566,10 @@
               decimals: 2
 #              unit: F
             - color: purple
-              entity: climate.hvaczone_2
-              attribute: current_temperature
-              name: Zone 2 Current Temperature
-              show_fill: true
+              entity: climate.hvaczone_1
+              attribute: temperature
+              name: Zone 2 Temperature
+              show_fill: false
               show_fill: fade
               show_line: true
               show_legend: true 
@@ -577,9 +577,9 @@
               decimals: 2
 #              unit: F
             - color: coral
-              entity: climate.hvaczone_3
-              attribute: current_temperature
-              name: Zone 3 Current Temperature
+              entity: climate.hvaczone_1
+              attribute: hvac_action
+              name: Zone 3 HVAC Action
               show_fill: true
               show_fill: fade
               show_line: true
