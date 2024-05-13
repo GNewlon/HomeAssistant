@@ -558,6 +558,7 @@
               entities:
                 - entity: climate.hvaczone_1
                   attribute: current_temperature
+                  name: Zone 1 Current Temperature
               name: Zone 1
               show_fill: true
               show_fill: fade
@@ -571,6 +572,7 @@
               entities:
                 - entity: climate.hvaczone_2
                   attribute: current_temperature
+                  name: Zone 2 Current Temperature
               name: Zone 2
               show_fill: true
               show_fill: fade
@@ -581,8 +583,10 @@
 #              unit: F
             - color: coral
 #              entity: climate.hvaczone_3
-                - entity: climate.hvaczone_2
+              entities:
+                - entity: climate.hvaczone_3
                   attribute: current_temperature
+                  name: Zone 3 Current Temperature
               name: Zone 3
               show_fill: true
               show_fill: fade
