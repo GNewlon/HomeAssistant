@@ -557,7 +557,7 @@
               entities:
               entity: climate.hvaczone_1
               attribute: current_temperature
-              name: Zone 1 Current Temperature
+              name: Current Temperature
               show_fill: true
               show_fill: fade
               show_line: true
@@ -568,7 +568,7 @@
             - color: purple
               entity: climate.hvaczone_1
               attribute: temperature
-              name: Zone 2 Temperature
+              name: Temperature
               show_fill: false
               show_fill: fade
               show_line: true
@@ -579,7 +579,7 @@
             - color: coral
               entity: climate.hvaczone_1
               attribute: hvac_action
-              name: Zone 3 HVAC Action
+              name: HVAC Action
               show_fill: true
               show_fill: fade
               show_line: true
