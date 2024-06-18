@@ -311,7 +311,7 @@ http:
 ####################################################
 zone:
   - name: home
-    latitude: 32.8773367
-    longitude: -117.2494053
-    radius: 250
+    latitude: 27.501170
+    longitude: -82.509850
+    radius: 1300
 #    icon: mdi:school
