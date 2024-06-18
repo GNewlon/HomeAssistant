@@ -304,3 +304,14 @@ http:
 #  ssl_key: /ssl/privkey.pem
 #  ip_ban_enabled: true
 #  login_attempts_threshold: 5
+####################################################
+#                                                  #
+#                  ZONE                            #
+#                                                  #
+####################################################
+zone:
+  - name: home
+    latitude: 32.8773367
+    longitude: -117.2494053
+    radius: 250
+#    icon: mdi:school
