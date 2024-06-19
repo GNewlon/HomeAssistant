@@ -39,5 +39,3 @@ switch.pooldrain_fph:
   entity_picture: /config/images/pool.png
 cover.garage_door:
   entity_picture: /config/images/skull.png
-zone.home:
-  radius: 1300
