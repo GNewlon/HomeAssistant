@@ -1,8 +1,8 @@
 #######################################################################################################
 #- url: /hacsfiles/lovelace-card-mod/card-mod.js
 #  type: module
-#- url: /hacsfiles/button-card/button-card.js
-#  type: module
+- url: /hacsfiles/button-card/button-card.js
+  type: module
 - url: /local/custom_components/button-card/button-card.js
   type: module
 - url: /hacsfiles/custom-header/custom-header.js
