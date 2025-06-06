@@ -337,7 +337,7 @@
               entity: sensor.powermeter_18c_hvac_watts  # return id(ct3Watts).state + id(ct4Watts).state + id(ct5Watts).state + id(ct6Watts).state;
               name: HVAC Total Watts
               show_fill: true
-              show_fill: fade
+#              show_fill: fade
               show_line: true
               show_legend: true 
               show_state: true
@@ -347,7 +347,7 @@
               entity: sensor.powermeter_18c_hvac_compressor_watts  # return id(ct3Watts).state + id(ct4Watts).state;
               name: HVAC Compressor Watts
               show_fill: true
-              show_fill: fade
+#              show_fill: fade
               show_line: true
               show_legend: true 
               show_state: true
@@ -357,7 +357,7 @@
               entity: sensor.powermeter_18c_hvac_air_handlers_watts #   watts  # return id(ct5Watts).state + id(ct6Watts).state;
               name: HVAC Air Handlers Watts
               show_fill: true
-              show_fill: fade
+ #             show_fill: fade
               show_line: true
               show_legend: true 
               show_state: true
@@ -388,7 +388,7 @@
               entity: sensor.powermeter_18c_hvac_watts  # return id(ct3Watts).state + id(ct4Watts).state + id(ct5Watts).state + id(ct6Watts).state;
               name: HVAC Total Watts
               show_fill: true
-              show_fill: fade
+#              show_fill: fade
               show_line: true
               show_legend: true 
               show_state: true
@@ -398,7 +398,7 @@
               entity: sensor.powermeter_18c_hvac_compressor_watts  # return id(ct3Watts).state + id(ct4Watts).state;
               name: HVAC Compressor Watts
               show_fill: true
-              show_fill: fade
+#              show_fill: fade
               show_line: true
               show_legend: true 
               show_state: true
@@ -408,7 +408,7 @@
               entity: sensor.powermeter_18c_hvac_air_handlers_watts #   watts  # return id(ct5Watts).state + id(ct6Watts).state;
               name: HVAC Air Handlers Watts
               show_fill: true
-              show_fill: fade
+#             show_fill: fade
               show_line: true
               show_legend: true 
               show_state: true
@@ -570,7 +570,7 @@
               attribute: temperature
               name: Temperature
               show_fill: false
-              show_fill: fade
+#              show_fill: fade
               show_line: true
               show_legend: true 
               show_state: true
@@ -581,7 +581,7 @@
               attribute: hvac_action
               name: HVAC Action
               show_fill: true
-              show_fill: fade
+ #             show_fill: fade
               show_line: true
               show_legend: true 
               show_state: true

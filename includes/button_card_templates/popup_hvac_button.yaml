@@ -113,8 +113,7 @@
           show_header_toggle: true   
           entities:
             - artwork: cover
-              entity: '[[[ return entity.entity_id ]]]'
-          show_header_toggle: true   
+              entity: '[[[ return entity.entity_id ]]]' 
           cards:
             - cards:
               - entity: climate.shark_house
