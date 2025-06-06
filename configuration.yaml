@@ -231,7 +231,7 @@ proximity:
   home:
     devices:
       - person.graham
-      - person.christina
+#      - person.christina
     tolerance: 50
     unit_of_measurement: 'mi'
 ####################################################
